@@ -59,7 +59,7 @@ namespace MeoIS
             this.buttonReg.Name = "buttonReg";
             this.buttonReg.Size = new System.Drawing.Size(318, 76);
             this.buttonReg.TabIndex = 4;
-            this.buttonReg.Text = "Зарегестрироваться";
+            this.buttonReg.Text = "Регистрация";
             this.buttonReg.UseVisualStyleBackColor = false;
             // 
             // textBoxLogin
@@ -109,7 +109,7 @@ namespace MeoIS
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.ClientSize = new System.Drawing.Size(539, 623);
+            this.ClientSize = new System.Drawing.Size(542, 623);
             this.Controls.Add(this.picturePass);
             this.Controls.Add(this.pictureUser);
             this.Controls.Add(this.textBoxPass);

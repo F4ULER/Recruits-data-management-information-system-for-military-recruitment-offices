@@ -35,7 +35,7 @@ namespace MeoIS
             return connection;
         }
 
-        public bool addUser(int documentNumber, string pass, string lastName, string name, string patronymic, string status, bool gender, string city, string phone, string email)
+        public bool addUser(string documentNumber, string pass, string lastName, string name, string patronymic, string status, bool gender, string city, string phone, string email)
         {
             MySqlDataAdapter adapter = new MySqlDataAdapter();
             MySqlCommand command = new MySqlCommand("INSERT INTO `users` (`document_number`, `password`, `last_name`, `name`, "+
@@ -58,5 +58,8 @@ namespace MeoIS
 
             closeConnection();
         }
+
+
+
     }
 }
