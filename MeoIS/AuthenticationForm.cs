@@ -95,5 +95,12 @@ namespace MeoIS
                 textBoxPass.PasswordChar = (char)0;
             }
         }
+
+        private void buttonReg_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            RegistrationForm reg = new RegistrationForm();
+            reg.Show();
+        }
     }
 }

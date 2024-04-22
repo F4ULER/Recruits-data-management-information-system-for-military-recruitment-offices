@@ -35,6 +35,7 @@ namespace MeoIS
             this.textBoxPass = new System.Windows.Forms.TextBox();
             this.pictureUser = new System.Windows.Forms.PictureBox();
             this.picturePass = new System.Windows.Forms.PictureBox();
+            this.labelAuth = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturePass)).BeginInit();
             this.SuspendLayout();
@@ -61,6 +62,7 @@ namespace MeoIS
             this.buttonReg.TabIndex = 4;
             this.buttonReg.Text = "Регистрация";
             this.buttonReg.UseVisualStyleBackColor = false;
+            this.buttonReg.Click += new System.EventHandler(this.buttonReg_Click);
             // 
             // textBoxLogin
             // 
@@ -104,12 +106,23 @@ namespace MeoIS
             this.picturePass.TabIndex = 5;
             this.picturePass.TabStop = false;
             // 
+            // labelAuth
+            // 
+            this.labelAuth.AutoSize = true;
+            this.labelAuth.Font = new System.Drawing.Font("Times New Roman", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelAuth.Location = new System.Drawing.Point(75, 21);
+            this.labelAuth.Name = "labelAuth";
+            this.labelAuth.Size = new System.Drawing.Size(417, 68);
+            this.labelAuth.TabIndex = 6;
+            this.labelAuth.Text = "Вход в систему";
+            // 
             // AuthenticationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.ClientSize = new System.Drawing.Size(542, 623);
+            this.Controls.Add(this.labelAuth);
             this.Controls.Add(this.picturePass);
             this.Controls.Add(this.pictureUser);
             this.Controls.Add(this.textBoxPass);
@@ -135,5 +148,6 @@ namespace MeoIS
         private System.Windows.Forms.TextBox textBoxPass;
         private System.Windows.Forms.PictureBox pictureUser;
         private System.Windows.Forms.PictureBox picturePass;
+        private System.Windows.Forms.Label labelAuth;
     }
 }

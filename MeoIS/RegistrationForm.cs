@@ -13,62 +13,62 @@ namespace MeoIS
 {
     public partial class RegistrationForm : Form
     {
-        public void formatting_tBDocNumber()
+        public void set_gray_text_in_tBDocumentNumber()
         {
             tBDocNumber.Text = "Введите номер документа";
             tBDocNumber.ForeColor = Color.Gray;
         }
 
-        public void formatting_tBPass()
+        public void set_gray_text_in_tBPass()
         {
             tBPass.Text = "Введите пароль";
             tBPass.ForeColor = Color.Gray;
             tBPass.PasswordChar = (char)0;
         }
 
-        public void formatting_tBNameUser()
+        public void set_gray_text_in_tBNameUser()
         {
             tBNameUser.Text = "Введите имя";
             tBNameUser.ForeColor = Color.Gray;
         }
 
-        public void formatting_tBLastName()
+        public void set_gray_text_in_tBLastName()
         {
             tBLastName.Text = "Введите фамилию";
             tBLastName.ForeColor = Color.Gray;
         }
 
-        public void formatting_tBPatronymic()
+        public void set_gray_text_in_tBPatronymic()
         {
             tBPatronymic.Text = "Введите отчество";
             tBPatronymic.ForeColor = Color.Gray;
         }
 
-        public void formatting_tBCity()
+        public void set_gray_text_in_tBCity()
         {
             tBCity.Text = "Введите город";
             tBCity.ForeColor = Color.Gray;
         }
 
-        public void formatting_tBDistrict()
+        public void set_gray_text_in_tBDistrict()
         {
             tBDistrict.Text = "Введите район";
             tBDistrict.ForeColor = Color.Gray;
         }
 
-        public void formatting_tBPhone()
+        public void set_gray_text_in_tBPhone()
         {
             tBPhone.Text = "Введите номер телефона";
             tBPhone.ForeColor = Color.Gray;
         }
 
-        public void formatting_tBEmail()
+        public void set_gray_text_in_tBEmail()
         {
             tBEmail.Text = "Введите email";
             tBEmail.ForeColor = Color.Gray;
         }
 
-        public void formatting_tBStatus()
+        public void set_gray_text_in_tBStatus()
         {
             tBStatus.Text = "Выберите статус";
             tBStatus.ForeColor = Color.Gray;
@@ -78,16 +78,29 @@ namespace MeoIS
         {
             InitializeComponent();
 
-            formatting_tBCity();
-            formatting_tBDistrict();
-            formatting_tBDocNumber();
-            formatting_tBEmail();
-            formatting_tBLastName();
-            formatting_tBNameUser();
-            formatting_tBPass();
-            formatting_tBPatronymic();
-            formatting_tBPhone();
-            formatting_tBStatus();
+            buttonReg.Visible = false;
+            buttonBack.Visible = false;
+            tBNameUser.Visible = false;
+            tBLastName.Visible = false;
+            tBPatronymic.Visible = false;
+            rBF.Visible = false;
+            rBM.Visible = false;
+            labelGender.Visible = false;
+            tBCity.Visible = false;
+            tBDistrict.Visible = false;
+            tBPhone.Visible = false;
+            tBEmail.Visible = false;
+
+            set_gray_text_in_tBCity();
+            set_gray_text_in_tBDistrict();
+            set_gray_text_in_tBDocumentNumber();
+            set_gray_text_in_tBEmail();
+            set_gray_text_in_tBLastName();
+            set_gray_text_in_tBNameUser();
+            set_gray_text_in_tBPass();
+            set_gray_text_in_tBPatronymic();
+            set_gray_text_in_tBPhone();
+            set_gray_text_in_tBStatus();
         }
 
         public Boolean checkLoggin()
@@ -113,8 +126,36 @@ namespace MeoIS
             }
         }
 
+        public Boolean сheckCompletedInputFields()
+        {
+            string[] mass = new string[] { tBDocNumber.Text, tBPass.Text, tBStatus.Text, tBNameUser.Text, tBLastName.Text, tBPatronymic.Text, tBPhone.Text, tBEmail.Text, tBCity.Text, tBDistrict.Text};
+            bool trouble = false;
+
+            for (int i = 0; i < 10; i++)
+            {
+                if (mass[i] == "" || mass[i].IndexOf("Введите") == 0)
+                {
+                    trouble = true;
+                }
+            }
+            if (trouble == true)
+            {
+                MessageBox.Show("Заполните все поля!");
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         private void buttonRegReg_Click(object sender, EventArgs e)
         {
+            if (сheckCompletedInputFields())
+            {
+                return;
+            }
+
             if (checkLoggin())
             {
                 return;
@@ -155,7 +196,7 @@ namespace MeoIS
         {
             if (tBDocNumber.Text == "")
             {
-                formatting_tBDocNumber();
+                set_gray_text_in_tBDocumentNumber();
             }
         }
 
@@ -173,7 +214,7 @@ namespace MeoIS
         {
             if (tBPass.Text == "")
             {
-                formatting_tBPass();
+                set_gray_text_in_tBPass();
             }
         }
 
@@ -190,7 +231,7 @@ namespace MeoIS
         {
             if (tBNameUser.Text == "")
             {
-                formatting_tBNameUser();
+                set_gray_text_in_tBNameUser();
             }
         }
 
@@ -207,7 +248,7 @@ namespace MeoIS
         {
             if (tBLastName.Text == "")
             {
-                formatting_tBLastName();
+                set_gray_text_in_tBLastName();
             }
         }
 
@@ -224,7 +265,7 @@ namespace MeoIS
         {
             if (tBPatronymic.Text == "")
             {
-                formatting_tBPatronymic();
+                set_gray_text_in_tBPatronymic();
             }
         }
 
@@ -241,7 +282,7 @@ namespace MeoIS
         {
             if (tBCity.Text == "")
             {
-                formatting_tBCity();
+                set_gray_text_in_tBCity();
             }
         }
 
@@ -258,7 +299,7 @@ namespace MeoIS
         {
             if (tBDistrict.Text == "")
             {
-                formatting_tBDistrict();
+                set_gray_text_in_tBDistrict();
             }
         }
 
@@ -275,7 +316,7 @@ namespace MeoIS
         {
             if (tBPhone.Text == "")
             {
-                formatting_tBPhone();
+                set_gray_text_in_tBPhone();
             }
         }
 
@@ -292,7 +333,7 @@ namespace MeoIS
         {
             if (tBEmail.Text == "")
             {
-                formatting_tBEmail();
+                set_gray_text_in_tBEmail();
             }
         }
 
@@ -309,9 +350,70 @@ namespace MeoIS
         {
             if (tBStatus.Text == "")
             {
-                formatting_tBStatus();
+                set_gray_text_in_tBStatus();
+            }
+        }
+
+        private void buttonContinue_Click(object sender, EventArgs e)
+        {
+            if(tBDocNumber.Visible == true)
+            {
+                tBDocNumber.Visible = false;
+                tBPass.Visible = false;
+                tBStatus.Visible = false;
+                tBLastName.Visible = true;
+                tBNameUser.Visible = true;
+                tBPatronymic.Visible = true;
+                rBF.Visible = true;
+                rBM.Visible = true;
+                labelGender.Visible = true;
+                buttonBack.Visible = true;
+            } else if (tBNameUser.Visible == true)
+            {
+                tBLastName.Visible = false;
+                tBNameUser.Visible = false;
+                tBPatronymic.Visible = false;
+                rBF.Visible = false;
+                rBM.Visible = false;
+                labelGender.Visible = false;
+                tBCity.Visible = true;
+                tBDistrict.Visible = true;
+                tBPhone.Visible = true;
+                tBEmail.Visible = true;
+                buttonReg.Visible = true;
+                buttonContinue.Visible = false;
+            } 
+        }
+
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+            if (tBNameUser.Visible == true)
+            {
+                tBDocNumber.Visible = true;
+                tBPass.Visible = true;
+                tBStatus.Visible = true;
+                tBLastName.Visible = false;
+                tBNameUser.Visible = false;
+                tBPatronymic.Visible = false;
+                rBF.Visible = false;
+                rBM.Visible = false;
+                labelGender.Visible = false;
+                buttonBack.Visible = false;
+            }
+            else if (tBCity.Visible == true)
+            {
+                tBLastName.Visible = true;
+                tBNameUser.Visible = true;
+                tBPatronymic.Visible = true;
+                tBCity.Visible = false;
+                tBDistrict.Visible = false;
+                tBPhone.Visible = false;
+                tBEmail.Visible = false;
+                rBF.Visible = true;
+                rBM.Visible = true;
+                labelGender.Visible = true;
+                buttonContinue.Visible = true;
             }
         }
     }
-    
 }
