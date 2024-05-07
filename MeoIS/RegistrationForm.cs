@@ -103,28 +103,7 @@ namespace MeoIS
             set_gray_text_in_tBStatus();
         }
 
-        public Boolean checkLoggin()
-        {
-            DataBase DB_Log = new DataBase();
-            DataTable table = new DataTable();
-
-            MySqlDataAdapter adapter = new MySqlDataAdapter();
-            MySqlCommand command = new MySqlCommand("SELECT * FROM `users` WHERE `document_number` = @Log", DB_Log.getConnection());
-            command.Parameters.Add("@Log", MySqlDbType.VarChar).Value = tBDocNumber.Text;
-
-            adapter.SelectCommand = command;
-            adapter.Fill(table);
-
-            if (table.Rows.Count > 0)
-            {
-                MessageBox.Show("Данный номер документа уже зарегистрирован!");
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
+        
 
         public Boolean сheckCompletedInputFields()
         {
@@ -151,12 +130,13 @@ namespace MeoIS
 
         private void buttonRegReg_Click(object sender, EventArgs e)
         {
+            LogIn log = new LogIn();
             if (сheckCompletedInputFields())
             {
                 return;
             }
 
-            if (checkLoggin())
+            if (log.check_document_number(tBDocNumber.Text))
             {
                 return;
             }
@@ -414,6 +394,11 @@ namespace MeoIS
                 labelGender.Visible = true;
                 buttonContinue.Visible = true;
             }
+        }
+
+        private void RegistrationForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            System.Diagnostics.Process.GetCurrentProcess().Kill();
         }
     }
 }

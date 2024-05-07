@@ -39,7 +39,7 @@ namespace MeoIS
         {
             MySqlDataAdapter adapter = new MySqlDataAdapter();
             MySqlCommand command = new MySqlCommand("INSERT INTO `users` (`document_number`, `password`, `last_name`, `name`, "+
-                "`patronymic`, `status`, `gender`, `city`, `phone_number`, `email`) VALUES (@documentNumber, @pass, @lastName, @name, @patronymic, @status, @gender, @city, @phone, @email);", getConnection());
+                "`patronymic`, `status`, `gender`, `city`, `phone_number`, `email`, `user_status`) VALUES (@documentNumber, @pass, @lastName, @name, @patronymic, @status, @gender, @city, @phone, @email, @userStatus);", getConnection());
             command.Parameters.Add("@documentNumber", MySqlDbType.VarChar).Value = documentNumber;
             command.Parameters.Add("@pass", MySqlDbType.VarChar).Value = pass;
             command.Parameters.Add("@lastName", MySqlDbType.VarChar).Value = lastName;
@@ -50,6 +50,7 @@ namespace MeoIS
             command.Parameters.Add("@city", MySqlDbType.VarChar).Value = city;
             command.Parameters.Add("@phone", MySqlDbType.VarChar).Value = phone;
             command.Parameters.Add("@email", MySqlDbType.VarChar).Value = email;
+            command.Parameters.Add("@userStatus", MySqlDbType.VarChar).Value = "user";
 
             openConnection();
 

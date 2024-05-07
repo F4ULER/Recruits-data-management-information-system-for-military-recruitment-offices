@@ -102,5 +102,12 @@ namespace MeoIS
             RegistrationForm reg = new RegistrationForm();
             reg.Show();
         }
+
+        private void AuthenticationForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            System.Diagnostics.Process.GetCurrentProcess().Kill();
+        }
+
+        
     }
 }
