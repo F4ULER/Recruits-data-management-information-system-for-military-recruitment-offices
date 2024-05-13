@@ -13,7 +13,7 @@ namespace MeoIS
     {
         public Boolean connect_DB(string column, string value, string message)
         {
-            DataBase DB = new DataBase();
+            DataBaseConnect DB = new DataBaseConnect();
             DataTable table = new DataTable();
 
             MySqlDataAdapter adapter = new MySqlDataAdapter();
@@ -37,30 +37,47 @@ namespace MeoIS
         public Boolean check_document_number(string documentNumber)
         {
             string message = "Данный номер документа уже зарегистрирован!";
-            connect_DB("document_number", documentNumber, message);
-
-            return true;
+            if(connect_DB("document_number", documentNumber, message) == true)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public Boolean check_email(string email)
         {
             string message = "Данный email уже зарегистрирован!";
-            connect_DB("document_number", email, message);
-
-            return true;
+            
+            if (connect_DB("email", email, message) == true)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public Boolean check_phone_number(string phone)
         {
             string message = "Данный номер телефона уже зарегистрирован!";
-            connect_DB("document_number", phone, message);
-
-            return true;
+            
+            if (connect_DB("phone_number", phone, message) == true)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public Boolean give_superrights(string documentNumber)
         {
-            DataBase DB = new DataBase();
+            DataBaseConnect DB = new DataBaseConnect();
             DataTable table = new DataTable();
 
             MySqlDataAdapter adapter = new MySqlDataAdapter();
@@ -72,12 +89,12 @@ namespace MeoIS
 
             if (table.Rows.Count > 0) 
             {
-                if (table.Rows[0][4].ToString() == "user")
+                DialogResult result = MessageBox.Show("Вы уверены, что хотите выдать права администратора" + 
+                    table.Rows[0][2].ToString() + " " + table.Rows[0][1].ToString() + " " + table.Rows[0][3].ToString() + "?", "Подтверждение", MessageBoxButtons.YesNo);
+                if (table.Rows[0][4].ToString() == "user" && result == DialogResult.Yes)
                 {
 
-                    MySqlCommand comm = new MySqlCommand("UPDATE `users` SET `user_status`= '@userStatus' WHERE `document_number` = '@DocNum';", DB.getConnection());
-                    comm.Parameters.Add("@DocNum", MySqlDbType.VarChar).Value = documentNumber;
-                    comm.Parameters.Add("@userStatus", MySqlDbType.VarChar).Value = "admin";
+                    MySqlCommand comm = new MySqlCommand("UPDATE `users` SET `user_status`= 'admin' WHERE `document_number` = '" + documentNumber + "';", DB.getConnection());
 
                     DB.openConnection();
 
@@ -86,7 +103,11 @@ namespace MeoIS
                         MessageBox.Show("Пользователю выданы права администратора.");
                         return true; 
                     }
-                    else { return false; }
+                    else 
+                    {
+                        MessageBox.Show("Ошибка!");
+                        return false; 
+                    }
 
                     DB.closeConnection();
                 }

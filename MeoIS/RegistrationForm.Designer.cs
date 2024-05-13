@@ -42,7 +42,7 @@ namespace MeoIS
             this.labelGender = new System.Windows.Forms.Label();
             this.rBM = new System.Windows.Forms.RadioButton();
             this.rBF = new System.Windows.Forms.RadioButton();
-            this.tBStatus = new System.Windows.Forms.TextBox();
+            this.tBCategory = new System.Windows.Forms.TextBox();
             this.buttonContinue = new System.Windows.Forms.Button();
             this.buttonBack = new System.Windows.Forms.Button();
             this.labelAuth = new System.Windows.Forms.Label();
@@ -193,16 +193,16 @@ namespace MeoIS
             this.rBF.Text = "Ж";
             this.rBF.UseVisualStyleBackColor = true;
             // 
-            // tBStatus
+            // tBCategory
             // 
-            this.tBStatus.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tBStatus.Location = new System.Drawing.Point(71, 296);
-            this.tBStatus.Multiline = true;
-            this.tBStatus.Name = "tBStatus";
-            this.tBStatus.Size = new System.Drawing.Size(398, 38);
-            this.tBStatus.TabIndex = 2811;
-            this.tBStatus.Enter += new System.EventHandler(this.tBStatus_Enter);
-            this.tBStatus.Leave += new System.EventHandler(this.tBStatus_Leave);
+            this.tBCategory.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tBCategory.Location = new System.Drawing.Point(71, 296);
+            this.tBCategory.Multiline = true;
+            this.tBCategory.Name = "tBCategory";
+            this.tBCategory.Size = new System.Drawing.Size(398, 38);
+            this.tBCategory.TabIndex = 2811;
+            this.tBCategory.Enter += new System.EventHandler(this.tBStatus_Enter);
+            this.tBCategory.Leave += new System.EventHandler(this.tBStatus_Leave);
             // 
             // buttonContinue
             // 
@@ -246,7 +246,7 @@ namespace MeoIS
             this.Controls.Add(this.labelAuth);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.buttonContinue);
-            this.Controls.Add(this.tBStatus);
+            this.Controls.Add(this.tBCategory);
             this.Controls.Add(this.rBF);
             this.Controls.Add(this.rBM);
             this.Controls.Add(this.labelGender);
@@ -285,7 +285,7 @@ namespace MeoIS
         private System.Windows.Forms.Label labelGender;
         private System.Windows.Forms.RadioButton rBM;
         private System.Windows.Forms.RadioButton rBF;
-        private System.Windows.Forms.TextBox tBStatus;
+        private System.Windows.Forms.TextBox tBCategory;
         private System.Windows.Forms.Button buttonContinue;
         private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.Label labelAuth;

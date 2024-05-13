@@ -70,8 +70,8 @@ namespace MeoIS
 
         public void set_gray_text_in_tBStatus()
         {
-            tBStatus.Text = "Выберите статус";
-            tBStatus.ForeColor = Color.Gray;
+            tBCategory.Text = "Выберите статус";
+            tBCategory.ForeColor = Color.Gray;
         }
 
         public RegistrationForm()
@@ -107,7 +107,7 @@ namespace MeoIS
 
         public Boolean сheckCompletedInputFields()
         {
-            string[] mass = new string[] { tBDocNumber.Text, tBPass.Text, tBStatus.Text, tBNameUser.Text, tBLastName.Text, tBPatronymic.Text, tBPhone.Text, tBEmail.Text, tBCity.Text, tBDistrict.Text};
+            string[] mass = new string[] { tBDocNumber.Text, tBPass.Text, tBCategory.Text, tBNameUser.Text, tBLastName.Text, tBPatronymic.Text, tBPhone.Text, tBEmail.Text, tBCity.Text, tBDistrict.Text};
             bool trouble = false;
 
             for (int i = 0; i < 10; i++)
@@ -141,7 +141,17 @@ namespace MeoIS
                 return;
             }
 
-            DataBase DB_Reg = new DataBase();
+            if (log.check_email(tBEmail.Text))
+            {
+                return;
+            }
+
+            if (log.check_phone_number(tBPhone.Text))
+            {
+                return;
+            }
+
+            DataBaseConnect DB_Reg = new DataBaseConnect();
             DataTable table = new DataTable();
 
             bool gender = true;
@@ -150,7 +160,7 @@ namespace MeoIS
                 gender = false;
             }
 
-            if (DB_Reg.addUser(tBDocNumber.Text, tBPass.Text, tBLastName.Text, tBNameUser.Text, tBPatronymic.Text, tBStatus.Text, gender, tBCity.Text, tBPhone.Text, tBEmail.Text))
+            if (DB_Reg.addUser(tBDocNumber.Text, tBPass.Text, tBLastName.Text, tBNameUser.Text, tBPatronymic.Text, tBCategory.Text, gender, tBCity.Text, tBPhone.Text, tBEmail.Text))
             {
                 MessageBox.Show("Регистрация прошла успешно!");
                 AuthenticationForm form = new AuthenticationForm();
@@ -319,16 +329,16 @@ namespace MeoIS
 
         private void tBStatus_Enter(object sender, EventArgs e)
         {
-            if (tBStatus.Text == "Выберите статус")
+            if (tBCategory.Text == "Выберите статус")
             {
-                tBStatus.Text = "";
-                tBStatus.ForeColor = Color.Black;
+                tBCategory.Text = "";
+                tBCategory.ForeColor = Color.Black;
             }
         }
 
         private void tBStatus_Leave(object sender, EventArgs e)
         {
-            if (tBStatus.Text == "")
+            if (tBCategory.Text == "")
             {
                 set_gray_text_in_tBStatus();
             }
@@ -340,7 +350,7 @@ namespace MeoIS
             {
                 tBDocNumber.Visible = false;
                 tBPass.Visible = false;
-                tBStatus.Visible = false;
+                tBCategory.Visible = false;
                 tBLastName.Visible = true;
                 tBNameUser.Visible = true;
                 tBPatronymic.Visible = true;
@@ -371,7 +381,7 @@ namespace MeoIS
             {
                 tBDocNumber.Visible = true;
                 tBPass.Visible = true;
-                tBStatus.Visible = true;
+                tBCategory.Visible = true;
                 tBLastName.Visible = false;
                 tBNameUser.Visible = false;
                 tBPatronymic.Visible = false;

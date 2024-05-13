@@ -30,7 +30,7 @@ namespace MeoIS
             string log = textBoxLogin.Text;
             string pass = textBoxPass.Text;
 
-            DataBase DB_users = new DataBase();
+            DataBaseConnect DB_users = new DataBaseConnect();
             DataTable table_users = new DataTable();
 
             MySqlDataAdapter adapter = new MySqlDataAdapter();

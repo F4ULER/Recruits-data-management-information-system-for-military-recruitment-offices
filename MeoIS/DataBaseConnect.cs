@@ -10,7 +10,7 @@ using MySql.Data.MySqlClient;
 
 namespace MeoIS
 {
-    class DataBase
+    class DataBaseConnect
     {
         //подключение к базе данных
         MySqlConnection connection = new MySqlConnection("server=localhost;port=3306;username=root;password=root;database=db_military_enlistment_office");
@@ -35,17 +35,17 @@ namespace MeoIS
             return connection;
         }
 
-        public bool addUser(string documentNumber, string pass, string lastName, string name, string patronymic, string status, bool gender, string city, string phone, string email)
+        public bool addUser(string documentNumber, string pass, string lastName, string name, string patronymic, string category, bool gender, string city, string phone, string email)
         {
             MySqlDataAdapter adapter = new MySqlDataAdapter();
             MySqlCommand command = new MySqlCommand("INSERT INTO `users` (`document_number`, `password`, `last_name`, `name`, "+
-                "`patronymic`, `status`, `gender`, `city`, `phone_number`, `email`, `user_status`) VALUES (@documentNumber, @pass, @lastName, @name, @patronymic, @status, @gender, @city, @phone, @email, @userStatus);", getConnection());
+                "`patronymic`, `category`, `gender`, `city`, `phone_number`, `email`, `user_status`) VALUES (@documentNumber, @pass, @lastName, @name, @patronymic, @status, @gender, @city, @phone, @email, @userStatus);", getConnection());
             command.Parameters.Add("@documentNumber", MySqlDbType.VarChar).Value = documentNumber;
             command.Parameters.Add("@pass", MySqlDbType.VarChar).Value = pass;
             command.Parameters.Add("@lastName", MySqlDbType.VarChar).Value = lastName;
             command.Parameters.Add("@name", MySqlDbType.VarChar).Value = name;
             command.Parameters.Add("@patronymic", MySqlDbType.VarChar).Value = patronymic;
-            command.Parameters.Add("@status", MySqlDbType.VarChar).Value = status;
+            command.Parameters.Add("@category", MySqlDbType.VarChar).Value = category;
             command.Parameters.Add("@gender", MySqlDbType.VarChar).Value = gender;
             command.Parameters.Add("@city", MySqlDbType.VarChar).Value = city;
             command.Parameters.Add("@phone", MySqlDbType.VarChar).Value = phone;
