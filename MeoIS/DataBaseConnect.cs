@@ -35,6 +35,19 @@ namespace MeoIS
             return connection;
         }
 
+        public Boolean change_item(string mess)
+        {
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            MySqlCommand command = new MySqlCommand(mess, getConnection());
+
+            openConnection();
+
+            if (command.ExecuteNonQuery() == 1) { return true; }
+            else { return false; }
+
+            closeConnection();
+        }
+
         public bool addUser(string documentNumber, string pass, string lastName, string name, string patronymic, string category, bool gender, string city, string phone, string email)
         {
             MySqlDataAdapter adapter = new MySqlDataAdapter();

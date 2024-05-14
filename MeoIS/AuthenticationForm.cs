@@ -46,7 +46,7 @@ namespace MeoIS
 
                 MessageBox.Show("Всё окэй");
 
-                //Transfer.Welcome = log;
+                Transfer.Doc_num = log;
                 MainForm form = new MainForm();
                 form.Show();
                 this.Hide();

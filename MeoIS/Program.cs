@@ -19,4 +19,10 @@ namespace MeoIS
             Application.Run(new AuthenticationForm());
         }
     }
+
+    static class Transfer
+    {
+        public static string Doc_num
+        { get; set; }
+    }
 }

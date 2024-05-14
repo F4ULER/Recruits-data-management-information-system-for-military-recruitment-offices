@@ -11,9 +11,9 @@ namespace MeoIS
     {
         public Boolean change_full_name(string documentNumber, string last_name, string name, string patronymic)
         {
-            string message = "UPDATE `users` SET`last_name`= " + last_name + ",`name`=" + name + ",`patronymic`=" + patronymic + " WHERE `document_number` = " + documentNumber;
+            string message = "UPDATE `users` SET`last_name`= '" + last_name + "',`name`='" + name + "',`patronymic`='" + patronymic + "' WHERE `document_number` = " + documentNumber;
 
-            if (change_item(message) == true)
+            if (DataBase.change_item(message) == true)
             {
                 MessageBox.Show("ФИО успешно изменены!");
                 return true;
@@ -26,9 +26,9 @@ namespace MeoIS
 
         public Boolean change_document_number(string phone, string value)
         {
-            string message = "UPDATE `users` SET `document_number` = " + value + " WHERE `phone_number`= " + phone;
+            string message = "UPDATE `users` SET `document_number` = '" + value + "' WHERE `phone_number`= " + phone;
 
-            if (change_item(message) == true)
+            if (DataBase.change_item(message) == true)
             {
                 MessageBox.Show("Номер документа успешно изменен!");
                 return true;
@@ -41,9 +41,9 @@ namespace MeoIS
 
         public Boolean change_category_of_suitability_for_military_service(string documentNumber, string value)
         {
-            string message = "UPDATE `users` SET `category` = " + value + " WHERE `document_number`= " + documentNumber;
+            string message = "UPDATE `users` SET `category` = '" + value + "' WHERE `document_number`= " + documentNumber;
 
-            if (change_item(message) == true)
+            if (DataBase.change_item(message) == true)
             {
                 MessageBox.Show("Категория успешно изменен!");
                 return true;

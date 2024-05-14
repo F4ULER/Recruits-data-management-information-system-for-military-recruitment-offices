@@ -11,27 +11,13 @@ namespace MeoIS
 {
     class UserAccount
     {
-        protected Boolean change_item(string mess)
-        {
-            DataBaseConnect DB = new DataBaseConnect();
-            DataTable table = new DataTable();
-
-            MySqlDataAdapter adapter = new MySqlDataAdapter();
-            MySqlCommand command = new MySqlCommand(mess, DB.getConnection());
-
-            DB.openConnection();
-
-            if (command.ExecuteNonQuery() == 1) { return true; }
-            else { return false; }
-
-            DB.closeConnection();
-        }
+        protected DataBaseConnect DataBase = new DataBaseConnect();
 
         public Boolean change_email(string documentNumber, string value)
         {
-            string message = "UPDATE `users` SET `email` = " + value + " WHERE `document_number`= " + documentNumber;
+            string message = "UPDATE `users` SET `email` = '" + value + "' WHERE `document_number`= " + documentNumber;
             
-            if (change_item(message) == true)
+            if (DataBase.change_item(message) == true)
             {
                 MessageBox.Show("Email успешно изменен!");
                 return true;
@@ -44,9 +30,9 @@ namespace MeoIS
 
         public Boolean change_password(string documentNumber, string value)
         {
-            string message = "UPDATE `users` SET `password` = " + value + " WHERE `document_number`= " + documentNumber;
+            string message = "UPDATE `users` SET `password` = '" + value + "' WHERE `document_number`= " + documentNumber;
 
-            if (change_item(message) == true)
+            if (DataBase.change_item(message) == true)
             {
                 MessageBox.Show("Пароль успешно изменен!");
                 return true;
@@ -59,9 +45,9 @@ namespace MeoIS
 
         public Boolean change_phone_number(string documentNumber, string value)
         {
-            string message = "UPDATE `users` SET `phone_number` = " + value + " WHERE `document_number`= " + documentNumber;
+            string message = "UPDATE `users` SET `phone_number` = '" + value + "' WHERE `document_number`= " + documentNumber;
 
-            if (change_item(message) == true)
+            if (DataBase.change_item(message) == true)
             {
                 MessageBox.Show("Номер телефона успешно изменен!");
                 return true;
