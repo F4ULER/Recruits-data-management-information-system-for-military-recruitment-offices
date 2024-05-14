@@ -17,7 +17,7 @@ namespace MeoIS
         {
             string message = "UPDATE `users` SET `email` = '" + value + "' WHERE `document_number`= " + documentNumber;
             
-            if (DataBase.change_item(message) == true)
+            if (DataBase.sending_command(message) == true)
             {
                 MessageBox.Show("Email успешно изменен!");
                 return true;
@@ -32,7 +32,7 @@ namespace MeoIS
         {
             string message = "UPDATE `users` SET `password` = '" + value + "' WHERE `document_number`= " + documentNumber;
 
-            if (DataBase.change_item(message) == true)
+            if (DataBase.sending_command(message) == true)
             {
                 MessageBox.Show("Пароль успешно изменен!");
                 return true;
@@ -47,7 +47,7 @@ namespace MeoIS
         {
             string message = "UPDATE `users` SET `phone_number` = '" + value + "' WHERE `document_number`= " + documentNumber;
 
-            if (DataBase.change_item(message) == true)
+            if (DataBase.sending_command(message) == true)
             {
                 MessageBox.Show("Номер телефона успешно изменен!");
                 return true;

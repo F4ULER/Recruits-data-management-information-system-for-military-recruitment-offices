@@ -50,6 +50,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Literature_guide.cs" />
+    <Compile Include="Search_note.cs" />
     <Compile Include="Military_registration_and_enlistment_office.cs" />
     <Compile Include="User_data.cs" />
     <Compile Include="UserAccount.cs" />

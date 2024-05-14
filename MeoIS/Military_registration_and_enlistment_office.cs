@@ -16,7 +16,7 @@ namespace MeoIS
             MessageBox.Show("Выберите военкомат по месту жительства:");
             string message = "UPDATE `users` SET `city` = '" + value + "' WHERE `document_number`= " + documentNumber;
 
-            if (DataBase.change_item(message) == true)
+            if (DataBase.sending_command(message) == true)
             {
                 MessageBox.Show("Военкомат выбран: " + value);
                 return true;
@@ -34,7 +34,7 @@ namespace MeoIS
             {
                 string message = "UPDATE `users` SET `city` = '" + value + "' WHERE `document_number`= " + documentNumber;
 
-                if (DataBase.change_item(message) == true)
+                if (DataBase.sending_command(message) == true)
                 {
                     MessageBox.Show("Военкомат изменен на " + value);
                     return true;

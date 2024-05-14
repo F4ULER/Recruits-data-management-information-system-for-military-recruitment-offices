@@ -13,7 +13,7 @@ namespace MeoIS
         {
             string message = "UPDATE `users` SET`last_name`= '" + last_name + "',`name`='" + name + "',`patronymic`='" + patronymic + "' WHERE `document_number` = " + documentNumber;
 
-            if (DataBase.change_item(message) == true)
+            if (DataBase.sending_command(message) == true)
             {
                 MessageBox.Show("ФИО успешно изменены!");
                 return true;
@@ -28,7 +28,7 @@ namespace MeoIS
         {
             string message = "UPDATE `users` SET `document_number` = '" + value + "' WHERE `phone_number`= " + phone;
 
-            if (DataBase.change_item(message) == true)
+            if (DataBase.sending_command(message) == true)
             {
                 MessageBox.Show("Номер документа успешно изменен!");
                 return true;
@@ -43,7 +43,7 @@ namespace MeoIS
         {
             string message = "UPDATE `users` SET `category` = '" + value + "' WHERE `document_number`= " + documentNumber;
 
-            if (DataBase.change_item(message) == true)
+            if (DataBase.sending_command(message) == true)
             {
                 MessageBox.Show("Категория успешно изменен!");
                 return true;

@@ -27,6 +27,7 @@ namespace MeoIS
 
         private void buttonAuthEnter_Click(object sender, EventArgs e)
         {
+
             string log = textBoxLogin.Text;
             string pass = textBoxPass.Text;
 

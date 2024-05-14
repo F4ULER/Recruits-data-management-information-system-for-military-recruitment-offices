@@ -35,22 +35,26 @@ namespace MeoIS
             return connection;
         }
 
-        public Boolean change_item(string mess)
+        public Boolean sending_command(string mess)
         {
-            MySqlDataAdapter adapter = new MySqlDataAdapter();
             MySqlCommand command = new MySqlCommand(mess, getConnection());
 
             openConnection();
 
-            if (command.ExecuteNonQuery() == 1) { return true; }
-            else { return false; }
-
-            closeConnection();
+            if (command.ExecuteNonQuery() == 1)
+            {
+                closeConnection(); 
+                return true; 
+            }
+            else
+            {
+                closeConnection(); 
+                return false; 
+            }
         }
 
         public bool addUser(string documentNumber, string pass, string lastName, string name, string patronymic, string category, bool gender, string city, string phone, string email)
         {
-            MySqlDataAdapter adapter = new MySqlDataAdapter();
             MySqlCommand command = new MySqlCommand("INSERT INTO `users` (`document_number`, `password`, `last_name`, `name`, "+
                 "`patronymic`, `category`, `gender`, `city`, `phone_number`, `email`, `user_status`) VALUES (@documentNumber, @pass, @lastName, @name, @patronymic, @status, @gender, @city, @phone, @email, @userStatus);", getConnection());
             command.Parameters.Add("@documentNumber", MySqlDbType.VarChar).Value = documentNumber;
