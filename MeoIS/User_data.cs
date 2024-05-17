@@ -20,6 +20,7 @@ namespace MeoIS
             }
             else
             {
+                MessageBox.Show("Ошибка!");
                 return false;
             }
         }
@@ -35,6 +36,7 @@ namespace MeoIS
             }
             else
             {
+                MessageBox.Show("Ошибка!");
                 return false;
             }
         }
@@ -50,8 +52,30 @@ namespace MeoIS
             }
             else
             {
+                MessageBox.Show("Ошибка!");
                 return false;
             }
+        }
+
+        public bool addUser(string documentNumber, string pass, string lastName, string name, string patronymic, string age, string category, bool gender, string phone, string email)
+        {
+            string message = "INSERT INTO `users` (`document_number`, `password`, `last_name`, `name`, " +
+                "`patronymic`, `age`, `category`, `gender`, `phone_number`, `email`, `user_status`) VALUES " +
+                "('" + documentNumber + "', '" + pass + "', '" + lastName + "', '" + name + "', '" + patronymic + "', '" + age + "', '" + category + "','" + gender + "', '" + phone + "', '" + email + "', 'user');";
+            
+            if (DataBase.sending_command(message) == true)
+            {
+                MessageBox.Show("Получилось!!!!");
+
+                return true;
+            }
+            else
+            {
+                MessageBox.Show("Не Получилось");
+
+                return false;
+            }
+
         }
     }
 }

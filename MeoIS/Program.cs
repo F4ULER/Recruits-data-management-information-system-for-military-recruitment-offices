@@ -16,13 +16,16 @@ namespace MeoIS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AuthenticationForm());
+            Application.Run(new MainForm());
         }
     }
 
     static class Transfer
     {
         public static string Doc_num
+        { get; set; }
+
+        public static string Verification
         { get; set; }
     }
 }

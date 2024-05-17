@@ -33,9 +33,7 @@ namespace MeoIS
             this.buttonReg = new System.Windows.Forms.Button();
             this.tBLastName = new System.Windows.Forms.TextBox();
             this.tBPatronymic = new System.Windows.Forms.TextBox();
-            this.tBCity = new System.Windows.Forms.TextBox();
             this.tBPass = new System.Windows.Forms.TextBox();
-            this.tBDistrict = new System.Windows.Forms.TextBox();
             this.tBEmail = new System.Windows.Forms.TextBox();
             this.tBNameUser = new System.Windows.Forms.TextBox();
             this.tBPhone = new System.Windows.Forms.TextBox();
@@ -46,6 +44,7 @@ namespace MeoIS
             this.buttonContinue = new System.Windows.Forms.Button();
             this.buttonBack = new System.Windows.Forms.Button();
             this.labelAuth = new System.Windows.Forms.Label();
+            this.tBAge = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // tBDocNumber
@@ -63,7 +62,7 @@ namespace MeoIS
             // 
             this.buttonReg.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.buttonReg.Font = new System.Drawing.Font("Monotype Corsiva", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonReg.Location = new System.Drawing.Point(71, 508);
+            this.buttonReg.Location = new System.Drawing.Point(80, 469);
             this.buttonReg.Name = "buttonReg";
             this.buttonReg.Size = new System.Drawing.Size(349, 76);
             this.buttonReg.TabIndex = 13;
@@ -93,17 +92,6 @@ namespace MeoIS
             this.tBPatronymic.Enter += new System.EventHandler(this.tBPatronymic_Enter);
             this.tBPatronymic.Leave += new System.EventHandler(this.tBPatronymic_Leave);
             // 
-            // tBCity
-            // 
-            this.tBCity.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tBCity.Location = new System.Drawing.Point(71, 287);
-            this.tBCity.Multiline = true;
-            this.tBCity.Name = "tBCity";
-            this.tBCity.Size = new System.Drawing.Size(398, 38);
-            this.tBCity.TabIndex = 7;
-            this.tBCity.Enter += new System.EventHandler(this.tBCity_Enter);
-            this.tBCity.Leave += new System.EventHandler(this.tBCity_Leave);
-            // 
             // tBPass
             // 
             this.tBPass.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -114,17 +102,6 @@ namespace MeoIS
             this.tBPass.TabIndex = 12;
             this.tBPass.Enter += new System.EventHandler(this.tBPass_Enter);
             this.tBPass.Leave += new System.EventHandler(this.tBPass_Leave);
-            // 
-            // tBDistrict
-            // 
-            this.tBDistrict.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tBDistrict.Location = new System.Drawing.Point(71, 372);
-            this.tBDistrict.Multiline = true;
-            this.tBDistrict.Name = "tBDistrict";
-            this.tBDistrict.Size = new System.Drawing.Size(398, 38);
-            this.tBDistrict.TabIndex = 8;
-            this.tBDistrict.Enter += new System.EventHandler(this.tBDistrict_Enter);
-            this.tBDistrict.Leave += new System.EventHandler(this.tBDistrict_Leave);
             // 
             // tBEmail
             // 
@@ -208,7 +185,7 @@ namespace MeoIS
             // 
             this.buttonContinue.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.buttonContinue.Font = new System.Drawing.Font("Monotype Corsiva", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonContinue.Location = new System.Drawing.Point(265, 436);
+            this.buttonContinue.Location = new System.Drawing.Point(274, 397);
             this.buttonContinue.Name = "buttonContinue";
             this.buttonContinue.Size = new System.Drawing.Size(120, 66);
             this.buttonContinue.TabIndex = 2812;
@@ -220,7 +197,7 @@ namespace MeoIS
             // 
             this.buttonBack.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.buttonBack.Font = new System.Drawing.Font("Monotype Corsiva", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonBack.Location = new System.Drawing.Point(103, 436);
+            this.buttonBack.Location = new System.Drawing.Point(112, 397);
             this.buttonBack.Name = "buttonBack";
             this.buttonBack.Size = new System.Drawing.Size(120, 66);
             this.buttonBack.TabIndex = 2813;
@@ -238,11 +215,23 @@ namespace MeoIS
             this.labelAuth.TabIndex = 2814;
             this.labelAuth.Text = "Регистрация";
             // 
+            // tBAge
+            // 
+            this.tBAge.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tBAge.Location = new System.Drawing.Point(71, 313);
+            this.tBAge.Multiline = true;
+            this.tBAge.Name = "tBAge";
+            this.tBAge.Size = new System.Drawing.Size(398, 38);
+            this.tBAge.TabIndex = 2815;
+            this.tBAge.Enter += new System.EventHandler(this.tBAge_Enter);
+            this.tBAge.Leave += new System.EventHandler(this.tBAge_Leave);
+            // 
             // RegistrationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(542, 623);
+            this.ClientSize = new System.Drawing.Size(542, 565);
+            this.Controls.Add(this.tBAge);
             this.Controls.Add(this.labelAuth);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.buttonContinue);
@@ -253,9 +242,7 @@ namespace MeoIS
             this.Controls.Add(this.tBPhone);
             this.Controls.Add(this.tBNameUser);
             this.Controls.Add(this.tBEmail);
-            this.Controls.Add(this.tBDistrict);
             this.Controls.Add(this.tBPass);
-            this.Controls.Add(this.tBCity);
             this.Controls.Add(this.tBPatronymic);
             this.Controls.Add(this.tBLastName);
             this.Controls.Add(this.tBDocNumber);
@@ -276,9 +263,7 @@ namespace MeoIS
         private System.Windows.Forms.Button buttonReg;
         private System.Windows.Forms.TextBox tBLastName;
         private System.Windows.Forms.TextBox tBPatronymic;
-        private System.Windows.Forms.TextBox tBCity;
         private System.Windows.Forms.TextBox tBPass;
-        private System.Windows.Forms.TextBox tBDistrict;
         private System.Windows.Forms.TextBox tBEmail;
         private System.Windows.Forms.TextBox tBNameUser;
         private System.Windows.Forms.TextBox tBPhone;
@@ -289,5 +274,6 @@ namespace MeoIS
         private System.Windows.Forms.Button buttonContinue;
         private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.Label labelAuth;
+        private System.Windows.Forms.TextBox tBAge;
     }
 }

@@ -50,6 +50,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Advanced_search.cs" />
+    <Compile Include="Collect_statistics.cs" />
     <Compile Include="Literature_guide.cs" />
     <Compile Include="Search_note.cs" />
     <Compile Include="Military_registration_and_enlistment_office.cs" />
@@ -117,6 +119,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pass_open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

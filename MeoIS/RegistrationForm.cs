@@ -44,16 +44,10 @@ namespace MeoIS
             tBPatronymic.ForeColor = Color.Gray;
         }
 
-        public void set_gray_text_in_tBCity()
+        public void set_grey_text_in_tBAge()
         {
-            tBCity.Text = "Введите город";
-            tBCity.ForeColor = Color.Gray;
-        }
-
-        public void set_gray_text_in_tBDistrict()
-        {
-            tBDistrict.Text = "Введите район";
-            tBDistrict.ForeColor = Color.Gray;
+            tBAge.Text = "Введите дату рождения";
+            tBAge.ForeColor = Color.Gray;
         }
 
         public void set_gray_text_in_tBPhone()
@@ -86,13 +80,11 @@ namespace MeoIS
             rBF.Visible = false;
             rBM.Visible = false;
             labelGender.Visible = false;
-            tBCity.Visible = false;
-            tBDistrict.Visible = false;
+            tBAge.Visible = false;
             tBPhone.Visible = false;
             tBEmail.Visible = false;
 
-            set_gray_text_in_tBCity();
-            set_gray_text_in_tBDistrict();
+            set_grey_text_in_tBAge();
             set_gray_text_in_tBDocumentNumber();
             set_gray_text_in_tBEmail();
             set_gray_text_in_tBLastName();
@@ -101,13 +93,14 @@ namespace MeoIS
             set_gray_text_in_tBPatronymic();
             set_gray_text_in_tBPhone();
             set_gray_text_in_tBStatus();
+            set_grey_text_in_tBAge();
         }
 
         
 
         public Boolean сheckCompletedInputFields()
         {
-            string[] mass = new string[] { tBDocNumber.Text, tBPass.Text, tBCategory.Text, tBNameUser.Text, tBLastName.Text, tBPatronymic.Text, tBPhone.Text, tBEmail.Text, tBCity.Text, tBDistrict.Text};
+            string[] mass = new string[] { tBDocNumber.Text, tBPass.Text, tBCategory.Text, tBNameUser.Text, tBLastName.Text, tBPatronymic.Text, tBAge.Text, tBPhone.Text, tBEmail.Text};
             bool trouble = false;
 
             for (int i = 0; i < 10; i++)
@@ -151,7 +144,7 @@ namespace MeoIS
                 return;
             }
 
-            DataBaseConnect DB_Reg = new DataBaseConnect();
+            User_data user_Data = new User_data();
             DataTable table = new DataTable();
 
             bool gender = true;
@@ -160,7 +153,7 @@ namespace MeoIS
                 gender = false;
             }
 
-            if (DB_Reg.addUser(tBDocNumber.Text, tBPass.Text, tBLastName.Text, tBNameUser.Text, tBPatronymic.Text, tBCategory.Text, gender, tBCity.Text, tBPhone.Text, tBEmail.Text))
+            if (user_Data.addUser(tBDocNumber.Text, tBPass.Text, tBLastName.Text, tBNameUser.Text, tBPatronymic.Text, tBAge.Text, tBCategory.Text, gender, tBPhone.Text, tBEmail.Text))
             {
                 MessageBox.Show("Регистрация прошла успешно!");
                 AuthenticationForm form = new AuthenticationForm();
@@ -259,40 +252,6 @@ namespace MeoIS
             }
         }
 
-        private void tBCity_Enter(object sender, EventArgs e)
-        {
-            if (tBCity.Text == "Введите город")
-            {
-                tBCity.Text = "";
-                tBCity.ForeColor = Color.Black;
-            }
-        }
-
-        private void tBCity_Leave(object sender, EventArgs e)
-        {
-            if (tBCity.Text == "")
-            {
-                set_gray_text_in_tBCity();
-            }
-        }
-
-        private void tBDistrict_Enter(object sender, EventArgs e)
-        {
-            if (tBDistrict.Text == "Введите район")
-            {
-                tBDistrict.Text = "";
-                tBDistrict.ForeColor = Color.Black;
-            }
-        }
-
-        private void tBDistrict_Leave(object sender, EventArgs e)
-        {
-            if (tBDistrict.Text == "")
-            {
-                set_gray_text_in_tBDistrict();
-            }
-        }
-
         private void tBPhone_Enter(object sender, EventArgs e)
         {
             if (tBPhone.Text == "Введите номер телефона")
@@ -343,6 +302,22 @@ namespace MeoIS
                 set_gray_text_in_tBStatus();
             }
         }
+        private void tBAge_Enter(object sender, EventArgs e)
+        {
+            if (tBAge.Text == "Введите дату рождения")
+            {
+                tBAge.Text = "";
+                tBAge.ForeColor = Color.Black;
+            }
+        }
+
+        private void tBAge_Leave(object sender, EventArgs e)
+        {
+            if (tBAge.Text == "")
+            {
+                set_grey_text_in_tBAge();
+            }
+        }
 
         private void buttonContinue_Click(object sender, EventArgs e)
         {
@@ -366,8 +341,7 @@ namespace MeoIS
                 rBF.Visible = false;
                 rBM.Visible = false;
                 labelGender.Visible = false;
-                tBCity.Visible = true;
-                tBDistrict.Visible = true;
+                tBAge.Visible = true;
                 tBPhone.Visible = true;
                 tBEmail.Visible = true;
                 buttonReg.Visible = true;
@@ -390,13 +364,12 @@ namespace MeoIS
                 labelGender.Visible = false;
                 buttonBack.Visible = false;
             }
-            else if (tBCity.Visible == true)
+            else if (tBAge.Visible == true)
             {
                 tBLastName.Visible = true;
                 tBNameUser.Visible = true;
                 tBPatronymic.Visible = true;
-                tBCity.Visible = false;
-                tBDistrict.Visible = false;
+                tBAge.Visible = false;
                 tBPhone.Visible = false;
                 tBEmail.Visible = false;
                 rBF.Visible = true;
@@ -410,5 +383,7 @@ namespace MeoIS
         {
             System.Diagnostics.Process.GetCurrentProcess().Kill();
         }
+
+      
     }
 }

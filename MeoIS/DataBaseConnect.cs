@@ -52,32 +52,5 @@ namespace MeoIS
                 return false; 
             }
         }
-
-        public bool addUser(string documentNumber, string pass, string lastName, string name, string patronymic, string category, bool gender, string city, string phone, string email)
-        {
-            MySqlCommand command = new MySqlCommand("INSERT INTO `users` (`document_number`, `password`, `last_name`, `name`, "+
-                "`patronymic`, `category`, `gender`, `city`, `phone_number`, `email`, `user_status`) VALUES (@documentNumber, @pass, @lastName, @name, @patronymic, @status, @gender, @city, @phone, @email, @userStatus);", getConnection());
-            command.Parameters.Add("@documentNumber", MySqlDbType.VarChar).Value = documentNumber;
-            command.Parameters.Add("@pass", MySqlDbType.VarChar).Value = pass;
-            command.Parameters.Add("@lastName", MySqlDbType.VarChar).Value = lastName;
-            command.Parameters.Add("@name", MySqlDbType.VarChar).Value = name;
-            command.Parameters.Add("@patronymic", MySqlDbType.VarChar).Value = patronymic;
-            command.Parameters.Add("@category", MySqlDbType.VarChar).Value = category;
-            command.Parameters.Add("@gender", MySqlDbType.VarChar).Value = gender;
-            command.Parameters.Add("@city", MySqlDbType.VarChar).Value = city;
-            command.Parameters.Add("@phone", MySqlDbType.VarChar).Value = phone;
-            command.Parameters.Add("@email", MySqlDbType.VarChar).Value = email;
-            command.Parameters.Add("@userStatus", MySqlDbType.VarChar).Value = "user";
-
-            openConnection();
-
-            if (command.ExecuteNonQuery() == 1) { return true; }
-            else { return false; }
-
-            closeConnection();
-        }
-
-
-
     }
 }

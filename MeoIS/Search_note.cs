@@ -13,9 +13,6 @@ namespace MeoIS
     {
         public DataBaseConnect DataBase = new DataBaseConnect();
 
-        public static string search_word
-        { get; set; }
-
         protected Boolean sending_command(string mess)
         {
             MySqlCommand command = new MySqlCommand(mess, DataBase.getConnection());
@@ -25,11 +22,15 @@ namespace MeoIS
             adapter.SelectCommand = command;
             adapter.Fill(table_literature);
 
-
             if (table_literature.Rows.Count > 0)
             {
-                //mainTable.DataSource = table_literature;
-                //mainTable.Visible = true;
+                MessageBox.Show(table_literature.Rows[0][1].ToString());
+
+                MainForm mainForm = new MainForm();
+                mainForm.dataGVLitTable.DataSource = table_literature;
+                
+                MessageBox.Show(mainForm.dataGVLitTable.Rows[0].Cells[1].Value.ToString());
+                
                 return true;
             }
             else
@@ -38,23 +39,29 @@ namespace MeoIS
             }
 
         }
-        public Boolean search_literature()
+
+        protected DataTable sending_command(string mess, bool i)
         {
-            string message = "SELECT `title_literature`, `author`, `year_release`, " +
-                "`summary` FROM `literature` WHERE `title_literature` = '" + search_word + "' || `author` = '" + search_word + "' || `year_release` = '" + search_word + "'";
-            
-            if(sending_command(message) == true)
-            {
+            MySqlCommand command = new MySqlCommand(mess, DataBase.getConnection());
+            DataTable table_literature = new DataTable();
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
 
-                MessageBox.Show("Получилось!!!!");
-                return true;
-            }
-            else
-            {
+            adapter.SelectCommand = command;
+            adapter.Fill(table_literature);
 
-                MessageBox.Show("Не Получилось");
-                return false; 
-            }
+            return table_literature;
+
         }
+
+        public DataTable search_literature(string search_word)
+        {
+            string message = "SELECT `title_literature` AS 'Название', `author` AS 'Автор', `year_release` AS 'Дата выхода', " +
+                "`summary` AS 'Краткое содержание', `date_added` AS 'Дата добавления' FROM `literature` WHERE `title_literature` = '" + search_word + "' || `author` = '" + search_word + "' || `year_release` = '" + search_word + "'";
+
+            return (sending_command(message, true));
+            
+        }
+
+        
     }
 }

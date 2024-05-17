@@ -81,7 +81,7 @@ namespace MeoIS
             DataTable table = new DataTable();
 
             MySqlDataAdapter adapter = new MySqlDataAdapter();
-            MySqlCommand command = new MySqlCommand("SELECT `document_number`, `name`,`last_name`, `patronymic`, `user_status` FROM `users` WHERE  `document_number` = @documentNumber", DB.getConnection());
+            MySqlCommand command = new MySqlCommand("SELECT `document_number`, `name`,`last_name`, `patronymic`, `age`, `user_status` FROM `users` WHERE  `document_number` = @documentNumber", DB.getConnection());
             command.Parameters.Add("@documentNumber", MySqlDbType.VarChar).Value = documentNumber;
 
             adapter.SelectCommand = command;
