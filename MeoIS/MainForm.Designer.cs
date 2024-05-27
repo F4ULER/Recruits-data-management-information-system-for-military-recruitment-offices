@@ -34,6 +34,9 @@ namespace MeoIS
             this.labelEnterReg = new System.Windows.Forms.Label();
             this.labelExit = new System.Windows.Forms.Label();
             this.dataGVLitTable = new System.Windows.Forms.DataGridView();
+            this.labelWelcome = new System.Windows.Forms.Label();
+            this.labelCategory = new System.Windows.Forms.Label();
+            this.labelRectal = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGVLitTable)).BeginInit();
             this.SuspendLayout();
@@ -64,11 +67,12 @@ namespace MeoIS
             this.labelEnterReg.AutoSize = true;
             this.labelEnterReg.Cursor = System.Windows.Forms.Cursors.Hand;
             this.labelEnterReg.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelEnterReg.Location = new System.Drawing.Point(12, 9);
+            this.labelEnterReg.Location = new System.Drawing.Point(12, 464);
             this.labelEnterReg.Name = "labelEnterReg";
             this.labelEnterReg.Size = new System.Drawing.Size(163, 22);
             this.labelEnterReg.TabIndex = 7;
             this.labelEnterReg.Text = "Вход/Регистрация";
+            this.labelEnterReg.Visible = false;
             this.labelEnterReg.Click += new System.EventHandler(this.labelEnterReg_Click);
             // 
             // labelExit
@@ -76,7 +80,7 @@ namespace MeoIS
             this.labelExit.AutoSize = true;
             this.labelExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.labelExit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelExit.Location = new System.Drawing.Point(12, 43);
+            this.labelExit.Location = new System.Drawing.Point(12, 498);
             this.labelExit.Name = "labelExit";
             this.labelExit.Size = new System.Drawing.Size(63, 22);
             this.labelExit.TabIndex = 8;
@@ -87,18 +91,50 @@ namespace MeoIS
             // dataGVLitTable
             // 
             this.dataGVLitTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGVLitTable.Location = new System.Drawing.Point(277, 112);
+            this.dataGVLitTable.Location = new System.Drawing.Point(246, 112);
             this.dataGVLitTable.Name = "dataGVLitTable";
             this.dataGVLitTable.RowHeadersWidth = 51;
             this.dataGVLitTable.RowTemplate.Height = 24;
             this.dataGVLitTable.Size = new System.Drawing.Size(696, 306);
             this.dataGVLitTable.TabIndex = 10;
+            this.dataGVLitTable.Visible = false;
+            // 
+            // labelWelcome
+            // 
+            this.labelWelcome.AutoSize = true;
+            this.labelWelcome.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelWelcome.Location = new System.Drawing.Point(10, 9);
+            this.labelWelcome.Name = "labelWelcome";
+            this.labelWelcome.Size = new System.Drawing.Size(54, 33);
+            this.labelWelcome.TabIndex = 11;
+            this.labelWelcome.Text = "test";
+            // 
+            // labelCategory
+            // 
+            this.labelCategory.AutoSize = true;
+            this.labelCategory.Location = new System.Drawing.Point(13, 66);
+            this.labelCategory.Name = "labelCategory";
+            this.labelCategory.Size = new System.Drawing.Size(77, 17);
+            this.labelCategory.TabIndex = 12;
+            this.labelCategory.Text = "Категория";
+            // 
+            // labelRectal
+            // 
+            this.labelRectal.AutoSize = true;
+            this.labelRectal.Location = new System.Drawing.Point(12, 112);
+            this.labelRectal.Name = "labelRectal";
+            this.labelRectal.Size = new System.Drawing.Size(80, 17);
+            this.labelRectal.TabIndex = 13;
+            this.labelRectal.Text = "Военкомат";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1199, 604);
+            this.Controls.Add(this.labelRectal);
+            this.Controls.Add(this.labelCategory);
+            this.Controls.Add(this.labelWelcome);
             this.Controls.Add(this.dataGVLitTable);
             this.Controls.Add(this.labelExit);
             this.Controls.Add(this.labelEnterReg);
@@ -118,9 +154,12 @@ namespace MeoIS
 
         private System.Windows.Forms.PictureBox picSearch;
         private System.Windows.Forms.TextBox tBSearch;
-        private System.Windows.Forms.Label labelEnterReg;
         private System.Windows.Forms.Label labelExit;
         public System.Windows.Forms.DataGridView dataGVLitTable;
+        public System.Windows.Forms.Label labelEnterReg;
+        private System.Windows.Forms.Label labelWelcome;
+        private System.Windows.Forms.Label labelCategory;
+        private System.Windows.Forms.Label labelRectal;
     }
 }
 

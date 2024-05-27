@@ -16,15 +16,30 @@ namespace MeoIS
         public MainForm()
         {
             InitializeComponent();
+            if(Transfer.Doc_num != "")
+            {
+                
+                //labelExit.Visible = true;
+                //labelEnterReg.Visible = false;
+                
+
+                labelWelcome.Text = "Добрый день, " + Transfer.Name;
+            }
+            else
+            {
+                labelWelcome.Visible = false;
+                
+                
+                //labelExit.Visible = false;
+                //labelEnterReg.Visible = true;
+               
+            }
         }
 
         private void labelEnterReg_Click(object sender, EventArgs e)
         {
-            labelEnterReg.Visible = false;
-            labelExit.Visible = true;
             AuthenticationForm form = new AuthenticationForm();
             form.Show();
-            
         }
 
         private void labelExit_Click(object sender, EventArgs e)
@@ -35,23 +50,26 @@ namespace MeoIS
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
+            //Закрытие всего приложения
             System.Diagnostics.Process.GetCurrentProcess().Kill();
         }
 
         private void picSearch_Click(object sender, EventArgs e)
         {
-            //dataGVLitTable.Rows[0].Cells[0].Value= "ХУЕТА";
             Search_note search = new Search_note();
             DataTable table = new DataTable();
             table = search.search_literature(tBSearch.Text);
             if(table.Rows.Count > 0)
             {
+
                 dataGVLitTable.DataSource = table;
+                dataGVLitTable.Visible = true;
             }
             else
             {
                 MessageBox.Show("Не найдено ни одной записи");
             }
         }
+
     }
 }

@@ -43,13 +43,13 @@ namespace MeoIS
 
             if (command.ExecuteNonQuery() == 1)
             {
-                closeConnection(); 
-                return true; 
+                closeConnection();
+                return true;
             }
             else
             {
-                closeConnection(); 
-                return false; 
+                closeConnection();
+                return false;
             }
         }
     }

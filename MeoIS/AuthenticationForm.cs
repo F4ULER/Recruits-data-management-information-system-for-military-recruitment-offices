@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Data;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -16,6 +17,8 @@ namespace MeoIS
         public AuthenticationForm()
         {
             InitializeComponent();
+
+            Transfer.Doc_num = "ERROR";
 
             textBoxLogin.Text = "Введите номер документа";
             textBoxLogin.ForeColor = Color.Gray;
@@ -45,12 +48,22 @@ namespace MeoIS
             if (table_users.Rows.Count > 0)
             {
 
-                MessageBox.Show("Всё окэй");
-
                 Transfer.Doc_num = log;
+                
+                for(int i = 3; i < 6; i++)
+                {
+                    Transfer.Name += table_users.Rows[0][i].ToString() + " ";
+                }
+
+                MessageBox.Show(Transfer.Name);
+                
                 MainForm form = new MainForm();
+
                 form.Show();
                 this.Hide();
+                
+
+               
             }
             else
             {
@@ -106,9 +119,17 @@ namespace MeoIS
 
         private void AuthenticationForm_FormClosed(object sender, FormClosedEventArgs e)
         {
+            //Закрытие всего приложения
             System.Diagnostics.Process.GetCurrentProcess().Kill();
         }
 
-        
+        private void buttonWithoutReg_Click(object sender, EventArgs e)
+        {
+            Transfer.Doc_num = "";
+            MainForm form = new MainForm();
+
+            form.Show();
+            this.Hide();
+        }
     }
 }

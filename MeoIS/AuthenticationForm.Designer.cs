@@ -36,6 +36,7 @@ namespace MeoIS
             this.pictureUser = new System.Windows.Forms.PictureBox();
             this.picturePass = new System.Windows.Forms.PictureBox();
             this.labelAuth = new System.Windows.Forms.Label();
+            this.buttonWithoutReg = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturePass)).BeginInit();
             this.SuspendLayout();
@@ -44,7 +45,7 @@ namespace MeoIS
             // 
             this.buttonAuthEnter.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.buttonAuthEnter.Font = new System.Drawing.Font("Monotype Corsiva", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonAuthEnter.Location = new System.Drawing.Point(190, 372);
+            this.buttonAuthEnter.Location = new System.Drawing.Point(191, 342);
             this.buttonAuthEnter.Name = "buttonAuthEnter";
             this.buttonAuthEnter.Size = new System.Drawing.Size(138, 76);
             this.buttonAuthEnter.TabIndex = 3;
@@ -56,7 +57,7 @@ namespace MeoIS
             // 
             this.buttonReg.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.buttonReg.Font = new System.Drawing.Font("Monotype Corsiva", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonReg.Location = new System.Drawing.Point(104, 474);
+            this.buttonReg.Location = new System.Drawing.Point(105, 444);
             this.buttonReg.Name = "buttonReg";
             this.buttonReg.Size = new System.Drawing.Size(318, 76);
             this.buttonReg.TabIndex = 4;
@@ -116,12 +117,25 @@ namespace MeoIS
             this.labelAuth.TabIndex = 6;
             this.labelAuth.Text = "Вход в систему";
             // 
+            // buttonWithoutReg
+            // 
+            this.buttonWithoutReg.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonWithoutReg.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonWithoutReg.Location = new System.Drawing.Point(182, 526);
+            this.buttonWithoutReg.Name = "buttonWithoutReg";
+            this.buttonWithoutReg.Size = new System.Drawing.Size(166, 85);
+            this.buttonWithoutReg.TabIndex = 7;
+            this.buttonWithoutReg.Text = "Продолжить без регистрации";
+            this.buttonWithoutReg.UseVisualStyleBackColor = false;
+            this.buttonWithoutReg.Click += new System.EventHandler(this.buttonWithoutReg_Click);
+            // 
             // AuthenticationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.ClientSize = new System.Drawing.Size(542, 623);
+            this.Controls.Add(this.buttonWithoutReg);
             this.Controls.Add(this.labelAuth);
             this.Controls.Add(this.picturePass);
             this.Controls.Add(this.pictureUser);
@@ -150,5 +164,6 @@ namespace MeoIS
         private System.Windows.Forms.PictureBox pictureUser;
         private System.Windows.Forms.PictureBox picturePass;
         private System.Windows.Forms.Label labelAuth;
+        private System.Windows.Forms.Button buttonWithoutReg;
     }
 }

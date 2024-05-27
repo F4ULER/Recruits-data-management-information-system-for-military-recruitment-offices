@@ -14,9 +14,10 @@ namespace MeoIS
         [STAThread]
         static void Main()
         {
+            Transfer.Doc_num = "";
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            Application.Run(new AuthenticationForm());
         }
     }
 
@@ -24,8 +25,8 @@ namespace MeoIS
     {
         public static string Doc_num
         { get; set; }
-
-        public static string Verification
+        public static string Name
         { get; set; }
+
     }
 }
