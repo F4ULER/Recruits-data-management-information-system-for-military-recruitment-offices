@@ -20,6 +20,7 @@ namespace MeoIS
             if (DataBase.sending_command(message) == true)
             {
                 MessageBox.Show("Email успешно изменен!");
+                Transfer.Email = value;
                 return true;
             }
             else
@@ -35,6 +36,7 @@ namespace MeoIS
             if (DataBase.sending_command(message) == true)
             {
                 MessageBox.Show("Пароль успешно изменен!");
+                Transfer.Pass = value;
                 return true;
             }
             else
@@ -50,6 +52,7 @@ namespace MeoIS
             if (DataBase.sending_command(message) == true)
             {
                 MessageBox.Show("Номер телефона успешно изменен!");
+                Transfer.Phone = value;
                 return true;
             }
             else

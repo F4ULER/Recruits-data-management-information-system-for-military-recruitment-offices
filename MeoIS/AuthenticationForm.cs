@@ -6,7 +6,6 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Data;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -54,9 +53,12 @@ namespace MeoIS
                 {
                     Transfer.Name += table_users.Rows[0][i].ToString() + " ";
                 }
+                Transfer.Category = table_users.Rows[0][7].ToString();
+                Transfer.City = table_users.Rows[0][9].ToString();
+                Transfer.Pass = pass;
+                Transfer.Email = table_users.Rows[0][11].ToString();
+                Transfer.Phone = table_users.Rows[0][10].ToString();
 
-                MessageBox.Show(Transfer.Name);
-                
                 MainForm form = new MainForm();
 
                 form.Show();

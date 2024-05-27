@@ -37,6 +37,7 @@ namespace MeoIS
                 if (DataBase.sending_command(message) == true)
                 {
                     MessageBox.Show("Военкомат изменен на " + value);
+                    Transfer.City = value;
                     return true;
                 }
                 else

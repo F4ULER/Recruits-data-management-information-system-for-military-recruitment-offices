@@ -25,8 +25,17 @@ namespace MeoIS
     {
         public static string Doc_num
         { get; set; }
+        public static string Pass
+        { get; set; }
         public static string Name
         { get; set; }
-
+        public static string Category
+        { get; set; }
+        public static string City
+        { get; set; }
+        public static string Email
+        { get; set; }
+        public static string Phone
+        { get; set; }
     }
 }

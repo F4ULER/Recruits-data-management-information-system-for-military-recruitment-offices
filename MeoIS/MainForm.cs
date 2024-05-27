@@ -24,6 +24,8 @@ namespace MeoIS
                 
 
                 labelWelcome.Text = "Добрый день, " + Transfer.Name;
+                labelCategory.Text = "Категория: " + Transfer.Category;
+                labelRectal.Text = "Военкомат: " + Transfer.City;
             }
             else
             {
@@ -71,5 +73,76 @@ namespace MeoIS
             }
         }
 
+        private void labelChangeMilitaryRegistrationOffice_Click(object sender, EventArgs e)
+        {
+            tBChangeMilitaryRegistrationOffice.Visible = true;
+            buttonChangeMilitaryRegistrationOffice.Visible = true;
+        }
+
+        private void buttonChangeMilitaryRegistrationOffice_Click(object sender, EventArgs e)
+        {
+            if (tBChangeMilitaryRegistrationOffice.Text == Transfer.City)
+            {
+                Military_registration_and_enlistment_office military_Registration = new Military_registration_and_enlistment_office();
+                military_Registration.change_military_registration_and_enlistment_office(Transfer.Doc_num, tBChangeMilitaryRegistrationOffice.Text);
+                
+                labelRectal.Text = "Военкомат: " + Transfer.City;
+                tBChangeMilitaryRegistrationOffice.Text = "";
+            }
+            tBChangeMilitaryRegistrationOffice.Visible = false;
+            buttonChangeMilitaryRegistrationOffice.Visible = false;
+        }
+
+        private void pictureOptions_Click(object sender, EventArgs e)
+        {
+            tBChangePass.Text = Transfer.Pass;
+            tBChangeEmail.Text = Transfer.Email;
+            tBCangePhone.Text = Transfer.Phone;
+
+            if(buttonChangeUserAccont.Visible == false)
+            {
+                labelChageEmail.Visible = true;
+                labelChangePhone.Visible = true;
+                labelChangePass.Visible = true;
+                tBCangePhone.Visible = true;
+                tBChangeEmail.Visible = true;
+                tBChangePass.Visible = true;
+                buttonChangeUserAccont.Visible = true;
+            } else
+            {
+                labelChageEmail.Visible = false;
+                labelChangePhone.Visible = false;
+                labelChangePass.Visible = false;
+                tBCangePhone.Visible = false;
+                tBChangeEmail.Visible = false;
+                tBChangePass.Visible = false;
+                buttonChangeUserAccont.Visible = false;
+            }
+        }
+
+        private void buttonChangeUserAccont_Click(object sender, EventArgs e)
+        {
+            if(tBCangePhone.Text != Transfer.Phone)
+            {
+                UserAccount account = new UserAccount();
+                account.change_phone_number(Transfer.Doc_num, tBCangePhone.Text);
+                tBCangePhone.Text = Transfer.Phone;
+            }
+
+            if (tBChangeEmail.Text != Transfer.Email)
+            {
+                UserAccount account = new UserAccount();
+                account.change_phone_number(Transfer.Doc_num, tBChangeEmail.Text);
+                tBChangeEmail.Text = Transfer.Email;
+            }
+
+            if (tBChangePass.Text != Transfer.Pass)
+            {
+                UserAccount account = new UserAccount();
+                account.change_phone_number(Transfer.Doc_num, tBChangePass.Text);
+                tBChangePass.Text = Transfer.Pass;
+            }
+
+        }
     }
 }
