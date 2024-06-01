@@ -25,4 +25,3 @@ C:\Users\User\source\repos\MeoIS\MeoIS\bin\Debug\System.Runtime.CompilerServices
 C:\Users\User\source\repos\MeoIS\MeoIS\bin\Debug\MySql.Data.xml
 C:\Users\User\source\repos\MeoIS\MeoIS\obj\Debug\MeoIS.exe.config
 C:\Users\User\source\repos\MeoIS\MeoIS\obj\Debug\MeoIS.csproj.CopyComplete
-C:\Users\User\source\repos\MeoIS\MeoIS\obj\Debug\MeoIS.csprojAssemblyReference.cache

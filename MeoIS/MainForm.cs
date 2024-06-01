@@ -110,6 +110,7 @@ namespace MeoIS
                 tBChangePass.Visible = false;
                 buttonChangeUserAccont.Visible = false;
             }
+
         }
 
         private void buttonChangeUserAccont_Click(object sender, EventArgs e)
@@ -150,5 +151,99 @@ namespace MeoIS
 
         }
 
+        private void monday_MouseMove(object sender, MouseEventArgs e)
+        {
+            monday.BackColor = Color.LightBlue;
+        }
+
+        private void monday_MouseLeave(object sender, EventArgs e)
+        {
+            monday.BackColor = Color.White;
+        }
+
+        private void Wednesday_MouseMove(object sender, MouseEventArgs e)
+        {
+            Wednesday.BackColor = Color.LightBlue;
+        }
+
+        private void Wednesday_MouseLeave(object sender, EventArgs e)
+        {
+            Wednesday.BackColor = Color.White;
+        }
+
+        private void Friday_MouseMove(object sender, MouseEventArgs e)
+        {
+            Friday.BackColor = Color.LightBlue;
+        }
+
+        private void Friday_MouseLeave(object sender, EventArgs e)
+        {
+            Friday.BackColor = Color.White;
+        }
+
+        private void cBMonday_MouseMove(object sender, MouseEventArgs e)
+        {
+            monday.BackColor = Color.LightBlue;
+        }
+
+        private void cBMonday_MouseLeave(object sender, EventArgs e)
+        {
+            monday.BackColor = Color.White;
+        }
+
+        private void cBWednesday_MouseMove(object sender, MouseEventArgs e)
+        {
+            Wednesday.BackColor = Color.LightBlue;
+        }
+
+        private void cBWednesday_MouseLeave(object sender, EventArgs e)
+        {
+            Wednesday.BackColor = Color.White;
+        }
+
+        private void cBFriday_MouseMove(object sender, MouseEventArgs e)
+        {
+            Friday.BackColor = Color.LightBlue;
+        }
+
+        private void cBFriday_MouseLeave(object sender, EventArgs e)
+        {
+            Friday.BackColor = Color.White;
+        }
+
+        private void labelRecordingCompleteMonday_MouseMove(object sender, MouseEventArgs e)
+        {
+            monday.BackColor = Color.LightBlue;
+        }
+
+        private void labelRecordingCompleteMonday_MouseLeave(object sender, EventArgs e)
+        {
+            monday.BackColor = Color.White;
+        }
+
+        private void labelRecordingCompleteWensday_MouseMove(object sender, MouseEventArgs e)
+        {
+            Wednesday.BackColor = Color.LightBlue;
+        }
+
+        private void labelRecordingCompleteWensday_MouseLeave(object sender, EventArgs e)
+        {
+            Wednesday.BackColor = Color.White;
+        }
+
+        private void labelRecordingCompleteFriday_MouseMove(object sender, MouseEventArgs e)
+        {
+            Friday.BackColor = Color.LightBlue;
+        }
+
+        private void labelRecordingCompleteFriday_MouseLeave(object sender, EventArgs e)
+        {
+            Friday.BackColor = Color.White;
+        }
+
+        private void buttonMed_Click(object sender, EventArgs e)
+        {
+            tabControlMenuServices.Visible = false;
+        }
     }
 }

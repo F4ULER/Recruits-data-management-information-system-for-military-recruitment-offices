@@ -56,11 +56,31 @@ namespace MeoIS
             this.label1 = new System.Windows.Forms.Label();
             this.tPMed = new System.Windows.Forms.TabPage();
             this.tPChange = new System.Windows.Forms.TabPage();
+            this.label4 = new System.Windows.Forms.Label();
+            this.monday = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.Friday = new System.Windows.Forms.TableLayoutPanel();
+            this.Wednesday = new System.Windows.Forms.TableLayoutPanel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.cBMonday = new System.Windows.Forms.ComboBox();
+            this.labelRecordingCompleteMonday = new System.Windows.Forms.Label();
+            this.cBWednesday = new System.Windows.Forms.ComboBox();
+            this.labelRecordingCompleteWensday = new System.Windows.Forms.Label();
+            this.cBFriday = new System.Windows.Forms.ComboBox();
+            this.labelRecordingCompleteFriday = new System.Windows.Forms.Label();
+            this.buttonMed = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGVLitTable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureOptions)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSearch)).BeginInit();
             this.tabControlMenuServices.SuspendLayout();
             this.tPReg.SuspendLayout();
+            this.tPMed.SuspendLayout();
+            this.monday.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.Friday.SuspendLayout();
+            this.Wednesday.SuspendLayout();
             this.SuspendLayout();
             // 
             // tBSearch
@@ -248,10 +268,10 @@ namespace MeoIS
             this.tabControlMenuServices.Controls.Add(this.tPReg);
             this.tabControlMenuServices.Controls.Add(this.tPMed);
             this.tabControlMenuServices.Controls.Add(this.tPChange);
-            this.tabControlMenuServices.Location = new System.Drawing.Point(224, 66);
+            this.tabControlMenuServices.Location = new System.Drawing.Point(272, 0);
             this.tabControlMenuServices.Name = "tabControlMenuServices";
             this.tabControlMenuServices.SelectedIndex = 0;
-            this.tabControlMenuServices.Size = new System.Drawing.Size(908, 460);
+            this.tabControlMenuServices.Size = new System.Drawing.Size(815, 453);
             this.tabControlMenuServices.TabIndex = 25;
             // 
             // tPReg
@@ -265,7 +285,7 @@ namespace MeoIS
             this.tPReg.Location = new System.Drawing.Point(4, 25);
             this.tPReg.Name = "tPReg";
             this.tPReg.Padding = new System.Windows.Forms.Padding(3);
-            this.tPReg.Size = new System.Drawing.Size(900, 431);
+            this.tPReg.Size = new System.Drawing.Size(807, 424);
             this.tPReg.TabIndex = 0;
             this.tPReg.Text = "Постановка на учет";
             this.tPReg.UseVisualStyleBackColor = true;
@@ -331,10 +351,14 @@ namespace MeoIS
             // 
             // tPMed
             // 
+            this.tPMed.Controls.Add(this.buttonMed);
+            this.tPMed.Controls.Add(this.label4);
+            this.tPMed.Controls.Add(this.tableLayoutPanel1);
+            this.tPMed.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tPMed.Location = new System.Drawing.Point(4, 25);
             this.tPMed.Name = "tPMed";
             this.tPMed.Padding = new System.Windows.Forms.Padding(3);
-            this.tPMed.Size = new System.Drawing.Size(1194, 573);
+            this.tPMed.Size = new System.Drawing.Size(807, 424);
             this.tPMed.TabIndex = 1;
             this.tPMed.Text = "Медицинский осмотр";
             this.tPMed.UseVisualStyleBackColor = true;
@@ -344,10 +368,290 @@ namespace MeoIS
             this.tPChange.Location = new System.Drawing.Point(4, 25);
             this.tPChange.Name = "tPChange";
             this.tPChange.Padding = new System.Windows.Forms.Padding(3);
-            this.tPChange.Size = new System.Drawing.Size(1194, 573);
+            this.tPChange.Size = new System.Drawing.Size(943, 575);
             this.tPChange.TabIndex = 2;
             this.tPChange.Text = "Смена места учебы/работы";
             this.tPChange.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(73, 57);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(558, 43);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Запись на медицинский осмотр";
+            // 
+            // monday
+            // 
+            this.monday.AccessibleRole = System.Windows.Forms.AccessibleRole.Cursor;
+            this.monday.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.monday.ColumnCount = 1;
+            this.monday.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.monday.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.monday.Controls.Add(this.labelRecordingCompleteMonday, 0, 1);
+            this.monday.Controls.Add(this.cBMonday, 0, 0);
+            this.monday.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.monday.Location = new System.Drawing.Point(6, 125);
+            this.monday.Name = "monday";
+            this.monday.RowCount = 2;
+            this.monday.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.monday.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 57F));
+            this.monday.Size = new System.Drawing.Size(145, 110);
+            this.monday.TabIndex = 0;
+            this.monday.MouseLeave += new System.EventHandler(this.monday_MouseLeave);
+            this.monday.MouseMove += new System.Windows.Forms.MouseEventHandler(this.monday_MouseMove);
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.OutsetPartial;
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33332F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Controls.Add(this.label9, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label7, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.Wednesday, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.monday, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.Friday, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label5, 0, 0);
+            this.tableLayoutPanel1.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(115, 114);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(468, 241);
+            this.tableLayoutPanel1.TabIndex = 2;
+            // 
+            // Friday
+            // 
+            this.Friday.AccessibleRole = System.Windows.Forms.AccessibleRole.Cursor;
+            this.Friday.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Friday.ColumnCount = 1;
+            this.Friday.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.Friday.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.Friday.Controls.Add(this.labelRecordingCompleteFriday, 0, 1);
+            this.Friday.Controls.Add(this.cBFriday, 0, 0);
+            this.Friday.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Friday.Location = new System.Drawing.Point(314, 125);
+            this.Friday.Name = "Friday";
+            this.Friday.RowCount = 2;
+            this.Friday.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.Friday.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 56F));
+            this.Friday.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.Friday.Size = new System.Drawing.Size(148, 110);
+            this.Friday.TabIndex = 1;
+            this.Friday.MouseLeave += new System.EventHandler(this.Friday_MouseLeave);
+            this.Friday.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Friday_MouseMove);
+            // 
+            // Wednesday
+            // 
+            this.Wednesday.AccessibleRole = System.Windows.Forms.AccessibleRole.Cursor;
+            this.Wednesday.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Wednesday.ColumnCount = 1;
+            this.Wednesday.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.Wednesday.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.Wednesday.Controls.Add(this.labelRecordingCompleteWensday, 0, 1);
+            this.Wednesday.Controls.Add(this.cBWednesday, 0, 0);
+            this.Wednesday.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Wednesday.Location = new System.Drawing.Point(160, 125);
+            this.Wednesday.Name = "Wednesday";
+            this.Wednesday.RowCount = 2;
+            this.Wednesday.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.Wednesday.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 57F));
+            this.Wednesday.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.Wednesday.Size = new System.Drawing.Size(145, 110);
+            this.Wednesday.TabIndex = 1;
+            this.Wednesday.MouseLeave += new System.EventHandler(this.Wednesday_MouseLeave);
+            this.Wednesday.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Wednesday_MouseMove);
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Location = new System.Drawing.Point(20, 50);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(116, 21);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Понедельник";
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.Location = new System.Drawing.Point(203, 50);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(59, 21);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "Среда";
+            // 
+            // label9
+            // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label9.Location = new System.Drawing.Point(349, 50);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(78, 21);
+            this.label9.TabIndex = 7;
+            this.label9.Text = "Пятница";
+            // 
+            // cBMonday
+            // 
+            this.cBMonday.AutoCompleteCustomSource.AddRange(new string[] {
+            "9:00",
+            "10:00",
+            "11:00",
+            "12:00",
+            "14:00",
+            "15:00",
+            "16:00",
+            "17:00"});
+            this.cBMonday.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.cBMonday.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cBMonday.FormattingEnabled = true;
+            this.cBMonday.Items.AddRange(new object[] {
+            "9:00",
+            "10:00",
+            "11:00",
+            "12:00",
+            "14:00",
+            "15:00",
+            "16:00"});
+            this.cBMonday.Location = new System.Drawing.Point(3, 26);
+            this.cBMonday.Name = "cBMonday";
+            this.cBMonday.Size = new System.Drawing.Size(139, 24);
+            this.cBMonday.TabIndex = 5;
+            this.cBMonday.MouseLeave += new System.EventHandler(this.cBMonday_MouseLeave);
+            this.cBMonday.MouseMove += new System.Windows.Forms.MouseEventHandler(this.cBMonday_MouseMove);
+            // 
+            // labelRecordingCompleteMonday
+            // 
+            this.labelRecordingCompleteMonday.AutoSize = true;
+            this.labelRecordingCompleteMonday.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.labelRecordingCompleteMonday.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelRecordingCompleteMonday.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelRecordingCompleteMonday.Location = new System.Drawing.Point(3, 68);
+            this.labelRecordingCompleteMonday.Name = "labelRecordingCompleteMonday";
+            this.labelRecordingCompleteMonday.Size = new System.Drawing.Size(139, 42);
+            this.labelRecordingCompleteMonday.TabIndex = 6;
+            this.labelRecordingCompleteMonday.Text = "Запись завершена";
+            this.labelRecordingCompleteMonday.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelRecordingCompleteMonday.Visible = false;
+            this.labelRecordingCompleteMonday.MouseLeave += new System.EventHandler(this.labelRecordingCompleteMonday_MouseLeave);
+            this.labelRecordingCompleteMonday.MouseMove += new System.Windows.Forms.MouseEventHandler(this.labelRecordingCompleteMonday_MouseMove);
+            // 
+            // cBWednesday
+            // 
+            this.cBWednesday.AutoCompleteCustomSource.AddRange(new string[] {
+            "9:00",
+            "10:00",
+            "11:00",
+            "12:00",
+            "14:00",
+            "15:00",
+            "16:00",
+            "17:00"});
+            this.cBWednesday.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.cBWednesday.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cBWednesday.FormattingEnabled = true;
+            this.cBWednesday.Items.AddRange(new object[] {
+            "9:00",
+            "10:00",
+            "11:00",
+            "12:00",
+            "14:00",
+            "15:00",
+            "16:00"});
+            this.cBWednesday.Location = new System.Drawing.Point(3, 26);
+            this.cBWednesday.Name = "cBWednesday";
+            this.cBWednesday.Size = new System.Drawing.Size(139, 24);
+            this.cBWednesday.TabIndex = 7;
+            this.cBWednesday.MouseLeave += new System.EventHandler(this.cBWednesday_MouseLeave);
+            this.cBWednesday.MouseMove += new System.Windows.Forms.MouseEventHandler(this.cBWednesday_MouseMove);
+            // 
+            // labelRecordingCompleteWensday
+            // 
+            this.labelRecordingCompleteWensday.AutoSize = true;
+            this.labelRecordingCompleteWensday.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.labelRecordingCompleteWensday.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelRecordingCompleteWensday.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelRecordingCompleteWensday.Location = new System.Drawing.Point(3, 68);
+            this.labelRecordingCompleteWensday.Name = "labelRecordingCompleteWensday";
+            this.labelRecordingCompleteWensday.Size = new System.Drawing.Size(139, 42);
+            this.labelRecordingCompleteWensday.TabIndex = 8;
+            this.labelRecordingCompleteWensday.Text = "Запись завершена";
+            this.labelRecordingCompleteWensday.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelRecordingCompleteWensday.Visible = false;
+            this.labelRecordingCompleteWensday.MouseLeave += new System.EventHandler(this.labelRecordingCompleteWensday_MouseLeave);
+            this.labelRecordingCompleteWensday.MouseMove += new System.Windows.Forms.MouseEventHandler(this.labelRecordingCompleteWensday_MouseMove);
+            // 
+            // cBFriday
+            // 
+            this.cBFriday.AutoCompleteCustomSource.AddRange(new string[] {
+            "9:00",
+            "10:00",
+            "11:00",
+            "12:00",
+            "14:00",
+            "15:00",
+            "16:00",
+            "17:00"});
+            this.cBFriday.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.cBFriday.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cBFriday.FormattingEnabled = true;
+            this.cBFriday.Items.AddRange(new object[] {
+            "9:00",
+            "10:00",
+            "11:00",
+            "12:00",
+            "14:00",
+            "15:00",
+            "16:00"});
+            this.cBFriday.Location = new System.Drawing.Point(3, 27);
+            this.cBFriday.Name = "cBFriday";
+            this.cBFriday.Size = new System.Drawing.Size(142, 24);
+            this.cBFriday.TabIndex = 9;
+            this.cBFriday.MouseLeave += new System.EventHandler(this.cBFriday_MouseLeave);
+            this.cBFriday.MouseMove += new System.Windows.Forms.MouseEventHandler(this.cBFriday_MouseMove);
+            // 
+            // labelRecordingCompleteFriday
+            // 
+            this.labelRecordingCompleteFriday.AutoSize = true;
+            this.labelRecordingCompleteFriday.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.labelRecordingCompleteFriday.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelRecordingCompleteFriday.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelRecordingCompleteFriday.Location = new System.Drawing.Point(3, 68);
+            this.labelRecordingCompleteFriday.Name = "labelRecordingCompleteFriday";
+            this.labelRecordingCompleteFriday.Size = new System.Drawing.Size(142, 42);
+            this.labelRecordingCompleteFriday.TabIndex = 10;
+            this.labelRecordingCompleteFriday.Text = "Запись завершена";
+            this.labelRecordingCompleteFriday.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelRecordingCompleteFriday.Visible = false;
+            this.labelRecordingCompleteFriday.MouseLeave += new System.EventHandler(this.labelRecordingCompleteFriday_MouseLeave);
+            this.labelRecordingCompleteFriday.MouseMove += new System.Windows.Forms.MouseEventHandler(this.labelRecordingCompleteFriday_MouseMove);
+            // 
+            // buttonMed
+            // 
+            this.buttonMed.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonMed.Location = new System.Drawing.Point(282, 364);
+            this.buttonMed.Name = "buttonMed";
+            this.buttonMed.Size = new System.Drawing.Size(165, 54);
+            this.buttonMed.TabIndex = 31;
+            this.buttonMed.Text = "Записаться";
+            this.buttonMed.UseVisualStyleBackColor = true;
+            this.buttonMed.Click += new System.EventHandler(this.buttonMed_Click);
             // 
             // MainForm
             // 
@@ -381,6 +685,16 @@ namespace MeoIS
             this.tabControlMenuServices.ResumeLayout(false);
             this.tPReg.ResumeLayout(false);
             this.tPReg.PerformLayout();
+            this.tPMed.ResumeLayout(false);
+            this.tPMed.PerformLayout();
+            this.monday.ResumeLayout(false);
+            this.monday.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            this.Friday.ResumeLayout(false);
+            this.Friday.PerformLayout();
+            this.Wednesday.ResumeLayout(false);
+            this.Wednesday.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -415,6 +729,21 @@ namespace MeoIS
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tBNewAddress;
         private System.Windows.Forms.Button buttonOldEnlistmentOffice;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel monday;
+        private System.Windows.Forms.TableLayoutPanel Wednesday;
+        private System.Windows.Forms.TableLayoutPanel Friday;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label labelRecordingCompleteMonday;
+        private System.Windows.Forms.ComboBox cBMonday;
+        private System.Windows.Forms.Label labelRecordingCompleteWensday;
+        private System.Windows.Forms.ComboBox cBWednesday;
+        private System.Windows.Forms.Label labelRecordingCompleteFriday;
+        private System.Windows.Forms.ComboBox cBFriday;
+        private System.Windows.Forms.Button buttonMed;
     }
 }
 
