@@ -57,7 +57,7 @@ namespace MeoIS
             // 
             this.buttonReg.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.buttonReg.Font = new System.Drawing.Font("Monotype Corsiva", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonReg.Location = new System.Drawing.Point(105, 444);
+            this.buttonReg.Location = new System.Drawing.Point(99, 435);
             this.buttonReg.Name = "buttonReg";
             this.buttonReg.Size = new System.Drawing.Size(318, 76);
             this.buttonReg.TabIndex = 4;

@@ -29,14 +29,18 @@ namespace MeoIS
 
         public Boolean change_military_registration_and_enlistment_office(string documentNumber, string value)
         {
-            DialogResult result = MessageBox.Show("Вы хотите поменять военкомат?", "Смена военкомата", MessageBoxButtons.YesNo);
+            DialogResult result = MessageBox.Show(
+                "Вы хотите встать на учет в военкомате города " + value + "?",
+                "Постановка на учет",
+                MessageBoxButtons.YesNo);
+
             if (result == DialogResult.Yes)
             {
                 string message = "UPDATE `users` SET `city` = '" + value + "' WHERE `document_number`= " + documentNumber;
 
                 if (DataBase.sending_command(message) == true)
                 {
-                    MessageBox.Show("Военкомат изменен на " + value);
+                    MessageBox.Show("Вы встали на учет в военкомат города " + value + ".");
                     Transfer.City = value;
                     return true;
                 }

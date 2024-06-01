@@ -37,8 +37,6 @@ namespace MeoIS
             this.labelCategory = new System.Windows.Forms.Label();
             this.labelRectal = new System.Windows.Forms.Label();
             this.labelChangeMilitaryRegistrationOffice = new System.Windows.Forms.Label();
-            this.tBChangeMilitaryRegistrationOffice = new System.Windows.Forms.TextBox();
-            this.buttonChangeMilitaryRegistrationOffice = new System.Windows.Forms.Button();
             this.pictureOptions = new System.Windows.Forms.PictureBox();
             this.picSearch = new System.Windows.Forms.PictureBox();
             this.tBChangePass = new System.Windows.Forms.TextBox();
@@ -48,9 +46,21 @@ namespace MeoIS
             this.labelChangePhone = new System.Windows.Forms.Label();
             this.labelChangePass = new System.Windows.Forms.Label();
             this.buttonChangeUserAccont = new System.Windows.Forms.Button();
+            this.tabControlMenuServices = new System.Windows.Forms.TabControl();
+            this.tPReg = new System.Windows.Forms.TabPage();
+            this.buttonOldEnlistmentOffice = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tBNewAddress = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tBEnlistmentOfficeWhereRegistered = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tPMed = new System.Windows.Forms.TabPage();
+            this.tPChange = new System.Windows.Forms.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.dataGVLitTable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureOptions)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSearch)).BeginInit();
+            this.tabControlMenuServices.SuspendLayout();
+            this.tPReg.SuspendLayout();
             this.SuspendLayout();
             // 
             // tBSearch
@@ -91,11 +101,11 @@ namespace MeoIS
             // dataGVLitTable
             // 
             this.dataGVLitTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGVLitTable.Location = new System.Drawing.Point(247, 168);
+            this.dataGVLitTable.Location = new System.Drawing.Point(272, 84);
             this.dataGVLitTable.Name = "dataGVLitTable";
             this.dataGVLitTable.RowHeadersWidth = 51;
             this.dataGVLitTable.RowTemplate.Height = 24;
-            this.dataGVLitTable.Size = new System.Drawing.Size(696, 306);
+            this.dataGVLitTable.Size = new System.Drawing.Size(713, 489);
             this.dataGVLitTable.TabIndex = 10;
             this.dataGVLitTable.Visible = false;
             // 
@@ -123,9 +133,9 @@ namespace MeoIS
             this.labelRectal.AutoSize = true;
             this.labelRectal.Location = new System.Drawing.Point(12, 112);
             this.labelRectal.Name = "labelRectal";
-            this.labelRectal.Size = new System.Drawing.Size(80, 17);
+            this.labelRectal.Size = new System.Drawing.Size(129, 17);
             this.labelRectal.TabIndex = 13;
-            this.labelRectal.Text = "Военкомат";
+            this.labelRectal.Text = "Военкомат города";
             // 
             // labelChangeMilitaryRegistrationOffice
             // 
@@ -137,27 +147,6 @@ namespace MeoIS
             this.labelChangeMilitaryRegistrationOffice.TabIndex = 14;
             this.labelChangeMilitaryRegistrationOffice.Text = "(Смена военкомат)";
             this.labelChangeMilitaryRegistrationOffice.Click += new System.EventHandler(this.labelChangeMilitaryRegistrationOffice_Click);
-            // 
-            // tBChangeMilitaryRegistrationOffice
-            // 
-            this.tBChangeMilitaryRegistrationOffice.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tBChangeMilitaryRegistrationOffice.Location = new System.Drawing.Point(12, 159);
-            this.tBChangeMilitaryRegistrationOffice.Multiline = true;
-            this.tBChangeMilitaryRegistrationOffice.Name = "tBChangeMilitaryRegistrationOffice";
-            this.tBChangeMilitaryRegistrationOffice.Size = new System.Drawing.Size(131, 27);
-            this.tBChangeMilitaryRegistrationOffice.TabIndex = 15;
-            this.tBChangeMilitaryRegistrationOffice.Visible = false;
-            // 
-            // buttonChangeMilitaryRegistrationOffice
-            // 
-            this.buttonChangeMilitaryRegistrationOffice.Location = new System.Drawing.Point(39, 192);
-            this.buttonChangeMilitaryRegistrationOffice.Name = "buttonChangeMilitaryRegistrationOffice";
-            this.buttonChangeMilitaryRegistrationOffice.Size = new System.Drawing.Size(92, 23);
-            this.buttonChangeMilitaryRegistrationOffice.TabIndex = 16;
-            this.buttonChangeMilitaryRegistrationOffice.Text = "Изменить";
-            this.buttonChangeMilitaryRegistrationOffice.UseVisualStyleBackColor = true;
-            this.buttonChangeMilitaryRegistrationOffice.Visible = false;
-            this.buttonChangeMilitaryRegistrationOffice.Click += new System.EventHandler(this.buttonChangeMilitaryRegistrationOffice_Click);
             // 
             // pictureOptions
             // 
@@ -254,11 +243,118 @@ namespace MeoIS
             this.buttonChangeUserAccont.Visible = false;
             this.buttonChangeUserAccont.Click += new System.EventHandler(this.buttonChangeUserAccont_Click);
             // 
+            // tabControlMenuServices
+            // 
+            this.tabControlMenuServices.Controls.Add(this.tPReg);
+            this.tabControlMenuServices.Controls.Add(this.tPMed);
+            this.tabControlMenuServices.Controls.Add(this.tPChange);
+            this.tabControlMenuServices.Location = new System.Drawing.Point(224, 66);
+            this.tabControlMenuServices.Name = "tabControlMenuServices";
+            this.tabControlMenuServices.SelectedIndex = 0;
+            this.tabControlMenuServices.Size = new System.Drawing.Size(908, 460);
+            this.tabControlMenuServices.TabIndex = 25;
+            // 
+            // tPReg
+            // 
+            this.tPReg.Controls.Add(this.buttonOldEnlistmentOffice);
+            this.tPReg.Controls.Add(this.label3);
+            this.tPReg.Controls.Add(this.tBNewAddress);
+            this.tPReg.Controls.Add(this.label2);
+            this.tPReg.Controls.Add(this.tBEnlistmentOfficeWhereRegistered);
+            this.tPReg.Controls.Add(this.label1);
+            this.tPReg.Location = new System.Drawing.Point(4, 25);
+            this.tPReg.Name = "tPReg";
+            this.tPReg.Padding = new System.Windows.Forms.Padding(3);
+            this.tPReg.Size = new System.Drawing.Size(900, 431);
+            this.tPReg.TabIndex = 0;
+            this.tPReg.Text = "Постановка на учет";
+            this.tPReg.UseVisualStyleBackColor = true;
+            // 
+            // buttonOldEnlistmentOffice
+            // 
+            this.buttonOldEnlistmentOffice.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonOldEnlistmentOffice.Location = new System.Drawing.Point(385, 252);
+            this.buttonOldEnlistmentOffice.Name = "buttonOldEnlistmentOffice";
+            this.buttonOldEnlistmentOffice.Size = new System.Drawing.Size(165, 54);
+            this.buttonOldEnlistmentOffice.TabIndex = 30;
+            this.buttonOldEnlistmentOffice.Text = "Встать на учет";
+            this.buttonOldEnlistmentOffice.UseVisualStyleBackColor = true;
+            this.buttonOldEnlistmentOffice.Click += new System.EventHandler(this.buttonOldEnlistmentOffice_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(483, 130);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(351, 22);
+            this.label3.TabIndex = 29;
+            this.label3.Text = "Новый адрес фактического проживания\r\n";
+            // 
+            // tBNewAddress
+            // 
+            this.tBNewAddress.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tBNewAddress.Location = new System.Drawing.Point(536, 182);
+            this.tBNewAddress.Multiline = true;
+            this.tBNewAddress.Name = "tBNewAddress";
+            this.tBNewAddress.Size = new System.Drawing.Size(237, 27);
+            this.tBNewAddress.TabIndex = 28;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(115, 128);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(303, 44);
+            this.label2.TabIndex = 27;
+            this.label2.Text = "Военкомат, в котором вы состоите\r\n на учете на данный момент";
+            // 
+            // tBEnlistmentOfficeWhereRegistered
+            // 
+            this.tBEnlistmentOfficeWhereRegistered.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tBEnlistmentOfficeWhereRegistered.Location = new System.Drawing.Point(130, 182);
+            this.tBEnlistmentOfficeWhereRegistered.Multiline = true;
+            this.tBEnlistmentOfficeWhereRegistered.Name = "tBEnlistmentOfficeWhereRegistered";
+            this.tBEnlistmentOfficeWhereRegistered.Size = new System.Drawing.Size(261, 27);
+            this.tBEnlistmentOfficeWhereRegistered.TabIndex = 26;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(173, 48);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(513, 43);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Постановка и снятие с учета";
+            // 
+            // tPMed
+            // 
+            this.tPMed.Location = new System.Drawing.Point(4, 25);
+            this.tPMed.Name = "tPMed";
+            this.tPMed.Padding = new System.Windows.Forms.Padding(3);
+            this.tPMed.Size = new System.Drawing.Size(1194, 573);
+            this.tPMed.TabIndex = 1;
+            this.tPMed.Text = "Медицинский осмотр";
+            this.tPMed.UseVisualStyleBackColor = true;
+            // 
+            // tPChange
+            // 
+            this.tPChange.Location = new System.Drawing.Point(4, 25);
+            this.tPChange.Name = "tPChange";
+            this.tPChange.Padding = new System.Windows.Forms.Padding(3);
+            this.tPChange.Size = new System.Drawing.Size(1194, 573);
+            this.tPChange.TabIndex = 2;
+            this.tPChange.Text = "Смена места учебы/работы";
+            this.tPChange.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1199, 604);
+            this.Controls.Add(this.tabControlMenuServices);
             this.Controls.Add(this.buttonChangeUserAccont);
             this.Controls.Add(this.labelChangePass);
             this.Controls.Add(this.labelChangePhone);
@@ -267,8 +363,6 @@ namespace MeoIS
             this.Controls.Add(this.tBChangeEmail);
             this.Controls.Add(this.tBChangePass);
             this.Controls.Add(this.pictureOptions);
-            this.Controls.Add(this.buttonChangeMilitaryRegistrationOffice);
-            this.Controls.Add(this.tBChangeMilitaryRegistrationOffice);
             this.Controls.Add(this.labelChangeMilitaryRegistrationOffice);
             this.Controls.Add(this.labelRectal);
             this.Controls.Add(this.labelCategory);
@@ -284,6 +378,9 @@ namespace MeoIS
             ((System.ComponentModel.ISupportInitialize)(this.dataGVLitTable)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureOptions)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSearch)).EndInit();
+            this.tabControlMenuServices.ResumeLayout(false);
+            this.tPReg.ResumeLayout(false);
+            this.tPReg.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -300,8 +397,6 @@ namespace MeoIS
         private System.Windows.Forms.Label labelCategory;
         private System.Windows.Forms.Label labelRectal;
         private System.Windows.Forms.Label labelChangeMilitaryRegistrationOffice;
-        private System.Windows.Forms.TextBox tBChangeMilitaryRegistrationOffice;
-        private System.Windows.Forms.Button buttonChangeMilitaryRegistrationOffice;
         private System.Windows.Forms.PictureBox pictureOptions;
         private System.Windows.Forms.TextBox tBChangePass;
         private System.Windows.Forms.TextBox tBChangeEmail;
@@ -310,6 +405,16 @@ namespace MeoIS
         private System.Windows.Forms.Label labelChangePhone;
         private System.Windows.Forms.Label labelChangePass;
         private System.Windows.Forms.Button buttonChangeUserAccont;
+        private System.Windows.Forms.TabControl tabControlMenuServices;
+        private System.Windows.Forms.TabPage tPReg;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox tBEnlistmentOfficeWhereRegistered;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TabPage tPMed;
+        private System.Windows.Forms.TabPage tPChange;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox tBNewAddress;
+        private System.Windows.Forms.Button buttonOldEnlistmentOffice;
     }
 }
 

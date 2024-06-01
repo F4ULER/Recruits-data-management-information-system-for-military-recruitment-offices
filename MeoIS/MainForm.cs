@@ -16,7 +16,9 @@ namespace MeoIS
         public MainForm()
         {
             InitializeComponent();
-            if(Transfer.Doc_num != "")
+
+            tabControlMenuServices.Visible = false;
+            if (Transfer.Doc_num != "")
             {
                 
                 //labelExit.Visible = true;
@@ -25,12 +27,16 @@ namespace MeoIS
 
                 labelWelcome.Text = "Добрый день, " + Transfer.Name;
                 labelCategory.Text = "Категория: " + Transfer.Category;
-                labelRectal.Text = "Военкомат: " + Transfer.City;
+                labelRectal.Text = "Военкомат города: " + Transfer.City;
+
             }
             else
             {
                 labelWelcome.Visible = false;
-                
+                labelCategory.Visible = false;
+                labelChangeMilitaryRegistrationOffice.Visible = false;
+                labelRectal.Visible = false;
+                pictureOptions.Visible = false;
                 
                 //labelExit.Visible = false;
                 //labelEnterReg.Visible = true;
@@ -75,24 +81,10 @@ namespace MeoIS
 
         private void labelChangeMilitaryRegistrationOffice_Click(object sender, EventArgs e)
         {
-            tBChangeMilitaryRegistrationOffice.Visible = true;
-            buttonChangeMilitaryRegistrationOffice.Visible = true;
+            tabControlMenuServices.Visible = true;
         }
 
-        private void buttonChangeMilitaryRegistrationOffice_Click(object sender, EventArgs e)
-        {
-            if (tBChangeMilitaryRegistrationOffice.Text == Transfer.City)
-            {
-                Military_registration_and_enlistment_office military_Registration = new Military_registration_and_enlistment_office();
-                military_Registration.change_military_registration_and_enlistment_office(Transfer.Doc_num, tBChangeMilitaryRegistrationOffice.Text);
-                
-                labelRectal.Text = "Военкомат: " + Transfer.City;
-                tBChangeMilitaryRegistrationOffice.Text = "";
-            }
-            tBChangeMilitaryRegistrationOffice.Visible = false;
-            buttonChangeMilitaryRegistrationOffice.Visible = false;
-        }
-
+       
         private void pictureOptions_Click(object sender, EventArgs e)
         {
             tBChangePass.Text = Transfer.Pass;
@@ -144,5 +136,19 @@ namespace MeoIS
             }
 
         }
+
+        private void buttonOldEnlistmentOffice_Click(object sender, EventArgs e)
+        {
+            string[] city = tBNewAddress.Text.Split(new char[] { ',' });
+
+            Military_registration_and_enlistment_office Enlistment_Office = new Military_registration_and_enlistment_office();
+            if(Enlistment_Office.change_military_registration_and_enlistment_office(Transfer.Doc_num, city[0]) == true)
+            {
+                labelRectal.Text = "Военкомат города: " + Transfer.City;
+                tabControlMenuServices.Visible = false;
+            }
+
+        }
+
     }
 }
