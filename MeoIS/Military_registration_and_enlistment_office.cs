@@ -50,7 +50,38 @@ namespace MeoIS
                 }
             }
             else { return false; }
+        }
+        protected Boolean check_date(string date)
+        {
+            string message = "На данное время нет записи";
+
+            if (DataBase.check("date", date, message) == true)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public Boolean registration_for_medical_check_up (string docNum, string city, string date)
+        {
             
+            string message = "INSERT INTO `enlistment_offices`(`document_number`, `city`, `date`) VALUES (" + docNum + "," + city + "," + date + " );";
+
+            if (DataBase.sending_command(message) == true)
+            {
+                MessageBox.Show("Вы записались на мед. осмотр в военкомат города " + city + " " + date);
+
+                return true;
+            }
+            else
+            {
+                MessageBox.Show("Не Получилось");
+
+                return false;
+            }
+
         }
     }
 }

@@ -11,33 +11,12 @@ namespace MeoIS
 {
     class LogIn
     {
-        public Boolean connect_DB(string column, string value, string message)
-        {
-            DataBaseConnect DB = new DataBaseConnect();
-            DataTable table = new DataTable();
 
-            MySqlDataAdapter adapter = new MySqlDataAdapter();
-            MySqlCommand command = new MySqlCommand("SELECT * FROM `users` WHERE `" + column + "` = @Value", DB.getConnection());
-            command.Parameters.Add("@Value", MySqlDbType.VarChar).Value = value;
-
-            adapter.SelectCommand = command;
-            adapter.Fill(table);
-
-            if (table.Rows.Count > 0)
-            {
-                MessageBox.Show(message);
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
+        DataBaseConnect DB = new DataBaseConnect();
         public Boolean check_document_number(string documentNumber)
         {
             string message = "Данный номер документа уже зарегистрирован!";
-            if(connect_DB("document_number", documentNumber, message) == true)
+            if(DB.check("document_number", documentNumber, message) == true)
             {
                 return true;
             }
@@ -51,7 +30,7 @@ namespace MeoIS
         {
             string message = "Данный email уже зарегистрирован!";
             
-            if (connect_DB("email", email, message) == true)
+            if (DB.check("email", email, message) == true)
             {
                 return true;
             }
@@ -65,7 +44,7 @@ namespace MeoIS
         {
             string message = "Данный номер телефона уже зарегистрирован!";
             
-            if (connect_DB("phone_number", phone, message) == true)
+            if (DB.check("phone_number", phone, message) == true)
             {
                 return true;
             }
@@ -77,7 +56,6 @@ namespace MeoIS
 
         public Boolean give_superrights(string documentNumber)
         {
-            DataBaseConnect DB = new DataBaseConnect();
             DataTable table = new DataTable();
 
             MySqlDataAdapter adapter = new MySqlDataAdapter();

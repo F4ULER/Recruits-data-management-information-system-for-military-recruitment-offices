@@ -241,9 +241,72 @@ namespace MeoIS
             Friday.BackColor = Color.White;
         }
 
+        int k = 0;
+        protected void change_date(bool key)
+        {
+
+            labelMonday.Text = "Понедельник \n";
+            labelWensday.Text = "Среда \n";
+            labelFriday.Text = "Пятница \n";
+
+            //поиск даты понедельника
+            var date = DateTime.Now.AddDays(k); ;
+            var difference = date.DayOfWeek - DayOfWeek.Monday;
+            if (difference < 0)
+                difference += 7;
+            var mondayDate = date.AddDays(-1 * difference).Date;
+            
+            labelMonday.Text += mondayDate.ToString("d");
+            labelWensday.Text += mondayDate.AddDays(2).ToString("d");
+            labelFriday.Text += mondayDate.AddDays(4).ToString("d");
+        }
+
         private void buttonMed_Click(object sender, EventArgs e)
         {
-            tabControlMenuServices.Visible = false;
+            
+        }
+
+        private void tabControlMenuServices_Enter(object sender, EventArgs e)
+        {
+            //поиск даты понедельника
+            var date = DateTime.Today;
+            MessageBox.Show(date.DayOfWeek.ToString());
+            if(date.DayOfWeek.ToString() == "Sunday" || date.DayOfWeek.ToString() == "Saturday" || date.DayOfWeek.ToString() == "Friday")
+            {
+                var difference = date.DayOfWeek - DayOfWeek.Monday;
+                if (difference < 0)
+                    difference += 7;
+                var mondayDate = date.AddDays(-1 * difference).Date;
+
+                labelMonday.Text += mondayDate.ToString();
+                labelWensday.Text += mondayDate.AddDays(2).ToString();
+                labelFriday.Text += mondayDate.AddDays(4).ToString();
+            }
+            else
+            {
+                date = date.AddDays(3);
+                var difference = date.DayOfWeek - DayOfWeek.Monday;
+                if (difference < 0)
+                    difference += 7;
+                var mondayDate = date.AddDays(-1 * difference).Date;
+
+                labelMonday.Text += mondayDate.ToString();
+                labelWensday.Text += mondayDate.AddDays(2).ToString();
+                labelFriday.Text += mondayDate.AddDays(4).ToString();
+            }
+            
+        }
+
+        private void labelNextWeek_Click(object sender, EventArgs e)
+        {
+            k += 7;
+            change_date(true);
+        }
+
+        private void labelPreviousWeek_Click(object sender, EventArgs e)
+        {
+            k -= 7;
+            change_date(false);
         }
     }
 }

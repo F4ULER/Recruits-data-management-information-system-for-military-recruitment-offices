@@ -52,5 +52,27 @@ namespace MeoIS
                 return false;
             }
         }
+        public Boolean check(string column, string value, string message)
+        {
+            DataBaseConnect DB = new DataBaseConnect();
+            DataTable table = new DataTable();
+
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `users` WHERE `" + column + "` = @Value", DB.getConnection());
+            command.Parameters.Add("@Value", MySqlDbType.VarChar).Value = value;
+
+            adapter.SelectCommand = command;
+            adapter.Fill(table);
+
+            if (table.Rows.Count > 0)
+            {
+                MessageBox.Show(message);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }
