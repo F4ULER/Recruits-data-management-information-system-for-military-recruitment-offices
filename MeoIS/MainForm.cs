@@ -349,5 +349,98 @@ namespace MeoIS
             k -= 7;
             change_date(false);
         }
+
+        private void show_education_objects()
+        {
+            labelNameOfEducationalOrganization.Visible = true;
+            tBNameOfEducationalOrganization.Text = "";
+            tBNameOfEducationalOrganization.Visible = true;
+
+            labelNameOfSpecialty.Visible = true;
+            tBNameOfSpecialty.Visible = true;
+            tBNameOfSpecialty.Text = "";
+
+            labelEnrollmentDate.Visible = true;
+            dateTPEnrollmentDate.Visible = true;
+
+            labelDurationOfTraining.Visible = true;
+            tBDurationOfTraining.Visible = true;
+            tBDurationOfTraining.Text = "";
+
+            labelAddressOfEducationalOrganization.Visible = true;
+            tBAddressOfEducationalOrganization.Visible = true;
+            tBAddressOfEducationalOrganization.Text = "";
+
+            buttonChangePlaceOfStudy.Visible = true;
+        }
+
+        private void hide_education_objects()
+        {
+            labelNameOfEducationalOrganization.Visible = false;
+            tBNameOfEducationalOrganization.Text = "";
+            tBNameOfEducationalOrganization.Visible = false;
+
+            labelNameOfSpecialty.Visible = false;
+            tBNameOfSpecialty.Visible = false;
+            tBNameOfSpecialty.Text = "";
+
+            labelEnrollmentDate.Visible = false;
+            dateTPEnrollmentDate.Visible = false;
+
+            labelDurationOfTraining.Visible = false;
+            tBDurationOfTraining.Visible = false;
+            tBDurationOfTraining.Text = "";
+
+            labelAddressOfEducationalOrganization.Visible = false;
+            tBAddressOfEducationalOrganization.Visible = false;
+            tBAddressOfEducationalOrganization.Text = "";
+
+            buttonChangePlaceOfStudy.Visible = false;
+        }
+
+        private void radioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if(rBEducation.Checked == true)
+            {
+                show_education_objects();
+
+            } else if (rBWork.Checked == true)
+            {
+                hide_education_objects();
+            }
+        }
+
+        private void buttonChangePlaceOfStudy_Click(object sender, EventArgs e)
+        {
+            
+                if (tBNameOfEducationalOrganization.Text != "" && tBNameOfSpecialty.Text != "" && tBDurationOfTraining.Text != "" && tBAddressOfEducationalOrganization.Text != "")
+                {
+                    string message = "INSERT INTO `education`(`document_number`, `Name_of_educational_organization`, `Name_of_specialty`," +
+                        " `Enrollment_date`, `Duration_of_training`, `Address_educational_organization`)" +
+                        " VALUES (" + Transfer.Doc_num + ", '" + tBNameOfEducationalOrganization.Text + "', '" + tBNameOfSpecialty.Text + "', '" +
+                        "" + dateTPEnrollmentDate.Text + "', '" + tBDurationOfTraining.Text + "', '" + tBAddressOfEducationalOrganization.Text + "')";
+
+                    DataBaseConnect DB = new DataBaseConnect();
+
+                    if (DB.sending_command(message) == true)
+                    {
+                        MessageBox.Show("Место учебы успешно изменено на " + tBNameOfEducationalOrganization.Text);
+                    }
+                    else MessageBox.Show("Ошибка!");
+
+                hide_education_objects();
+                }
+                else
+                {
+                    MessageBox.Show("Заполните все поля!");
+                }
+        }
+
+        private void tPChange_Enter(object sender, EventArgs e)
+        {
+            hide_education_objects();
+            rBEducation.Checked = false;
+            rBWork.Checked = false;
+        }
     }
 }

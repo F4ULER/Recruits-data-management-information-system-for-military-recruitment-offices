@@ -73,10 +73,19 @@ namespace MeoIS
             this.cBFriday = new System.Windows.Forms.ComboBox();
             this.labelMonday = new System.Windows.Forms.Label();
             this.tPChange = new System.Windows.Forms.TabPage();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.buttonChangePlaceOfStudy = new System.Windows.Forms.Button();
+            this.labelAddressOfEducationalOrganization = new System.Windows.Forms.Label();
+            this.labelDurationOfTraining = new System.Windows.Forms.Label();
+            this.dateTPEnrollmentDate = new System.Windows.Forms.DateTimePicker();
+            this.labelEnrollmentDate = new System.Windows.Forms.Label();
+            this.labelNameOfSpecialty = new System.Windows.Forms.Label();
+            this.labelNameOfEducationalOrganization = new System.Windows.Forms.Label();
+            this.tBNameOfSpecialty = new System.Windows.Forms.TextBox();
+            this.tBDurationOfTraining = new System.Windows.Forms.TextBox();
+            this.tBAddressOfEducationalOrganization = new System.Windows.Forms.TextBox();
+            this.tBNameOfEducationalOrganization = new System.Windows.Forms.TextBox();
+            this.rBEducation = new System.Windows.Forms.RadioButton();
+            this.rBWork = new System.Windows.Forms.RadioButton();
             this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGVLitTable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureOptions)).BeginInit();
@@ -683,10 +692,19 @@ namespace MeoIS
             // 
             // tPChange
             // 
-            this.tPChange.Controls.Add(this.textBox2);
-            this.tPChange.Controls.Add(this.textBox1);
-            this.tPChange.Controls.Add(this.radioButton2);
-            this.tPChange.Controls.Add(this.radioButton1);
+            this.tPChange.Controls.Add(this.buttonChangePlaceOfStudy);
+            this.tPChange.Controls.Add(this.labelAddressOfEducationalOrganization);
+            this.tPChange.Controls.Add(this.labelDurationOfTraining);
+            this.tPChange.Controls.Add(this.dateTPEnrollmentDate);
+            this.tPChange.Controls.Add(this.labelEnrollmentDate);
+            this.tPChange.Controls.Add(this.labelNameOfSpecialty);
+            this.tPChange.Controls.Add(this.labelNameOfEducationalOrganization);
+            this.tPChange.Controls.Add(this.tBNameOfSpecialty);
+            this.tPChange.Controls.Add(this.tBDurationOfTraining);
+            this.tPChange.Controls.Add(this.tBAddressOfEducationalOrganization);
+            this.tPChange.Controls.Add(this.tBNameOfEducationalOrganization);
+            this.tPChange.Controls.Add(this.rBEducation);
+            this.tPChange.Controls.Add(this.rBWork);
             this.tPChange.Controls.Add(this.label5);
             this.tPChange.Location = new System.Drawing.Point(4, 25);
             this.tPChange.Name = "tPChange";
@@ -695,48 +713,137 @@ namespace MeoIS
             this.tPChange.TabIndex = 2;
             this.tPChange.Text = "Смена места учебы/работы";
             this.tPChange.UseVisualStyleBackColor = true;
+            this.tPChange.Enter += new System.EventHandler(this.tPChange_Enter);
             // 
-            // textBox2
+            // buttonChangePlaceOfStudy
             // 
-            this.textBox2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox2.Location = new System.Drawing.Point(381, 188);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(188, 30);
-            this.textBox2.TabIndex = 21;
-            this.textBox2.Visible = false;
+            this.buttonChangePlaceOfStudy.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonChangePlaceOfStudy.Location = new System.Drawing.Point(272, 310);
+            this.buttonChangePlaceOfStudy.Name = "buttonChangePlaceOfStudy";
+            this.buttonChangePlaceOfStudy.Size = new System.Drawing.Size(233, 50);
+            this.buttonChangePlaceOfStudy.TabIndex = 31;
+            this.buttonChangePlaceOfStudy.Text = "Отправить заявление";
+            this.buttonChangePlaceOfStudy.UseVisualStyleBackColor = true;
+            this.buttonChangePlaceOfStudy.Click += new System.EventHandler(this.buttonChangePlaceOfStudy_Click);
             // 
-            // textBox1
+            // labelAddressOfEducationalOrganization
             // 
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(92, 188);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(188, 30);
-            this.textBox1.TabIndex = 20;
-            this.textBox1.Visible = false;
+            this.labelAddressOfEducationalOrganization.AutoSize = true;
+            this.labelAddressOfEducationalOrganization.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelAddressOfEducationalOrganization.Location = new System.Drawing.Point(476, 227);
+            this.labelAddressOfEducationalOrganization.Name = "labelAddressOfEducationalOrganization";
+            this.labelAddressOfEducationalOrganization.Size = new System.Drawing.Size(324, 22);
+            this.labelAddressOfEducationalOrganization.TabIndex = 30;
+            this.labelAddressOfEducationalOrganization.Text = "Адрес образовательной организации";
             // 
-            // radioButton2
+            // labelDurationOfTraining
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(18, 128);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(72, 21);
-            this.radioButton2.TabIndex = 4;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Учебы";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.labelDurationOfTraining.AutoSize = true;
+            this.labelDurationOfTraining.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelDurationOfTraining.Location = new System.Drawing.Point(198, 227);
+            this.labelDurationOfTraining.Name = "labelDurationOfTraining";
+            this.labelDurationOfTraining.Size = new System.Drawing.Size(266, 22);
+            this.labelDurationOfTraining.TabIndex = 29;
+            this.labelDurationOfTraining.Text = "Продолжительность обучения";
             // 
-            // radioButton1
+            // dateTPEnrollmentDate
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(18, 101);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(79, 21);
-            this.radioButton1.TabIndex = 3;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Работы";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.dateTPEnrollmentDate.Location = new System.Drawing.Point(6, 257);
+            this.dateTPEnrollmentDate.Name = "dateTPEnrollmentDate";
+            this.dateTPEnrollmentDate.Size = new System.Drawing.Size(200, 22);
+            this.dateTPEnrollmentDate.TabIndex = 28;
+            // 
+            // labelEnrollmentDate
+            // 
+            this.labelEnrollmentDate.AutoSize = true;
+            this.labelEnrollmentDate.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelEnrollmentDate.Location = new System.Drawing.Point(25, 230);
+            this.labelEnrollmentDate.Name = "labelEnrollmentDate";
+            this.labelEnrollmentDate.Size = new System.Drawing.Size(151, 22);
+            this.labelEnrollmentDate.TabIndex = 26;
+            this.labelEnrollmentDate.Text = "Дата зачисления";
+            // 
+            // labelNameOfSpecialty
+            // 
+            this.labelNameOfSpecialty.AutoSize = true;
+            this.labelNameOfSpecialty.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelNameOfSpecialty.Location = new System.Drawing.Point(198, 136);
+            this.labelNameOfSpecialty.Name = "labelNameOfSpecialty";
+            this.labelNameOfSpecialty.Size = new System.Drawing.Size(224, 22);
+            this.labelNameOfSpecialty.TabIndex = 26;
+            this.labelNameOfSpecialty.Text = "Название специальности";
+            // 
+            // labelNameOfEducationalOrganization
+            // 
+            this.labelNameOfEducationalOrganization.AutoSize = true;
+            this.labelNameOfEducationalOrganization.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelNameOfEducationalOrganization.Location = new System.Drawing.Point(198, 76);
+            this.labelNameOfEducationalOrganization.Name = "labelNameOfEducationalOrganization";
+            this.labelNameOfEducationalOrganization.Size = new System.Drawing.Size(398, 22);
+            this.labelNameOfEducationalOrganization.TabIndex = 25;
+            this.labelNameOfEducationalOrganization.Text = "Наименование образовательной организации";
+            // 
+            // tBNameOfSpecialty
+            // 
+            this.tBNameOfSpecialty.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tBNameOfSpecialty.Location = new System.Drawing.Point(202, 161);
+            this.tBNameOfSpecialty.Multiline = true;
+            this.tBNameOfSpecialty.Name = "tBNameOfSpecialty";
+            this.tBNameOfSpecialty.Size = new System.Drawing.Size(385, 30);
+            this.tBNameOfSpecialty.TabIndex = 24;
+            // 
+            // tBDurationOfTraining
+            // 
+            this.tBDurationOfTraining.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tBDurationOfTraining.Location = new System.Drawing.Point(239, 252);
+            this.tBDurationOfTraining.Multiline = true;
+            this.tBDurationOfTraining.Name = "tBDurationOfTraining";
+            this.tBDurationOfTraining.Size = new System.Drawing.Size(188, 30);
+            this.tBDurationOfTraining.TabIndex = 22;
+            // 
+            // tBAddressOfEducationalOrganization
+            // 
+            this.tBAddressOfEducationalOrganization.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tBAddressOfEducationalOrganization.Location = new System.Drawing.Point(480, 252);
+            this.tBAddressOfEducationalOrganization.Multiline = true;
+            this.tBAddressOfEducationalOrganization.Name = "tBAddressOfEducationalOrganization";
+            this.tBAddressOfEducationalOrganization.Size = new System.Drawing.Size(271, 30);
+            this.tBAddressOfEducationalOrganization.TabIndex = 21;
+            // 
+            // tBNameOfEducationalOrganization
+            // 
+            this.tBNameOfEducationalOrganization.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tBNameOfEducationalOrganization.Location = new System.Drawing.Point(202, 101);
+            this.tBNameOfEducationalOrganization.Multiline = true;
+            this.tBNameOfEducationalOrganization.Name = "tBNameOfEducationalOrganization";
+            this.tBNameOfEducationalOrganization.Size = new System.Drawing.Size(385, 30);
+            this.tBNameOfEducationalOrganization.TabIndex = 20;
+            // 
+            // rBEducation
+            // 
+            this.rBEducation.AutoSize = true;
+            this.rBEducation.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rBEducation.Location = new System.Drawing.Point(29, 114);
+            this.rBEducation.Name = "rBEducation";
+            this.rBEducation.Size = new System.Drawing.Size(85, 25);
+            this.rBEducation.TabIndex = 4;
+            this.rBEducation.TabStop = true;
+            this.rBEducation.Text = "Учебы";
+            this.rBEducation.UseVisualStyleBackColor = true;
+            this.rBEducation.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
+            // 
+            // rBWork
+            // 
+            this.rBWork.AutoSize = true;
+            this.rBWork.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rBWork.Location = new System.Drawing.Point(29, 87);
+            this.rBWork.Name = "rBWork";
+            this.rBWork.Size = new System.Drawing.Size(91, 25);
+            this.rBWork.TabIndex = 3;
+            this.rBWork.TabStop = true;
+            this.rBWork.Text = "Работы";
+            this.rBWork.UseVisualStyleBackColor = true;
+            this.rBWork.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
             // 
             // label5
             // 
@@ -843,11 +950,20 @@ namespace MeoIS
         private System.Windows.Forms.Button buttonMed;
         private System.Windows.Forms.Label labelNextWeek;
         private System.Windows.Forms.Label labelPreviousWeek;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rBEducation;
+        private System.Windows.Forms.RadioButton rBWork;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button buttonChangePlaceOfStudy;
+        private System.Windows.Forms.Label labelAddressOfEducationalOrganization;
+        private System.Windows.Forms.Label labelDurationOfTraining;
+        private System.Windows.Forms.DateTimePicker dateTPEnrollmentDate;
+        private System.Windows.Forms.Label labelEnrollmentDate;
+        private System.Windows.Forms.Label labelNameOfSpecialty;
+        private System.Windows.Forms.Label labelNameOfEducationalOrganization;
+        private System.Windows.Forms.TextBox tBNameOfSpecialty;
+        private System.Windows.Forms.TextBox tBDurationOfTraining;
+        private System.Windows.Forms.TextBox tBAddressOfEducationalOrganization;
+        private System.Windows.Forms.TextBox tBNameOfEducationalOrganization;
     }
 }
 
