@@ -263,6 +263,48 @@ namespace MeoIS
 
         private void buttonMed_Click(object sender, EventArgs e)
         {
+            string[] date;
+            string title = "";
+            string time = "";
+            
+            if (cBFriday.Text == "" && cBWednesday.Text == "")
+            {
+                title = labelMonday.Text;
+                time = cBMonday.Text;
+            }
+            else if(cBMonday.Text == "" && cBFriday.Text == "")
+            {
+                title = labelWensday.Text;
+                time = cBWednesday.Text;
+            }
+            else if(cBMonday.Text == "" && cBWednesday.Text == "")
+            {
+                title = labelFriday.Text;
+                time = cBFriday.Text;
+            }
+            else
+            {
+                MessageBox.Show("Нельзя выбирать больше одной даты в неделю.");
+            }
+
+            if (title != "")
+            {
+                date = title.Split(new char[] { '\n' });
+
+                string message = "INSERT INTO `enlistment_offices`(`document_number`, `city`, `date`) VALUES " +
+                "(" + Transfer.Doc_num + ", '" + Transfer.City + "', '" + date[1] + " " + time + "');";
+
+                DataBaseConnect dataBase = new DataBaseConnect();
+                dataBase.sending_command(message);
+
+                MessageBox.Show("Успешно! Запись на медицинский осмотр в городе "+ Transfer.City + " " + date[1] + " " + time );
+
+                cBMonday.SelectedIndex = 0;
+                cBWednesday.SelectedIndex = 0;
+                cBFriday.SelectedIndex = 0;
+                tabControlMenuServices.Visible = false;
+            }
+
             
         }
 
@@ -270,7 +312,6 @@ namespace MeoIS
         {
             //поиск даты понедельника
             var date = DateTime.Today;
-            MessageBox.Show(date.DayOfWeek.ToString());
             if(date.DayOfWeek.ToString() == "Sunday" || date.DayOfWeek.ToString() == "Saturday" || date.DayOfWeek.ToString() == "Friday")
             {
                 var difference = date.DayOfWeek - DayOfWeek.Monday;
@@ -278,9 +319,9 @@ namespace MeoIS
                     difference += 7;
                 var mondayDate = date.AddDays(-1 * difference).Date;
 
-                labelMonday.Text += mondayDate.ToString();
-                labelWensday.Text += mondayDate.AddDays(2).ToString();
-                labelFriday.Text += mondayDate.AddDays(4).ToString();
+                labelMonday.Text += mondayDate.ToString("d");
+                labelWensday.Text += mondayDate.AddDays(2).ToString("d");
+                labelFriday.Text += mondayDate.AddDays(4).ToString("d");
             }
             else
             {
@@ -290,9 +331,9 @@ namespace MeoIS
                     difference += 7;
                 var mondayDate = date.AddDays(-1 * difference).Date;
 
-                labelMonday.Text += mondayDate.ToString();
-                labelWensday.Text += mondayDate.AddDays(2).ToString();
-                labelFriday.Text += mondayDate.AddDays(4).ToString();
+                labelMonday.Text += mondayDate.ToString("d");
+                labelWensday.Text += mondayDate.AddDays(2).ToString("d");
+                labelFriday.Text += mondayDate.AddDays(4).ToString("d");
             }
             
         }

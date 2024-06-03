@@ -73,11 +73,11 @@ namespace MeoIS
             this.cBFriday = new System.Windows.Forms.ComboBox();
             this.labelMonday = new System.Windows.Forms.Label();
             this.tPChange = new System.Windows.Forms.TabPage();
-            this.label5 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGVLitTable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureOptions)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSearch)).BeginInit();
@@ -518,6 +518,7 @@ namespace MeoIS
             this.cBWednesday.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cBWednesday.FormattingEnabled = true;
             this.cBWednesday.Items.AddRange(new object[] {
+            "",
             "9:00",
             "10:00",
             "11:00",
@@ -525,7 +526,7 @@ namespace MeoIS
             "14:00",
             "15:00",
             "16:00"});
-            this.cBWednesday.Location = new System.Drawing.Point(3, 26);
+            this.cBWednesday.Location = new System.Drawing.Point(3, 25);
             this.cBWednesday.Name = "cBWednesday";
             this.cBWednesday.Size = new System.Drawing.Size(140, 24);
             this.cBWednesday.TabIndex = 7;
@@ -585,6 +586,7 @@ namespace MeoIS
             this.cBMonday.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cBMonday.FormattingEnabled = true;
             this.cBMonday.Items.AddRange(new object[] {
+            "",
             "9:00",
             "10:00",
             "11:00",
@@ -592,7 +594,7 @@ namespace MeoIS
             "14:00",
             "15:00",
             "16:00"});
-            this.cBMonday.Location = new System.Drawing.Point(3, 26);
+            this.cBMonday.Location = new System.Drawing.Point(3, 25);
             this.cBMonday.Name = "cBMonday";
             this.cBMonday.Size = new System.Drawing.Size(139, 24);
             this.cBMonday.TabIndex = 5;
@@ -653,6 +655,7 @@ namespace MeoIS
             this.cBFriday.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cBFriday.FormattingEnabled = true;
             this.cBFriday.Items.AddRange(new object[] {
+            "",
             "9:00",
             "10:00",
             "11:00",
@@ -660,7 +663,7 @@ namespace MeoIS
             "14:00",
             "15:00",
             "16:00"});
-            this.cBFriday.Location = new System.Drawing.Point(3, 27);
+            this.cBFriday.Location = new System.Drawing.Point(3, 26);
             this.cBFriday.Name = "cBFriday";
             this.cBFriday.Size = new System.Drawing.Size(141, 24);
             this.cBFriday.TabIndex = 9;
@@ -693,26 +696,25 @@ namespace MeoIS
             this.tPChange.Text = "Смена места учебы/работы";
             this.tPChange.UseVisualStyleBackColor = true;
             // 
-            // label5
+            // textBox2
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(84, 15);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(600, 43);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Сменить место работы или учебы";
+            this.textBox2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox2.Location = new System.Drawing.Point(381, 188);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(188, 30);
+            this.textBox2.TabIndex = 21;
+            this.textBox2.Visible = false;
             // 
-            // radioButton1
+            // textBox1
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(18, 101);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(79, 21);
-            this.radioButton1.TabIndex = 3;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Работы";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox1.Location = new System.Drawing.Point(92, 188);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(188, 30);
+            this.textBox1.TabIndex = 20;
+            this.textBox1.Visible = false;
             // 
             // radioButton2
             // 
@@ -725,25 +727,26 @@ namespace MeoIS
             this.radioButton2.Text = "Учебы";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // radioButton1
             // 
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(92, 188);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(188, 30);
-            this.textBox1.TabIndex = 20;
-            this.textBox1.Visible = false;
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(18, 101);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(79, 21);
+            this.radioButton1.TabIndex = 3;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Работы";
+            this.radioButton1.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // label5
             // 
-            this.textBox2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox2.Location = new System.Drawing.Point(381, 188);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(188, 30);
-            this.textBox2.TabIndex = 21;
-            this.textBox2.Visible = false;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Location = new System.Drawing.Point(84, 15);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(600, 43);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Сменить место работы или учебы";
             // 
             // MainForm
             // 
