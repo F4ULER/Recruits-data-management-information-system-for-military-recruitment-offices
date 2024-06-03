@@ -73,7 +73,13 @@ namespace MeoIS
             this.cBFriday = new System.Windows.Forms.ComboBox();
             this.labelMonday = new System.Windows.Forms.Label();
             this.tPChange = new System.Windows.Forms.TabPage();
-            this.buttonChangePlaceOfStudy = new System.Windows.Forms.Button();
+            this.labelWorkOrganizationAddress = new System.Windows.Forms.Label();
+            this.tBWorkOrganizationAddress = new System.Windows.Forms.TextBox();
+            this.labelJobTitle = new System.Windows.Forms.Label();
+            this.tBJobTitle = new System.Windows.Forms.TextBox();
+            this.labelNameOfOrganizationOrIndividualEntrepreneur = new System.Windows.Forms.Label();
+            this.tBNameOfWorkOrganizationOrIndividualEntrepreneur = new System.Windows.Forms.TextBox();
+            this.buttonChangePlaceOfStudyOrWork = new System.Windows.Forms.Button();
             this.labelAddressOfEducationalOrganization = new System.Windows.Forms.Label();
             this.labelDurationOfTraining = new System.Windows.Forms.Label();
             this.dateTPEnrollmentDate = new System.Windows.Forms.DateTimePicker();
@@ -288,7 +294,7 @@ namespace MeoIS
             this.tabControlMenuServices.Location = new System.Drawing.Point(272, 0);
             this.tabControlMenuServices.Name = "tabControlMenuServices";
             this.tabControlMenuServices.SelectedIndex = 0;
-            this.tabControlMenuServices.Size = new System.Drawing.Size(815, 453);
+            this.tabControlMenuServices.Size = new System.Drawing.Size(837, 505);
             this.tabControlMenuServices.TabIndex = 25;
             this.tabControlMenuServices.Enter += new System.EventHandler(this.tabControlMenuServices_Enter);
             // 
@@ -303,7 +309,7 @@ namespace MeoIS
             this.tPReg.Location = new System.Drawing.Point(4, 25);
             this.tPReg.Name = "tPReg";
             this.tPReg.Padding = new System.Windows.Forms.Padding(3);
-            this.tPReg.Size = new System.Drawing.Size(807, 424);
+            this.tPReg.Size = new System.Drawing.Size(829, 476);
             this.tPReg.TabIndex = 0;
             this.tPReg.Text = "Постановка на учет";
             this.tPReg.UseVisualStyleBackColor = true;
@@ -378,7 +384,7 @@ namespace MeoIS
             this.tPMed.Location = new System.Drawing.Point(4, 25);
             this.tPMed.Name = "tPMed";
             this.tPMed.Padding = new System.Windows.Forms.Padding(3);
-            this.tPMed.Size = new System.Drawing.Size(807, 424);
+            this.tPMed.Size = new System.Drawing.Size(829, 476);
             this.tPMed.TabIndex = 1;
             this.tPMed.Text = "Медицинский осмотр";
             this.tPMed.UseVisualStyleBackColor = true;
@@ -692,7 +698,13 @@ namespace MeoIS
             // 
             // tPChange
             // 
-            this.tPChange.Controls.Add(this.buttonChangePlaceOfStudy);
+            this.tPChange.Controls.Add(this.labelWorkOrganizationAddress);
+            this.tPChange.Controls.Add(this.tBWorkOrganizationAddress);
+            this.tPChange.Controls.Add(this.labelJobTitle);
+            this.tPChange.Controls.Add(this.tBJobTitle);
+            this.tPChange.Controls.Add(this.labelNameOfOrganizationOrIndividualEntrepreneur);
+            this.tPChange.Controls.Add(this.tBNameOfWorkOrganizationOrIndividualEntrepreneur);
+            this.tPChange.Controls.Add(this.buttonChangePlaceOfStudyOrWork);
             this.tPChange.Controls.Add(this.labelAddressOfEducationalOrganization);
             this.tPChange.Controls.Add(this.labelDurationOfTraining);
             this.tPChange.Controls.Add(this.dateTPEnrollmentDate);
@@ -709,28 +721,85 @@ namespace MeoIS
             this.tPChange.Location = new System.Drawing.Point(4, 25);
             this.tPChange.Name = "tPChange";
             this.tPChange.Padding = new System.Windows.Forms.Padding(3);
-            this.tPChange.Size = new System.Drawing.Size(807, 424);
+            this.tPChange.Size = new System.Drawing.Size(829, 476);
             this.tPChange.TabIndex = 2;
             this.tPChange.Text = "Смена места учебы/работы";
             this.tPChange.UseVisualStyleBackColor = true;
             this.tPChange.Enter += new System.EventHandler(this.tPChange_Enter);
             // 
-            // buttonChangePlaceOfStudy
+            // labelWorkOrganizationAddress
             // 
-            this.buttonChangePlaceOfStudy.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonChangePlaceOfStudy.Location = new System.Drawing.Point(272, 310);
-            this.buttonChangePlaceOfStudy.Name = "buttonChangePlaceOfStudy";
-            this.buttonChangePlaceOfStudy.Size = new System.Drawing.Size(233, 50);
-            this.buttonChangePlaceOfStudy.TabIndex = 31;
-            this.buttonChangePlaceOfStudy.Text = "Отправить заявление";
-            this.buttonChangePlaceOfStudy.UseVisualStyleBackColor = true;
-            this.buttonChangePlaceOfStudy.Click += new System.EventHandler(this.buttonChangePlaceOfStudy_Click);
+            this.labelWorkOrganizationAddress.AutoSize = true;
+            this.labelWorkOrganizationAddress.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelWorkOrganizationAddress.Location = new System.Drawing.Point(193, 262);
+            this.labelWorkOrganizationAddress.Name = "labelWorkOrganizationAddress";
+            this.labelWorkOrganizationAddress.Size = new System.Drawing.Size(176, 22);
+            this.labelWorkOrganizationAddress.TabIndex = 37;
+            this.labelWorkOrganizationAddress.Text = "Адрес организации";
+            // 
+            // tBWorkOrganizationAddress
+            // 
+            this.tBWorkOrganizationAddress.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tBWorkOrganizationAddress.Location = new System.Drawing.Point(197, 287);
+            this.tBWorkOrganizationAddress.Multiline = true;
+            this.tBWorkOrganizationAddress.Name = "tBWorkOrganizationAddress";
+            this.tBWorkOrganizationAddress.Size = new System.Drawing.Size(385, 30);
+            this.tBWorkOrganizationAddress.TabIndex = 36;
+            // 
+            // labelJobTitle
+            // 
+            this.labelJobTitle.AutoSize = true;
+            this.labelJobTitle.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelJobTitle.Location = new System.Drawing.Point(193, 172);
+            this.labelJobTitle.Name = "labelJobTitle";
+            this.labelJobTitle.Size = new System.Drawing.Size(106, 22);
+            this.labelJobTitle.TabIndex = 35;
+            this.labelJobTitle.Text = "Должность";
+            // 
+            // tBJobTitle
+            // 
+            this.tBJobTitle.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tBJobTitle.Location = new System.Drawing.Point(197, 197);
+            this.tBJobTitle.Multiline = true;
+            this.tBJobTitle.Name = "tBJobTitle";
+            this.tBJobTitle.Size = new System.Drawing.Size(385, 30);
+            this.tBJobTitle.TabIndex = 34;
+            // 
+            // labelNameOfOrganizationOrIndividualEntrepreneur
+            // 
+            this.labelNameOfOrganizationOrIndividualEntrepreneur.AutoSize = true;
+            this.labelNameOfOrganizationOrIndividualEntrepreneur.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelNameOfOrganizationOrIndividualEntrepreneur.Location = new System.Drawing.Point(193, 90);
+            this.labelNameOfOrganizationOrIndividualEntrepreneur.Name = "labelNameOfOrganizationOrIndividualEntrepreneur";
+            this.labelNameOfOrganizationOrIndividualEntrepreneur.Size = new System.Drawing.Size(320, 22);
+            this.labelNameOfOrganizationOrIndividualEntrepreneur.TabIndex = 33;
+            this.labelNameOfOrganizationOrIndividualEntrepreneur.Text = "Наименование организации или ИП";
+            // 
+            // tBNameOfWorkOrganizationOrIndividualEntrepreneur
+            // 
+            this.tBNameOfWorkOrganizationOrIndividualEntrepreneur.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tBNameOfWorkOrganizationOrIndividualEntrepreneur.Location = new System.Drawing.Point(197, 115);
+            this.tBNameOfWorkOrganizationOrIndividualEntrepreneur.Multiline = true;
+            this.tBNameOfWorkOrganizationOrIndividualEntrepreneur.Name = "tBNameOfWorkOrganizationOrIndividualEntrepreneur";
+            this.tBNameOfWorkOrganizationOrIndividualEntrepreneur.Size = new System.Drawing.Size(385, 30);
+            this.tBNameOfWorkOrganizationOrIndividualEntrepreneur.TabIndex = 32;
+            // 
+            // buttonChangePlaceOfStudyOrWork
+            // 
+            this.buttonChangePlaceOfStudyOrWork.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonChangePlaceOfStudyOrWork.Location = new System.Drawing.Point(280, 364);
+            this.buttonChangePlaceOfStudyOrWork.Name = "buttonChangePlaceOfStudyOrWork";
+            this.buttonChangePlaceOfStudyOrWork.Size = new System.Drawing.Size(233, 50);
+            this.buttonChangePlaceOfStudyOrWork.TabIndex = 31;
+            this.buttonChangePlaceOfStudyOrWork.Text = "Отправить заявление";
+            this.buttonChangePlaceOfStudyOrWork.UseVisualStyleBackColor = true;
+            this.buttonChangePlaceOfStudyOrWork.Click += new System.EventHandler(this.buttonChangePlaceOfStudyOrWork_Click);
             // 
             // labelAddressOfEducationalOrganization
             // 
             this.labelAddressOfEducationalOrganization.AutoSize = true;
             this.labelAddressOfEducationalOrganization.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelAddressOfEducationalOrganization.Location = new System.Drawing.Point(476, 227);
+            this.labelAddressOfEducationalOrganization.Location = new System.Drawing.Point(500, 285);
             this.labelAddressOfEducationalOrganization.Name = "labelAddressOfEducationalOrganization";
             this.labelAddressOfEducationalOrganization.Size = new System.Drawing.Size(324, 22);
             this.labelAddressOfEducationalOrganization.TabIndex = 30;
@@ -740,7 +809,7 @@ namespace MeoIS
             // 
             this.labelDurationOfTraining.AutoSize = true;
             this.labelDurationOfTraining.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelDurationOfTraining.Location = new System.Drawing.Point(198, 227);
+            this.labelDurationOfTraining.Location = new System.Drawing.Point(222, 285);
             this.labelDurationOfTraining.Name = "labelDurationOfTraining";
             this.labelDurationOfTraining.Size = new System.Drawing.Size(266, 22);
             this.labelDurationOfTraining.TabIndex = 29;
@@ -748,7 +817,7 @@ namespace MeoIS
             // 
             // dateTPEnrollmentDate
             // 
-            this.dateTPEnrollmentDate.Location = new System.Drawing.Point(6, 257);
+            this.dateTPEnrollmentDate.Location = new System.Drawing.Point(30, 315);
             this.dateTPEnrollmentDate.Name = "dateTPEnrollmentDate";
             this.dateTPEnrollmentDate.Size = new System.Drawing.Size(200, 22);
             this.dateTPEnrollmentDate.TabIndex = 28;
@@ -757,7 +826,7 @@ namespace MeoIS
             // 
             this.labelEnrollmentDate.AutoSize = true;
             this.labelEnrollmentDate.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelEnrollmentDate.Location = new System.Drawing.Point(25, 230);
+            this.labelEnrollmentDate.Location = new System.Drawing.Point(49, 288);
             this.labelEnrollmentDate.Name = "labelEnrollmentDate";
             this.labelEnrollmentDate.Size = new System.Drawing.Size(151, 22);
             this.labelEnrollmentDate.TabIndex = 26;
@@ -767,7 +836,7 @@ namespace MeoIS
             // 
             this.labelNameOfSpecialty.AutoSize = true;
             this.labelNameOfSpecialty.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelNameOfSpecialty.Location = new System.Drawing.Point(198, 136);
+            this.labelNameOfSpecialty.Location = new System.Drawing.Point(222, 194);
             this.labelNameOfSpecialty.Name = "labelNameOfSpecialty";
             this.labelNameOfSpecialty.Size = new System.Drawing.Size(224, 22);
             this.labelNameOfSpecialty.TabIndex = 26;
@@ -777,7 +846,7 @@ namespace MeoIS
             // 
             this.labelNameOfEducationalOrganization.AutoSize = true;
             this.labelNameOfEducationalOrganization.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelNameOfEducationalOrganization.Location = new System.Drawing.Point(198, 76);
+            this.labelNameOfEducationalOrganization.Location = new System.Drawing.Point(222, 134);
             this.labelNameOfEducationalOrganization.Name = "labelNameOfEducationalOrganization";
             this.labelNameOfEducationalOrganization.Size = new System.Drawing.Size(398, 22);
             this.labelNameOfEducationalOrganization.TabIndex = 25;
@@ -786,7 +855,7 @@ namespace MeoIS
             // tBNameOfSpecialty
             // 
             this.tBNameOfSpecialty.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tBNameOfSpecialty.Location = new System.Drawing.Point(202, 161);
+            this.tBNameOfSpecialty.Location = new System.Drawing.Point(226, 219);
             this.tBNameOfSpecialty.Multiline = true;
             this.tBNameOfSpecialty.Name = "tBNameOfSpecialty";
             this.tBNameOfSpecialty.Size = new System.Drawing.Size(385, 30);
@@ -795,7 +864,7 @@ namespace MeoIS
             // tBDurationOfTraining
             // 
             this.tBDurationOfTraining.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tBDurationOfTraining.Location = new System.Drawing.Point(239, 252);
+            this.tBDurationOfTraining.Location = new System.Drawing.Point(263, 310);
             this.tBDurationOfTraining.Multiline = true;
             this.tBDurationOfTraining.Name = "tBDurationOfTraining";
             this.tBDurationOfTraining.Size = new System.Drawing.Size(188, 30);
@@ -804,7 +873,7 @@ namespace MeoIS
             // tBAddressOfEducationalOrganization
             // 
             this.tBAddressOfEducationalOrganization.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tBAddressOfEducationalOrganization.Location = new System.Drawing.Point(480, 252);
+            this.tBAddressOfEducationalOrganization.Location = new System.Drawing.Point(504, 310);
             this.tBAddressOfEducationalOrganization.Multiline = true;
             this.tBAddressOfEducationalOrganization.Name = "tBAddressOfEducationalOrganization";
             this.tBAddressOfEducationalOrganization.Size = new System.Drawing.Size(271, 30);
@@ -813,7 +882,7 @@ namespace MeoIS
             // tBNameOfEducationalOrganization
             // 
             this.tBNameOfEducationalOrganization.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tBNameOfEducationalOrganization.Location = new System.Drawing.Point(202, 101);
+            this.tBNameOfEducationalOrganization.Location = new System.Drawing.Point(226, 159);
             this.tBNameOfEducationalOrganization.Multiline = true;
             this.tBNameOfEducationalOrganization.Name = "tBNameOfEducationalOrganization";
             this.tBNameOfEducationalOrganization.Size = new System.Drawing.Size(385, 30);
@@ -827,7 +896,6 @@ namespace MeoIS
             this.rBEducation.Name = "rBEducation";
             this.rBEducation.Size = new System.Drawing.Size(85, 25);
             this.rBEducation.TabIndex = 4;
-            this.rBEducation.TabStop = true;
             this.rBEducation.Text = "Учебы";
             this.rBEducation.UseVisualStyleBackColor = true;
             this.rBEducation.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
@@ -835,6 +903,7 @@ namespace MeoIS
             // rBWork
             // 
             this.rBWork.AutoSize = true;
+            this.rBWork.Checked = true;
             this.rBWork.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.rBWork.Location = new System.Drawing.Point(29, 87);
             this.rBWork.Name = "rBWork";
@@ -953,7 +1022,7 @@ namespace MeoIS
         private System.Windows.Forms.RadioButton rBEducation;
         private System.Windows.Forms.RadioButton rBWork;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button buttonChangePlaceOfStudy;
+        private System.Windows.Forms.Button buttonChangePlaceOfStudyOrWork;
         private System.Windows.Forms.Label labelAddressOfEducationalOrganization;
         private System.Windows.Forms.Label labelDurationOfTraining;
         private System.Windows.Forms.DateTimePicker dateTPEnrollmentDate;
@@ -964,6 +1033,12 @@ namespace MeoIS
         private System.Windows.Forms.TextBox tBDurationOfTraining;
         private System.Windows.Forms.TextBox tBAddressOfEducationalOrganization;
         private System.Windows.Forms.TextBox tBNameOfEducationalOrganization;
+        private System.Windows.Forms.Label labelWorkOrganizationAddress;
+        private System.Windows.Forms.TextBox tBWorkOrganizationAddress;
+        private System.Windows.Forms.Label labelJobTitle;
+        private System.Windows.Forms.TextBox tBJobTitle;
+        private System.Windows.Forms.Label labelNameOfOrganizationOrIndividualEntrepreneur;
+        private System.Windows.Forms.TextBox tBNameOfWorkOrganizationOrIndividualEntrepreneur;
     }
 }
 

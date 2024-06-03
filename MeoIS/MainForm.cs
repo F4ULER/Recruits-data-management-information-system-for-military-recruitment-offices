@@ -371,7 +371,7 @@ namespace MeoIS
             tBAddressOfEducationalOrganization.Visible = true;
             tBAddressOfEducationalOrganization.Text = "";
 
-            buttonChangePlaceOfStudy.Visible = true;
+            buttonChangePlaceOfStudyOrWork.Visible = true;
         }
 
         private void hide_education_objects()
@@ -395,24 +395,59 @@ namespace MeoIS
             tBAddressOfEducationalOrganization.Visible = false;
             tBAddressOfEducationalOrganization.Text = "";
 
-            buttonChangePlaceOfStudy.Visible = false;
+            buttonChangePlaceOfStudyOrWork.Visible = false;
         }
 
-        private void radioButton_CheckedChanged(object sender, EventArgs e)
+        private void show_work_objects()
+        {
+            labelNameOfOrganizationOrIndividualEntrepreneur.Visible = true;
+            tBNameOfWorkOrganizationOrIndividualEntrepreneur.Visible = true;
+            tBNameOfWorkOrganizationOrIndividualEntrepreneur.Text = "";
+
+            labelJobTitle.Visible = true;
+            tBJobTitle.Visible = true;
+            tBJobTitle.Text = "";
+
+            labelWorkOrganizationAddress.Visible = true;
+            tBWorkOrganizationAddress.Visible = true;
+            tBAddressOfEducationalOrganization.Text = "";
+
+            buttonChangePlaceOfStudyOrWork.Visible = true;
+        }
+        private void hide_work_objects()
+        {
+            labelNameOfOrganizationOrIndividualEntrepreneur.Visible = false;
+            tBNameOfWorkOrganizationOrIndividualEntrepreneur.Visible = false;
+            tBNameOfWorkOrganizationOrIndividualEntrepreneur.Text = "";
+
+            labelJobTitle.Visible = false;
+            tBJobTitle.Visible = false;
+            tBJobTitle.Text = "";
+
+            labelWorkOrganizationAddress.Visible = false;
+            tBWorkOrganizationAddress.Visible = false;
+            tBAddressOfEducationalOrganization.Text = "";
+
+            buttonChangePlaceOfStudyOrWork.Visible = false;
+        }
+            private void radioButton_CheckedChanged(object sender, EventArgs e)
         {
             if(rBEducation.Checked == true)
             {
+                hide_work_objects();
                 show_education_objects();
 
             } else if (rBWork.Checked == true)
             {
                 hide_education_objects();
+                show_work_objects();
             }
         }
 
-        private void buttonChangePlaceOfStudy_Click(object sender, EventArgs e)
+        private void buttonChangePlaceOfStudyOrWork_Click(object sender, EventArgs e)
         {
-            
+            if (rBEducation.Checked == true)
+            {
                 if (tBNameOfEducationalOrganization.Text != "" && tBNameOfSpecialty.Text != "" && tBDurationOfTraining.Text != "" && tBAddressOfEducationalOrganization.Text != "")
                 {
                     string message = "INSERT INTO `education`(`document_number`, `Name_of_educational_organization`, `Name_of_specialty`," +
@@ -428,19 +463,52 @@ namespace MeoIS
                     }
                     else MessageBox.Show("Ошибка!");
 
-                hide_education_objects();
+                    hide_education_objects();
+                    defolt_change_of_study_or_job();
+                    tabControlMenuServices.Visible = false;
                 }
                 else
                 {
                     MessageBox.Show("Заполните все поля!");
                 }
+
+            } else if (rBWork.Checked == true)
+            {
+                if (tBNameOfWorkOrganizationOrIndividualEntrepreneur.Text != "" && tBWorkOrganizationAddress.Text != "" && tBJobTitle.Text != "")
+                {
+                    string message = "INSERT INTO `work`(`document_number`, `name_of_work_organization`, `work_organization_address`, `job_title`) " +
+                        "VALUES (" + Transfer.Doc_num + ", '" + tBNameOfWorkOrganizationOrIndividualEntrepreneur.Text + "', '" + tBWorkOrganizationAddress.Text + "', '" + tBJobTitle.Text + "')";
+
+                    DataBaseConnect DB = new DataBaseConnect();
+
+                    if (DB.sending_command(message) == true)
+                    {
+                        MessageBox.Show("Место работы успешно изменено на " + tBNameOfWorkOrganizationOrIndividualEntrepreneur.Text);
+                    }
+                    else MessageBox.Show("Ошибка!");
+
+                    hide_work_objects();
+                    defolt_change_of_study_or_job();
+                    tabControlMenuServices.Visible = false;
+
+                } else
+                {
+                    MessageBox.Show("Заполните все поля!");
+                }
+            }
+        }
+
+        private void defolt_change_of_study_or_job()
+        {
+            hide_education_objects();
+            hide_work_objects();
+            rBEducation.Checked = false;
+            rBWork.Checked = false;
         }
 
         private void tPChange_Enter(object sender, EventArgs e)
         {
-            hide_education_objects();
-            rBEducation.Checked = false;
-            rBWork.Checked = false;
+            defolt_change_of_study_or_job();
         }
     }
 }
