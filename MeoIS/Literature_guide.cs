@@ -9,10 +9,10 @@ namespace MeoIS
 {
     class Literature_guide : Search_note
     {
-        public Boolean addLiterature(string titleLit, string author, int yearRelease, string summary, string link)
+        public Boolean addLiterature(string titleLit, string author, string keywords, string summary, string link)
         {
-            string message = "INSERT INTO `literature`(`title_literature`, `author`, `year_release`, `summary`, `link`) " +
-                "VALUES ('" + titleLit + "','" + author + "','" + yearRelease + "','" + summary + "','" + link + "')";
+            string message = "INSERT INTO `literature`(`title_literature`, `author`, `summary`, `keywords`, `link`) " +
+                "VALUES ('" + titleLit + "','" + author + "','" + keywords + "','" + summary + "','" + link + "')";
             if (DataBase.sending_command(message) == true)
             {
                 MessageBox.Show("Получилось!!!!");

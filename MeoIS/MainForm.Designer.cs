@@ -37,8 +37,6 @@ namespace MeoIS
             this.labelCategory = new System.Windows.Forms.Label();
             this.labelRectal = new System.Windows.Forms.Label();
             this.labelChangeMilitaryRegistrationOffice = new System.Windows.Forms.Label();
-            this.pictureOptions = new System.Windows.Forms.PictureBox();
-            this.picSearch = new System.Windows.Forms.PictureBox();
             this.tBChangePass = new System.Windows.Forms.TextBox();
             this.tBChangeEmail = new System.Windows.Forms.TextBox();
             this.tBCangePhone = new System.Windows.Forms.TextBox();
@@ -93,9 +91,17 @@ namespace MeoIS
             this.rBEducation = new System.Windows.Forms.RadioButton();
             this.rBWork = new System.Windows.Forms.RadioButton();
             this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.labelApplicationForChangeOfPlaceOfWorkOrStudy = new System.Windows.Forms.Label();
+            this.labelSignUpForMedicalExamination = new System.Windows.Forms.Label();
+            this.labelRegistrationWithEnlistmentOffice = new System.Windows.Forms.Label();
+            this.groupBoxServices = new System.Windows.Forms.GroupBox();
+            this.pictureMedicalData = new System.Windows.Forms.PictureBox();
+            this.pictureCloseServices = new System.Windows.Forms.PictureBox();
+            this.pictureOptions = new System.Windows.Forms.PictureBox();
+            this.picSearch = new System.Windows.Forms.PictureBox();
+            this.pictureCloseDataGV = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGVLitTable)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureOptions)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picSearch)).BeginInit();
             this.tabControlMenuServices.SuspendLayout();
             this.tPReg.SuspendLayout();
             this.tPMed.SuspendLayout();
@@ -104,6 +110,12 @@ namespace MeoIS
             this.monday.SuspendLayout();
             this.Friday.SuspendLayout();
             this.tPChange.SuspendLayout();
+            this.groupBoxServices.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureMedicalData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureCloseServices)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureOptions)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSearch)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureCloseDataGV)).BeginInit();
             this.SuspendLayout();
             // 
             // tBSearch
@@ -144,11 +156,11 @@ namespace MeoIS
             // dataGVLitTable
             // 
             this.dataGVLitTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGVLitTable.Location = new System.Drawing.Point(272, 84);
+            this.dataGVLitTable.Location = new System.Drawing.Point(195, 48);
             this.dataGVLitTable.Name = "dataGVLitTable";
             this.dataGVLitTable.RowHeadersWidth = 51;
             this.dataGVLitTable.RowTemplate.Height = 24;
-            this.dataGVLitTable.Size = new System.Drawing.Size(713, 489);
+            this.dataGVLitTable.Size = new System.Drawing.Size(868, 488);
             this.dataGVLitTable.TabIndex = 10;
             this.dataGVLitTable.Visible = false;
             // 
@@ -190,30 +202,6 @@ namespace MeoIS
             this.labelChangeMilitaryRegistrationOffice.TabIndex = 14;
             this.labelChangeMilitaryRegistrationOffice.Text = "(Смена военкомат)";
             this.labelChangeMilitaryRegistrationOffice.Click += new System.EventHandler(this.labelChangeMilitaryRegistrationOffice_Click);
-            // 
-            // pictureOptions
-            // 
-            this.pictureOptions.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureOptions.Image = global::MeoIS.Properties.Resources.options;
-            this.pictureOptions.Location = new System.Drawing.Point(15, 455);
-            this.pictureOptions.Name = "pictureOptions";
-            this.pictureOptions.Size = new System.Drawing.Size(40, 40);
-            this.pictureOptions.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureOptions.TabIndex = 17;
-            this.pictureOptions.TabStop = false;
-            this.pictureOptions.Click += new System.EventHandler(this.pictureOptions_Click);
-            // 
-            // picSearch
-            // 
-            this.picSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picSearch.Image = global::MeoIS.Properties.Resources.search;
-            this.picSearch.Location = new System.Drawing.Point(1147, 2);
-            this.picSearch.Name = "picSearch";
-            this.picSearch.Size = new System.Drawing.Size(40, 40);
-            this.picSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picSearch.TabIndex = 6;
-            this.picSearch.TabStop = false;
-            this.picSearch.Click += new System.EventHandler(this.picSearch_Click);
             // 
             // tBChangePass
             // 
@@ -291,11 +279,12 @@ namespace MeoIS
             this.tabControlMenuServices.Controls.Add(this.tPReg);
             this.tabControlMenuServices.Controls.Add(this.tPMed);
             this.tabControlMenuServices.Controls.Add(this.tPChange);
-            this.tabControlMenuServices.Location = new System.Drawing.Point(272, 0);
+            this.tabControlMenuServices.Location = new System.Drawing.Point(195, 48);
             this.tabControlMenuServices.Name = "tabControlMenuServices";
             this.tabControlMenuServices.SelectedIndex = 0;
             this.tabControlMenuServices.Size = new System.Drawing.Size(837, 505);
             this.tabControlMenuServices.TabIndex = 25;
+            this.tabControlMenuServices.VisibleChanged += new System.EventHandler(this.tabControlMenuServices_VisibleChanged);
             this.tabControlMenuServices.Enter += new System.EventHandler(this.tabControlMenuServices_Enter);
             // 
             // tPReg
@@ -416,7 +405,7 @@ namespace MeoIS
             // buttonMed
             // 
             this.buttonMed.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonMed.Location = new System.Drawing.Point(282, 364);
+            this.buttonMed.Location = new System.Drawing.Point(282, 409);
             this.buttonMed.Name = "buttonMed";
             this.buttonMed.Size = new System.Drawing.Size(165, 54);
             this.buttonMed.TabIndex = 31;
@@ -924,12 +913,133 @@ namespace MeoIS
             this.label5.TabIndex = 2;
             this.label5.Text = "Сменить место работы или учебы";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.Location = new System.Drawing.Point(31, 35);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(493, 37);
+            this.label6.TabIndex = 27;
+            this.label6.Text = "ПРЕДОСТАВЛЯЕМЫЕ УСЛУГИ";
+            // 
+            // labelApplicationForChangeOfPlaceOfWorkOrStudy
+            // 
+            this.labelApplicationForChangeOfPlaceOfWorkOrStudy.AutoSize = true;
+            this.labelApplicationForChangeOfPlaceOfWorkOrStudy.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.labelApplicationForChangeOfPlaceOfWorkOrStudy.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelApplicationForChangeOfPlaceOfWorkOrStudy.Location = new System.Drawing.Point(94, 292);
+            this.labelApplicationForChangeOfPlaceOfWorkOrStudy.Name = "labelApplicationForChangeOfPlaceOfWorkOrStudy";
+            this.labelApplicationForChangeOfPlaceOfWorkOrStudy.Size = new System.Drawing.Size(398, 27);
+            this.labelApplicationForChangeOfPlaceOfWorkOrStudy.TabIndex = 28;
+            this.labelApplicationForChangeOfPlaceOfWorkOrStudy.Text = "Заявка на смену места работы/ учебы";
+            this.labelApplicationForChangeOfPlaceOfWorkOrStudy.Click += new System.EventHandler(this.labelApplicationForChangeOfPlaceOfWorkOrStudy_Click);
+            // 
+            // labelSignUpForMedicalExamination
+            // 
+            this.labelSignUpForMedicalExamination.AutoSize = true;
+            this.labelSignUpForMedicalExamination.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.labelSignUpForMedicalExamination.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelSignUpForMedicalExamination.Location = new System.Drawing.Point(122, 210);
+            this.labelSignUpForMedicalExamination.Name = "labelSignUpForMedicalExamination";
+            this.labelSignUpForMedicalExamination.Size = new System.Drawing.Size(337, 27);
+            this.labelSignUpForMedicalExamination.TabIndex = 29;
+            this.labelSignUpForMedicalExamination.Text = "Запись на медицинский осмотр";
+            this.labelSignUpForMedicalExamination.Click += new System.EventHandler(this.labelSignUpForMedicalExamination_Click);
+            // 
+            // labelRegistrationWithEnlistmentOffice
+            // 
+            this.labelRegistrationWithEnlistmentOffice.AutoSize = true;
+            this.labelRegistrationWithEnlistmentOffice.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.labelRegistrationWithEnlistmentOffice.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelRegistrationWithEnlistmentOffice.Location = new System.Drawing.Point(117, 116);
+            this.labelRegistrationWithEnlistmentOffice.Name = "labelRegistrationWithEnlistmentOffice";
+            this.labelRegistrationWithEnlistmentOffice.Size = new System.Drawing.Size(342, 27);
+            this.labelRegistrationWithEnlistmentOffice.TabIndex = 30;
+            this.labelRegistrationWithEnlistmentOffice.Text = "Постановка на учет в военкомат";
+            this.labelRegistrationWithEnlistmentOffice.Click += new System.EventHandler(this.labelRegistrationWithEnlistmentOffice_Click);
+            // 
+            // groupBoxServices
+            // 
+            this.groupBoxServices.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.groupBoxServices.Controls.Add(this.labelApplicationForChangeOfPlaceOfWorkOrStudy);
+            this.groupBoxServices.Controls.Add(this.labelRegistrationWithEnlistmentOffice);
+            this.groupBoxServices.Controls.Add(this.label6);
+            this.groupBoxServices.Controls.Add(this.labelSignUpForMedicalExamination);
+            this.groupBoxServices.Location = new System.Drawing.Point(304, 70);
+            this.groupBoxServices.Name = "groupBoxServices";
+            this.groupBoxServices.Size = new System.Drawing.Size(630, 425);
+            this.groupBoxServices.TabIndex = 31;
+            this.groupBoxServices.TabStop = false;
+            // 
+            // pictureMedicalData
+            // 
+            this.pictureMedicalData.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureMedicalData.Image = global::MeoIS.Properties.Resources.medical_data;
+            this.pictureMedicalData.Location = new System.Drawing.Point(39, 168);
+            this.pictureMedicalData.Name = "pictureMedicalData";
+            this.pictureMedicalData.Size = new System.Drawing.Size(69, 64);
+            this.pictureMedicalData.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureMedicalData.TabIndex = 33;
+            this.pictureMedicalData.TabStop = false;
+            this.pictureMedicalData.Click += new System.EventHandler(this.pictureMedicalData_Click);
+            // 
+            // pictureCloseServices
+            // 
+            this.pictureCloseServices.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureCloseServices.Image = global::MeoIS.Properties.Resources.close;
+            this.pictureCloseServices.Location = new System.Drawing.Point(991, 48);
+            this.pictureCloseServices.Name = "pictureCloseServices";
+            this.pictureCloseServices.Size = new System.Drawing.Size(53, 47);
+            this.pictureCloseServices.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureCloseServices.TabIndex = 32;
+            this.pictureCloseServices.TabStop = false;
+            this.pictureCloseServices.Click += new System.EventHandler(this.pictureCloseServices_Click);
+            // 
+            // pictureOptions
+            // 
+            this.pictureOptions.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureOptions.Image = global::MeoIS.Properties.Resources.options;
+            this.pictureOptions.Location = new System.Drawing.Point(15, 455);
+            this.pictureOptions.Name = "pictureOptions";
+            this.pictureOptions.Size = new System.Drawing.Size(40, 40);
+            this.pictureOptions.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureOptions.TabIndex = 17;
+            this.pictureOptions.TabStop = false;
+            this.pictureOptions.Click += new System.EventHandler(this.pictureOptions_Click);
+            // 
+            // picSearch
+            // 
+            this.picSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picSearch.Image = global::MeoIS.Properties.Resources.search;
+            this.picSearch.Location = new System.Drawing.Point(1147, 2);
+            this.picSearch.Name = "picSearch";
+            this.picSearch.Size = new System.Drawing.Size(40, 40);
+            this.picSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picSearch.TabIndex = 6;
+            this.picSearch.TabStop = false;
+            this.picSearch.Click += new System.EventHandler(this.picSearch_Click);
+            // 
+            // pictureCloseDataGV
+            // 
+            this.pictureCloseDataGV.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureCloseDataGV.Image = global::MeoIS.Properties.Resources.close;
+            this.pictureCloseDataGV.Location = new System.Drawing.Point(1069, 48);
+            this.pictureCloseDataGV.Name = "pictureCloseDataGV";
+            this.pictureCloseDataGV.Size = new System.Drawing.Size(53, 47);
+            this.pictureCloseDataGV.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureCloseDataGV.TabIndex = 34;
+            this.pictureCloseDataGV.TabStop = false;
+            this.pictureCloseDataGV.Click += new System.EventHandler(this.pictureCloseDataGV_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1199, 604);
-            this.Controls.Add(this.tabControlMenuServices);
+            this.Controls.Add(this.pictureCloseDataGV);
+            this.Controls.Add(this.pictureMedicalData);
+            this.Controls.Add(this.pictureCloseServices);
             this.Controls.Add(this.buttonChangeUserAccont);
             this.Controls.Add(this.labelChangePass);
             this.Controls.Add(this.labelChangePhone);
@@ -946,13 +1056,13 @@ namespace MeoIS
             this.Controls.Add(this.labelEnterReg);
             this.Controls.Add(this.picSearch);
             this.Controls.Add(this.tBSearch);
+            this.Controls.Add(this.tabControlMenuServices);
+            this.Controls.Add(this.groupBoxServices);
             this.Controls.Add(this.dataGVLitTable);
             this.Name = "MainForm";
             this.Text = "MeoIS";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.dataGVLitTable)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureOptions)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picSearch)).EndInit();
             this.tabControlMenuServices.ResumeLayout(false);
             this.tPReg.ResumeLayout(false);
             this.tPReg.PerformLayout();
@@ -968,6 +1078,13 @@ namespace MeoIS
             this.Friday.PerformLayout();
             this.tPChange.ResumeLayout(false);
             this.tPChange.PerformLayout();
+            this.groupBoxServices.ResumeLayout(false);
+            this.groupBoxServices.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureMedicalData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureCloseServices)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureOptions)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSearch)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureCloseDataGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1039,6 +1156,14 @@ namespace MeoIS
         private System.Windows.Forms.TextBox tBJobTitle;
         private System.Windows.Forms.Label labelNameOfOrganizationOrIndividualEntrepreneur;
         private System.Windows.Forms.TextBox tBNameOfWorkOrganizationOrIndividualEntrepreneur;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label labelApplicationForChangeOfPlaceOfWorkOrStudy;
+        private System.Windows.Forms.Label labelSignUpForMedicalExamination;
+        private System.Windows.Forms.Label labelRegistrationWithEnlistmentOffice;
+        private System.Windows.Forms.GroupBox groupBoxServices;
+        private System.Windows.Forms.PictureBox pictureCloseServices;
+        private System.Windows.Forms.PictureBox pictureMedicalData;
+        private System.Windows.Forms.PictureBox pictureCloseDataGV;
     }
 }
 

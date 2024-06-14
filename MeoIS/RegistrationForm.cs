@@ -64,7 +64,7 @@ namespace MeoIS
 
         public void set_gray_text_in_tBStatus()
         {
-            tBCategory.Text = "Выберите статус";
+            tBCategory.Text = "Введите категорию годности";
             tBCategory.ForeColor = Color.Gray;
         }
 
@@ -288,7 +288,7 @@ namespace MeoIS
 
         private void tBStatus_Enter(object sender, EventArgs e)
         {
-            if (tBCategory.Text == "Выберите статус")
+            if (tBCategory.Text == "Введите категорию годности")
             {
                 tBCategory.Text = "";
                 tBCategory.ForeColor = Color.Black;

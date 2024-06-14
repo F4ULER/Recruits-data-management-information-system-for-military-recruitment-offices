@@ -27,13 +27,11 @@ namespace MeoIS
 
         public DataTable search_literature(string search_word)
         {
-            string message = "SELECT `title_literature` AS 'Название', `author` AS 'Автор', `year_release` AS 'Дата выхода', " +
-                "`summary` AS 'Краткое содержание', `date_added` AS 'Дата добавления' FROM `literature` WHERE `title_literature` = '" + search_word + "' || `author` = '" + search_word + "' || `year_release` = '" + search_word + "'";
+            string message = "SELECT `title_literature` AS 'Название', `author` AS 'Автор', " +
+                "`summary` AS 'Краткое содержание', `keywords` AS 'Ключевые слова', `link` AS 'Ссылка', `date_added` AS 'Дата добавления' FROM `literature` WHERE `title_literature` = '" + search_word + "' || `author` = '" + search_word + "' || `keywords` = '" + search_word + "'";
 
             return (sending_command(message));
             
         }
-
-        
     }
 }

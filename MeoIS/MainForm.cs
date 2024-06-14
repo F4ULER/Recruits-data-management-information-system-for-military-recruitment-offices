@@ -18,6 +18,8 @@ namespace MeoIS
             InitializeComponent();
 
             tabControlMenuServices.Visible = false;
+            pictureCloseServices.Visible = false;
+            pictureCloseDataGV.Visible = false;
             if (Transfer.Doc_num != "")
             {
                 
@@ -28,10 +30,12 @@ namespace MeoIS
                 labelWelcome.Text = "Добрый день, " + Transfer.Name;
                 labelCategory.Text = "Категория: " + Transfer.Category;
                 labelRectal.Text = "Военкомат города: " + Transfer.City;
+                groupBoxServices.Visible = true;
 
             }
             else
             {
+                groupBoxServices.Visible = false;
                 labelWelcome.Visible = false;
                 labelCategory.Visible = false;
                 labelChangeMilitaryRegistrationOffice.Visible = false;
@@ -64,6 +68,10 @@ namespace MeoIS
 
         private void picSearch_Click(object sender, EventArgs e)
         {
+            groupBoxServices.Visible = false;
+            pictureCloseDataGV.Visible = true;
+
+
             Search_note search = new Search_note();
             DataTable table = new DataTable();
             table = search.search_literature(tBSearch.Text);
@@ -82,6 +90,7 @@ namespace MeoIS
         private void labelChangeMilitaryRegistrationOffice_Click(object sender, EventArgs e)
         {
             tabControlMenuServices.Visible = true;
+            groupBoxServices.Visible = false;
         }
 
        
@@ -146,6 +155,8 @@ namespace MeoIS
             if(Enlistment_Office.change_military_registration_and_enlistment_office(Transfer.Doc_num, city[0]) == true)
             {
                 labelRectal.Text = "Военкомат города: " + Transfer.City;
+                tBNewAddress.Text = "";
+                tBEnlistmentOfficeWhereRegistered.Text = "";
                 tabControlMenuServices.Visible = false;
             }
 
@@ -509,6 +520,68 @@ namespace MeoIS
         private void tPChange_Enter(object sender, EventArgs e)
         {
             defolt_change_of_study_or_job();
+        }
+
+        private void labelRegistrationWithEnlistmentOffice_Click(object sender, EventArgs e)
+        {
+            tabControlMenuServices.Visible = true;
+            tabControlMenuServices.SelectedIndex = 0;
+            groupBoxServices.Visible = false;
+        }
+
+        private void labelSignUpForMedicalExamination_Click(object sender, EventArgs e)
+        {
+            tabControlMenuServices.Visible = true;
+            tabControlMenuServices.SelectedIndex = 1;
+            groupBoxServices.Visible = false;
+        }
+
+        private void labelApplicationForChangeOfPlaceOfWorkOrStudy_Click(object sender, EventArgs e)
+        {
+            tabControlMenuServices.Visible = true;
+            tabControlMenuServices.SelectedIndex = 2;
+            groupBoxServices.Visible = false;
+        }
+
+        private void pictureCloseServices_Click(object sender, EventArgs e)
+        {
+            tabControlMenuServices.Visible = false;
+            pictureCloseServices.Visible = false;
+            groupBoxServices.Visible = true;
+        }
+
+        private void tabControlMenuServices_VisibleChanged(object sender, EventArgs e)
+        {
+            if (tabControlMenuServices.Visible == true) pictureCloseServices.Visible = true;
+        }
+
+        private void pictureMedicalData_Click(object sender, EventArgs e)
+        {
+            tabControlMenuServices.Visible = false;
+            groupBoxServices.Visible = false;
+            pictureCloseDataGV.Visible = true;
+
+            Advanced_search search = new Advanced_search();
+            DataTable table = new DataTable();
+            table = search.searchMedicalData(Transfer.Doc_num);
+            if (table.Rows.Count > 0)
+            {
+                dataGVLitTable.DataSource = table;
+                dataGVLitTable.Visible = true;
+            }
+            else
+            {
+                MessageBox.Show("Не найдено ни одной записи");
+            }
+        }
+
+        private void pictureCloseDataGV_Click(object sender, EventArgs e)
+        {
+            pictureCloseDataGV.Visible = false;
+            dataGVLitTable.Visible = false;
+            tabControlMenuServices.Visible = false;
+            groupBoxServices.Visible = true;
+            tBSearch.Text = "";
         }
     }
 }
