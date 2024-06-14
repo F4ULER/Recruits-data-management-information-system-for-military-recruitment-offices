@@ -13,7 +13,7 @@ namespace MeoIS
     {
         public DataBaseConnect DataBase = new DataBaseConnect();
 
-        protected DataTable sending_command(string mess)
+        public DataTable sending_command(string mess)
         {
             MySqlCommand command = new MySqlCommand(mess, DataBase.getConnection());
             DataTable table_literature = new DataTable();
@@ -32,6 +32,14 @@ namespace MeoIS
 
             return (sending_command(message));
             
+        }
+
+        public DataTable searchMedicalData(string search_word)
+        {
+            string message = "SELECT `therapist` AS 'Терапевт', `surgeon` AS 'Хирург', `neurologist` AS 'Невропатолог', `psychiatrist` AS 'Психиатр', `ophthalmologist` AS 'Окулист', `dermatovenerologist` AS 'Дерматовенеролог', `otorhinolaryngologist` AS 'Оториноларинголог', `dentist` AS 'Стоматолог' FROM `medical_data` WHERE `document_number` = '" + search_word + "'";
+
+            return (sending_command(message));
+
         }
     }
 }

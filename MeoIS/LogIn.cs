@@ -69,7 +69,7 @@ namespace MeoIS
             {
                 DialogResult result = MessageBox.Show("Вы уверены, что хотите выдать права администратора" + 
                     table.Rows[0][2].ToString() + " " + table.Rows[0][1].ToString() + " " + table.Rows[0][3].ToString() + "?", "Подтверждение", MessageBoxButtons.YesNo);
-                if (table.Rows[0][4].ToString() == "user" && result == DialogResult.Yes)
+                if (table.Rows[0][5].ToString() == "user" && result == DialogResult.Yes)
                 {
 
                     MySqlCommand comm = new MySqlCommand("UPDATE `users` SET `user_status`= 'admin' WHERE `document_number` = '" + documentNumber + "';", DB.getConnection());

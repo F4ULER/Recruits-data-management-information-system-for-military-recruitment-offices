@@ -147,13 +147,14 @@ namespace MeoIS
             User_data user_Data = new User_data();
             DataTable table = new DataTable();
 
-            bool gender = true;
-            if(rBM.Checked == false)
+            string gender = "";
+            if (rBM.Checked == false)
             {
-                gender = false;
+                gender = "М";
             }
+            else gender = "Ж";
 
-            if (user_Data.addUser(tBDocNumber.Text, tBPass.Text, tBLastName.Text, tBNameUser.Text, tBPatronymic.Text, tBAge.Text, tBCategory.Text, gender, tBPhone.Text, tBEmail.Text))
+            if (user_Data.addUser(tBDocNumber.Text, tBPass.Text, tBLastName.Text, tBNameUser.Text, tBPatronymic.Text, tBAge.Text, tBCategory.Text, gender,"", tBPhone.Text, tBEmail.Text))
             {
                 MessageBox.Show("Регистрация прошла успешно!");
                 AuthenticationForm form = new AuthenticationForm();

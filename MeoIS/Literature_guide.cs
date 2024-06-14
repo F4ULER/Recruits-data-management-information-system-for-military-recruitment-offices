@@ -9,19 +9,19 @@ namespace MeoIS
 {
     class Literature_guide : Search_note
     {
-        public Boolean addLiterature(string titleLit, string author, string keywords, string summary, string link)
+        public Boolean addLiterature(string titleLit, string author, string summary, string keywords, string link, string dateAdded)
         {
-            string message = "INSERT INTO `literature`(`title_literature`, `author`, `summary`, `keywords`, `link`) " +
-                "VALUES ('" + titleLit + "','" + author + "','" + keywords + "','" + summary + "','" + link + "')";
+            string message = "INSERT INTO `literature`(`title_literature`, `author`, `summary`, `keywords`, `link`, `date_added`) " +
+                "VALUES ('" + titleLit + "','" + author + "','" + summary + "','" + keywords + "','" + link + "','" + dateAdded + "')";
             if (DataBase.sending_command(message) == true)
             {
-                MessageBox.Show("Получилось!!!!");
+                MessageBox.Show("Запись успешно добавлена");
 
                 return true;
             }
             else
             {
-                MessageBox.Show("Не Получилось");
+                MessageBox.Show("Ошибка!");
 
                 return false;
             }
@@ -32,13 +32,13 @@ namespace MeoIS
             string message = "DELETE FROM `literature` WHERE `title_literature` = '" + titleLit + "'";
             if (DataBase.sending_command(message) == true)
             {
-                MessageBox.Show("Получилось!!!!");
+                MessageBox.Show("Запись успешно удалена");
 
                 return true;
             }
             else
             {
-                MessageBox.Show("Не Получилось");
+                MessageBox.Show("Ошибка!");
 
                 return false;
             }

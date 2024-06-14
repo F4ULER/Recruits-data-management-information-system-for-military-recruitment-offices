@@ -561,7 +561,7 @@ namespace MeoIS
             groupBoxServices.Visible = false;
             pictureCloseDataGV.Visible = true;
 
-            Advanced_search search = new Advanced_search();
+            Search_note search = new Search_note();
             DataTable table = new DataTable();
             table = search.searchMedicalData(Transfer.Doc_num);
             if (table.Rows.Count > 0)

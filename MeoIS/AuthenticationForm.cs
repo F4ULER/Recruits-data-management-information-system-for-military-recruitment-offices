@@ -59,21 +59,23 @@ namespace MeoIS
                 Transfer.Email = table_users.Rows[0][11].ToString();
                 Transfer.Phone = table_users.Rows[0][10].ToString();
 
-                MainForm form = new MainForm();
-
-                form.Show();
-                this.Hide();
-                
-
-               
+                if(table_users.Rows[0][12].ToString() == "user")
+                {
+                    MainForm form = new MainForm();
+                    form.Show();
+                    this.Hide();
+                } else
+                {
+                    Admin_panel form = new Admin_panel();
+                    form.Show();
+                    this.Hide();
+                }
             }
             else
             {
                 MessageBox.Show("Неверный номер документа или пароль!");
             }
         }
-
-
         private void textBoxLogin_Enter(object sender, EventArgs e)
         {
             if (textBoxLogin.Text == "Введите номер документа")
