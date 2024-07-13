@@ -21,6 +21,7 @@ namespace MeoIS
         }
     }
 
+    // класс для перенесения основной информации о пользователе между формами
     static class Transfer
     {
         public static string Doc_num

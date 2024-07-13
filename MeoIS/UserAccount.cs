@@ -9,10 +9,12 @@ using System.Windows.Forms;
 
 namespace MeoIS
 {
+    //класс для изменения некоторых параметров записи пользователем
     class UserAccount
     {
         protected DataBaseConnect DataBase = new DataBaseConnect();
 
+        //изменение электронной почты
         public Boolean change_email(string documentNumber, string value)
         {
             string message = "UPDATE `users` SET `email` = '" + value + "' WHERE `document_number`= " + documentNumber;
@@ -31,6 +33,7 @@ namespace MeoIS
             }
         }
 
+        //изменение пароля
         public Boolean change_password(string documentNumber, string value)
         {
             string message = "UPDATE `users` SET `password` = '" + value + "' WHERE `document_number`= " + documentNumber;
@@ -47,6 +50,7 @@ namespace MeoIS
             }
         }
 
+        // изменения номера телефона
         public Boolean change_phone_number(string documentNumber, string value)
         {
             string message = "UPDATE `users` SET `phone_number` = '" + value + "' WHERE `document_number`= " + documentNumber;

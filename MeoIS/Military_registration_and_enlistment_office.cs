@@ -7,27 +7,28 @@ using System.Windows.Forms;
 
 namespace MeoIS
 {
-    // класс для 
+    // класс для работы с военкоматами
     class Military_registration_and_enlistment_office
     {
         DataBaseConnect DataBase = new DataBaseConnect();
 
-        public Boolean choice_military_registration_and_enlistment_office(string documentNumber, string value)
-        {
-            MessageBox.Show("Выберите военкомат по месту жительства:");
-            string message = "UPDATE `users` SET `city` = '" + value + "' WHERE `document_number`= " + documentNumber;
+        //public Boolean choice_military_registration_and_enlistment_office(string documentNumber, string value)
+        //{
+        //    MessageBox.Show("Выберите военкомат по месту жительства:");
+        //    string message = "UPDATE `users` SET `city` = '" + value + "' WHERE `document_number`= " + documentNumber;
 
-            if (DataBase.sending_command(message) == true)
-            {
-                MessageBox.Show("Военкомат выбран: " + value);
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
+        //    if (DataBase.sending_command(message) == true)
+        //    {
+        //        MessageBox.Show("Военкомат выбран: " + value);
+        //        return true;
+        //    }
+        //    else
+        //    {
+        //        return false;
+        //    }
+        //}
 
+        // выбор нового военкомата
         public Boolean change_military_registration_and_enlistment_office(string documentNumber, string value)
         {
             DialogResult result = MessageBox.Show(
@@ -52,6 +53,7 @@ namespace MeoIS
             }
             else { return false; }
         }
+
         //protected Boolean check_date(string date)
         //{
         //    string message = "На данное время нет записи";
@@ -65,25 +67,23 @@ namespace MeoIS
         //        return false;
         //    }
         //}
+
+        // запись на мед осмотр в военкомат
         public Boolean registration_for_medical_check_up (string docNum, string city, string date, string time)
         {
-            
             string message = "INSERT INTO `enlistment_offices`(`document_number`, `city`, `date`) VALUES " +
                     "(" + docNum + ", '" + city + "', '" + date + " " + time + "');";
 
             if (DataBase.sending_command(message) == true)
             {
                 MessageBox.Show("Вы записались на мед. осмотр в военкомат города " + city + " " + date + " " + time);
-
                 return true;
             }
             else
             {
                 MessageBox.Show("Не Получилось");
-
                 return false;
             }
-
         }
     }
 }

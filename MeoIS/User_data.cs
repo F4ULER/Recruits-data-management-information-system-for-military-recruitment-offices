@@ -7,8 +7,10 @@ using System.Windows.Forms;
 
 namespace MeoIS
 {
+    //изменение всех параметров записи
     class User_data : UserAccount
     {
+        // изменение полного имени
         public Boolean change_full_name(string documentNumber, string name)
         {
             string[] fullName = name.Split(new char[] { ' ' });
@@ -28,6 +30,7 @@ namespace MeoIS
             }
         }
 
+        // изменение номера документа
         public Boolean change_document_number(string phone, string value)
         {
             string message = "UPDATE `users` SET `document_number` = '" + value + "' WHERE `phone_number`= " + phone;
@@ -44,6 +47,7 @@ namespace MeoIS
             }
         }
 
+        // изменение категории годности
         public Boolean change_category_of_suitability_for_military_service(string documentNumber, string value)
         {
             string message = "UPDATE `users` SET `category` = '" + value + "' WHERE `document_number`= " + documentNumber;
@@ -60,6 +64,7 @@ namespace MeoIS
             }
         }
 
+        // добавление записи о пользователе
         public bool addUser(string documentNumber, string pass, string lastName, string name, string patronymic, string age, string category, string gender, string city, string phone, string email)
         {
             string message = "INSERT INTO `users` (`document_number`, `password`, `last_name`, `name`, " +
@@ -81,6 +86,8 @@ namespace MeoIS
             }
 
         }
+
+        // удаление записи о пользователе
         public bool deleteUser(string documentNumber)
         {
             string message = "DELETE FROM `users` WHERE `document_number` = '"+documentNumber+"'";
