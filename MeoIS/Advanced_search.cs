@@ -8,8 +8,10 @@ using System.Windows.Forms;
 
 namespace MeoIS
 {
+    //расширенный поиск. В каждом методы находится SQL команда для поиска того или иного параметра о пользователе
     class Advanced_search : Search_note
     {
+        //поиск по номеры документа
         public DataTable searchDocumentNumber(string documentNumber)
         {
             string message = "SELECT `document_number`, `password`, `last_name`, `name`, `patronymic`, `category`, `gender`, " +
@@ -19,6 +21,7 @@ namespace MeoIS
             return table;
         }
 
+        //поиск по  полному имени (ФИО)
         public DataTable searchFullName(string last_name, string name, string patronymic)
         {
             string message = "SELECT `document_number`, `password`, `last_name`, `name`, `patronymic`, `category`, `gender`, `city`, " +
@@ -28,6 +31,7 @@ namespace MeoIS
             return table;
         }
 
+        //поиск по городу (военкомату)
         public DataTable searchMilitaryRegistrationAndEnlistmentOffice(string city)
         {
             string message = "SELECT `document_number`, `password`, `last_name`, `name`, `patronymic`, `category`, `gender`, " +
@@ -37,6 +41,7 @@ namespace MeoIS
             return table;
         }
 
+        //поиск по номеру телефона
         public DataTable searchPhoneNumber(string phone)
         {
             string message = "SELECT `document_number`, `password`, `last_name`, `name`, `patronymic`, `category`, `gender`, " +

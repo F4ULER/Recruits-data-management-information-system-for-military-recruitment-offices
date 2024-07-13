@@ -29,8 +29,8 @@ namespace MeoIS
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.tBSearch = new System.Windows.Forms.TextBox();
-            this.labelEnterReg = new System.Windows.Forms.Label();
             this.labelExit = new System.Windows.Forms.Label();
             this.dataGVLitTable = new System.Windows.Forms.DataGridView();
             this.labelWelcome = new System.Windows.Forms.Label();
@@ -97,10 +97,10 @@ namespace MeoIS
             this.labelRegistrationWithEnlistmentOffice = new System.Windows.Forms.Label();
             this.groupBoxServices = new System.Windows.Forms.GroupBox();
             this.pictureMedicalData = new System.Windows.Forms.PictureBox();
-            this.pictureCloseServices = new System.Windows.Forms.PictureBox();
             this.pictureOptions = new System.Windows.Forms.PictureBox();
             this.picSearch = new System.Windows.Forms.PictureBox();
-            this.pictureCloseDataGV = new System.Windows.Forms.PictureBox();
+            this.pictureCloseServises = new System.Windows.Forms.PictureBox();
+            this.labelLogIn = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGVLitTable)).BeginInit();
             this.tabControlMenuServices.SuspendLayout();
             this.tPReg.SuspendLayout();
@@ -112,10 +112,9 @@ namespace MeoIS
             this.tPChange.SuspendLayout();
             this.groupBoxServices.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureMedicalData)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureCloseServices)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureOptions)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSearch)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureCloseDataGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureCloseServises)).BeginInit();
             this.SuspendLayout();
             // 
             // tBSearch
@@ -127,30 +126,16 @@ namespace MeoIS
             this.tBSearch.Size = new System.Drawing.Size(233, 30);
             this.tBSearch.TabIndex = 5;
             // 
-            // labelEnterReg
-            // 
-            this.labelEnterReg.AutoSize = true;
-            this.labelEnterReg.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.labelEnterReg.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelEnterReg.Location = new System.Drawing.Point(12, 464);
-            this.labelEnterReg.Name = "labelEnterReg";
-            this.labelEnterReg.Size = new System.Drawing.Size(163, 22);
-            this.labelEnterReg.TabIndex = 7;
-            this.labelEnterReg.Text = "Вход/Регистрация";
-            this.labelEnterReg.Visible = false;
-            this.labelEnterReg.Click += new System.EventHandler(this.labelEnterReg_Click);
-            // 
             // labelExit
             // 
             this.labelExit.AutoSize = true;
             this.labelExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.labelExit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelExit.Location = new System.Drawing.Point(12, 498);
+            this.labelExit.Location = new System.Drawing.Point(12, 573);
             this.labelExit.Name = "labelExit";
             this.labelExit.Size = new System.Drawing.Size(63, 22);
             this.labelExit.TabIndex = 8;
             this.labelExit.Text = "Выход";
-            this.labelExit.Visible = false;
             this.labelExit.Click += new System.EventHandler(this.labelExit_Click);
             // 
             // dataGVLitTable
@@ -327,10 +312,10 @@ namespace MeoIS
             // tBNewAddress
             // 
             this.tBNewAddress.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tBNewAddress.Location = new System.Drawing.Point(449, 191);
+            this.tBNewAddress.Location = new System.Drawing.Point(400, 191);
             this.tBNewAddress.Multiline = true;
             this.tBNewAddress.Name = "tBNewAddress";
-            this.tBNewAddress.Size = new System.Drawing.Size(237, 27);
+            this.tBNewAddress.Size = new System.Drawing.Size(323, 27);
             this.tBNewAddress.TabIndex = 28;
             // 
             // label2
@@ -530,7 +515,7 @@ namespace MeoIS
             "14:00",
             "15:00",
             "16:00"});
-            this.cBWednesday.Location = new System.Drawing.Point(3, 26);
+            this.cBWednesday.Location = new System.Drawing.Point(3, 25);
             this.cBWednesday.Name = "cBWednesday";
             this.cBWednesday.Size = new System.Drawing.Size(140, 24);
             this.cBWednesday.TabIndex = 7;
@@ -598,7 +583,7 @@ namespace MeoIS
             "14:00",
             "15:00",
             "16:00"});
-            this.cBMonday.Location = new System.Drawing.Point(3, 26);
+            this.cBMonday.Location = new System.Drawing.Point(3, 25);
             this.cBMonday.Name = "cBMonday";
             this.cBMonday.Size = new System.Drawing.Size(139, 24);
             this.cBMonday.TabIndex = 5;
@@ -667,7 +652,7 @@ namespace MeoIS
             "14:00",
             "15:00",
             "16:00"});
-            this.cBFriday.Location = new System.Drawing.Point(3, 27);
+            this.cBFriday.Location = new System.Drawing.Point(3, 26);
             this.cBFriday.Name = "cBFriday";
             this.cBFriday.Size = new System.Drawing.Size(141, 24);
             this.cBFriday.TabIndex = 9;
@@ -984,18 +969,6 @@ namespace MeoIS
             this.pictureMedicalData.TabStop = false;
             this.pictureMedicalData.Click += new System.EventHandler(this.pictureMedicalData_Click);
             // 
-            // pictureCloseServices
-            // 
-            this.pictureCloseServices.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureCloseServices.Image = global::MeoIS.Properties.Resources.close;
-            this.pictureCloseServices.Location = new System.Drawing.Point(991, 48);
-            this.pictureCloseServices.Name = "pictureCloseServices";
-            this.pictureCloseServices.Size = new System.Drawing.Size(53, 47);
-            this.pictureCloseServices.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureCloseServices.TabIndex = 32;
-            this.pictureCloseServices.TabStop = false;
-            this.pictureCloseServices.Click += new System.EventHandler(this.pictureCloseServices_Click);
-            // 
             // pictureOptions
             // 
             this.pictureOptions.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -1020,26 +993,39 @@ namespace MeoIS
             this.picSearch.TabStop = false;
             this.picSearch.Click += new System.EventHandler(this.picSearch_Click);
             // 
-            // pictureCloseDataGV
+            // pictureCloseServises
             // 
-            this.pictureCloseDataGV.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureCloseDataGV.Image = global::MeoIS.Properties.Resources.close;
-            this.pictureCloseDataGV.Location = new System.Drawing.Point(1069, 48);
-            this.pictureCloseDataGV.Name = "pictureCloseDataGV";
-            this.pictureCloseDataGV.Size = new System.Drawing.Size(53, 47);
-            this.pictureCloseDataGV.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureCloseDataGV.TabIndex = 34;
-            this.pictureCloseDataGV.TabStop = false;
-            this.pictureCloseDataGV.Click += new System.EventHandler(this.pictureCloseDataGV_Click);
+            this.pictureCloseServises.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureCloseServises.Image = global::MeoIS.Properties.Resources.close;
+            this.pictureCloseServises.Location = new System.Drawing.Point(1069, 48);
+            this.pictureCloseServises.Name = "pictureCloseServises";
+            this.pictureCloseServises.Size = new System.Drawing.Size(53, 47);
+            this.pictureCloseServises.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureCloseServises.TabIndex = 34;
+            this.pictureCloseServises.TabStop = false;
+            this.pictureCloseServises.Click += new System.EventHandler(this.pictureCloseServises_Click);
+            // 
+            // labelLogIn
+            // 
+            this.labelLogIn.AutoSize = true;
+            this.labelLogIn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.labelLogIn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelLogIn.Location = new System.Drawing.Point(11, 551);
+            this.labelLogIn.Name = "labelLogIn";
+            this.labelLogIn.Size = new System.Drawing.Size(50, 22);
+            this.labelLogIn.TabIndex = 35;
+            this.labelLogIn.Text = "Вход";
+            this.labelLogIn.Click += new System.EventHandler(this.labelLogIn_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1199, 604);
-            this.Controls.Add(this.pictureCloseDataGV);
+            this.Controls.Add(this.tabControlMenuServices);
+            this.Controls.Add(this.labelLogIn);
+            this.Controls.Add(this.pictureCloseServises);
             this.Controls.Add(this.pictureMedicalData);
-            this.Controls.Add(this.pictureCloseServices);
             this.Controls.Add(this.buttonChangeUserAccont);
             this.Controls.Add(this.labelChangePass);
             this.Controls.Add(this.labelChangePhone);
@@ -1053,14 +1039,14 @@ namespace MeoIS
             this.Controls.Add(this.labelCategory);
             this.Controls.Add(this.labelWelcome);
             this.Controls.Add(this.labelExit);
-            this.Controls.Add(this.labelEnterReg);
             this.Controls.Add(this.picSearch);
             this.Controls.Add(this.tBSearch);
-            this.Controls.Add(this.tabControlMenuServices);
             this.Controls.Add(this.groupBoxServices);
             this.Controls.Add(this.dataGVLitTable);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
-            this.Text = "MeoIS";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Военкомат Российской Федерации";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.dataGVLitTable)).EndInit();
             this.tabControlMenuServices.ResumeLayout(false);
@@ -1081,10 +1067,9 @@ namespace MeoIS
             this.groupBoxServices.ResumeLayout(false);
             this.groupBoxServices.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureMedicalData)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureCloseServices)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureOptions)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSearch)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureCloseDataGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureCloseServises)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1096,7 +1081,6 @@ namespace MeoIS
         private System.Windows.Forms.TextBox tBSearch;
         private System.Windows.Forms.Label labelExit;
         public System.Windows.Forms.DataGridView dataGVLitTable;
-        public System.Windows.Forms.Label labelEnterReg;
         private System.Windows.Forms.Label labelWelcome;
         private System.Windows.Forms.Label labelCategory;
         private System.Windows.Forms.Label labelRectal;
@@ -1161,9 +1145,9 @@ namespace MeoIS
         private System.Windows.Forms.Label labelSignUpForMedicalExamination;
         private System.Windows.Forms.Label labelRegistrationWithEnlistmentOffice;
         private System.Windows.Forms.GroupBox groupBoxServices;
-        private System.Windows.Forms.PictureBox pictureCloseServices;
         private System.Windows.Forms.PictureBox pictureMedicalData;
-        private System.Windows.Forms.PictureBox pictureCloseDataGV;
+        private System.Windows.Forms.PictureBox pictureCloseServises;
+        private System.Windows.Forms.Label labelLogIn;
     }
 }
 

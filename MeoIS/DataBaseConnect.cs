@@ -10,6 +10,7 @@ using MySql.Data.MySqlClient;
 
 namespace MeoIS
 {
+    //класс для взаимодействия программы с базой данных
     class DataBaseConnect
     {
         //подключение к базе данных
@@ -35,6 +36,7 @@ namespace MeoIS
             return connection;
         }
 
+        // отправление команды базе данных
         public Boolean sending_command(string mess)
         {
             MySqlCommand command = new MySqlCommand(mess, getConnection());
@@ -52,6 +54,8 @@ namespace MeoIS
                 return false;
             }
         }
+
+        // проверка оригинальности любого параметра
         public Boolean check(string column, string value, string message)
         {
             DataBaseConnect DB = new DataBaseConnect();

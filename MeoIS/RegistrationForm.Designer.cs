@@ -45,6 +45,7 @@ namespace MeoIS
             this.buttonBack = new System.Windows.Forms.Button();
             this.labelAuth = new System.Windows.Forms.Label();
             this.tBAge = new System.Windows.Forms.TextBox();
+            this.labelExit = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // tBDocNumber
@@ -68,6 +69,7 @@ namespace MeoIS
             this.buttonReg.TabIndex = 13;
             this.buttonReg.Text = "Зарегистрироваться";
             this.buttonReg.UseVisualStyleBackColor = false;
+            this.buttonReg.Visible = false;
             this.buttonReg.Click += new System.EventHandler(this.buttonRegReg_Click);
             // 
             // tBLastName
@@ -226,11 +228,24 @@ namespace MeoIS
             this.tBAge.Enter += new System.EventHandler(this.tBAge_Enter);
             this.tBAge.Leave += new System.EventHandler(this.tBAge_Leave);
             // 
+            // labelExit
+            // 
+            this.labelExit.AutoSize = true;
+            this.labelExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.labelExit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelExit.Location = new System.Drawing.Point(11, 523);
+            this.labelExit.Name = "labelExit";
+            this.labelExit.Size = new System.Drawing.Size(63, 22);
+            this.labelExit.TabIndex = 2816;
+            this.labelExit.Text = "Выход";
+            this.labelExit.Click += new System.EventHandler(this.labelExit_Click);
+            // 
             // RegistrationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(542, 565);
+            this.Controls.Add(this.labelExit);
             this.Controls.Add(this.tBAge);
             this.Controls.Add(this.labelAuth);
             this.Controls.Add(this.buttonBack);
@@ -275,5 +290,6 @@ namespace MeoIS
         private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.Label labelAuth;
         private System.Windows.Forms.TextBox tBAge;
+        private System.Windows.Forms.Label labelExit;
     }
 }

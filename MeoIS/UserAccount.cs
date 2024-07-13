@@ -17,6 +17,8 @@ namespace MeoIS
         {
             string message = "UPDATE `users` SET `email` = '" + value + "' WHERE `document_number`= " + documentNumber;
             
+            // вставить сюда проверку уникальности checkEmail
+
             if (DataBase.sending_command(message) == true)
             {
                 MessageBox.Show("Email успешно изменен!");

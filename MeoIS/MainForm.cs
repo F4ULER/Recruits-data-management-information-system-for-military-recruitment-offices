@@ -11,6 +11,7 @@ using MySql.Data.MySqlClient;
 
 namespace MeoIS
 {
+    //пользовательская панель
     public partial class MainForm : Form
     {
         public MainForm()
@@ -18,45 +19,47 @@ namespace MeoIS
             InitializeComponent();
 
             tabControlMenuServices.Visible = false;
-            pictureCloseServices.Visible = false;
-            pictureCloseDataGV.Visible = false;
+            pictureCloseServises.Visible = false;
+            labelExit.Visible = false;
+
+
+            
             if (Transfer.Doc_num != "")
             {
-                
+
                 //labelExit.Visible = true;
                 //labelEnterReg.Visible = false;
-                
 
+                pictureMedicalData.Visible = true;
                 labelWelcome.Text = "Добрый день, " + Transfer.Name;
                 labelCategory.Text = "Категория: " + Transfer.Category;
                 labelRectal.Text = "Военкомат города: " + Transfer.City;
                 groupBoxServices.Visible = true;
-
+                labelExit.Visible = true;
+                labelLogIn.Visible = false;
             }
-            else
+            else/////////////////////////////////////////////вход без регистрации (УСТАРЕЛ?)
             {
+                pictureMedicalData.Visible = false;
                 groupBoxServices.Visible = false;
                 labelWelcome.Visible = false;
                 labelCategory.Visible = false;
                 labelChangeMilitaryRegistrationOffice.Visible = false;
                 labelRectal.Visible = false;
                 pictureOptions.Visible = false;
-                
-                //labelExit.Visible = false;
-                //labelEnterReg.Visible = true;
-               
-            }
+                labelExit.Visible = false;
+                labelLogIn.Visible = true;
+
+            }////////////////////////////////////////////////////////
         }
 
-        private void labelEnterReg_Click(object sender, EventArgs e)
-        {
-            AuthenticationForm form = new AuthenticationForm();
-            form.Show();
-        }
-
+        //кнопка выхода из аккаунта
         private void labelExit_Click(object sender, EventArgs e)
         {
-            labelEnterReg.Visible = true;
+            Transfer.Name = "";
+            labelWelcome.Text = "";
+            this.Hide();
+            labelLogIn.Visible = true;
             labelExit.Visible = false;
         }
 
@@ -66,18 +69,17 @@ namespace MeoIS
             System.Diagnostics.Process.GetCurrentProcess().Kill();
         }
 
+        // поиск по справочнику литературы в поисковой строке
         private void picSearch_Click(object sender, EventArgs e)
         {
             groupBoxServices.Visible = false;
-            pictureCloseDataGV.Visible = true;
-
+            pictureCloseServises.Visible = true;
 
             Search_note search = new Search_note();
             DataTable table = new DataTable();
             table = search.search_literature(tBSearch.Text);
             if(table.Rows.Count > 0)
             {
-
                 dataGVLitTable.DataSource = table;
                 dataGVLitTable.Visible = true;
             }
@@ -93,7 +95,7 @@ namespace MeoIS
             groupBoxServices.Visible = false;
         }
 
-       
+       // параметры пользователя (значек шестеренки)
         private void pictureOptions_Click(object sender, EventArgs e)
         {
             tBChangePass.Text = Transfer.Pass;
@@ -119,9 +121,9 @@ namespace MeoIS
                 tBChangePass.Visible = false;
                 buttonChangeUserAccont.Visible = false;
             }
-
         }
 
+        // изменение номера телефона и/или электронной почты и/или пароля пользователем (значок шестеренки кнопка сохранить)
         private void buttonChangeUserAccont_Click(object sender, EventArgs e)
         {
             if(tBCangePhone.Text != Transfer.Phone)
@@ -134,32 +136,43 @@ namespace MeoIS
             if (tBChangeEmail.Text != Transfer.Email)
             {
                 UserAccount account = new UserAccount();
-                account.change_phone_number(Transfer.Doc_num, tBChangeEmail.Text);
+                account.change_email(Transfer.Doc_num, tBChangeEmail.Text);
                 tBChangeEmail.Text = Transfer.Email;
             }
 
             if (tBChangePass.Text != Transfer.Pass)
             {
                 UserAccount account = new UserAccount();
-                account.change_phone_number(Transfer.Doc_num, tBChangePass.Text);
+                account.change_password(Transfer.Doc_num, tBChangePass.Text);
                 tBChangePass.Text = Transfer.Pass;
             }
 
         }
 
+        //постановка на учет в новый военкомат
         private void buttonOldEnlistmentOffice_Click(object sender, EventArgs e)
         {
-            string[] city = tBNewAddress.Text.Split(new char[] { ',' });
-
-            Military_registration_and_enlistment_office Enlistment_Office = new Military_registration_and_enlistment_office();
-            if(Enlistment_Office.change_military_registration_and_enlistment_office(Transfer.Doc_num, city[0]) == true)
+            if(tBEnlistmentOfficeWhereRegistered.Text != "" && tBNewAddress.Text != "")
             {
-                labelRectal.Text = "Военкомат города: " + Transfer.City;
-                tBNewAddress.Text = "";
-                tBEnlistmentOfficeWhereRegistered.Text = "";
-                tabControlMenuServices.Visible = false;
-            }
+                string[] city = tBNewAddress.Text.Split(new char[] { ',' });
 
+                Military_registration_and_enlistment_office Enlistment_Office = new Military_registration_and_enlistment_office();
+                if (Enlistment_Office.change_military_registration_and_enlistment_office(Transfer.Doc_num, city[0]) == true)
+                {
+                    labelRectal.Text = "Военкомат города: " + Transfer.City;
+                    tBNewAddress.Text = "";
+                    tBEnlistmentOfficeWhereRegistered.Text = "";
+                    tabControlMenuServices.Visible = false;
+                } 
+                else { MessageBox.Show("Ошибка!"); }
+                tabControlMenuServices.Visible = false;
+                pictureCloseServises.Visible = false;
+                groupBoxServices.Visible = true;
+            }
+            else
+            {
+                MessageBox.Show("Заполните все поля!");
+            }
         }
 
         private void monday_MouseMove(object sender, MouseEventArgs e)
@@ -252,10 +265,11 @@ namespace MeoIS
             Friday.BackColor = Color.White;
         }
 
-        int k = 0;
-        protected void change_date(bool key)
-        {
+        int k = 0; //счетчик недель для мед осмотра
 
+        //изменение даты в мед осморте
+        protected void change_date()
+        {
             labelMonday.Text = "Понедельник \n";
             labelWensday.Text = "Среда \n";
             labelFriday.Text = "Пятница \n";
@@ -272,56 +286,59 @@ namespace MeoIS
             labelFriday.Text += mondayDate.AddDays(4).ToString("d");
         }
 
+        //кнопка "записаться" в мед осмотре
         private void buttonMed_Click(object sender, EventArgs e)
         {
-            string[] date;
-            string title = "";
-            string time = "";
-            
-            if (cBFriday.Text == "" && cBWednesday.Text == "")
+            if (cBMonday.Text != "" || cBWednesday.Text != "" || cBFriday.Text != "")
             {
-                title = labelMonday.Text;
-                time = cBMonday.Text;
-            }
-            else if(cBMonday.Text == "" && cBFriday.Text == "")
-            {
-                title = labelWensday.Text;
-                time = cBWednesday.Text;
-            }
-            else if(cBMonday.Text == "" && cBWednesday.Text == "")
-            {
-                title = labelFriday.Text;
-                time = cBFriday.Text;
+                string[] date;
+                string title = "";
+                string time = "";
+
+                if (cBFriday.Text == "" && cBWednesday.Text == "")
+                {
+                    title = labelMonday.Text;
+                    time = cBMonday.Text;
+                }
+                else if (cBMonday.Text == "" && cBFriday.Text == "")
+                {
+                    title = labelWensday.Text;
+                    time = cBWednesday.Text;
+                }
+                else if (cBMonday.Text == "" && cBWednesday.Text == "")
+                {
+                    title = labelFriday.Text;
+                    time = cBFriday.Text;
+                }
+                else
+                {
+                    MessageBox.Show("Нельзя выбирать больше одной даты в неделю.");
+                }
+
+                if (title != "")
+                {
+                    date = title.Split(new char[] { '\n' });
+
+                    Military_registration_and_enlistment_office Enlistment_Office = new Military_registration_and_enlistment_office();
+                    Enlistment_Office.registration_for_medical_check_up(Transfer.Doc_num, Transfer.City, date[1], time);
+
+                    cBMonday.SelectedIndex = 0;
+                    cBWednesday.SelectedIndex = 0;
+                    cBFriday.SelectedIndex = 0;
+                    tabControlMenuServices.Visible = false;
+                    pictureCloseServises.Visible = false;
+                    groupBoxServices.Visible = true;
+                }
             }
             else
             {
-                MessageBox.Show("Нельзя выбирать больше одной даты в неделю.");
+                MessageBox.Show("Выберите дату и время.");
             }
-
-            if (title != "")
-            {
-                date = title.Split(new char[] { '\n' });
-
-                string message = "INSERT INTO `enlistment_offices`(`document_number`, `city`, `date`) VALUES " +
-                "(" + Transfer.Doc_num + ", '" + Transfer.City + "', '" + date[1] + " " + time + "');";
-
-                DataBaseConnect dataBase = new DataBaseConnect();
-                dataBase.sending_command(message);
-
-                MessageBox.Show("Успешно! Запись на медицинский осмотр в городе "+ Transfer.City + " " + date[1] + " " + time );
-
-                cBMonday.SelectedIndex = 0;
-                cBWednesday.SelectedIndex = 0;
-                cBFriday.SelectedIndex = 0;
-                tabControlMenuServices.Visible = false;
-            }
-
-            
         }
 
+        //поиск даты ближайшего понедельника
         private void tabControlMenuServices_Enter(object sender, EventArgs e)
         {
-            //поиск даты понедельника
             var date = DateTime.Today;
             if(date.DayOfWeek.ToString() == "Sunday" || date.DayOfWeek.ToString() == "Saturday" || date.DayOfWeek.ToString() == "Friday")
             {
@@ -346,21 +363,23 @@ namespace MeoIS
                 labelWensday.Text += mondayDate.AddDays(2).ToString("d");
                 labelFriday.Text += mondayDate.AddDays(4).ToString("d");
             }
-            
         }
 
+        //следущая неделя
         private void labelNextWeek_Click(object sender, EventArgs e)
         {
             k += 7;
-            change_date(true);
+            change_date();
         }
 
+        // предыдущая неделя
         private void labelPreviousWeek_Click(object sender, EventArgs e)
         {
             k -= 7;
-            change_date(false);
+            change_date();
         }
 
+        // показывает все поля для изменения места учебы
         private void show_education_objects()
         {
             labelNameOfEducationalOrganization.Visible = true;
@@ -385,6 +404,7 @@ namespace MeoIS
             buttonChangePlaceOfStudyOrWork.Visible = true;
         }
 
+        // скрывает все поля для изменения места учебы
         private void hide_education_objects()
         {
             labelNameOfEducationalOrganization.Visible = false;
@@ -409,6 +429,7 @@ namespace MeoIS
             buttonChangePlaceOfStudyOrWork.Visible = false;
         }
 
+        // показывает все поля для изменения места работы
         private void show_work_objects()
         {
             labelNameOfOrganizationOrIndividualEntrepreneur.Visible = true;
@@ -425,6 +446,8 @@ namespace MeoIS
 
             buttonChangePlaceOfStudyOrWork.Visible = true;
         }
+
+        // скрывает все поля для изменения места работы
         private void hide_work_objects()
         {
             labelNameOfOrganizationOrIndividualEntrepreneur.Visible = false;
@@ -441,7 +464,9 @@ namespace MeoIS
 
             buttonChangePlaceOfStudyOrWork.Visible = false;
         }
-            private void radioButton_CheckedChanged(object sender, EventArgs e)
+
+        //переключать учебы и работы
+        private void radioButton_CheckedChanged(object sender, EventArgs e)
         {
             if(rBEducation.Checked == true)
             {
@@ -455,6 +480,7 @@ namespace MeoIS
             }
         }
 
+        // кнопка сохрания данных о изменении места учебы или работы
         private void buttonChangePlaceOfStudyOrWork_Click(object sender, EventArgs e)
         {
             if (rBEducation.Checked == true)
@@ -509,6 +535,7 @@ namespace MeoIS
             }
         }
 
+        //обычное состояние вкладки смены учебы или работы
         private void defolt_change_of_study_or_job()
         {
             hide_education_objects();
@@ -543,23 +570,17 @@ namespace MeoIS
             groupBoxServices.Visible = false;
         }
 
-        private void pictureCloseServices_Click(object sender, EventArgs e)
-        {
-            tabControlMenuServices.Visible = false;
-            pictureCloseServices.Visible = false;
-            groupBoxServices.Visible = true;
-        }
-
         private void tabControlMenuServices_VisibleChanged(object sender, EventArgs e)
         {
-            if (tabControlMenuServices.Visible == true) pictureCloseServices.Visible = true;
+            if (tabControlMenuServices.Visible == true) pictureCloseServises.Visible = true;
         }
 
+        // отображение таблицы посещения врачей в военкомате (иконка медицинского планшета)
         private void pictureMedicalData_Click(object sender, EventArgs e)
         {
             tabControlMenuServices.Visible = false;
             groupBoxServices.Visible = false;
-            pictureCloseDataGV.Visible = true;
+            pictureCloseServises.Visible = true;
 
             Search_note search = new Search_note();
             DataTable table = new DataTable();
@@ -575,13 +596,24 @@ namespace MeoIS
             }
         }
 
-        private void pictureCloseDataGV_Click(object sender, EventArgs e)
+        private void pictureCloseServises_Click(object sender, EventArgs e)
         {
-            pictureCloseDataGV.Visible = false;
+            pictureCloseServises.Visible = false;
             dataGVLitTable.Visible = false;
             tabControlMenuServices.Visible = false;
             groupBoxServices.Visible = true;
             tBSearch.Text = "";
+
+        }
+
+        // открытие окна аутентификации (кнопка вход)
+        private void labelLogIn_Click(object sender, EventArgs e)
+        {
+            labelLogIn.Visible = false;
+            labelExit.Visible = true;
+            AuthenticationForm authenticationForm = new AuthenticationForm();
+            authenticationForm.Show();
+            this.Hide();
         }
     }
 }

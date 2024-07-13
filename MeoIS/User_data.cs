@@ -13,7 +13,8 @@ namespace MeoIS
         {
             string[] fullName = name.Split(new char[] { ' ' });
 
-            string message = "UPDATE `users` SET`last_name`= '" + fullName[0] + "',`name`='" + fullName[1] + "',`patronymic`='" + fullName[2] + "' WHERE `document_number` = " + documentNumber;
+            string message = "UPDATE `users` SET`last_name`= '" + fullName[0] + "',`name`='"
+                + fullName[1] + "',`patronymic`='" + fullName[2] + "' WHERE `document_number` = " + documentNumber;
 
             if (DataBase.sending_command(message) == true)
             {
@@ -63,7 +64,8 @@ namespace MeoIS
         {
             string message = "INSERT INTO `users` (`document_number`, `password`, `last_name`, `name`, " +
                 "`patronymic`, `age`, `category`, `gender`, `city`, `phone_number`, `email`, `user_status`,`address`) VALUES " +
-                "('" + documentNumber + "', '" + pass + "', '" + lastName + "', '" + name + "', '" + patronymic + "', '" + age + "', '" + category + "','" + gender + "','" + city + "', '" + phone + "', '" + email + "', 'user', '');";
+                "('" + documentNumber + "', '" + pass + "', '" + lastName + "', '" + name + "', '" + patronymic + "', '" + age +
+                "', '" + category + "','" + gender + "','" + city + "', '" + phone + "', '" + email + "', 'user', '');";
             
             if (DataBase.sending_command(message) == true)
             {

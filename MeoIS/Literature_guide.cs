@@ -7,8 +7,10 @@ using System.Windows.Forms;
 
 namespace MeoIS
 {
+    // класс для работы со справочником литературы
     class Literature_guide : Search_note
     {
+        //добаленеи литературы в бд
         public Boolean addLiterature(string titleLit, string author, string summary, string keywords, string link, string dateAdded)
         {
             string message = "INSERT INTO `literature`(`title_literature`, `author`, `summary`, `keywords`, `link`, `date_added`) " +
@@ -27,6 +29,7 @@ namespace MeoIS
             }
         }
 
+        //удаление литературы из бд
         public Boolean deleteLiterature(string titleLit)
         {
             string message = "DELETE FROM `literature` WHERE `title_literature` = '" + titleLit + "'";

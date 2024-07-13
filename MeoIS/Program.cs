@@ -17,7 +17,7 @@ namespace MeoIS
             Transfer.Doc_num = "";
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AuthenticationForm());
+            Application.Run(new MainForm());
         }
     }
 

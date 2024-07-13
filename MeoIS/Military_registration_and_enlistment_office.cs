@@ -7,6 +7,7 @@ using System.Windows.Forms;
 
 namespace MeoIS
 {
+    // класс для 
     class Military_registration_and_enlistment_office
     {
         DataBaseConnect DataBase = new DataBaseConnect();
@@ -51,27 +52,28 @@ namespace MeoIS
             }
             else { return false; }
         }
-        protected Boolean check_date(string date)
-        {
-            string message = "На данное время нет записи";
+        //protected Boolean check_date(string date)
+        //{
+        //    string message = "На данное время нет записи";
 
-            if (DataBase.check("date", date, message) == true)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-        public Boolean registration_for_medical_check_up (string docNum, string city, string date)
+        //    if (DataBase.check("date", date, message) == true)
+        //    {
+        //        return true;
+        //    }
+        //    else
+        //    {
+        //        return false;
+        //    }
+        //}
+        public Boolean registration_for_medical_check_up (string docNum, string city, string date, string time)
         {
             
-            string message = "INSERT INTO `enlistment_offices`(`document_number`, `city`, `date`) VALUES (" + docNum + "," + city + "," + date + " );";
+            string message = "INSERT INTO `enlistment_offices`(`document_number`, `city`, `date`) VALUES " +
+                    "(" + docNum + ", '" + city + "', '" + date + " " + time + "');";
 
             if (DataBase.sending_command(message) == true)
             {
-                MessageBox.Show("Вы записались на мед. осмотр в военкомат города " + city + " " + date);
+                MessageBox.Show("Вы записались на мед. осмотр в военкомат города " + city + " " + date + " " + time);
 
                 return true;
             }

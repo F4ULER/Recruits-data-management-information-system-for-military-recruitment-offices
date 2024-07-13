@@ -9,10 +9,13 @@ using System.Windows.Forms;
 
 namespace MeoIS
 {
+    // класс аутентификации
     class LogIn
     {
 
         DataBaseConnect DB = new DataBaseConnect();
+        
+        // проверка оригинальность номера документа
         public Boolean check_document_number(string documentNumber)
         {
             string message = "Данный номер документа уже зарегистрирован!";
@@ -26,6 +29,7 @@ namespace MeoIS
             }
         }
 
+        //проверка оригинальность электронной почты
         public Boolean check_email(string email)
         {
             string message = "Данный email уже зарегистрирован!";
@@ -40,6 +44,7 @@ namespace MeoIS
             }
         }
 
+        //проверка оригинальности номера телефона
         public Boolean check_phone_number(string phone)
         {
             string message = "Данный номер телефона уже зарегистрирован!";
@@ -54,12 +59,14 @@ namespace MeoIS
             }
         }
 
+        //выдача прав администратора
         public Boolean give_superrights(string documentNumber)
         {
             DataTable table = new DataTable();
 
             MySqlDataAdapter adapter = new MySqlDataAdapter();
-            MySqlCommand command = new MySqlCommand("SELECT `document_number`, `name`,`last_name`, `patronymic`, `age`, `user_status` FROM `users` WHERE  `document_number` = @documentNumber", DB.getConnection());
+            MySqlCommand command = new MySqlCommand("SELECT `document_number`, `name`,`last_name`, `patronymic`, `age`, `user_status` FROM `users` WHERE  " +
+                "`document_number` = @documentNumber", DB.getConnection());
             command.Parameters.Add("@documentNumber", MySqlDbType.VarChar).Value = documentNumber;
 
             adapter.SelectCommand = command;

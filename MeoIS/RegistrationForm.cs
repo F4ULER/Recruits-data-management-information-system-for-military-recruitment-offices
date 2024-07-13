@@ -11,14 +11,17 @@ using System.Windows.Forms;
 
 namespace MeoIS
 {
+    //класс регистрации
     public partial class RegistrationForm : Form
     {
+        //установка серого цвета, если поле пустое (номер документа)
         public void set_gray_text_in_tBDocumentNumber()
         {
             tBDocNumber.Text = "Введите номер документа";
             tBDocNumber.ForeColor = Color.Gray;
         }
 
+        //установка серого цвета, если поле пустое (пароль)
         public void set_gray_text_in_tBPass()
         {
             tBPass.Text = "Введите пароль";
@@ -26,42 +29,49 @@ namespace MeoIS
             tBPass.PasswordChar = (char)0;
         }
 
+        //установка серого цвета, если поле пустое (имя пользователя)
         public void set_gray_text_in_tBNameUser()
         {
             tBNameUser.Text = "Введите имя";
             tBNameUser.ForeColor = Color.Gray;
         }
 
+        //установка серого цвета, если поле пустое (фамилия пользователя)
         public void set_gray_text_in_tBLastName()
         {
             tBLastName.Text = "Введите фамилию";
             tBLastName.ForeColor = Color.Gray;
         }
 
+        //установка серого цвета, если поле пустое (отчество пользователя)
         public void set_gray_text_in_tBPatronymic()
         {
             tBPatronymic.Text = "Введите отчество";
             tBPatronymic.ForeColor = Color.Gray;
         }
 
+        //установка серого цвета, если поле пустое (возраст)
         public void set_grey_text_in_tBAge()
         {
             tBAge.Text = "Введите дату рождения";
             tBAge.ForeColor = Color.Gray;
         }
 
+        //установка серого цвета, если поле пустое (номер телефона)
         public void set_gray_text_in_tBPhone()
         {
             tBPhone.Text = "Введите номер телефона";
             tBPhone.ForeColor = Color.Gray;
         }
 
+        //установка серого цвета, если поле пустое (электронная почта)
         public void set_gray_text_in_tBEmail()
         {
             tBEmail.Text = "Введите email";
             tBEmail.ForeColor = Color.Gray;
         }
 
+        //установка серого цвета, если поле пустое (категория годности)
         public void set_gray_text_in_tBStatus()
         {
             tBCategory.Text = "Введите категорию годности";
@@ -96,8 +106,7 @@ namespace MeoIS
             set_grey_text_in_tBAge();
         }
 
-        
-
+        // проверка заполнения полей
         public Boolean сheckCompletedInputFields()
         {
             string[] mass = new string[] { tBDocNumber.Text, tBPass.Text, tBCategory.Text, tBNameUser.Text, tBLastName.Text, tBPatronymic.Text, tBAge.Text, tBPhone.Text, tBEmail.Text};
@@ -121,6 +130,7 @@ namespace MeoIS
             }
         }
 
+        // добавление пользователя в базу данных
         private void buttonRegReg_Click(object sender, EventArgs e)
         {
             LogIn log = new LogIn();
@@ -320,6 +330,7 @@ namespace MeoIS
             }
         }
 
+        // переключатель "далее"
         private void buttonContinue_Click(object sender, EventArgs e)
         {
             if(tBDocNumber.Visible == true)
@@ -350,8 +361,10 @@ namespace MeoIS
             } 
         }
 
+        // переключатель "назад"
         private void buttonBack_Click(object sender, EventArgs e)
         {
+            buttonReg.Visible = false;
             if (tBNameUser.Visible == true)
             {
                 tBDocNumber.Visible = true;
@@ -380,11 +393,16 @@ namespace MeoIS
             }
         }
 
+        //закрытие приложения
         private void RegistrationForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             System.Diagnostics.Process.GetCurrentProcess().Kill();
         }
 
-      
+        // возвращение к окну входа в  систему
+        private void labelExit_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

@@ -51,7 +51,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Advanced_search.cs" />
-    <Compile Include="Collect_statistics.cs" />
     <Compile Include="Admin_panel.cs">
       <SubType>Form</SubType>
     </Compile>

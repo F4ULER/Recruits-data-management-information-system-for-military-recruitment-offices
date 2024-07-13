@@ -29,6 +29,7 @@ namespace MeoIS
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin_panel));
             this.labelWelcome = new System.Windows.Forms.Label();
             this.tBSearch = new System.Windows.Forms.TextBox();
             this.dataGV = new System.Windows.Forms.DataGridView();
@@ -120,6 +121,7 @@ namespace MeoIS
             this.buttonDeleteLit = new System.Windows.Forms.Button();
             this.label32 = new System.Windows.Forms.Label();
             this.pictureClose = new System.Windows.Forms.PictureBox();
+            this.labelExit = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGV)).BeginInit();
             this.tableLayoutPanelFilter.SuspendLayout();
             this.groupBoxServices.SuspendLayout();
@@ -163,11 +165,11 @@ namespace MeoIS
             // dataGV
             // 
             this.dataGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGV.Location = new System.Drawing.Point(109, 87);
+            this.dataGV.Location = new System.Drawing.Point(109, 72);
             this.dataGV.Name = "dataGV";
             this.dataGV.RowHeadersWidth = 51;
             this.dataGV.RowTemplate.Height = 24;
-            this.dataGV.Size = new System.Drawing.Size(868, 422);
+            this.dataGV.Size = new System.Drawing.Size(868, 437);
             this.dataGV.TabIndex = 15;
             this.dataGV.Visible = false;
             // 
@@ -271,7 +273,7 @@ namespace MeoIS
             this.groupBoxServices.Controls.Add(this.labelUpdatingTheReferenceBook);
             this.groupBoxServices.Controls.Add(this.labelEditingUserDatabase);
             this.groupBoxServices.Controls.Add(this.labelAppointmentOfNewAdministrator);
-            this.groupBoxServices.Location = new System.Drawing.Point(213, 55);
+            this.groupBoxServices.Location = new System.Drawing.Point(213, 60);
             this.groupBoxServices.Name = "groupBoxServices";
             this.groupBoxServices.Size = new System.Drawing.Size(630, 425);
             this.groupBoxServices.TabIndex = 32;
@@ -318,7 +320,7 @@ namespace MeoIS
             this.tabControlMenuFunctions.Controls.Add(this.tPAdd);
             this.tabControlMenuFunctions.Controls.Add(this.tPDelete);
             this.tabControlMenuFunctions.Controls.Add(this.tPChange);
-            this.tabControlMenuFunctions.Location = new System.Drawing.Point(140, 19);
+            this.tabControlMenuFunctions.Location = new System.Drawing.Point(111, 22);
             this.tabControlMenuFunctions.Name = "tabControlMenuFunctions";
             this.tabControlMenuFunctions.SelectedIndex = 0;
             this.tabControlMenuFunctions.Size = new System.Drawing.Size(890, 549);
@@ -867,20 +869,20 @@ namespace MeoIS
             this.panelNewAdmin.Controls.Add(this.label17);
             this.panelNewAdmin.Controls.Add(this.tBDocNumNewAdmin);
             this.panelNewAdmin.Controls.Add(this.label18);
-            this.panelNewAdmin.Location = new System.Drawing.Point(258, 19);
+            this.panelNewAdmin.Location = new System.Drawing.Point(258, 90);
             this.panelNewAdmin.Name = "panelNewAdmin";
-            this.panelNewAdmin.Size = new System.Drawing.Size(585, 331);
+            this.panelNewAdmin.Size = new System.Drawing.Size(585, 298);
             this.panelNewAdmin.TabIndex = 34;
             this.panelNewAdmin.Visible = false;
             // 
             // buttonNewAdmin
             // 
             this.buttonNewAdmin.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonNewAdmin.Location = new System.Drawing.Point(132, 170);
+            this.buttonNewAdmin.Location = new System.Drawing.Point(119, 170);
             this.buttonNewAdmin.Name = "buttonNewAdmin";
-            this.buttonNewAdmin.Size = new System.Drawing.Size(274, 99);
+            this.buttonNewAdmin.Size = new System.Drawing.Size(307, 99);
             this.buttonNewAdmin.TabIndex = 2842;
-            this.buttonNewAdmin.Text = "Дать права администратора\r\nданному пользователю";
+            this.buttonNewAdmin.Text = "Выдать права администратора\r\nданному пользователю";
             this.buttonNewAdmin.UseVisualStyleBackColor = true;
             this.buttonNewAdmin.Click += new System.EventHandler(this.buttonNewAdmin_Click);
             // 
@@ -1177,22 +1179,37 @@ namespace MeoIS
             this.pictureClose.Visible = false;
             this.pictureClose.Click += new System.EventHandler(this.pictureClose_Click);
             // 
+            // labelExit
+            // 
+            this.labelExit.AutoSize = true;
+            this.labelExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.labelExit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelExit.Location = new System.Drawing.Point(25, 549);
+            this.labelExit.Name = "labelExit";
+            this.labelExit.Size = new System.Drawing.Size(63, 22);
+            this.labelExit.TabIndex = 37;
+            this.labelExit.Text = "Выход";
+            this.labelExit.Click += new System.EventHandler(this.labelExit_Click);
+            // 
             // Admin_panel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1093, 603);
-            this.Controls.Add(this.tabControlLit);
-            this.Controls.Add(this.dataGV);
-            this.Controls.Add(this.tableLayoutPanelFilter);
-            this.Controls.Add(this.panelNewAdmin);
-            this.Controls.Add(this.pictureClose);
-            this.Controls.Add(this.groupBoxServices);
             this.Controls.Add(this.tabControlMenuFunctions);
-            this.Controls.Add(this.labelWelcome);
+            this.Controls.Add(this.tableLayoutPanelFilter);
+            this.Controls.Add(this.labelExit);
+            this.Controls.Add(this.groupBoxServices);
+            this.Controls.Add(this.pictureClose);
             this.Controls.Add(this.picSearch);
             this.Controls.Add(this.tBSearch);
+            this.Controls.Add(this.panelNewAdmin);
+            this.Controls.Add(this.labelWelcome);
+            this.Controls.Add(this.tabControlLit);
+            this.Controls.Add(this.dataGV);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Admin_panel";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Панель администратора";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Admin_panel_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.dataGV)).EndInit();
@@ -1320,5 +1337,6 @@ namespace MeoIS
         private System.Windows.Forms.Button buttonDeleteLit;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.PictureBox pictureClose;
+        private System.Windows.Forms.Label labelExit;
     }
 }

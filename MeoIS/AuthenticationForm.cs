@@ -27,6 +27,7 @@ namespace MeoIS
             textBoxPass.PasswordChar = (char)0;
         }
 
+        // аутентификация пользователя
         private void buttonAuthEnter_Click(object sender, EventArgs e)
         {
 
@@ -59,17 +60,20 @@ namespace MeoIS
                 Transfer.Email = table_users.Rows[0][11].ToString();
                 Transfer.Phone = table_users.Rows[0][10].ToString();
 
+                textBoxLogin.Text = "";
+                textBoxPass.Text = "";
+
                 if(table_users.Rows[0][12].ToString() == "user")
                 {
                     MainForm form = new MainForm();
                     form.Show();
-                    this.Hide();
-                } else
+                    //this.Hide();
+                } else if (table_users.Rows[0][12].ToString() == "admin")
                 {
                     Admin_panel form = new Admin_panel();
                     form.Show();
-                    this.Hide();
-                }
+                    //this.Hide();
+                } else { MessageBox.Show("Ошибка!"); }
             }
             else
             {
@@ -116,7 +120,7 @@ namespace MeoIS
 
         private void buttonReg_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            //this.Hide();
             RegistrationForm reg = new RegistrationForm();
             reg.Show();
         }
@@ -133,7 +137,7 @@ namespace MeoIS
             MainForm form = new MainForm();
 
             form.Show();
-            this.Hide();
+            //this.Hide();
         }
     }
 }

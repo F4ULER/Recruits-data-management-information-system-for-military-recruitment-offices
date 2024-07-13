@@ -23,6 +23,7 @@ namespace MeoIS
             tabControlMenuFunctions.Visible = false;
         }
 
+        // иконка поиска
         private void picSearch_Click_1(object sender, EventArgs e)
         {
             pictureClose.Visible = true;
@@ -84,7 +85,9 @@ namespace MeoIS
             }
             else
             {
-                search.sending_command("SELECT * FROM `users` WHERE 1");
+                table = search.sending_command("SELECT * FROM `users` WHERE 1");
+                dataGV.DataSource = table;
+                dataGV.Visible = true;
             }
         }
 
@@ -111,25 +114,43 @@ namespace MeoIS
             pictureClose.Visible = true;
         }
 
+        // добавление пользователя
         private void buttonNewUser_Click(object sender, EventArgs e)
         {
-            User_data user_Data = new User_data();
-            string gender = "";
-            if(rBM.Checked == true) { gender = "M"; } else { gender = "Ж"; };
-            user_Data.addUser(tBDocNumber.Text, tBPass.Text, tBLastName.Text, tBNameUser.Text, tBPatronymic.Text, tBAge.Text, tBCategory.Text, gender,tBCity.Text, tBPhone.Text, tBEmail.Text);
+            if (tBDocNumber.Text != "" &&
+            tBPass.Text != "" &&
+            tBLastName.Text != "" &&
+            tBNameUser.Text != "" &&
+            tBPatronymic.Text != "" &&
+            tBAge.Text != "" &&
+            tBCategory.Text != "" &&
+            tBCity.Text != "" &&
+            tBPhone.Text != "" &&
+            tBEmail.Text != "")
+            {
+                User_data user_Data = new User_data();
+                string gender = "";
+                if (rBM.Checked == true) { gender = "M"; } else { gender = "Ж"; };
+                user_Data.addUser(tBDocNumber.Text, tBPass.Text, tBLastName.Text, tBNameUser.Text, tBPatronymic.Text, tBAge.Text, tBCategory.Text, gender, tBCity.Text, tBPhone.Text, tBEmail.Text);
 
-            tBDocNumber.Text = "";
-            tBPass.Text = "";
-            tBLastName.Text = "";
-            tBNameUser.Text = "";
-            tBPatronymic.Text = "";
-            tBAge.Text = "";
-            tBCategory.Text = "";
-            tBCity.Text = "";
-            tBPhone.Text = "";
-            tBEmail.Text = "";
+                tBDocNumber.Text = "";
+                tBPass.Text = "";
+                tBLastName.Text = "";
+                tBNameUser.Text = "";
+                tBPatronymic.Text = "";
+                tBAge.Text = "";
+                tBCategory.Text = "";
+                tBCity.Text = "";
+                tBPhone.Text = "";
+                tBEmail.Text = "";
+            }
+            else
+            {
+                MessageBox.Show("Заполните все поля!");
+            }
         }
 
+        // поиск пользоваетля для удаления записи о нем (иконка стрелки)
         private void pictureArrowDel_Click(object sender, EventArgs e)
         {
             Advanced_search search = new Advanced_search();
@@ -147,19 +168,28 @@ namespace MeoIS
             }
         }
 
+        // удаление пользователя
         private void buttonDeleteUser_Click(object sender, EventArgs e)
         {
-            User_data user_ = new User_data();
-            DialogResult result = MessageBox.Show("Вы действительно хотите удалить данного пользователя?", "Удаление записи", MessageBoxButtons.YesNo);
-            if (result == DialogResult.Yes)
+            if (tBDocNumDelete.Text != "")
             {
-                user_.deleteUser(tBDocNumDelete.Text);
+                User_data user_ = new User_data();
+                DialogResult result = MessageBox.Show("Вы действительно хотите удалить данного пользователя?", "Удаление записи", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    user_.deleteUser(tBDocNumDelete.Text);
 
-                tBDocNumDelete.Text = "";
-                dataGridViewDelete.Visible = false;
+                    tBDocNumDelete.Text = "";
+                    dataGridViewDelete.Visible = false;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Введите номер документа.");
             }
         }
 
+        // поле ввода номера документа (изменение пользователя)
         private void tBChangeUser_TextChanged(object sender, EventArgs e)
         {
             if (tBChangeUser.Text != "")
@@ -179,37 +209,52 @@ namespace MeoIS
             }
         }
 
+        // изменение записи о пользователе
         private void buttonChange_Click(object sender, EventArgs e)
         {
-            User_data user_Data = new User_data();
-            if(rBDocNumChangeUser.Checked == true)
+            if (tBChangeUser.Text != "" && tBChange.Text != "")
             {
-                user_Data.change_document_number(tBChangeUser.Text, tBChange.Text);
-            } else if (rBNameChangeUser.Checked == true)
+                User_data user_Data = new User_data();
+                if (rBDocNumChangeUser.Checked == true)
+                {
+                    user_Data.change_document_number(tBChangeUser.Text, tBChange.Text);
+                }
+                else if (rBNameChangeUser.Checked == true)
+                {
+                    user_Data.change_full_name(tBChangeUser.Text, tBChange.Text);
+                }
+                else if (rBPhoneChangeUser.Checked == true)
+                {
+                    user_Data.change_phone_number(tBChangeUser.Text, tBChange.Text);
+                }
+                else if (rBEmailChangeUser.Checked == true)
+                {
+                    user_Data.change_email(tBChangeUser.Text, tBChange.Text);
+                }
+                else if (rBCategoryChangeUser.Checked == true)
+                {
+                    user_Data.change_category_of_suitability_for_military_service(tBChangeUser.Text, tBChange.Text);
+                }
+            } else
             {
-                user_Data.change_full_name(tBChangeUser.Text, tBChange.Text);
-            }
-            else if (rBPhoneChangeUser.Checked == true)
-            {
-                user_Data.change_phone_number(tBChangeUser.Text, tBChange.Text);
-            }
-            else if (rBEmailChangeUser.Checked == true)
-            {
-                user_Data.change_email(tBChangeUser.Text, tBChange.Text);
-            }
-            else if (rBCategoryChangeUser.Checked == true)
-            {
-                user_Data.change_category_of_suitability_for_military_service(tBChangeUser.Text, tBChange.Text);
+                MessageBox.Show("Заполните все поля!");
             }
         }
 
+        // выдача прав администратора
         private void buttonNewAdmin_Click(object sender, EventArgs e)
         {
-            LogIn logIn = new LogIn();
-            logIn.give_superrights(tBDocNumNewAdmin.Text);
-            panelNewAdmin.Visible = false;
-            groupBoxServices.Visible = true;
-            tBDocNumNewAdmin.Text = "";
+            if (tBDocNumNewAdmin.Text != "")
+            {
+                LogIn logIn = new LogIn();
+                logIn.give_superrights(tBDocNumNewAdmin.Text);
+                panelNewAdmin.Visible = false;
+                groupBoxServices.Visible = true;
+                tBDocNumNewAdmin.Text = "";
+            } else
+            {
+                MessageBox.Show("Введите номер документа пользователя, которому хотите выдать права администратора.");
+            }
         }
 
         private void labelAppointmentOfNewAdministrator_Click(object sender, EventArgs e)
@@ -226,13 +271,21 @@ namespace MeoIS
             pictureClose.Visible = true;
         }
 
+        //добавление литературы
         private void buttonAddLit_Click(object sender, EventArgs e)
         {
-            Literature_guide literature = new Literature_guide();
-            literature.addLiterature(tBTitle.Text, tBAuthor.Text,tBSummary.Text, tBKeywords.Text, tBLink.Text, tBDateAdded.Text);
-            tabControlLit.Visible = false;
+            if (tBTitle.Text != "" && tBAuthor.Text != "" && tBSummary.Text != "" && tBKeywords.Text != "" && tBLink.Text != "" && tBDateAdded.Text != "")
+            {
+                Literature_guide literature = new Literature_guide();
+                literature.addLiterature(tBTitle.Text, tBAuthor.Text, tBSummary.Text, tBKeywords.Text, tBLink.Text, tBDateAdded.Text);
+                tabControlLit.Visible = false;
+            } else
+            {
+                MessageBox.Show("Заполните все поля!");
+            }
         }
 
+        // поиск литературы для удаления записи о ней (иконка стрелки)
         private void pictureArrowDeleteLit_Click(object sender, EventArgs e)
         {
             Advanced_search search = new Advanced_search();
@@ -250,18 +303,25 @@ namespace MeoIS
             }
         }
 
+        //удаление литературы
         private void buttonDeleteLit_Click(object sender, EventArgs e)
         {
-            Literature_guide literature_Guide = new Literature_guide();
-            DialogResult result = MessageBox.Show("Вы действительно хотите удалить данную запись?", "Удаление записи", MessageBoxButtons.YesNo);
-            if (result == DialogResult.Yes)
+            if (tBDeleteLit.Text != "")
             {
-                literature_Guide.deleteLiterature(tBDeleteLit.Text);
+                Literature_guide literature_Guide = new Literature_guide();
+                DialogResult result = MessageBox.Show("Вы действительно хотите удалить данную запись?", "Удаление записи", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    literature_Guide.deleteLiterature(tBDeleteLit.Text);
 
-                tBDeleteLit.Text = "";
-                dataGridViewDeleteLit.Visible = false;
+                    tBDeleteLit.Text = "";
+                    dataGridViewDeleteLit.Visible = false;
+                }
+                tabControlLit.Visible = false;
+            } else
+            {
+                MessageBox.Show("Введите название");
             }
-            tabControlLit.Visible = false;
         }
 
         private void pictureClose_Click(object sender, EventArgs e)
@@ -272,6 +332,14 @@ namespace MeoIS
             panelNewAdmin.Visible = false;
             dataGV.Visible = false;
             groupBoxServices.Visible = true;
+            tBSearch.Text = "";
+        }
+
+        private void labelExit_Click(object sender, EventArgs e)
+        {
+            Transfer.Name = "";
+            labelWelcome.Text = "";
+            this.Hide();
         }
     }
 }
