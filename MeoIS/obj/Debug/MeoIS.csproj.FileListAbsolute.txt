@@ -27,3 +27,4 @@ C:\Users\User\source\repos\MeoIS\MeoIS\obj\Debug\MeoIS.exe.config
 C:\Users\User\source\repos\MeoIS\MeoIS\obj\Debug\MeoIS.csproj.CopyComplete
 C:\Users\User\source\repos\MeoIS\MeoIS\obj\Debug\MeoIS.Admin_panel.resources
 C:\Users\User\source\repos\MeoIS\MeoIS\obj\Debug\MeoIS.csprojAssemblyReference.cache
+C:\Users\User\source\repos\MeoIS\MeoIS\obj\Debug\MeoIS.TEST.resources

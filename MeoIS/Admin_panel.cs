@@ -26,7 +26,6 @@ namespace MeoIS
         // иконка поиска
         private void picSearch_Click_1(object sender, EventArgs e)
         {
-            pictureClose.Visible = true;
             Advanced_search search = new Advanced_search();
             DataBaseConnect dataBase = new DataBaseConnect();
             DataTable table = new DataTable();
@@ -46,10 +45,10 @@ namespace MeoIS
                     switch (fullName.Length)
                     {
                         case 1:
-                            table = search.searchFullName(fullName[0], "", "");
+                            table = search.searchFullName(fullName[0], " ", " ");
                             break;
                         case 2:
-                            table = search.searchFullName(fullName[0], fullName[1], "");
+                            table = search.searchFullName(fullName[0], fullName[1], " ");
                             break;
                         case 3:
                             table = search.searchFullName(fullName[0], fullName[1], fullName[2]);
@@ -82,6 +81,7 @@ namespace MeoIS
                 else
                 {
                     MessageBox.Show("Не найдено ни одной записи");
+                    pictureClose.Visible = false;
                 }
             }
             else
@@ -89,7 +89,10 @@ namespace MeoIS
                 table = dataBase.sending_command_with_output_to_table("SELECT * FROM `users` WHERE 1");
                 dataGV.DataSource = table;
                 dataGV.Visible = true;
+                pictureClose.Visible = true;
             }
+
+            if(dataGV.Visible == true || panelNewAdmin.Visible == true) { pictureClose.Visible = true; }
         }
 
         private void tBSearch_TextChanged(object sender, EventArgs e)

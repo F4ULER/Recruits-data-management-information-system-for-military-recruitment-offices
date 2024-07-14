@@ -155,10 +155,10 @@ namespace MeoIS
             // tBSearch
             // 
             this.tBSearch.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tBSearch.Location = new System.Drawing.Point(727, 19);
+            this.tBSearch.Location = new System.Drawing.Point(498, 19);
             this.tBSearch.Multiline = true;
             this.tBSearch.Name = "tBSearch";
-            this.tBSearch.Size = new System.Drawing.Size(284, 30);
+            this.tBSearch.Size = new System.Drawing.Size(513, 30);
             this.tBSearch.TabIndex = 13;
             this.tBSearch.TextChanged += new System.EventHandler(this.tBSearch_TextChanged);
             // 

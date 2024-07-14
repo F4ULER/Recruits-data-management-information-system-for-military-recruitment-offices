@@ -23,10 +23,23 @@ namespace MeoIS
         //поиск по  полному имени (ФИО)
         public DataTable searchFullName(string last_name, string name, string patronymic)
         {
-            string message = "SELECT `document_number` AS 'Номер документа', `password` AS 'Пароль', `last_name` AS 'Фамилия', `name` AS 'Имя', `patronymic` AS 'Отчество', `date_of_birth` AS 'Дата рождения', `address` AS 'Фактический адрес', `category` AS 'Категория годности'," +
-                " `gender` AS 'Пол', `city` AS 'Город', `phone_number` AS 'Номер телефона', `email` AS 'Электронная почта', `user_status` AS 'Статус' FROM `users` WHERE (`last_name`= '" + last_name + "') || (`document_number`= '" + last_name + "') ||" +
-                " (`last_name` = '" + last_name + "' && `name` = '" + name + "') || (`last_name` = '" + last_name + "' && `name`= '" + name + "' && `patronymic`='" + patronymic + "')";
-            
+            string message;
+            if(last_name != "" && name == " " && patronymic == " ")
+            {
+                message = "SELECT `document_number` AS 'Номер документа', `password` AS 'Пароль', `last_name` AS 'Фамилия', `name` AS 'Имя', `patronymic` AS 'Отчество', `date_of_birth` AS 'Дата рождения', `address` AS 'Фактический адрес', `category` AS 'Категория годности'," +
+               " `gender` AS 'Пол', `city` AS 'Город', `phone_number` AS 'Номер телефона', `email` AS 'Электронная почта', `user_status` AS 'Статус' FROM `users` WHERE `last_name`= '" + last_name + "'";
+            }
+            else if(last_name != "" && name != "" && patronymic == " ")
+            {
+                message = "SELECT `document_number` AS 'Номер документа', `password` AS 'Пароль', `last_name` AS 'Фамилия', `name` AS 'Имя', `patronymic` AS 'Отчество', `date_of_birth` AS 'Дата рождения', `address` AS 'Фактический адрес', `category` AS 'Категория годности'," +
+               " `gender` AS 'Пол', `city` AS 'Город', `phone_number` AS 'Номер телефона', `email` AS 'Электронная почта', `user_status` AS 'Статус' FROM `users` WHERE `last_name` = '" + last_name + "' && `name` = '" + name + "'";
+            }
+            else
+            {
+                message = "SELECT `document_number` AS 'Номер документа', `password` AS 'Пароль', `last_name` AS 'Фамилия', `name` AS 'Имя', `patronymic` AS 'Отчество', `date_of_birth` AS 'Дата рождения', `address` AS 'Фактический адрес', `category` AS 'Категория годности'," +
+               " `gender` AS 'Пол', `city` AS 'Город', `phone_number` AS 'Номер телефона', `email` AS 'Электронная почта', `user_status` AS 'Статус' FROM `users` WHERE `last_name` = '" + last_name + "' && `name`= '" + name + "' && `patronymic`='" + patronymic + "' ";
+            }
+           
             return DataBase.sending_command_with_output_to_table(message);
         }
 

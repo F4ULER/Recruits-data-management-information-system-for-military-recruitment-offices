@@ -24,7 +24,7 @@ namespace MeoIS
 
 
             
-            if (Transfer.Doc_num != "")
+            if (Transfer.Doc_num != "") // если вошел зарегистрированный пользователь
             {
 
                 //labelExit.Visible = true;
@@ -37,8 +37,12 @@ namespace MeoIS
                 groupBoxServices.Visible = true;
                 labelExit.Visible = true;
                 labelLogIn.Visible = false;
+                labelWelcome1.Visible = false;
+                labelWelcome2.Visible = false;
+                labelWelcome3.Visible = false;
+                labelLine.Visible = false;
             }
-            else/////////////////////////////////////////////вход без регистрации (УСТАРЕЛ?)
+            else // если вошел незарегистрированный пользователь
             {
                 pictureMedicalData.Visible = false;
                 groupBoxServices.Visible = false;
@@ -49,8 +53,11 @@ namespace MeoIS
                 pictureOptions.Visible = false;
                 labelExit.Visible = false;
                 labelLogIn.Visible = true;
-
-            }////////////////////////////////////////////////////////
+                labelWelcome1.Visible = true;
+                labelWelcome2.Visible = true;
+                labelWelcome3.Visible = true;
+                labelLine.Visible = true;
+            }
         }
 
         //кнопка выхода из аккаунта
@@ -73,20 +80,22 @@ namespace MeoIS
         private void picSearch_Click(object sender, EventArgs e)
         {
             groupBoxServices.Visible = false;
-            pictureCloseServises.Visible = true;
 
             Search_note search = new Search_note();
             DataTable table = new DataTable();
             table = search.search_literature(tBSearch.Text);
             if(table.Rows.Count > 0)
             {
-                dataGVLitTable.DataSource = table;
-                dataGVLitTable.Visible = true;
+                dataGV.DataSource = table;
+                dataGV.Visible = true;
             }
             else
             {
                 MessageBox.Show("Не найдено ни одной записи");
+                pictureCloseServises.Visible = false;
             }
+
+            if (dataGV.Visible == true || tabControlMenuServices.Visible == true) { pictureCloseServises.Visible = true; }
         }
 
         private void labelChangeMilitaryRegistrationOffice_Click(object sender, EventArgs e)
@@ -587,8 +596,8 @@ namespace MeoIS
             table = search.searchMedicalData(Transfer.Doc_num);
             if (table.Rows.Count > 0)
             {
-                dataGVLitTable.DataSource = table;
-                dataGVLitTable.Visible = true;
+                dataGV.DataSource = table;
+                dataGV.Visible = true;
             }
             else
             {
@@ -599,7 +608,7 @@ namespace MeoIS
         private void pictureCloseServises_Click(object sender, EventArgs e)
         {
             pictureCloseServises.Visible = false;
-            dataGVLitTable.Visible = false;
+            dataGV.Visible = false;
             tabControlMenuServices.Visible = false;
             groupBoxServices.Visible = true;
             tBSearch.Text = "";
@@ -614,6 +623,12 @@ namespace MeoIS
             AuthenticationForm authenticationForm = new AuthenticationForm();
             authenticationForm.Show();
             this.Hide();
+        }
+
+        private void buttonFirstReg_Click(object sender, EventArgs e)
+        {
+            RegistrationForm reg = new RegistrationForm();
+            reg.Show();
         }
     }
 }
