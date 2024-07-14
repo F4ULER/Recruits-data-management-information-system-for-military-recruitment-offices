@@ -55,6 +55,18 @@ namespace MeoIS
             }
         }
 
+        public DataTable sending_command_with_output_to_table(string mess)
+        {
+            MySqlCommand command = new MySqlCommand(mess, getConnection());
+            DataTable table = new DataTable();
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+
+            adapter.SelectCommand = command;
+            adapter.Fill(table);
+
+            return table;
+        }
+
         // проверка оригинальности любого параметра
         public Boolean check(string column, string value, string message)
         {

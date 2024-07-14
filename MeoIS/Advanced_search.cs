@@ -14,41 +14,38 @@ namespace MeoIS
         //поиск по номеры документа
         public DataTable searchDocumentNumber(string documentNumber)
         {
-            string message = "SELECT `document_number`, `password`, `last_name`, `name`, `patronymic`, `category`, `gender`, " +
-                "`city`, `phone_number`, `email`, `user_status` FROM `users` WHERE `document_number` = '" + documentNumber + "'";
+            string message = "SELECT `document_number` AS 'Номер документа', `password` AS 'Пароль', `last_name` AS 'Фамилия', `name` AS 'Имя', `patronymic` AS 'Отчество', `date_of_birth` AS 'Дата рождения', `address` AS 'Фактический адрес', `category` AS 'Категория годности'," +
+                " `gender` AS 'Пол', `city` AS 'Город', `phone_number` AS 'Номер телефона', `email` AS 'Электронная почта', `user_status` AS 'Статус' FROM `users` WHERE `document_number` = '" + documentNumber + "'";
 
-            DataTable table = sending_command(message);
-            return table;
+            return DataBase.sending_command_with_output_to_table(message);
         }
 
         //поиск по  полному имени (ФИО)
         public DataTable searchFullName(string last_name, string name, string patronymic)
         {
-            string message = "SELECT `document_number`, `password`, `last_name`, `name`, `patronymic`, `category`, `gender`, `city`, " +
-                "`phone_number`, `email`, `user_status` FROM `users` WHERE (`last_name`= '" + last_name + "') || (`document_number`= '" + last_name + "') ||" +
+            string message = "SELECT `document_number` AS 'Номер документа', `password` AS 'Пароль', `last_name` AS 'Фамилия', `name` AS 'Имя', `patronymic` AS 'Отчество', `date_of_birth` AS 'Дата рождения', `address` AS 'Фактический адрес', `category` AS 'Категория годности'," +
+                " `gender` AS 'Пол', `city` AS 'Город', `phone_number` AS 'Номер телефона', `email` AS 'Электронная почта', `user_status` AS 'Статус' FROM `users` WHERE (`last_name`= '" + last_name + "') || (`document_number`= '" + last_name + "') ||" +
                 " (`last_name` = '" + last_name + "' && `name` = '" + name + "') || (`last_name` = '" + last_name + "' && `name`= '" + name + "' && `patronymic`='" + patronymic + "')";
-            DataTable table = sending_command(message);
-            return table;
+            
+            return DataBase.sending_command_with_output_to_table(message);
         }
 
         //поиск по городу (военкомату)
         public DataTable searchMilitaryRegistrationAndEnlistmentOffice(string city)
         {
-            string message = "SELECT `document_number`, `password`, `last_name`, `name`, `patronymic`, `category`, `gender`, " +
-                "`city`, `phone_number`, `email`, `user_status` FROM `users` WHERE `city` = '" + city + "'";
+            string message = "SELECT `document_number` AS 'Номер документа', `password` AS 'Пароль', `last_name` AS 'Фамилия', `name` AS 'Имя', `patronymic` AS 'Отчество', `date_of_birth` AS 'Дата рождения', `address` AS 'Фактический адрес', `category` AS 'Категория годности'," +
+                " `gender` AS 'Пол', `city` AS 'Город', `phone_number` AS 'Номер телефона', `email` AS 'Электронная почта', `user_status` AS 'Статус' FROM `users` WHERE `city` = '" + city + "'";
 
-            DataTable table = sending_command(message);
-            return table;
+            return DataBase.sending_command_with_output_to_table(message);
         }
 
         //поиск по номеру телефона
         public DataTable searchPhoneNumber(string phone)
         {
-            string message = "SELECT `document_number`, `password`, `last_name`, `name`, `patronymic`, `category`, `gender`, " +
-                "`city`, `phone_number`, `email`, `user_status` FROM `users` WHERE `phone_number` = '" + phone + "'";
+            string message = "SELECT `document_number` AS 'Номер документа', `password` AS 'Пароль', `last_name` AS 'Фамилия', `name` AS 'Имя', `patronymic` AS 'Отчество', `date_of_birth` AS 'Дата рождения', `address` AS 'Фактический адрес', `category` AS 'Категория годности'," +
+                " `gender` AS 'Пол', `city` AS 'Город', `phone_number` AS 'Номер телефона', `email` AS 'Электронная почта', `user_status` AS 'Статус' FROM `users` WHERE `phone_number` = '" + phone + "'";
            
-            DataTable table = sending_command(message);
-            return table;
+            return DataBase.sending_command_with_output_to_table(message);
         }
     }
 }

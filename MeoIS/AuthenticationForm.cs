@@ -54,21 +54,21 @@ namespace MeoIS
                 {
                     Transfer.Name += table_users.Rows[0][i].ToString() + " ";
                 }
-                Transfer.Category = table_users.Rows[0][7].ToString();
-                Transfer.City = table_users.Rows[0][9].ToString();
+                Transfer.Category = table_users.Rows[0][8].ToString();
+                Transfer.City = table_users.Rows[0][10].ToString();
                 Transfer.Pass = pass;
-                Transfer.Email = table_users.Rows[0][11].ToString();
-                Transfer.Phone = table_users.Rows[0][10].ToString();
+                Transfer.Email = table_users.Rows[0][12].ToString();
+                Transfer.Phone = table_users.Rows[0][11].ToString();
 
                 textBoxLogin.Text = "";
                 textBoxPass.Text = "";
 
-                if(table_users.Rows[0][12].ToString() == "user")
+                if(table_users.Rows[0][13].ToString() == "user")
                 {
                     MainForm form = new MainForm();
                     form.Show();
                     //this.Hide();
-                } else if (table_users.Rows[0][12].ToString() == "admin")
+                } else if (table_users.Rows[0][13].ToString() == "admin")
                 {
                     Admin_panel form = new Admin_panel();
                     form.Show();

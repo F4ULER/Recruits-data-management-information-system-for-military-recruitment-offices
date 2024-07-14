@@ -71,7 +71,7 @@ namespace MeoIS
         // запись на мед осмотр в военкомат
         public Boolean registration_for_medical_check_up (string docNum, string city, string date, string time)
         {
-            string message = "INSERT INTO `enlistment_offices`(`document_number`, `city`, `date`) VALUES " +
+            string message = "INSERT INTO `date_medical_data`(`document_number`, `city`, `date`) VALUES " +
                     "(" + docNum + ", '" + city + "', '" + date + " " + time + "');";
 
             if (DataBase.sending_command(message) == true)

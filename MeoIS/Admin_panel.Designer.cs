@@ -1196,10 +1196,8 @@ namespace MeoIS
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1093, 603);
-            this.Controls.Add(this.tabControlMenuFunctions);
             this.Controls.Add(this.tableLayoutPanelFilter);
             this.Controls.Add(this.labelExit);
-            this.Controls.Add(this.groupBoxServices);
             this.Controls.Add(this.pictureClose);
             this.Controls.Add(this.picSearch);
             this.Controls.Add(this.tBSearch);
@@ -1207,6 +1205,8 @@ namespace MeoIS
             this.Controls.Add(this.labelWelcome);
             this.Controls.Add(this.tabControlLit);
             this.Controls.Add(this.dataGV);
+            this.Controls.Add(this.tabControlMenuFunctions);
+            this.Controls.Add(this.groupBoxServices);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Admin_panel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -28,6 +28,7 @@ namespace MeoIS
         {
             pictureClose.Visible = true;
             Advanced_search search = new Advanced_search();
+            DataBaseConnect dataBase = new DataBaseConnect();
             DataTable table = new DataTable();
 
             if (tBSearch.Text != "")
@@ -85,7 +86,7 @@ namespace MeoIS
             }
             else
             {
-                table = search.sending_command("SELECT * FROM `users` WHERE 1");
+                table = dataBase.sending_command_with_output_to_table("SELECT * FROM `users` WHERE 1");
                 dataGV.DataSource = table;
                 dataGV.Visible = true;
             }
