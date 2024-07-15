@@ -42,7 +42,7 @@ namespace MeoIS
             this.labelWelcome2.Font = new System.Drawing.Font("Times New Roman", 25.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelWelcome2.Location = new System.Drawing.Point(101, 210);
             this.labelWelcome2.Name = "labelWelcome2";
-            this.labelWelcome2.Size = new System.Drawing.Size(1012, 51);
+            this.labelWelcome2.Size = new System.Drawing.Size(991, 49);
             this.labelWelcome2.TabIndex = 0;
             this.labelWelcome2.Text = " в информационную систему военкоматов России!";
             this.labelWelcome2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -76,7 +76,7 @@ namespace MeoIS
             this.labelLine.Font = new System.Drawing.Font("Times New Roman", 25.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelLine.Location = new System.Drawing.Point(166, 261);
             this.labelLine.Name = "labelLine";
-            this.labelLine.Size = new System.Drawing.Size(880, 51);
+            this.labelLine.Size = new System.Drawing.Size(880, 49);
             this.labelLine.TabIndex = 3;
             this.labelLine.Text = "_______________________________________";
             this.labelLine.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -90,6 +90,7 @@ namespace MeoIS
             this.buttonFirstReg.TabIndex = 4;
             this.buttonFirstReg.Text = "Зарегистрироваться";
             this.buttonFirstReg.UseVisualStyleBackColor = true;
+            this.buttonFirstReg.Click += new System.EventHandler(this.buttonFirstReg_Click);
             // 
             // TEST
             // 

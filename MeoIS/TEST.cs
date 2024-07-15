@@ -17,9 +17,12 @@ namespace MeoIS
             InitializeComponent();
         }
 
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        private void buttonFirstReg_Click(object sender, EventArgs e)
         {
-
+            //Advanced_search _Search = new Advanced_search();
+            //Collect_statistics collect = new Collect_statistics();
+            //DataTable table = _Search.searchFullName("Пресняков", " ", " ");
+            //collect.export_to_file(table);
         }
     }
 }
