@@ -24,5 +24,13 @@ namespace MeoIS
             //DataTable table = _Search.searchFullName("Пресняков", " ", " ");
             //collect.export_to_file(table);
         }
+
+        private void buttonStat_Click(object sender, EventArgs e)
+        {
+            //Advanced_search search = new Advanced_search();
+            //Collect_statistics statistics = new Collect_statistics();
+
+            //statistics.export_to_file(search.searchCity(tBStatCity.Text));
+        }
     }
 }

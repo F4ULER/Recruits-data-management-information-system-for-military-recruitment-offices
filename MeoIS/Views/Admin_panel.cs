@@ -21,6 +21,8 @@ namespace MeoIS
 
             tableLayoutPanelFilter.Visible = false;
             tabControlMenuFunctions.Visible = false;
+            panelStatisticsAndExport.Visible = false;
+            splitContainerStat.SplitterDistance = 150;
         }
 
         // иконка поиска
@@ -57,7 +59,7 @@ namespace MeoIS
                 }
                 else if (rBSearchCity.Checked == true)
                 {
-                    table = search.searchMilitaryRegistrationAndEnlistmentOffice(tBSearch.Text);
+                    table = search.searchCity(tBSearch.Text);
                 }
                 else if (rBSearchPhone.Checked == true)
                 {
@@ -334,6 +336,9 @@ namespace MeoIS
             pictureClose.Visible = false;
             tabControlMenuFunctions.Visible = false;
             panelNewAdmin.Visible = false;
+            panelStatisticsAndExport.Visible = false;
+            tBStatCity.Text = "";
+            tBStatVizit.Text = "";
             dataGV.Visible = false;
             groupBoxServices.Visible = true;
             tBSearch.Text = "";
@@ -344,6 +349,37 @@ namespace MeoIS
             Transfer.Name = "";
             labelWelcome.Text = "";
             this.Hide();
+        }
+
+        private void pictureExport_Click(object sender, EventArgs e)
+        {
+            panelStatisticsAndExport.Visible = true;
+            groupBoxServices.Visible = false;
+            pictureClose.Visible = true;
+        }
+
+        private void buttonStat_Click(object sender, EventArgs e)
+        {
+            Advanced_search search = new Advanced_search();
+            Collect_statistics statistics = new Collect_statistics();
+
+            if(rBStatCity.Checked == true)
+            {
+                statistics.export_to_file(search.searchCity(tBStatCity.Text));
+            }
+            //else if(rBStatCategory.Checked == true)
+            //{
+            //    statistics.export_to_file(search.);
+            //}
+            //else if(rBStatAge.Checked == true)
+            //{
+            //    statistics.export_to_file(search.);
+            //}
+            //else if (rBStatVizit.Checked == true)
+            //{
+            //    statistics.export_to_file(search.);
+            //}
+            
         }
     }
 }

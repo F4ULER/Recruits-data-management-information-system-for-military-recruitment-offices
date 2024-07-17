@@ -44,7 +44,7 @@ namespace MeoIS
         }
 
         //поиск по городу (военкомату)
-        public DataTable searchMilitaryRegistrationAndEnlistmentOffice(string city)
+        public DataTable searchCity(string city)
         {
             string message = "SELECT `document_number` AS 'Номер документа', `password` AS 'Пароль', `last_name` AS 'Фамилия', `name` AS 'Имя', `patronymic` AS 'Отчество', `date_of_birth` AS 'Дата рождения', `address` AS 'Фактический адрес', `category` AS 'Категория годности'," +
                 " `gender` AS 'Пол', `city` AS 'Город', `phone_number` AS 'Номер телефона', `email` AS 'Электронная почта', `user_status` AS 'Статус' FROM `users` WHERE `city` = '" + city + "'";

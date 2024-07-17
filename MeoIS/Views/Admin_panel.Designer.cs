@@ -91,7 +91,6 @@ namespace MeoIS
             this.tBChangeUser = new System.Windows.Forms.TextBox();
             this.buttonChange = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
-            this.picSearch = new System.Windows.Forms.PictureBox();
             this.panelNewAdmin = new System.Windows.Forms.Panel();
             this.buttonNewAdmin = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
@@ -120,8 +119,27 @@ namespace MeoIS
             this.tBDeleteLit = new System.Windows.Forms.TextBox();
             this.buttonDeleteLit = new System.Windows.Forms.Button();
             this.label32 = new System.Windows.Forms.Label();
-            this.pictureClose = new System.Windows.Forms.PictureBox();
             this.labelExit = new System.Windows.Forms.Label();
+            this.pictureExport = new System.Windows.Forms.PictureBox();
+            this.pictureClose = new System.Windows.Forms.PictureBox();
+            this.picSearch = new System.Windows.Forms.PictureBox();
+            this.labelExport = new System.Windows.Forms.Label();
+            this.panelStatisticsAndExport = new System.Windows.Forms.Panel();
+            this.splitContainerStat = new System.Windows.Forms.SplitContainer();
+            this.tBStatCity = new System.Windows.Forms.TextBox();
+            this.numericFromAge = new System.Windows.Forms.NumericUpDown();
+            this.numericToAge = new System.Windows.Forms.NumericUpDown();
+            this.tBStatVizit = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.rBStatAge = new System.Windows.Forms.RadioButton();
+            this.rBStatCategory = new System.Windows.Forms.RadioButton();
+            this.rBStatVizit = new System.Windows.Forms.RadioButton();
+            this.rBStatCity = new System.Windows.Forms.RadioButton();
+            this.label23 = new System.Windows.Forms.Label();
+            this.buttonStat = new System.Windows.Forms.Button();
+            this.rBShowOnWindow = new System.Windows.Forms.RadioButton();
+            this.rBExport = new System.Windows.Forms.RadioButton();
+            this.label24 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGV)).BeginInit();
             this.tableLayoutPanelFilter.SuspendLayout();
             this.groupBoxServices.SuspendLayout();
@@ -132,14 +150,22 @@ namespace MeoIS
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDelete)).BeginInit();
             this.tPChange.SuspendLayout();
             this.tableLayoutPanelChangeUser.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picSearch)).BeginInit();
             this.panelNewAdmin.SuspendLayout();
             this.tabControlLit.SuspendLayout();
             this.tPAddLit.SuspendLayout();
             this.tPDeleteLit.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureArrowDeleteLit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDeleteLit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureExport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureClose)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSearch)).BeginInit();
+            this.panelStatisticsAndExport.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerStat)).BeginInit();
+            this.splitContainerStat.Panel1.SuspendLayout();
+            this.splitContainerStat.Panel2.SuspendLayout();
+            this.splitContainerStat.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericFromAge)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericToAge)).BeginInit();
             this.SuspendLayout();
             // 
             // labelWelcome
@@ -850,18 +876,6 @@ namespace MeoIS
             this.label15.TabIndex = 2835;
             this.label15.Text = "Изменение записи о пользователе";
             // 
-            // picSearch
-            // 
-            this.picSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picSearch.Image = global::MeoIS.Properties.Resources.search;
-            this.picSearch.Location = new System.Drawing.Point(1028, 9);
-            this.picSearch.Name = "picSearch";
-            this.picSearch.Size = new System.Drawing.Size(40, 40);
-            this.picSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picSearch.TabIndex = 17;
-            this.picSearch.TabStop = false;
-            this.picSearch.Click += new System.EventHandler(this.picSearch_Click_1);
-            // 
             // panelNewAdmin
             // 
             this.panelNewAdmin.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -1166,6 +1180,30 @@ namespace MeoIS
             this.label32.TabIndex = 1;
             this.label32.Text = "Удаление литературы";
             // 
+            // labelExit
+            // 
+            this.labelExit.AutoSize = true;
+            this.labelExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.labelExit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelExit.Location = new System.Drawing.Point(25, 549);
+            this.labelExit.Name = "labelExit";
+            this.labelExit.Size = new System.Drawing.Size(63, 22);
+            this.labelExit.TabIndex = 37;
+            this.labelExit.Text = "Выход";
+            this.labelExit.Click += new System.EventHandler(this.labelExit_Click);
+            // 
+            // pictureExport
+            // 
+            this.pictureExport.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureExport.Image = global::MeoIS.Properties.Resources.export_icon;
+            this.pictureExport.Location = new System.Drawing.Point(12, 108);
+            this.pictureExport.Name = "pictureExport";
+            this.pictureExport.Size = new System.Drawing.Size(69, 64);
+            this.pictureExport.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureExport.TabIndex = 38;
+            this.pictureExport.TabStop = false;
+            this.pictureExport.Click += new System.EventHandler(this.pictureExport_Click);
+            // 
             // pictureClose
             // 
             this.pictureClose.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -1179,33 +1217,239 @@ namespace MeoIS
             this.pictureClose.Visible = false;
             this.pictureClose.Click += new System.EventHandler(this.pictureClose_Click);
             // 
-            // labelExit
+            // picSearch
             // 
-            this.labelExit.AutoSize = true;
-            this.labelExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.labelExit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelExit.Location = new System.Drawing.Point(25, 549);
-            this.labelExit.Name = "labelExit";
-            this.labelExit.Size = new System.Drawing.Size(63, 22);
-            this.labelExit.TabIndex = 37;
-            this.labelExit.Text = "Выход";
-            this.labelExit.Click += new System.EventHandler(this.labelExit_Click);
+            this.picSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picSearch.Image = global::MeoIS.Properties.Resources.search;
+            this.picSearch.Location = new System.Drawing.Point(1028, 9);
+            this.picSearch.Name = "picSearch";
+            this.picSearch.Size = new System.Drawing.Size(40, 40);
+            this.picSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picSearch.TabIndex = 17;
+            this.picSearch.TabStop = false;
+            this.picSearch.Click += new System.EventHandler(this.picSearch_Click_1);
+            // 
+            // labelExport
+            // 
+            this.labelExport.AutoSize = true;
+            this.labelExport.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelExport.Location = new System.Drawing.Point(9, 177);
+            this.labelExport.Name = "labelExport";
+            this.labelExport.Size = new System.Drawing.Size(75, 19);
+            this.labelExport.TabIndex = 39;
+            this.labelExport.Text = "Экспорт";
+            // 
+            // panelStatisticsAndExport
+            // 
+            this.panelStatisticsAndExport.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panelStatisticsAndExport.Controls.Add(this.splitContainerStat);
+            this.panelStatisticsAndExport.Controls.Add(this.label24);
+            this.panelStatisticsAndExport.Location = new System.Drawing.Point(221, 90);
+            this.panelStatisticsAndExport.Name = "panelStatisticsAndExport";
+            this.panelStatisticsAndExport.Size = new System.Drawing.Size(650, 386);
+            this.panelStatisticsAndExport.TabIndex = 40;
+            // 
+            // splitContainerStat
+            // 
+            this.splitContainerStat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.splitContainerStat.Location = new System.Drawing.Point(3, 67);
+            this.splitContainerStat.Name = "splitContainerStat";
+            this.splitContainerStat.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainerStat.Panel1
+            // 
+            this.splitContainerStat.Panel1.Controls.Add(this.tBStatCity);
+            this.splitContainerStat.Panel1.Controls.Add(this.numericFromAge);
+            this.splitContainerStat.Panel1.Controls.Add(this.numericToAge);
+            this.splitContainerStat.Panel1.Controls.Add(this.tBStatVizit);
+            this.splitContainerStat.Panel1.Controls.Add(this.label22);
+            this.splitContainerStat.Panel1.Controls.Add(this.rBStatAge);
+            this.splitContainerStat.Panel1.Controls.Add(this.rBStatCategory);
+            this.splitContainerStat.Panel1.Controls.Add(this.rBStatVizit);
+            this.splitContainerStat.Panel1.Controls.Add(this.rBStatCity);
+            this.splitContainerStat.Panel1.Controls.Add(this.label23);
+            this.splitContainerStat.Panel1MinSize = 10;
+            // 
+            // splitContainerStat.Panel2
+            // 
+            this.splitContainerStat.Panel2.Controls.Add(this.buttonStat);
+            this.splitContainerStat.Panel2.Controls.Add(this.rBShowOnWindow);
+            this.splitContainerStat.Panel2.Controls.Add(this.rBExport);
+            this.splitContainerStat.Panel2MinSize = 1;
+            this.splitContainerStat.Size = new System.Drawing.Size(647, 316);
+            this.splitContainerStat.SplitterDistance = 185;
+            this.splitContainerStat.SplitterWidth = 1;
+            this.splitContainerStat.TabIndex = 2;
+            // 
+            // tBStatCity
+            // 
+            this.tBStatCity.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tBStatCity.Location = new System.Drawing.Point(60, 71);
+            this.tBStatCity.Multiline = true;
+            this.tBStatCity.Name = "tBStatCity";
+            this.tBStatCity.Size = new System.Drawing.Size(235, 32);
+            this.tBStatCity.TabIndex = 10;
+            // 
+            // numericFromAge
+            // 
+            this.numericFromAge.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.numericFromAge.Location = new System.Drawing.Point(477, 52);
+            this.numericFromAge.Name = "numericFromAge";
+            this.numericFromAge.Size = new System.Drawing.Size(62, 28);
+            this.numericFromAge.TabIndex = 9;
+            // 
+            // numericToAge
+            // 
+            this.numericToAge.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.numericToAge.Location = new System.Drawing.Point(580, 52);
+            this.numericToAge.Name = "numericToAge";
+            this.numericToAge.Size = new System.Drawing.Size(62, 28);
+            this.numericToAge.TabIndex = 6;
+            // 
+            // tBStatVizit
+            // 
+            this.tBStatVizit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tBStatVizit.Location = new System.Drawing.Point(360, 145);
+            this.tBStatVizit.Multiline = true;
+            this.tBStatVizit.Name = "tBStatVizit";
+            this.tBStatVizit.Size = new System.Drawing.Size(248, 32);
+            this.tBStatVizit.TabIndex = 8;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label22.Location = new System.Drawing.Point(542, 52);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(40, 27);
+            this.label22.TabIndex = 7;
+            this.label22.Text = "До";
+            // 
+            // rBStatAge
+            // 
+            this.rBStatAge.AutoSize = true;
+            this.rBStatAge.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rBStatAge.Location = new System.Drawing.Point(335, 49);
+            this.rBStatAge.Name = "rBStatAge";
+            this.rBStatAge.Size = new System.Drawing.Size(136, 31);
+            this.rBStatAge.TabIndex = 5;
+            this.rBStatAge.Text = "Возраст С";
+            this.rBStatAge.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rBStatAge.UseVisualStyleBackColor = true;
+            // 
+            // rBStatCategory
+            // 
+            this.rBStatCategory.AutoSize = true;
+            this.rBStatCategory.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rBStatCategory.Location = new System.Drawing.Point(60, 129);
+            this.rBStatCategory.Name = "rBStatCategory";
+            this.rBStatCategory.Size = new System.Drawing.Size(235, 31);
+            this.rBStatCategory.TabIndex = 3;
+            this.rBStatCategory.Text = "Категория годности";
+            this.rBStatCategory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rBStatCategory.UseVisualStyleBackColor = true;
+            // 
+            // rBStatVizit
+            // 
+            this.rBStatVizit.AutoSize = true;
+            this.rBStatVizit.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rBStatVizit.Location = new System.Drawing.Point(335, 111);
+            this.rBStatVizit.Name = "rBStatVizit";
+            this.rBStatVizit.Size = new System.Drawing.Size(273, 31);
+            this.rBStatVizit.TabIndex = 2;
+            this.rBStatVizit.Text = "Посещение военкомата";
+            this.rBStatVizit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rBStatVizit.UseVisualStyleBackColor = true;
+            // 
+            // rBStatCity
+            // 
+            this.rBStatCity.AutoSize = true;
+            this.rBStatCity.Checked = true;
+            this.rBStatCity.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rBStatCity.Location = new System.Drawing.Point(60, 34);
+            this.rBStatCity.Name = "rBStatCity";
+            this.rBStatCity.Size = new System.Drawing.Size(92, 31);
+            this.rBStatCity.TabIndex = 1;
+            this.rBStatCity.TabStop = true;
+            this.rBStatCity.Text = "Город";
+            this.rBStatCity.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rBStatCity.UseVisualStyleBackColor = true;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label23.Location = new System.Drawing.Point(136, 9);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(355, 26);
+            this.label23.TabIndex = 0;
+            this.label23.Text = "Выберите параметр статистики\r\n";
+            // 
+            // buttonStat
+            // 
+            this.buttonStat.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonStat.Location = new System.Drawing.Point(206, 62);
+            this.buttonStat.Name = "buttonStat";
+            this.buttonStat.Size = new System.Drawing.Size(265, 58);
+            this.buttonStat.TabIndex = 5;
+            this.buttonStat.Text = "Показать статистику";
+            this.buttonStat.UseVisualStyleBackColor = true;
+            this.buttonStat.Click += new System.EventHandler(this.buttonStat_Click);
+            // 
+            // rBShowOnWindow
+            // 
+            this.rBShowOnWindow.AutoSize = true;
+            this.rBShowOnWindow.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rBShowOnWindow.Location = new System.Drawing.Point(387, 25);
+            this.rBShowOnWindow.Name = "rBShowOnWindow";
+            this.rBShowOnWindow.Size = new System.Drawing.Size(230, 31);
+            this.rBShowOnWindow.TabIndex = 3;
+            this.rBShowOnWindow.TabStop = true;
+            this.rBShowOnWindow.Text = "Показать на экране";
+            this.rBShowOnWindow.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rBShowOnWindow.UseVisualStyleBackColor = true;
+            // 
+            // rBExport
+            // 
+            this.rBExport.AutoSize = true;
+            this.rBExport.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rBExport.Location = new System.Drawing.Point(27, 25);
+            this.rBExport.Name = "rBExport";
+            this.rBExport.Size = new System.Drawing.Size(333, 31);
+            this.rBExport.TabIndex = 2;
+            this.rBExport.TabStop = true;
+            this.rBExport.Text = "Экспортировать в Excel файл";
+            this.rBExport.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rBExport.UseVisualStyleBackColor = true;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label24.Location = new System.Drawing.Point(204, 13);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(257, 51);
+            this.label24.TabIndex = 1;
+            this.label24.Text = "Статистика";
             // 
             // Admin_panel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1093, 603);
+            this.Controls.Add(this.panelStatisticsAndExport);
+            this.Controls.Add(this.labelExport);
+            this.Controls.Add(this.pictureExport);
             this.Controls.Add(this.tableLayoutPanelFilter);
             this.Controls.Add(this.labelExit);
             this.Controls.Add(this.pictureClose);
             this.Controls.Add(this.picSearch);
             this.Controls.Add(this.tBSearch);
-            this.Controls.Add(this.panelNewAdmin);
             this.Controls.Add(this.labelWelcome);
+            this.Controls.Add(this.panelNewAdmin);
             this.Controls.Add(this.tabControlLit);
-            this.Controls.Add(this.dataGV);
             this.Controls.Add(this.tabControlMenuFunctions);
+            this.Controls.Add(this.dataGV);
             this.Controls.Add(this.groupBoxServices);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Admin_panel";
@@ -1228,7 +1472,6 @@ namespace MeoIS
             this.tPChange.PerformLayout();
             this.tableLayoutPanelChangeUser.ResumeLayout(false);
             this.tableLayoutPanelChangeUser.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picSearch)).EndInit();
             this.panelNewAdmin.ResumeLayout(false);
             this.panelNewAdmin.PerformLayout();
             this.tabControlLit.ResumeLayout(false);
@@ -1238,7 +1481,19 @@ namespace MeoIS
             this.tPDeleteLit.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureArrowDeleteLit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDeleteLit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureExport)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureClose)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSearch)).EndInit();
+            this.panelStatisticsAndExport.ResumeLayout(false);
+            this.panelStatisticsAndExport.PerformLayout();
+            this.splitContainerStat.Panel1.ResumeLayout(false);
+            this.splitContainerStat.Panel1.PerformLayout();
+            this.splitContainerStat.Panel2.ResumeLayout(false);
+            this.splitContainerStat.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerStat)).EndInit();
+            this.splitContainerStat.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numericFromAge)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericToAge)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1338,5 +1593,23 @@ namespace MeoIS
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.PictureBox pictureClose;
         private System.Windows.Forms.Label labelExit;
+        private System.Windows.Forms.PictureBox pictureExport;
+        private System.Windows.Forms.Label labelExport;
+        private System.Windows.Forms.Panel panelStatisticsAndExport;
+        private System.Windows.Forms.SplitContainer splitContainerStat;
+        private System.Windows.Forms.TextBox tBStatCity;
+        private System.Windows.Forms.NumericUpDown numericFromAge;
+        private System.Windows.Forms.NumericUpDown numericToAge;
+        private System.Windows.Forms.TextBox tBStatVizit;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.RadioButton rBStatAge;
+        private System.Windows.Forms.RadioButton rBStatCategory;
+        private System.Windows.Forms.RadioButton rBStatVizit;
+        private System.Windows.Forms.RadioButton rBStatCity;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Button buttonStat;
+        private System.Windows.Forms.RadioButton rBShowOnWindow;
+        private System.Windows.Forms.RadioButton rBExport;
+        private System.Windows.Forms.Label label24;
     }
 }
