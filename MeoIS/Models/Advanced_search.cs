@@ -60,5 +60,39 @@ namespace MeoIS
            
             return DataBase.sending_command_with_output_to_table(message);
         }
+
+        public DataTable searchCategory (string category)
+        {
+            string message = "SELECT `document_number` AS 'Номер документа', `password` AS 'Пароль', `last_name` AS 'Фамилия', `name` AS 'Имя', `patronymic` AS 'Отчество', `date_of_birth` AS 'Дата рождения', `address` AS 'Фактический адрес', `category` AS 'Категория годности'," +
+                " `gender` AS 'Пол', `city` AS 'Город', `phone_number` AS 'Номер телефона', `email` AS 'Электронная почта', `user_status` AS 'Статус' FROM `users` WHERE `category` = '" + category + "'";
+            return DataBase.sending_command_with_output_to_table(message);
+        }
+
+        //////////////////////////////////////////////////////////////////////////////
+        public DataTable searchAge(string fromAge, string toAge)
+        {
+            string message = "SELECT `document_number` AS 'Номер документа', `password` AS 'Пароль', `last_name` AS 'Фамилия', `name` AS 'Имя', `patronymic` AS 'Отчество', `date_of_birth` AS 'Дата рождения', `address` AS 'Фактический адрес', `category` AS 'Категория годности'," +
+                " `gender` AS 'Пол', `city` AS 'Город', `phone_number` AS 'Номер телефона', `email` AS 'Электронная почта', `user_status` AS 'Статус' FROM `users` WHERE 1=1";
+
+            DataTable tableAge = new DataTable(), tableAll = DataBase.sending_command_with_output_to_table(message);
+            
+            tableAge = tableAll.Clone();
+
+            for (int i = 0; i < tableAll.Rows.Count; i++)
+            {
+                string[] age = tableAll.Rows[i][5].ToString().Split(new char[] { '.' });
+                
+                if ((Int64.Parse(age[2]) <= Int64.Parse(DateTime.Now.Year.ToString()) - Int64.Parse(fromAge)) && (Int64.Parse(age[2]) >= Int64.Parse(DateTime.Now.Year.ToString()) - Int64.Parse(toAge)))
+                {
+                    DataRow dr = tableAll.Rows[i];
+                    tableAll.ImportRow(dr);
+                    MessageBox.Show(dr[2].ToString());
+                    tableAge.Rows.Add(dr.ItemArray);
+                }
+            }
+
+            return tableAge;
+        }//////////////////////////////////////////////////////////////////////////////
+
     }
 }

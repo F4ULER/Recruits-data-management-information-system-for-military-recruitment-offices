@@ -126,10 +126,9 @@ namespace MeoIS
             this.labelExport = new System.Windows.Forms.Label();
             this.panelStatisticsAndExport = new System.Windows.Forms.Panel();
             this.splitContainerStat = new System.Windows.Forms.SplitContainer();
-            this.tBStatCity = new System.Windows.Forms.TextBox();
+            this.tBStat = new System.Windows.Forms.TextBox();
             this.numericFromAge = new System.Windows.Forms.NumericUpDown();
             this.numericToAge = new System.Windows.Forms.NumericUpDown();
-            this.tBStatVizit = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.rBStatAge = new System.Windows.Forms.RadioButton();
             this.rBStatCategory = new System.Windows.Forms.RadioButton();
@@ -1258,10 +1257,9 @@ namespace MeoIS
             // 
             // splitContainerStat.Panel1
             // 
-            this.splitContainerStat.Panel1.Controls.Add(this.tBStatCity);
+            this.splitContainerStat.Panel1.Controls.Add(this.tBStat);
             this.splitContainerStat.Panel1.Controls.Add(this.numericFromAge);
             this.splitContainerStat.Panel1.Controls.Add(this.numericToAge);
-            this.splitContainerStat.Panel1.Controls.Add(this.tBStatVizit);
             this.splitContainerStat.Panel1.Controls.Add(this.label22);
             this.splitContainerStat.Panel1.Controls.Add(this.rBStatAge);
             this.splitContainerStat.Panel1.Controls.Add(this.rBStatCategory);
@@ -1281,19 +1279,19 @@ namespace MeoIS
             this.splitContainerStat.SplitterWidth = 1;
             this.splitContainerStat.TabIndex = 2;
             // 
-            // tBStatCity
+            // tBStat
             // 
-            this.tBStatCity.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tBStatCity.Location = new System.Drawing.Point(60, 71);
-            this.tBStatCity.Multiline = true;
-            this.tBStatCity.Name = "tBStatCity";
-            this.tBStatCity.Size = new System.Drawing.Size(235, 32);
-            this.tBStatCity.TabIndex = 10;
+            this.tBStat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tBStat.Location = new System.Drawing.Point(206, 121);
+            this.tBStat.Multiline = true;
+            this.tBStat.Name = "tBStat";
+            this.tBStat.Size = new System.Drawing.Size(235, 32);
+            this.tBStat.TabIndex = 10;
             // 
             // numericFromAge
             // 
             this.numericFromAge.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.numericFromAge.Location = new System.Drawing.Point(477, 52);
+            this.numericFromAge.Location = new System.Drawing.Point(477, 45);
             this.numericFromAge.Name = "numericFromAge";
             this.numericFromAge.Size = new System.Drawing.Size(62, 28);
             this.numericFromAge.TabIndex = 9;
@@ -1301,25 +1299,16 @@ namespace MeoIS
             // numericToAge
             // 
             this.numericToAge.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.numericToAge.Location = new System.Drawing.Point(580, 52);
+            this.numericToAge.Location = new System.Drawing.Point(580, 45);
             this.numericToAge.Name = "numericToAge";
             this.numericToAge.Size = new System.Drawing.Size(62, 28);
             this.numericToAge.TabIndex = 6;
-            // 
-            // tBStatVizit
-            // 
-            this.tBStatVizit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tBStatVizit.Location = new System.Drawing.Point(360, 145);
-            this.tBStatVizit.Multiline = true;
-            this.tBStatVizit.Name = "tBStatVizit";
-            this.tBStatVizit.Size = new System.Drawing.Size(248, 32);
-            this.tBStatVizit.TabIndex = 8;
             // 
             // label22
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label22.Location = new System.Drawing.Point(542, 52);
+            this.label22.Location = new System.Drawing.Point(542, 45);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(40, 27);
             this.label22.TabIndex = 7;
@@ -1329,7 +1318,7 @@ namespace MeoIS
             // 
             this.rBStatAge.AutoSize = true;
             this.rBStatAge.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rBStatAge.Location = new System.Drawing.Point(335, 49);
+            this.rBStatAge.Location = new System.Drawing.Point(335, 42);
             this.rBStatAge.Name = "rBStatAge";
             this.rBStatAge.Size = new System.Drawing.Size(136, 31);
             this.rBStatAge.TabIndex = 5;
@@ -1341,7 +1330,7 @@ namespace MeoIS
             // 
             this.rBStatCategory.AutoSize = true;
             this.rBStatCategory.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rBStatCategory.Location = new System.Drawing.Point(60, 129);
+            this.rBStatCategory.Location = new System.Drawing.Point(57, 71);
             this.rBStatCategory.Name = "rBStatCategory";
             this.rBStatCategory.Size = new System.Drawing.Size(235, 31);
             this.rBStatCategory.TabIndex = 3;
@@ -1353,7 +1342,7 @@ namespace MeoIS
             // 
             this.rBStatVizit.AutoSize = true;
             this.rBStatVizit.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rBStatVizit.Location = new System.Drawing.Point(335, 111);
+            this.rBStatVizit.Location = new System.Drawing.Point(342, 79);
             this.rBStatVizit.Name = "rBStatVizit";
             this.rBStatVizit.Size = new System.Drawing.Size(273, 31);
             this.rBStatVizit.TabIndex = 2;
@@ -1428,7 +1417,7 @@ namespace MeoIS
             this.label24.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label24.Location = new System.Drawing.Point(204, 13);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(257, 51);
+            this.label24.Size = new System.Drawing.Size(255, 49);
             this.label24.TabIndex = 1;
             this.label24.Text = "Статистика";
             // 
@@ -1597,10 +1586,9 @@ namespace MeoIS
         private System.Windows.Forms.Label labelExport;
         private System.Windows.Forms.Panel panelStatisticsAndExport;
         private System.Windows.Forms.SplitContainer splitContainerStat;
-        private System.Windows.Forms.TextBox tBStatCity;
+        private System.Windows.Forms.TextBox tBStat;
         private System.Windows.Forms.NumericUpDown numericFromAge;
         private System.Windows.Forms.NumericUpDown numericToAge;
-        private System.Windows.Forms.TextBox tBStatVizit;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.RadioButton rBStatAge;
         private System.Windows.Forms.RadioButton rBStatCategory;

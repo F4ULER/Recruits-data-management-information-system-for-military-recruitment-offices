@@ -337,8 +337,7 @@ namespace MeoIS
             tabControlMenuFunctions.Visible = false;
             panelNewAdmin.Visible = false;
             panelStatisticsAndExport.Visible = false;
-            tBStatCity.Text = "";
-            tBStatVizit.Text = "";
+            tBStat.Text = "";
             dataGV.Visible = false;
             groupBoxServices.Visible = true;
             tBSearch.Text = "";
@@ -363,22 +362,31 @@ namespace MeoIS
             Advanced_search search = new Advanced_search();
             Collect_statistics statistics = new Collect_statistics();
 
-            if(rBStatCity.Checked == true)
+            if(rBExport.Checked == true)
             {
-                statistics.export_to_file(search.searchCity(tBStatCity.Text));
+                if (rBStatCity.Checked == true)
+                {
+                    statistics.export_to_file(search.searchCity(tBStat.Text));
+                }
+                else if (rBStatCategory.Checked == true)
+                {
+                    statistics.export_to_file(search.searchCategory(tBStat.Text));
+                }
+                else if (rBStatAge.Checked == true)
+                {
+                    //statistics.export_to_file(search.searchAge(numericFromAge.ToString(), numericToAge.ToString()))
+                    
+                }
+                //else if (rBStatVizit.Checked == true)
+                //{
+                //    statistics.export_to_file(search.);
+                //}
             }
-            //else if(rBStatCategory.Checked == true)
-            //{
-            //    statistics.export_to_file(search.);
-            //}
-            //else if(rBStatAge.Checked == true)
-            //{
-            //    statistics.export_to_file(search.);
-            //}
-            //else if (rBStatVizit.Checked == true)
-            //{
-            //    statistics.export_to_file(search.);
-            //}
+            else if(rBShowOnWindow.Checked == true)
+            {
+
+            }
+            
             
         }
     }
