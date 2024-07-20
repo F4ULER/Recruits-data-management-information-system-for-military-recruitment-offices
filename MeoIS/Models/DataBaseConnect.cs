@@ -67,6 +67,7 @@ namespace MeoIS
             return table;
         }
 
+
         // проверка оригинальности любого параметра
         public Boolean check(string column, string value, string message)
         {
@@ -89,6 +90,20 @@ namespace MeoIS
             {
                 return false;
             }
+        }
+
+        public DataTable change_date_style(DataTable table)
+        {
+        //    DateTime date = new DateTime();
+        //    for(int i=0; i<table.Rows.Count; i++)
+        //    {
+        //        date = DateTime.Parse(table.Rows[0][6].ToString());
+        //        table.Rows[i][6] = date.ToShortDateString;
+        //    }
+
+        //    date = DateTime.Parse(table.Rows[0][6].ToString());
+            MessageBox.Show(table.Rows[10][6].ToString());
+            return table;
         }
     }
 }

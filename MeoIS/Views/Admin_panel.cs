@@ -362,31 +362,28 @@ namespace MeoIS
             Advanced_search search = new Advanced_search();
             Collect_statistics statistics = new Collect_statistics();
 
-            if(rBExport.Checked == true)
+            if (rBExport.Checked == true)
             {
-                if (rBStatCity.Checked == true)
+                if (rBExportCity.Checked == true)
                 {
-                    statistics.export_to_file(search.searchCity(tBStat.Text));
+                    statistics.export_to_Excel(search.searchCity(tBStat.Text));
                 }
-                else if (rBStatCategory.Checked == true)
+                else if (rBExportCategory.Checked == true)
                 {
-                    statistics.export_to_file(search.searchCategory(tBStat.Text));
-                }
-                else if (rBStatAge.Checked == true)
-                {
-                    //statistics.export_to_file(search.searchAge(numericFromAge.ToString(), numericToAge.ToString()))
-                    
+                    statistics.export_to_Excel(search.searchCategory(tBStat.Text));
                 }
                 //else if (rBStatVizit.Checked == true)
                 //{
                 //    statistics.export_to_file(search.);
                 //}
             }
-            else if(rBShowOnWindow.Checked == true)
+            else if (rBShowOnWindow.Checked == true)
             {
-
+                if (rBStatGender.Checked == true)
+                {
+                    statistics.show_statistics_on_window("gender", 10, search.searchAllUsers()); ;
+                }
             }
-            
             
         }
     }
