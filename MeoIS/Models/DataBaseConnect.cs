@@ -67,6 +67,38 @@ namespace MeoIS
             return table;
         }
 
+        public List<MeoIS.User> sending_command_with_output_to_list(string mess)
+        {
+            openConnection();
+
+            MySqlCommand command = new MySqlCommand(mess, getConnection());
+            List<User> user = new List<User>();
+            MySqlDataReader reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                user.Add(new User(
+                           reader.GetString(reader.GetOrdinal("document_number")),
+                           reader.GetString(reader.GetOrdinal("password")),
+                           reader.GetString(reader.GetOrdinal("last_name")),
+                           reader.GetString(reader.GetOrdinal("name")),
+                           reader.GetString(reader.GetOrdinal("patronymic")),
+                           reader.GetDateTime(reader.GetOrdinal("date_of_birth")),
+                           reader.GetString(reader.GetOrdinal("address")),
+                           reader.GetString(reader.GetOrdinal("category")),
+                           reader.GetString(reader.GetOrdinal("gender")),
+                           reader.GetString(reader.GetOrdinal("city")),
+                           reader.GetString(reader.GetOrdinal("phone_number")),
+                           reader.GetString(reader.GetOrdinal("email")),
+                           reader.GetString(reader.GetOrdinal("user_status")),
+                           ""
+                           ));
+            }
+
+            closeConnection();
+
+            return user;
+        }
 
         // проверка оригинальности любого параметра
         public Boolean check(string column, string value, string message)
@@ -92,18 +124,10 @@ namespace MeoIS
             }
         }
 
-        public DataTable change_date_style(DataTable table)
+        public List<MeoIS.User> change_date_style(List<User> user)
         {
-        //    DateTime date = new DateTime();
-        //    for(int i=0; i<table.Rows.Count; i++)
-        //    {
-        //        date = DateTime.Parse(table.Rows[0][6].ToString());
-        //        table.Rows[i][6] = date.ToShortDateString;
-        //    }
-
-        //    date = DateTime.Parse(table.Rows[0][6].ToString());
-            MessageBox.Show(table.Rows[10][6].ToString());
-            return table;
+            user[0].DateOfBirth = DateTime.Parse( user[0].DateOfBirth.ToShortDateString());
+            return user;
         }
     }
 }

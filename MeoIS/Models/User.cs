@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MeoIS.Models
+namespace MeoIS
 {
     class User
     {
-        public User(string documentNumber, string password, string lastName, string name, string patronymic, DateTime dateOfBirth, string addres, string category, string gender, string city, string phoneNumber, string email, string userStatus)
+        public User(string documentNumber, string password, string lastName, string name, string patronymic, DateTime dateOfBirth, string addres, string category, string gender, string city, string phoneNumber, string email, string userStatus, string dateString)
         {
             DocumentNumber = documentNumber;
             Password = password;
@@ -23,6 +23,7 @@ namespace MeoIS.Models
             PhoneNumber = phoneNumber;
             Email = email;
             UserStatus = userStatus;
+            DateString = dateString;
         }
 
         public string DocumentNumber { get; set; }
@@ -38,5 +39,6 @@ namespace MeoIS.Models
         public string PhoneNumber { get; set; }
         public string Email { get; set; }
         public string UserStatus { get; set; }
+        public string DateString { get; set; }
     }
 }
