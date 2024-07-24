@@ -8,7 +8,7 @@ namespace MeoIS
 {
     class User
     {
-        public User(string documentNumber, string password, string lastName, string name, string patronymic, DateTime dateOfBirth, string addres, string category, string gender, string city, string phoneNumber, string email, string userStatus, string dateString)
+        public User(string documentNumber, string password, string lastName, string name, string patronymic, DateTime dateOfBirth, string addres, string category, string gender, string city, string phoneNumber, string email, string userStatus)
         {
             DocumentNumber = documentNumber;
             Password = password;
@@ -23,7 +23,7 @@ namespace MeoIS
             PhoneNumber = phoneNumber;
             Email = email;
             UserStatus = userStatus;
-            DateString = dateString;
+            //DateString = dateString;
         }
 
         public string DocumentNumber { get; set; }
@@ -39,6 +39,5 @@ namespace MeoIS
         public string PhoneNumber { get; set; }
         public string Email { get; set; }
         public string UserStatus { get; set; }
-        public string DateString { get; set; }
     }
 }

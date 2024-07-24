@@ -25,16 +25,14 @@ namespace MeoIS
         private void buttonStat_Click(object sender, EventArgs e)
         {
             DataBaseConnect dataBase = new DataBaseConnect();
-            List<MeoIS.User> user = new List<User>();
-            user = dataBase.sending_command_with_output_to_list("SELECT * FROM users");
-            dataBase.change_date_style(user);
-            MessageBox.Show(user[0].DateOfBirth.ToShortDateString());
-            //addColumnsToTable();
-            //var r = user.OfType<string>();
-            //foreach(var rr in r)
-            //{
-            //    MessageBox.Show(rr);
-            //}
+            List<User> user = new List<User>();
+            user = dataBase.sending_command_with_output_to_list("SELECT `document_number`, `password`, `last_name`, `name`, `patronymic`, `date_of_birth`, `address`, `category`, `gender`, `city`, `phone_number`, `email`, `user_status` FROM users");
+
+            //MessageBox.Show(user[0].DocumentNumber);
+            addColumnsToTable();
+
+            dGView.DataSource = user;
+
         }
 
         public void showOnWindow(string name, string value)
@@ -81,19 +79,19 @@ namespace MeoIS
         public void addColumnsToTable()
         {
             dGView.Columns.AddRange(
-                new DataGridViewTextBoxColumn() { Name = "clmdocumenyNumber", HeaderText = "Номер документа", DataPropertyName = "documenyNumber" },
+                new DataGridViewTextBoxColumn() { Name = "clmDocumentNumber", HeaderText = "Номер документа", DataPropertyName = "DocumentNumber" },
                 new DataGridViewTextBoxColumn() { Name = "clmpassword", HeaderText = "Пароль", DataPropertyName = "password" },
                 new DataGridViewTextBoxColumn() { Name = "clmlastName", HeaderText = "Фамилия", DataPropertyName = "lastName" },
                 new DataGridViewTextBoxColumn() { Name = "clmname", HeaderText = "Имя", DataPropertyName = "name" },
                 new DataGridViewTextBoxColumn() { Name = "clmpatronymic", HeaderText = "Отчество", DataPropertyName = "patronymic" },
                 new DataGridViewTextBoxColumn() { Name = "clmdateOfBirth", HeaderText = "Дата рождения", DataPropertyName = "dateOfBirth" },
-                new DataGridViewTextBoxColumn() { Name = "clmaddress", HeaderText = "Адрес", DataPropertyName = "address" },
-                new DataGridViewTextBoxColumn() { Name = "clmcategory", HeaderText = "Категория", DataPropertyName = "category" }
-                //new DataGridViewTextBoxColumn() { Name = "clm", HeaderText = "Пароль", DataPropertyName = "password" },
-                //new DataGridViewTextBoxColumn() { Name = "clm", HeaderText = "Пароль", DataPropertyName = "password" },
-                //new DataGridViewTextBoxColumn() { Name = "clm", HeaderText = "Пароль", DataPropertyName = "password" },
-                //new DataGridViewTextBoxColumn() { Name = "clm", HeaderText = "Пароль", DataPropertyName = "password" },
-                //new DataGridViewTextBoxColumn() { Name = "clm", HeaderText = "Пароль", DataPropertyName = "password" }
+                new DataGridViewTextBoxColumn() { Name = "clmAddres", HeaderText = "Адрес", DataPropertyName = "Addres" },
+                new DataGridViewTextBoxColumn() { Name = "clmcategory", HeaderText = "Категория", DataPropertyName = "category" },
+                new DataGridViewTextBoxColumn() { Name = "clmgender", HeaderText = "Пол", DataPropertyName = "gender" },
+                new DataGridViewTextBoxColumn() { Name = "clmcity", HeaderText = "Военкомат", DataPropertyName = "city" },
+                new DataGridViewTextBoxColumn() { Name = "clmpPhoneNumber", HeaderText = "Номер телефона", DataPropertyName = "PhoneNumber" },
+                new DataGridViewTextBoxColumn() { Name = "clmemail", HeaderText = "Электронная почта", DataPropertyName = "email" },
+                new DataGridViewTextBoxColumn() { Name = "clmuserStatus", HeaderText = "Статус пользоваетля", DataPropertyName = "userStatus" }
                 );
         }
 

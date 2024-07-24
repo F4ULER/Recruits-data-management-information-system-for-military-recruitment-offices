@@ -90,8 +90,7 @@ namespace MeoIS
                            reader.GetString(reader.GetOrdinal("city")),
                            reader.GetString(reader.GetOrdinal("phone_number")),
                            reader.GetString(reader.GetOrdinal("email")),
-                           reader.GetString(reader.GetOrdinal("user_status")),
-                           ""
+                           reader.GetString(reader.GetOrdinal("user_status"))
                            ));
             }
 
@@ -122,12 +121,6 @@ namespace MeoIS
             {
                 return false;
             }
-        }
-
-        public List<MeoIS.User> change_date_style(List<User> user)
-        {
-            user[0].DateOfBirth = DateTime.Parse( user[0].DateOfBirth.ToShortDateString());
-            return user;
         }
     }
 }

@@ -29,33 +29,45 @@ namespace MeoIS
             expApp.Visible = true;
         }
 
-        public void show_statistics_on_window(string nameColumn, int number, DataTable table)
+        public void statistics_By_Gender(List<User> user)
         {
+            int M = 0, F = 0;
+            foreach (User f in user)
+            {
+                if(f.Gender == "M" || f.Gender == "М") { M++; } else { F++; }
+            }
+            MessageBox.Show("Мужчин - " + M + "\n Женщин - " + F, "Статистика по половому признаку", MessageBoxButtons.OK);
+        }
+
+        public void statistics_By_City(List<User> user)
+        {
+            List<string> city = new List<string>();
             
+            foreach (User u in user)
+            {
+                city.Add(u.City);
+            }
 
+            var cityDistinct = city.Distinct().ToList();
+            int[] count = new int[cityDistinct.Count];
 
+            for (int i = 0; i<city.Count; i++)
+            {
+                for(int j = 0; j < cityDistinct.Count; j++)
+                {
+                    if(cityDistinct[j] == city[i])
+                    {
+                        count[j]++;
+                    }
+                }
+            }
+            string result = "";
+            for (int i = 0; i < cityDistinct.Count; i++)
+            {
+                result += cityDistinct[i] + " - " + count[i] + "\n";
+            }
 
-
-            //var selectOrig = new List<string>();
-            //var count = new List<int>();
-            //int k = 0;
-            //if (int i = 0; i <= table.Rows.Count; i++)
-            //{
-            //    foreach (string v in selectOrig)
-            //    {
-            //        if (value != v)
-            //        {
-            //            selectOrig.Add(value);
-            //            k++;
-            //            count[k] += 1;
-            //            MessageBox.Show(value);
-            //        }
-            //        else { }
-            //    }
-            //    MessageBox.Show(count[k].ToString()) ;
-            //}
-            //name = "Статистика по параметру " + name;
-            //MessageBox.Show(value, name, MessageBoxButtons.OK);
+            MessageBox.Show(result, "Статистика по количеству призывников", MessageBoxButtons.OK);
         }
     }
 }

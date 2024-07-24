@@ -381,7 +381,11 @@ namespace MeoIS
             {
                 if (rBStatGender.Checked == true)
                 {
-                    statistics.show_statistics_on_window("gender", 10, search.searchAllUsers()); ;
+                    statistics.statistics_By_Gender(search.searchAllUsers()); ;
+                }
+                else if(rBStatCity.Checked == true)
+                {
+                    statistics.statistics_By_City(search.searchAllUsers());
                 }
             }
             
