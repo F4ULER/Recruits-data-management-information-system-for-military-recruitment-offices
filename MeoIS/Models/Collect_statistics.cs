@@ -47,27 +47,60 @@ namespace MeoIS
             {
                 city.Add(u.City);
             }
+            statistics_By_Item(city, "Статистика по количеству призывников");
+        }
 
-            var cityDistinct = city.Distinct().ToList();
-            int[] count = new int[cityDistinct.Count];
+        public void statistics_By_Category(List<User> user)
+        {
+            List<string> category = new List<string>();
 
-            for (int i = 0; i<city.Count; i++)
+            foreach (User u in user)
             {
-                for(int j = 0; j < cityDistinct.Count; j++)
+                category.Add(u.Category);
+            }
+            statistics_By_Item(category, "Статистика по категории годности");
+        }
+
+        public void statistics_By_Age(List<User> user)
+        {
+            List<string> age = new List<string>();
+            List<int> ageNumber = new List<int>();
+            for (int i = 0; i < user.Count; i++)
+            {
+                ageNumber.Add(DateTime.Today.Year - user[i].DateOfBirth.Year);
+            }
+            for (int i = 0; i < user.Count; i++)
+            {
+                age.Add(user[i].DateOfBirth.Year.ToString() + "(" + ageNumber[i] + ")");
+            }
+
+            statistics_By_Item(age, "Статистика по возрасту");
+        }
+
+        private void statistics_By_Item(List<string> list, string title)
+        {
+            var listDistinct = list.Distinct().ToList();
+            int[] count = new int[listDistinct.Count];
+
+            for (int i = 0; i < list.Count; i++)
+            {
+                for (int j = 0; j < listDistinct.Count; j++)
                 {
-                    if(cityDistinct[j] == city[i])
+                    if (listDistinct[j] == list[i])
                     {
                         count[j]++;
                     }
                 }
             }
             string result = "";
-            for (int i = 0; i < cityDistinct.Count; i++)
+            for (int i = 0; i < listDistinct.Count; i++)
             {
-                result += cityDistinct[i] + " - " + count[i] + "\n";
+                result += listDistinct[i] + " - " + count[i] + "\n\n";
             }
 
-            MessageBox.Show(result, "Статистика по количеству призывников", MessageBoxButtons.OK);
+            MessageBox.Show(result, title, MessageBoxButtons.OK);
         }
+
+
     }
 }

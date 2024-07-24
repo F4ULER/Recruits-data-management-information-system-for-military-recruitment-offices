@@ -387,6 +387,10 @@ namespace MeoIS
                 {
                     statistics.statistics_By_City(search.searchAllUsers());
                 }
+                else if (rBStatAge.Checked == true)
+                {
+                    statistics.statistics_By_Age(search.searchAllUsers());
+                }
             }
             
         }
