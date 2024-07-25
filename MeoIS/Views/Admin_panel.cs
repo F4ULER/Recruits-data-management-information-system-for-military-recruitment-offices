@@ -363,15 +363,15 @@ namespace MeoIS
 
             if (rBStatGender.Checked == true)
             {
-                statistics.statistics_By_Gender(search.searchAllUsers(), true); ;
+                statistics.statistics_By_Gender(search.searchAllUsersToList(), true); ;
             }
             else if (rBStatCity.Checked == true)
             {
-                statistics.statistics_By_City(search.searchAllUsers(), true);
+                statistics.statistics_By_City(search.searchAllUsersToList(), true);
             }
             else if (rBStatAge.Checked == true)
             {
-                statistics.statistics_By_Age(search.searchAllUsers(), true);
+                statistics.statistics_By_Age(search.searchAllUsersToList(), true);
             }
             else { MessageBox.Show("Выберите параметр для отображения статистики."); }
         }
@@ -391,15 +391,19 @@ namespace MeoIS
             }
             else if (rBExpTXTCity.Checked == true)
             {
-                statistics.statistics_By_City(search.searchAllUsers(), false);
+                statistics.statistics_By_City(search.searchAllUsersToList(), false);
             }
             else if (rBExpTXTAge.Checked == true)
             {
-                statistics.statistics_By_Age(search.searchAllUsers(), false);
+                statistics.statistics_By_Age(search.searchAllUsersToList(), false);
             }
             else if (rBExpTXTGender.Checked == true)
             {
-                statistics.statistics_By_Gender(search.searchAllUsers(), false);
+                statistics.statistics_By_Gender(search.searchAllUsersToList(), false);
+            }
+            else if (rBExportAll.Checked == true)
+            {
+                statistics.export_to_Excel(search.searchAllUsersToTable(), "Вся таблица пользователей");
             }
             tBExport.Text = "";
         }

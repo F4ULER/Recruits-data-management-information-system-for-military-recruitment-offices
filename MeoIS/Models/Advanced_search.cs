@@ -68,11 +68,17 @@ namespace MeoIS
             return DataBase.sending_command_with_output_to_table(message);
         }
 
-        public List<User> searchAllUsers()
+        public List<User> searchAllUsersToList()
         {
             string message = "SELECT * FROM `users` WHERE 1=1";
 
             return DataBase.sending_command_with_output_to_list(message);
+        }
+        public DataTable searchAllUsersToTable()
+        {
+            string message = "SELECT * FROM `users` WHERE 1=1";
+
+            return DataBase.sending_command_with_output_to_table(message);
         }
 
     }

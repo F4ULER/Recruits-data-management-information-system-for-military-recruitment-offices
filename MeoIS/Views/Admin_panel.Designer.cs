@@ -133,6 +133,7 @@ namespace MeoIS
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.tPExport = new System.Windows.Forms.TabPage();
+            this.rBExportAll = new System.Windows.Forms.RadioButton();
             this.buttonExport = new System.Windows.Forms.Button();
             this.tBExport = new System.Windows.Forms.TextBox();
             this.rBExportCategory = new System.Windows.Forms.RadioButton();
@@ -144,7 +145,6 @@ namespace MeoIS
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
-            this.rBExportAll = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGV)).BeginInit();
             this.tableLayoutPanelFilter.SuspendLayout();
             this.groupBoxServices.SuspendLayout();
@@ -1362,6 +1362,20 @@ namespace MeoIS
             this.tPExport.Text = "Экспорт";
             this.tPExport.UseVisualStyleBackColor = true;
             // 
+            // rBExportAll
+            // 
+            this.rBExportAll.AutoSize = true;
+            this.rBExportAll.Checked = true;
+            this.rBExportAll.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rBExportAll.Location = new System.Drawing.Point(55, 84);
+            this.rBExportAll.Name = "rBExportAll";
+            this.rBExportAll.Size = new System.Drawing.Size(158, 31);
+            this.rBExportAll.TabIndex = 24;
+            this.rBExportAll.TabStop = true;
+            this.rBExportAll.Text = "Вся таблица";
+            this.rBExportAll.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rBExportAll.UseVisualStyleBackColor = true;
+            // 
             // buttonExport
             // 
             this.buttonExport.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -1376,7 +1390,7 @@ namespace MeoIS
             // tBExport
             // 
             this.tBExport.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tBExport.Location = new System.Drawing.Point(49, 204);
+            this.tBExport.Location = new System.Drawing.Point(58, 223);
             this.tBExport.Multiline = true;
             this.tBExport.Name = "tBExport";
             this.tBExport.Size = new System.Drawing.Size(235, 32);
@@ -1386,7 +1400,7 @@ namespace MeoIS
             // 
             this.rBExportCategory.AutoSize = true;
             this.rBExportCategory.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rBExportCategory.Location = new System.Drawing.Point(55, 130);
+            this.rBExportCategory.Location = new System.Drawing.Point(55, 150);
             this.rBExportCategory.Name = "rBExportCategory";
             this.rBExportCategory.Size = new System.Drawing.Size(235, 31);
             this.rBExportCategory.TabIndex = 21;
@@ -1398,7 +1412,7 @@ namespace MeoIS
             // 
             this.rBExportVizit.AutoSize = true;
             this.rBExportVizit.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rBExportVizit.Location = new System.Drawing.Point(58, 166);
+            this.rBExportVizit.Location = new System.Drawing.Point(58, 186);
             this.rBExportVizit.Name = "rBExportVizit";
             this.rBExportVizit.Size = new System.Drawing.Size(273, 31);
             this.rBExportVizit.TabIndex = 20;
@@ -1411,7 +1425,7 @@ namespace MeoIS
             this.rBExportCity.AutoSize = true;
             this.rBExportCity.Checked = true;
             this.rBExportCity.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rBExportCity.Location = new System.Drawing.Point(55, 97);
+            this.rBExportCity.Location = new System.Drawing.Point(55, 117);
             this.rBExportCity.Name = "rBExportCity";
             this.rBExportCity.Size = new System.Drawing.Size(92, 31);
             this.rBExportCity.TabIndex = 19;
@@ -1491,20 +1505,6 @@ namespace MeoIS
             this.label28.Size = new System.Drawing.Size(185, 49);
             this.label28.TabIndex = 5;
             this.label28.Text = "Экспорт";
-            // 
-            // rBExportAll
-            // 
-            this.rBExportAll.AutoSize = true;
-            this.rBExportAll.Checked = true;
-            this.rBExportAll.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rBExportAll.Location = new System.Drawing.Point(202, 79);
-            this.rBExportAll.Name = "rBExportAll";
-            this.rBExportAll.Size = new System.Drawing.Size(158, 31);
-            this.rBExportAll.TabIndex = 24;
-            this.rBExportAll.TabStop = true;
-            this.rBExportAll.Text = "Вся таблица";
-            this.rBExportAll.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.rBExportAll.UseVisualStyleBackColor = true;
             // 
             // Admin_panel
             // 
