@@ -34,31 +34,32 @@ namespace MeoIS
             this.labelWelcome1 = new System.Windows.Forms.Label();
             this.labelLine = new System.Windows.Forms.Label();
             this.buttonFirstReg = new System.Windows.Forms.Button();
-            this.label30 = new System.Windows.Forms.Label();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.tBStatCity = new System.Windows.Forms.TextBox();
-            this.numericFromAge = new System.Windows.Forms.NumericUpDown();
-            this.numericToAge = new System.Windows.Forms.NumericUpDown();
-            this.tBStatVizit = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.rBStatAge = new System.Windows.Forms.RadioButton();
-            this.rBStatCategory = new System.Windows.Forms.RadioButton();
-            this.rBStatVizit = new System.Windows.Forms.RadioButton();
-            this.rBStatCity = new System.Windows.Forms.RadioButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.buttonStat = new System.Windows.Forms.Button();
-            this.rBShowOnWindow = new System.Windows.Forms.RadioButton();
-            this.rBExport = new System.Windows.Forms.RadioButton();
-            this.panelStatisticsAndExport = new System.Windows.Forms.Panel();
+            this.button = new System.Windows.Forms.Button();
             this.dGView = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel1.SuspendLayout();
-            this.splitContainer1.Panel2.SuspendLayout();
-            this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericFromAge)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericToAge)).BeginInit();
-            this.panelStatisticsAndExport.SuspendLayout();
+            this.tabControlExportAndStatistics = new System.Windows.Forms.TabControl();
+            this.tPStat = new System.Windows.Forms.TabPage();
+            this.buttonShowStat = new System.Windows.Forms.Button();
+            this.rBStatCity = new System.Windows.Forms.RadioButton();
+            this.rBStatGender = new System.Windows.Forms.RadioButton();
+            this.rBStatAge = new System.Windows.Forms.RadioButton();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.tPExport = new System.Windows.Forms.TabPage();
+            this.tBExport = new System.Windows.Forms.TextBox();
+            this.rBExportCategory = new System.Windows.Forms.RadioButton();
+            this.rBExportVizit = new System.Windows.Forms.RadioButton();
+            this.rBExportCity = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.buttonExport = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dGView)).BeginInit();
+            this.tabControlExportAndStatistics.SuspendLayout();
+            this.tPStat.SuspendLayout();
+            this.tPExport.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelWelcome2
@@ -117,197 +118,16 @@ namespace MeoIS
             this.buttonFirstReg.UseVisualStyleBackColor = true;
             this.buttonFirstReg.Click += new System.EventHandler(this.buttonFirstReg_Click);
             // 
-            // label30
+            // button
             // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label30.Location = new System.Drawing.Point(204, 13);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(255, 49);
-            this.label30.TabIndex = 1;
-            this.label30.Text = "Статистика";
-            // 
-            // splitContainer1
-            // 
-            this.splitContainer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.splitContainer1.Location = new System.Drawing.Point(3, 67);
-            this.splitContainer1.Name = "splitContainer1";
-            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.Controls.Add(this.tBStatCity);
-            this.splitContainer1.Panel1.Controls.Add(this.numericFromAge);
-            this.splitContainer1.Panel1.Controls.Add(this.numericToAge);
-            this.splitContainer1.Panel1.Controls.Add(this.tBStatVizit);
-            this.splitContainer1.Panel1.Controls.Add(this.label2);
-            this.splitContainer1.Panel1.Controls.Add(this.rBStatAge);
-            this.splitContainer1.Panel1.Controls.Add(this.rBStatCategory);
-            this.splitContainer1.Panel1.Controls.Add(this.rBStatVizit);
-            this.splitContainer1.Panel1.Controls.Add(this.rBStatCity);
-            this.splitContainer1.Panel1.Controls.Add(this.label1);
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.Controls.Add(this.buttonStat);
-            this.splitContainer1.Panel2.Controls.Add(this.rBShowOnWindow);
-            this.splitContainer1.Panel2.Controls.Add(this.rBExport);
-            this.splitContainer1.Size = new System.Drawing.Size(647, 354);
-            this.splitContainer1.SplitterDistance = 190;
-            this.splitContainer1.TabIndex = 2;
-            // 
-            // tBStatCity
-            // 
-            this.tBStatCity.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tBStatCity.Location = new System.Drawing.Point(60, 90);
-            this.tBStatCity.Multiline = true;
-            this.tBStatCity.Name = "tBStatCity";
-            this.tBStatCity.Size = new System.Drawing.Size(235, 32);
-            this.tBStatCity.TabIndex = 10;
-            // 
-            // numericFromAge
-            // 
-            this.numericFromAge.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.numericFromAge.Location = new System.Drawing.Point(477, 71);
-            this.numericFromAge.Name = "numericFromAge";
-            this.numericFromAge.Size = new System.Drawing.Size(62, 28);
-            this.numericFromAge.TabIndex = 9;
-            // 
-            // numericToAge
-            // 
-            this.numericToAge.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.numericToAge.Location = new System.Drawing.Point(580, 71);
-            this.numericToAge.Name = "numericToAge";
-            this.numericToAge.Size = new System.Drawing.Size(62, 28);
-            this.numericToAge.TabIndex = 6;
-            // 
-            // tBStatVizit
-            // 
-            this.tBStatVizit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tBStatVizit.Location = new System.Drawing.Point(360, 164);
-            this.tBStatVizit.Multiline = true;
-            this.tBStatVizit.Name = "tBStatVizit";
-            this.tBStatVizit.Size = new System.Drawing.Size(248, 32);
-            this.tBStatVizit.TabIndex = 8;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(542, 71);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 27);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "До";
-            // 
-            // rBStatAge
-            // 
-            this.rBStatAge.AutoSize = true;
-            this.rBStatAge.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rBStatAge.Location = new System.Drawing.Point(335, 68);
-            this.rBStatAge.Name = "rBStatAge";
-            this.rBStatAge.Size = new System.Drawing.Size(136, 31);
-            this.rBStatAge.TabIndex = 5;
-            this.rBStatAge.TabStop = true;
-            this.rBStatAge.Text = "Возраст С";
-            this.rBStatAge.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.rBStatAge.UseVisualStyleBackColor = true;
-            // 
-            // rBStatCategory
-            // 
-            this.rBStatCategory.AutoSize = true;
-            this.rBStatCategory.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rBStatCategory.Location = new System.Drawing.Point(60, 148);
-            this.rBStatCategory.Name = "rBStatCategory";
-            this.rBStatCategory.Size = new System.Drawing.Size(235, 31);
-            this.rBStatCategory.TabIndex = 3;
-            this.rBStatCategory.TabStop = true;
-            this.rBStatCategory.Text = "Категория годности";
-            this.rBStatCategory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.rBStatCategory.UseVisualStyleBackColor = true;
-            // 
-            // rBStatVizit
-            // 
-            this.rBStatVizit.AutoSize = true;
-            this.rBStatVizit.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rBStatVizit.Location = new System.Drawing.Point(335, 130);
-            this.rBStatVizit.Name = "rBStatVizit";
-            this.rBStatVizit.Size = new System.Drawing.Size(273, 31);
-            this.rBStatVizit.TabIndex = 2;
-            this.rBStatVizit.TabStop = true;
-            this.rBStatVizit.Text = "Посещение военкомата";
-            this.rBStatVizit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.rBStatVizit.UseVisualStyleBackColor = true;
-            // 
-            // rBStatCity
-            // 
-            this.rBStatCity.AutoSize = true;
-            this.rBStatCity.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rBStatCity.Location = new System.Drawing.Point(60, 53);
-            this.rBStatCity.Name = "rBStatCity";
-            this.rBStatCity.Size = new System.Drawing.Size(92, 31);
-            this.rBStatCity.TabIndex = 1;
-            this.rBStatCity.TabStop = true;
-            this.rBStatCity.Text = "Город";
-            this.rBStatCity.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.rBStatCity.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(136, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(355, 26);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Выберите параметр статистики\r\n";
-            // 
-            // buttonStat
-            // 
-            this.buttonStat.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonStat.Location = new System.Drawing.Point(180, 73);
-            this.buttonStat.Name = "buttonStat";
-            this.buttonStat.Size = new System.Drawing.Size(265, 58);
-            this.buttonStat.TabIndex = 5;
-            this.buttonStat.Text = "Показать статистику";
-            this.buttonStat.UseVisualStyleBackColor = true;
-            this.buttonStat.Click += new System.EventHandler(this.buttonStat_Click);
-            // 
-            // rBShowOnWindow
-            // 
-            this.rBShowOnWindow.AutoSize = true;
-            this.rBShowOnWindow.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rBShowOnWindow.Location = new System.Drawing.Point(387, 25);
-            this.rBShowOnWindow.Name = "rBShowOnWindow";
-            this.rBShowOnWindow.Size = new System.Drawing.Size(230, 31);
-            this.rBShowOnWindow.TabIndex = 3;
-            this.rBShowOnWindow.TabStop = true;
-            this.rBShowOnWindow.Text = "Показать на экране";
-            this.rBShowOnWindow.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.rBShowOnWindow.UseVisualStyleBackColor = true;
-            // 
-            // rBExport
-            // 
-            this.rBExport.AutoSize = true;
-            this.rBExport.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rBExport.Location = new System.Drawing.Point(27, 25);
-            this.rBExport.Name = "rBExport";
-            this.rBExport.Size = new System.Drawing.Size(333, 31);
-            this.rBExport.TabIndex = 2;
-            this.rBExport.TabStop = true;
-            this.rBExport.Text = "Экспортировать в Excel файл";
-            this.rBExport.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.rBExport.UseVisualStyleBackColor = true;
-            // 
-            // panelStatisticsAndExport
-            // 
-            this.panelStatisticsAndExport.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panelStatisticsAndExport.Controls.Add(this.splitContainer1);
-            this.panelStatisticsAndExport.Controls.Add(this.label30);
-            this.panelStatisticsAndExport.Location = new System.Drawing.Point(12, 12);
-            this.panelStatisticsAndExport.Name = "panelStatisticsAndExport";
-            this.panelStatisticsAndExport.Size = new System.Drawing.Size(650, 422);
-            this.panelStatisticsAndExport.TabIndex = 5;
+            this.button.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button.Location = new System.Drawing.Point(111, 507);
+            this.button.Name = "button";
+            this.button.Size = new System.Drawing.Size(265, 58);
+            this.button.TabIndex = 5;
+            this.button.Text = "Показать статистику";
+            this.button.UseVisualStyleBackColor = true;
+            this.button.Click += new System.EventHandler(this.buttonStat_Click);
             // 
             // dGView
             // 
@@ -319,13 +139,262 @@ namespace MeoIS
             this.dGView.Size = new System.Drawing.Size(778, 459);
             this.dGView.TabIndex = 6;
             // 
+            // tabControlExportAndStatistics
+            // 
+            this.tabControlExportAndStatistics.Controls.Add(this.tPStat);
+            this.tabControlExportAndStatistics.Controls.Add(this.tPExport);
+            this.tabControlExportAndStatistics.Location = new System.Drawing.Point(317, 12);
+            this.tabControlExportAndStatistics.Name = "tabControlExportAndStatistics";
+            this.tabControlExportAndStatistics.SelectedIndex = 0;
+            this.tabControlExportAndStatistics.Size = new System.Drawing.Size(552, 370);
+            this.tabControlExportAndStatistics.TabIndex = 3;
+            // 
+            // tPStat
+            // 
+            this.tPStat.Controls.Add(this.buttonShowStat);
+            this.tPStat.Controls.Add(this.rBStatCity);
+            this.tPStat.Controls.Add(this.rBStatGender);
+            this.tPStat.Controls.Add(this.rBStatAge);
+            this.tPStat.Controls.Add(this.label3);
+            this.tPStat.Controls.Add(this.label4);
+            this.tPStat.Location = new System.Drawing.Point(4, 25);
+            this.tPStat.Name = "tPStat";
+            this.tPStat.Padding = new System.Windows.Forms.Padding(3);
+            this.tPStat.Size = new System.Drawing.Size(544, 341);
+            this.tPStat.TabIndex = 0;
+            this.tPStat.Text = "Статистика";
+            this.tPStat.UseVisualStyleBackColor = true;
+            // 
+            // buttonShowStat
+            // 
+            this.buttonShowStat.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonShowStat.Location = new System.Drawing.Point(129, 215);
+            this.buttonShowStat.Name = "buttonShowStat";
+            this.buttonShowStat.Size = new System.Drawing.Size(265, 58);
+            this.buttonShowStat.TabIndex = 16;
+            this.buttonShowStat.Text = "Показать статистику";
+            this.buttonShowStat.UseVisualStyleBackColor = true;
+            // 
+            // rBStatCity
+            // 
+            this.rBStatCity.AutoSize = true;
+            this.rBStatCity.Checked = true;
+            this.rBStatCity.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rBStatCity.Location = new System.Drawing.Point(204, 129);
+            this.rBStatCity.Name = "rBStatCity";
+            this.rBStatCity.Size = new System.Drawing.Size(92, 31);
+            this.rBStatCity.TabIndex = 15;
+            this.rBStatCity.TabStop = true;
+            this.rBStatCity.Text = "Город";
+            this.rBStatCity.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rBStatCity.UseVisualStyleBackColor = true;
+            // 
+            // rBStatGender
+            // 
+            this.rBStatGender.AutoSize = true;
+            this.rBStatGender.Checked = true;
+            this.rBStatGender.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rBStatGender.Location = new System.Drawing.Point(206, 92);
+            this.rBStatGender.Name = "rBStatGender";
+            this.rBStatGender.Size = new System.Drawing.Size(74, 31);
+            this.rBStatGender.TabIndex = 13;
+            this.rBStatGender.TabStop = true;
+            this.rBStatGender.Text = "Пол";
+            this.rBStatGender.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rBStatGender.UseVisualStyleBackColor = true;
+            // 
+            // rBStatAge
+            // 
+            this.rBStatAge.AutoSize = true;
+            this.rBStatAge.Checked = true;
+            this.rBStatAge.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rBStatAge.Location = new System.Drawing.Point(206, 173);
+            this.rBStatAge.Name = "rBStatAge";
+            this.rBStatAge.Size = new System.Drawing.Size(114, 31);
+            this.rBStatAge.TabIndex = 14;
+            this.rBStatAge.TabStop = true;
+            this.rBStatAge.Text = "Возраст";
+            this.rBStatAge.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rBStatAge.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(64, 55);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(355, 26);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Выберите параметр статистики\r\n";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(120, 6);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(255, 49);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Статистика";
+            // 
+            // tPExport
+            // 
+            this.tPExport.Controls.Add(this.buttonExport);
+            this.tPExport.Controls.Add(this.tBExport);
+            this.tPExport.Controls.Add(this.rBExportCategory);
+            this.tPExport.Controls.Add(this.rBExportVizit);
+            this.tPExport.Controls.Add(this.rBExportCity);
+            this.tPExport.Controls.Add(this.radioButton1);
+            this.tPExport.Controls.Add(this.radioButton2);
+            this.tPExport.Controls.Add(this.radioButton3);
+            this.tPExport.Controls.Add(this.label5);
+            this.tPExport.Controls.Add(this.label1);
+            this.tPExport.Controls.Add(this.label2);
+            this.tPExport.Location = new System.Drawing.Point(4, 25);
+            this.tPExport.Name = "tPExport";
+            this.tPExport.Padding = new System.Windows.Forms.Padding(3);
+            this.tPExport.Size = new System.Drawing.Size(544, 341);
+            this.tPExport.TabIndex = 1;
+            this.tPExport.Text = "Экспорт";
+            this.tPExport.UseVisualStyleBackColor = true;
+            // 
+            // tBExport
+            // 
+            this.tBExport.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tBExport.Location = new System.Drawing.Point(49, 204);
+            this.tBExport.Multiline = true;
+            this.tBExport.Name = "tBExport";
+            this.tBExport.Size = new System.Drawing.Size(235, 32);
+            this.tBExport.TabIndex = 22;
+            // 
+            // rBExportCategory
+            // 
+            this.rBExportCategory.AutoSize = true;
+            this.rBExportCategory.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rBExportCategory.Location = new System.Drawing.Point(55, 130);
+            this.rBExportCategory.Name = "rBExportCategory";
+            this.rBExportCategory.Size = new System.Drawing.Size(235, 31);
+            this.rBExportCategory.TabIndex = 21;
+            this.rBExportCategory.Text = "Категория годности";
+            this.rBExportCategory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rBExportCategory.UseVisualStyleBackColor = true;
+            // 
+            // rBExportVizit
+            // 
+            this.rBExportVizit.AutoSize = true;
+            this.rBExportVizit.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rBExportVizit.Location = new System.Drawing.Point(58, 166);
+            this.rBExportVizit.Name = "rBExportVizit";
+            this.rBExportVizit.Size = new System.Drawing.Size(273, 31);
+            this.rBExportVizit.TabIndex = 20;
+            this.rBExportVizit.Text = "Посещение военкомата";
+            this.rBExportVizit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rBExportVizit.UseVisualStyleBackColor = true;
+            // 
+            // rBExportCity
+            // 
+            this.rBExportCity.AutoSize = true;
+            this.rBExportCity.Checked = true;
+            this.rBExportCity.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rBExportCity.Location = new System.Drawing.Point(55, 97);
+            this.rBExportCity.Name = "rBExportCity";
+            this.rBExportCity.Size = new System.Drawing.Size(92, 31);
+            this.rBExportCity.TabIndex = 19;
+            this.rBExportCity.TabStop = true;
+            this.rBExportCity.Text = "Город";
+            this.rBExportCity.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rBExportCity.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Checked = true;
+            this.radioButton1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButton1.Location = new System.Drawing.Point(385, 129);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(92, 31);
+            this.radioButton1.TabIndex = 18;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Город";
+            this.radioButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Checked = true;
+            this.radioButton2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButton2.Location = new System.Drawing.Point(387, 92);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(74, 31);
+            this.radioButton2.TabIndex = 16;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Пол";
+            this.radioButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Checked = true;
+            this.radioButton3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButton3.Location = new System.Drawing.Point(387, 173);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(114, 31);
+            this.radioButton3.TabIndex = 17;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "Возраст";
+            this.radioButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Location = new System.Drawing.Point(50, 55);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(108, 26);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Данных:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(356, 56);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(148, 26);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Статистики:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(172, 3);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(185, 49);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Экспорт";
+            // 
+            // buttonExport
+            // 
+            this.buttonExport.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonExport.Location = new System.Drawing.Point(136, 259);
+            this.buttonExport.Name = "buttonExport";
+            this.buttonExport.Size = new System.Drawing.Size(265, 58);
+            this.buttonExport.TabIndex = 23;
+            this.buttonExport.Text = "Экспортировать";
+            this.buttonExport.UseVisualStyleBackColor = true;
+            // 
             // TEST
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1232, 603);
+            this.Controls.Add(this.tabControlExportAndStatistics);
+            this.Controls.Add(this.button);
             this.Controls.Add(this.dGView);
-            this.Controls.Add(this.panelStatisticsAndExport);
             this.Controls.Add(this.labelLine);
             this.Controls.Add(this.labelWelcome1);
             this.Controls.Add(this.labelWelcome3);
@@ -333,17 +402,12 @@ namespace MeoIS
             this.Controls.Add(this.buttonFirstReg);
             this.Name = "TEST";
             this.Text = "TEST";
-            this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel1.PerformLayout();
-            this.splitContainer1.Panel2.ResumeLayout(false);
-            this.splitContainer1.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericFromAge)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericToAge)).EndInit();
-            this.panelStatisticsAndExport.ResumeLayout(false);
-            this.panelStatisticsAndExport.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGView)).EndInit();
+            this.tabControlExportAndStatistics.ResumeLayout(false);
+            this.tPStat.ResumeLayout(false);
+            this.tPStat.PerformLayout();
+            this.tPExport.ResumeLayout(false);
+            this.tPExport.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -356,22 +420,27 @@ namespace MeoIS
         private System.Windows.Forms.Label labelWelcome1;
         private System.Windows.Forms.Label labelLine;
         private System.Windows.Forms.Button buttonFirstReg;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.TextBox tBStatCity;
-        private System.Windows.Forms.NumericUpDown numericFromAge;
-        private System.Windows.Forms.NumericUpDown numericToAge;
-        private System.Windows.Forms.TextBox tBStatVizit;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RadioButton rBStatAge;
-        private System.Windows.Forms.RadioButton rBStatCategory;
-        private System.Windows.Forms.RadioButton rBStatVizit;
-        private System.Windows.Forms.RadioButton rBStatCity;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button buttonStat;
-        private System.Windows.Forms.RadioButton rBShowOnWindow;
-        private System.Windows.Forms.RadioButton rBExport;
-        private System.Windows.Forms.Panel panelStatisticsAndExport;
+        private System.Windows.Forms.Button button;
         private System.Windows.Forms.DataGridView dGView;
+        private System.Windows.Forms.TabControl tabControlExportAndStatistics;
+        private System.Windows.Forms.TabPage tPStat;
+        private System.Windows.Forms.TabPage tPExport;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.RadioButton rBStatCity;
+        private System.Windows.Forms.RadioButton rBStatGender;
+        private System.Windows.Forms.RadioButton rBStatAge;
+        private System.Windows.Forms.Button buttonShowStat;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox tBExport;
+        private System.Windows.Forms.RadioButton rBExportCategory;
+        private System.Windows.Forms.RadioButton rBExportVizit;
+        private System.Windows.Forms.RadioButton rBExportCity;
+        private System.Windows.Forms.Button buttonExport;
     }
 }

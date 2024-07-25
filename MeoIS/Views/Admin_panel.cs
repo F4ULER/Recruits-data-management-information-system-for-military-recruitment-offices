@@ -21,8 +21,7 @@ namespace MeoIS
 
             tableLayoutPanelFilter.Visible = false;
             tabControlMenuFunctions.Visible = false;
-            panelStatisticsAndExport.Visible = false;
-            splitContainerStat.SplitterDistance = 150;
+            tabControlExportAndStatistics.Visible = false;
         }
 
         // иконка поиска
@@ -336,8 +335,8 @@ namespace MeoIS
             pictureClose.Visible = false;
             tabControlMenuFunctions.Visible = false;
             panelNewAdmin.Visible = false;
-            panelStatisticsAndExport.Visible = false;
-            tBStat.Text = "";
+            tabControlExportAndStatistics.Visible = false;
+            tBExport.Text = "";
             dataGV.Visible = false;
             groupBoxServices.Visible = true;
             tBSearch.Text = "";
@@ -352,47 +351,57 @@ namespace MeoIS
 
         private void pictureExport_Click(object sender, EventArgs e)
         {
-            panelStatisticsAndExport.Visible = true;
+            tabControlExportAndStatistics.Visible = true;
             groupBoxServices.Visible = false;
             pictureClose.Visible = true;
         }
 
-        private void buttonStat_Click(object sender, EventArgs e)
+        private void buttonShowStat_Click(object sender, EventArgs e)
         {
             Advanced_search search = new Advanced_search();
             Collect_statistics statistics = new Collect_statistics();
 
-            if (rBExport.Checked == true)
+            if (rBStatGender.Checked == true)
             {
-                if (rBExportCity.Checked == true)
-                {
-                    statistics.export_to_Excel(search.searchCity(tBStat.Text));
-                }
-                else if (rBExportCategory.Checked == true)
-                {
-                    statistics.export_to_Excel(search.searchCategory(tBStat.Text));
-                }
-                //else if (rBStatVizit.Checked == true)
-                //{
-                //    statistics.export_to_file(search.);
-                //}
+                statistics.statistics_By_Gender(search.searchAllUsers(), true); ;
             }
-            else if (rBShowOnWindow.Checked == true)
+            else if (rBStatCity.Checked == true)
             {
-                if (rBStatGender.Checked == true)
-                {
-                    statistics.statistics_By_Gender(search.searchAllUsers()); ;
-                }
-                else if(rBStatCity.Checked == true)
-                {
-                    statistics.statistics_By_City(search.searchAllUsers());
-                }
-                else if (rBStatAge.Checked == true)
-                {
-                    statistics.statistics_By_Age(search.searchAllUsers());
-                }
+                statistics.statistics_By_City(search.searchAllUsers(), true);
             }
-            
+            else if (rBStatAge.Checked == true)
+            {
+                statistics.statistics_By_Age(search.searchAllUsers(), true);
+            }
+            else { MessageBox.Show("Выберите параметр для отображения статистики."); }
+        }
+
+        private void buttonExport_Click(object sender, EventArgs e)
+        {
+            Advanced_search search = new Advanced_search();
+            Collect_statistics statistics = new Collect_statistics();
+
+            if (rBExportCity.Checked == true)
+            {
+                statistics.export_to_Excel(search.searchCity(tBExport.Text), "Данные призывников в городе " + tBExport.Text);
+            }
+            else if (rBExportCategory.Checked == true)
+            {
+                statistics.export_to_Excel(search.searchCategory(tBExport.Text), "Данные призывников с категорией " + tBExport.Text);
+            }
+            else if (rBExpTXTCity.Checked == true)
+            {
+                statistics.statistics_By_City(search.searchAllUsers(), false);
+            }
+            else if (rBExpTXTAge.Checked == true)
+            {
+                statistics.statistics_By_Age(search.searchAllUsers(), false);
+            }
+            else if (rBExpTXTGender.Checked == true)
+            {
+                statistics.statistics_By_Gender(search.searchAllUsers(), false);
+            }
+            tBExport.Text = "";
         }
     }
 }

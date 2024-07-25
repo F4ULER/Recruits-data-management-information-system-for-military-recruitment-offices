@@ -6,15 +6,16 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Windows.Forms;
 using Excel = Microsoft.Office.Interop.Excel;
+using System.IO;
 
 namespace MeoIS
 {
     class Collect_statistics
     {
-        public void export_to_Excel(DataTable table)
+        public void export_to_Excel(DataTable table, string title)
         {
             Excel.Application expApp = new Excel.Application();
-            expApp.Workbooks.Add();
+            expApp.Workbooks.Add().SaveAs(title + " (" + DateTime.Today.ToShortDateString() + ")");
 
             Excel.Worksheet worksheet = (Excel.Worksheet)expApp.ActiveSheet;
 
@@ -29,17 +30,39 @@ namespace MeoIS
             expApp.Visible = true;
         }
 
-        public void statistics_By_Gender(List<User> user)
+        public void export_to_TXT(string result, string title)
+        {
+            string path = @"C:\Users\User\Desktop\" + title + "." + DateTime.Today.ToShortDateString() +".txt";
+            MessageBox.Show(result);
+            if(!File.Exists(path))
+            {
+                File.Create(path).Close();
+            }
+            StreamWriter streamWriter = new StreamWriter(path);
+            streamWriter.WriteLine(result);
+            streamWriter.Close();
+        }
+
+        public void statistics_By_Gender(List<User> user, bool expOrStat)
         {
             int M = 0, F = 0;
             foreach (User f in user)
             {
                 if(f.Gender == "M" || f.Gender == "М") { M++; } else { F++; }
             }
-            MessageBox.Show("Мужчин - " + M + "\n Женщин - " + F, "Статистика по половому признаку", MessageBoxButtons.OK);
+            string result = "Мужчин - " + M + "\n Женщин -" + F, title = "Статистика по половому признаку";
+            if (expOrStat == true)
+            {
+                MessageBox.Show(result, title, MessageBoxButtons.OK);
+            }
+            else
+            {
+                result = title + "\n\n" + result;
+                export_to_TXT(result, title);
+            }
         }
 
-        public void statistics_By_City(List<User> user)
+        public void statistics_By_City(List<User> user, bool expOrStat)
         {
             List<string> city = new List<string>();
             
@@ -47,10 +70,10 @@ namespace MeoIS
             {
                 city.Add(u.City);
             }
-            statistics_By_Item(city, "Статистика по количеству призывников");
+            statistics_By_Item(city, "Статистика по количеству призывников", expOrStat);
         }
 
-        public void statistics_By_Category(List<User> user)
+        public void statistics_By_Category(List<User> user, bool expOrStat)
         {
             List<string> category = new List<string>();
 
@@ -58,10 +81,10 @@ namespace MeoIS
             {
                 category.Add(u.Category);
             }
-            statistics_By_Item(category, "Статистика по категории годности");
+            statistics_By_Item(category, "Статистика по категории годности", expOrStat);
         }
 
-        public void statistics_By_Age(List<User> user)
+        public void statistics_By_Age(List<User> user, bool expOrStat)
         {
             List<string> age = new List<string>();
             List<int> ageNumber = new List<int>();
@@ -74,10 +97,10 @@ namespace MeoIS
                 age.Add(user[i].DateOfBirth.Year.ToString() + "(" + ageNumber[i] + ")");
             }
 
-            statistics_By_Item(age, "Статистика по возрасту");
+            statistics_By_Item(age, "Статистика по возрасту",expOrStat);
         }
 
-        private void statistics_By_Item(List<string> list, string title)
+        private void statistics_By_Item(List<string> list, string title, bool expOrStat)
         {
             var listDistinct = list.Distinct().ToList();
             int[] count = new int[listDistinct.Count];
@@ -98,9 +121,14 @@ namespace MeoIS
                 result += listDistinct[i] + " - " + count[i] + "\n\n";
             }
 
-            MessageBox.Show(result, title, MessageBoxButtons.OK);
+            if(expOrStat == true)
+            {
+                MessageBox.Show(result, title, MessageBoxButtons.OK);
+            } else
+            {
+                result = title + "\n\n" + result;
+                export_to_TXT(result,title);
+            }
         }
-
-
     }
 }
