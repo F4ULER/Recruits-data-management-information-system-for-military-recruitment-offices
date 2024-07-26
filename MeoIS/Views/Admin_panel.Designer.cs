@@ -34,6 +34,7 @@ namespace MeoIS
             this.tBSearch = new System.Windows.Forms.TextBox();
             this.dataGV = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanelFilter = new System.Windows.Forms.TableLayoutPanel();
+            this.rBEducation = new System.Windows.Forms.RadioButton();
             this.rBSearchLit = new System.Windows.Forms.RadioButton();
             this.rBSearchMedData = new System.Windows.Forms.RadioButton();
             this.rBSearchPhone = new System.Windows.Forms.RadioButton();
@@ -133,6 +134,8 @@ namespace MeoIS
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.tPExport = new System.Windows.Forms.TabPage();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
             this.rBExportAll = new System.Windows.Forms.RadioButton();
             this.buttonExport = new System.Windows.Forms.Button();
             this.tBExport = new System.Windows.Forms.TextBox();
@@ -144,9 +147,8 @@ namespace MeoIS
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
-            this.rBEducation = new System.Windows.Forms.RadioButton();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
+            this.rBStatCategory = new System.Windows.Forms.RadioButton();
+            this.rBExpTXTCategory = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGV)).BeginInit();
             this.tableLayoutPanelFilter.SuspendLayout();
             this.groupBoxServices.SuspendLayout();
@@ -227,6 +229,17 @@ namespace MeoIS
             this.tableLayoutPanelFilter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.tableLayoutPanelFilter.Size = new System.Drawing.Size(244, 359);
             this.tableLayoutPanelFilter.TabIndex = 16;
+            // 
+            // rBEducation
+            // 
+            this.rBEducation.AutoSize = true;
+            this.rBEducation.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rBEducation.Location = new System.Drawing.Point(3, 309);
+            this.rBEducation.Name = "rBEducation";
+            this.rBEducation.Size = new System.Drawing.Size(141, 26);
+            this.rBEducation.TabIndex = 6;
+            this.rBEducation.Text = "Образование";
+            this.rBEducation.UseVisualStyleBackColor = true;
             // 
             // rBSearchLit
             // 
@@ -1255,6 +1268,7 @@ namespace MeoIS
             // 
             // tPStat
             // 
+            this.tPStat.Controls.Add(this.rBStatCategory);
             this.tPStat.Controls.Add(this.buttonShowStat);
             this.tPStat.Controls.Add(this.rBStatCity);
             this.tPStat.Controls.Add(this.rBStatGender);
@@ -1285,7 +1299,7 @@ namespace MeoIS
             this.rBStatCity.AutoSize = true;
             this.rBStatCity.Checked = true;
             this.rBStatCity.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rBStatCity.Location = new System.Drawing.Point(204, 129);
+            this.rBStatCity.Location = new System.Drawing.Point(108, 165);
             this.rBStatCity.Name = "rBStatCity";
             this.rBStatCity.Size = new System.Drawing.Size(92, 31);
             this.rBStatCity.TabIndex = 15;
@@ -1299,7 +1313,7 @@ namespace MeoIS
             this.rBStatGender.AutoSize = true;
             this.rBStatGender.Checked = true;
             this.rBStatGender.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rBStatGender.Location = new System.Drawing.Point(206, 92);
+            this.rBStatGender.Location = new System.Drawing.Point(117, 103);
             this.rBStatGender.Name = "rBStatGender";
             this.rBStatGender.Size = new System.Drawing.Size(74, 31);
             this.rBStatGender.TabIndex = 13;
@@ -1313,7 +1327,7 @@ namespace MeoIS
             this.rBStatAge.AutoSize = true;
             this.rBStatAge.Checked = true;
             this.rBStatAge.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rBStatAge.Location = new System.Drawing.Point(206, 173);
+            this.rBStatAge.Location = new System.Drawing.Point(240, 103);
             this.rBStatAge.Name = "rBStatAge";
             this.rBStatAge.Size = new System.Drawing.Size(114, 31);
             this.rBStatAge.TabIndex = 14;
@@ -1344,6 +1358,7 @@ namespace MeoIS
             // 
             // tPExport
             // 
+            this.tPExport.Controls.Add(this.rBExpTXTCategory);
             this.tPExport.Controls.Add(this.label34);
             this.tPExport.Controls.Add(this.label33);
             this.tPExport.Controls.Add(this.rBExportAll);
@@ -1364,6 +1379,28 @@ namespace MeoIS
             this.tPExport.TabIndex = 1;
             this.tPExport.Text = "Экспорт";
             this.tPExport.UseVisualStyleBackColor = true;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label34.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label34.Location = new System.Drawing.Point(20, 197);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(341, 22);
+            this.label34.TabIndex = 39;
+            this.label34.Text = "(впишите в текстовое поле категорию)";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label33.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label33.Location = new System.Drawing.Point(20, 138);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(298, 22);
+            this.label33.TabIndex = 38;
+            this.label33.Text = "(впишите в текстовое поле город)";
             // 
             // rBExportAll
             // 
@@ -1430,7 +1467,7 @@ namespace MeoIS
             this.rBExpTXTCity.AutoSize = true;
             this.rBExpTXTCity.Checked = true;
             this.rBExpTXTCity.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rBExpTXTCity.Location = new System.Drawing.Point(385, 129);
+            this.rBExpTXTCity.Location = new System.Drawing.Point(374, 121);
             this.rBExpTXTCity.Name = "rBExpTXTCity";
             this.rBExpTXTCity.Size = new System.Drawing.Size(92, 31);
             this.rBExpTXTCity.TabIndex = 18;
@@ -1444,7 +1481,7 @@ namespace MeoIS
             this.rBExpTXTGender.AutoSize = true;
             this.rBExpTXTGender.Checked = true;
             this.rBExpTXTGender.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rBExpTXTGender.Location = new System.Drawing.Point(387, 92);
+            this.rBExpTXTGender.Location = new System.Drawing.Point(376, 84);
             this.rBExpTXTGender.Name = "rBExpTXTGender";
             this.rBExpTXTGender.Size = new System.Drawing.Size(74, 31);
             this.rBExpTXTGender.TabIndex = 16;
@@ -1458,7 +1495,7 @@ namespace MeoIS
             this.rBExpTXTAge.AutoSize = true;
             this.rBExpTXTAge.Checked = true;
             this.rBExpTXTAge.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rBExpTXTAge.Location = new System.Drawing.Point(387, 173);
+            this.rBExpTXTAge.Location = new System.Drawing.Point(376, 165);
             this.rBExpTXTAge.Name = "rBExpTXTAge";
             this.rBExpTXTAge.Size = new System.Drawing.Size(114, 31);
             this.rBExpTXTAge.TabIndex = 17;
@@ -1481,7 +1518,7 @@ namespace MeoIS
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label25.Location = new System.Drawing.Point(356, 56);
+            this.label25.Location = new System.Drawing.Point(353, 52);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(148, 26);
             this.label25.TabIndex = 4;
@@ -1497,38 +1534,33 @@ namespace MeoIS
             this.label28.TabIndex = 5;
             this.label28.Text = "Экспорт";
             // 
-            // rBEducation
+            // rBStatCategory
             // 
-            this.rBEducation.AutoSize = true;
-            this.rBEducation.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rBEducation.Location = new System.Drawing.Point(3, 309);
-            this.rBEducation.Name = "rBEducation";
-            this.rBEducation.Size = new System.Drawing.Size(141, 26);
-            this.rBEducation.TabIndex = 6;
-            this.rBEducation.Text = "Образование";
-            this.rBEducation.UseVisualStyleBackColor = true;
+            this.rBStatCategory.AutoSize = true;
+            this.rBStatCategory.Checked = true;
+            this.rBStatCategory.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rBStatCategory.Location = new System.Drawing.Point(240, 165);
+            this.rBStatCategory.Name = "rBStatCategory";
+            this.rBStatCategory.Size = new System.Drawing.Size(235, 31);
+            this.rBStatCategory.TabIndex = 17;
+            this.rBStatCategory.TabStop = true;
+            this.rBStatCategory.Text = "Категория годности";
+            this.rBStatCategory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rBStatCategory.UseVisualStyleBackColor = true;
             // 
-            // label33
+            // rBExpTXTCategory
             // 
-            this.label33.AutoSize = true;
-            this.label33.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label33.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label33.Location = new System.Drawing.Point(20, 138);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(298, 22);
-            this.label33.TabIndex = 38;
-            this.label33.Text = "(впишите в текстовое поле город)";
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label34.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label34.Location = new System.Drawing.Point(20, 197);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(341, 22);
-            this.label34.TabIndex = 39;
-            this.label34.Text = "(впишите в текстовое поле категорию)";
+            this.rBExpTXTCategory.AutoSize = true;
+            this.rBExpTXTCategory.Checked = true;
+            this.rBExpTXTCategory.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rBExpTXTCategory.Location = new System.Drawing.Point(374, 195);
+            this.rBExpTXTCategory.Name = "rBExpTXTCategory";
+            this.rBExpTXTCategory.Size = new System.Drawing.Size(137, 58);
+            this.rBExpTXTCategory.TabIndex = 40;
+            this.rBExpTXTCategory.TabStop = true;
+            this.rBExpTXTCategory.Text = "Категория\r\nгодности";
+            this.rBExpTXTCategory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rBExpTXTCategory.UseVisualStyleBackColor = true;
             // 
             // Admin_panel
             // 
@@ -1711,5 +1743,7 @@ namespace MeoIS
         private System.Windows.Forms.RadioButton rBEducation;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.RadioButton rBStatCategory;
+        private System.Windows.Forms.RadioButton rBExpTXTCategory;
     }
 }

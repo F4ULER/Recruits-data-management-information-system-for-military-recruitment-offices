@@ -353,6 +353,7 @@ namespace MeoIS
             this.Hide();
         }
 
+        //отображение меню статистики и экспорта(иконка экспорта)
         private void pictureExport_Click(object sender, EventArgs e)
         {
             tabControlExportAndStatistics.Visible = true;
@@ -360,6 +361,7 @@ namespace MeoIS
             pictureClose.Visible = true;
         }
 
+        //кнопка показать статисику в вкладке Статистика
         private void buttonShowStat_Click(object sender, EventArgs e)
         {
             Advanced_search search = new Advanced_search();
@@ -377,9 +379,14 @@ namespace MeoIS
             {
                 statistics.statistics_By_Age(search.searchAllUsersToList(), true);
             }
+            else if (rBStatCategory.Checked == true)
+            {
+                statistics.statistics_By_Category(search.searchAllUsersToList(), true);
+            }
             else { MessageBox.Show("Выберите параметр для отображения статистики."); }
         }
 
+        //кнопка Экспортировать в вкладке Экспорт
         private void buttonExport_Click(object sender, EventArgs e)
         {
             Advanced_search search = new Advanced_search();
@@ -404,6 +411,10 @@ namespace MeoIS
             else if (rBExpTXTGender.Checked == true)
             {
                 statistics.statistics_By_Gender(search.searchAllUsersToList(), false);
+            }
+            else if (rBExpTXTCategory.Checked == true)
+            {
+                statistics.statistics_By_Category(search.searchAllUsersToList(), false);
             }
             else if (rBExportAll.Checked == true)
             {

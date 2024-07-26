@@ -61,6 +61,7 @@ namespace MeoIS
             return DataBase.sending_command_with_output_to_table(message);
         }
 
+        //поиск по категории годности
         public DataTable searchCategory (string category)
         {
             string message = "SELECT `document_number` AS 'Номер документа', `password` AS 'Пароль', `last_name` AS 'Фамилия', `name` AS 'Имя', `patronymic` AS 'Отчество', `date_of_birth` AS 'Дата рождения', `address` AS 'Фактический адрес', `category` AS 'Категория годности'," +
@@ -68,6 +69,7 @@ namespace MeoIS
             return DataBase.sending_command_with_output_to_table(message);
         }
 
+        //поиск информации об образовании по номеру документа
         public DataTable searchEducation(string docNumber)
         {
             string message = "SELECT `document_number` AS 'Номер документа', `Name_of_educational_organization` AS 'Название учебной организации', `Name_of_specialty` AS 'Наименование специальности', `Enrollment_date` AS 'Дата поступления', `Duration_of_training` AS 'Продолжительность обучения', " +
@@ -75,12 +77,15 @@ namespace MeoIS
             return DataBase.sending_command_with_output_to_table(message);
         }
 
+        //вывод всей таблицы users в List<User>
         public List<User> searchAllUsersToList()
         {
             string message = "SELECT * FROM `users` WHERE 1=1";
 
             return DataBase.sending_command_with_output_to_list(message);
         }
+
+        //вывод всей таблицы users в Datatable
         public DataTable searchAllUsersToTable()
         {
             string message = "SELECT * FROM `users` WHERE 1=1";

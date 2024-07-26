@@ -2,10 +2,10 @@
 -- version 4.9.5
 -- https://www.phpmyadmin.net/
 --
--- Хост: localhost:3306
--- Время создания: Июл 20 2024 г., 16:44
--- Версия сервера: 5.7.24
--- Версия PHP: 7.4.1
+-- Host: localhost:3306
+-- Generation Time: Jul 26, 2024 at 09:57 AM
+-- Server version: 5.7.24
+-- PHP Version: 7.4.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,19 +19,19 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- База данных: `db_military_enlistment_office`
+-- Database: `db_military_enlistment_office`
 --
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `date_medical_data`
+-- Table structure for table `date_medical_data`
 --
 
 CREATE TABLE `date_medical_data` (
   `id` int(250) NOT NULL,
   `document_number` varchar(250) NOT NULL,
-  `date` varchar(10) NOT NULL,
+  `date` date NOT NULL,
   `therapist` varchar(250) NOT NULL,
   `surgeon` varchar(250) NOT NULL,
   `neurologist` varchar(250) NOT NULL,
@@ -43,18 +43,18 @@ CREATE TABLE `date_medical_data` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Дамп данных таблицы `date_medical_data`
+-- Dumping data for table `date_medical_data`
 --
 
 INSERT INTO `date_medical_data` (`id`, `document_number`, `date`, `therapist`, `surgeon`, `neurologist`, `psychiatrist`, `ophthalmologist`, `dermatovenerologist`, `otorhinolaryngologist`, `dentist`) VALUES
-(1, '5353', '25.02.2023', 'В целом неплохо', 'Кости целы', 'Нервы в порядке', 'Нет ментальных расстройств', 'Зрение -1.5', 'Всё хорошо', 'Ушные раковины в порядке, носовые пазухи тоже', 'Кариес на 7 зубе вправа, кариес на 5 зубе слева'),
-(2, '5353', '07.04.2023', 'Хорошее состояние', 'Сломана правая рука', 'Нервный тик на левом глазе', 'Пограничное расстройство личности', 'Зрение 0', 'Всё хорошо', 'Носовые пазухи в порядке', 'Все зубы в хорошем состоянии'),
-(3, '5353', '04.04.2024', 'Всё хорошо', 'Вывехнута правая лодыжка', 'Нервная система немного сбоит', 'Нет ментальных расстройств', 'Зрение 0', 'Всё хорошо', 'Ушная пробка в левом ухе', 'Кариес на 6 зубе слева');
+(1, '5353', '2023-02-25', 'В целом неплохо', 'Кости целы', 'Нервы в порядке', 'Нет ментальных расстройств', 'Зрение -1.5', 'Всё хорошо', 'Ушные раковины в порядке, носовые пазухи тоже', 'Кариес на 7 зубе вправа, кариес на 5 зубе слева'),
+(2, '5353', '2023-04-07', 'Хорошее состояние', 'Сломана правая рука', 'Нервный тик на левом глазе', 'Пограничное расстройство личности', 'Зрение 0', 'Всё хорошо', 'Носовые пазухи в порядке', 'Все зубы в хорошем состоянии'),
+(3, '5353', '2024-04-04', 'Всё хорошо', 'Вывехнута правая лодыжка', 'Нервная система немного сбоит', 'Нет ментальных расстройств', 'Зрение 0', 'Всё хорошо', 'Ушная пробка в левом ухе', 'Кариес на 6 зубе слева');
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `education`
+-- Table structure for table `education`
 --
 
 CREATE TABLE `education` (
@@ -68,7 +68,7 @@ CREATE TABLE `education` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Дамп данных таблицы `education`
+-- Dumping data for table `education`
 --
 
 INSERT INTO `education` (`id`, `document_number`, `Name_of_educational_organization`, `Name_of_specialty`, `Enrollment_date`, `Duration_of_training`, `Address_educational_organization`) VALUES
@@ -77,7 +77,7 @@ INSERT INTO `education` (`id`, `document_number`, `Name_of_educational_organizat
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `literature`
+-- Table structure for table `literature`
 --
 
 CREATE TABLE `literature` (
@@ -91,7 +91,7 @@ CREATE TABLE `literature` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Дамп данных таблицы `literature`
+-- Dumping data for table `literature`
 --
 
 INSERT INTO `literature` (`id`, `title_literature`, `author`, `summary`, `keywords`, `link`, `date_added`) VALUES
@@ -104,36 +104,36 @@ INSERT INTO `literature` (`id`, `title_literature`, `author`, `summary`, `keywor
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `medical_checkup`
+-- Table structure for table `medical_checkup`
 --
 
 CREATE TABLE `medical_checkup` (
   `id` int(100) NOT NULL,
   `document_number` varchar(100) NOT NULL,
   `city` varchar(100) NOT NULL,
-  `date` varchar(50) NOT NULL
+  `date` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Дамп данных таблицы `medical_checkup`
+-- Dumping data for table `medical_checkup`
 --
 
 INSERT INTO `medical_checkup` (`id`, `document_number`, `city`, `date`) VALUES
-(1, '12345', 'Tver', '12.06.2024 12:00'),
-(2, '5353', 'Тверь', '03.06.2024 12:00'),
-(3, '5353', 'Тверь', '05.06.2024 15:00'),
-(4, '5353', 'Тверь', '19.06.2024 12:00'),
-(5, '5353', 'Тверь', '14.06.2024 12:00'),
-(6, '5353', 'Тверь ', '03.07.2024 12:00'),
-(7, '5353', 'Тверь ', '12.06.2024 12:00'),
-(8, '5353', 'Тверь ', '19.06.2024 14:00'),
-(9, '5353', 'Тверь ', '26.06.2024 14:00'),
-(10, '96783543', 'Саратов', '26.07.2024 14:00');
+(1, '12345', 'Tver', '2024-06-12 12:00:00'),
+(2, '5353', 'Тверь', '2024-06-03 12:00:00'),
+(3, '5353', 'Тверь', '2024-06-05 15:00:00'),
+(4, '5353', 'Тверь', '2024-06-19 12:00:00'),
+(5, '5353', 'Тверь', '2024-06-14 12:00:00'),
+(6, '5353', 'Тверь ', '2024-07-03 12:00:00'),
+(7, '5353', 'Тверь ', '2024-06-12 12:00:00'),
+(8, '5353', 'Тверь ', '2024-06-19 14:00:00'),
+(9, '5353', 'Тверь ', '2024-06-26 14:00:00'),
+(10, '96783543', 'Саратов', '2024-07-26 14:00:00');
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `users`
+-- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
@@ -154,7 +154,7 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Дамп данных таблицы `users`
+-- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `document_number`, `password`, `last_name`, `name`, `patronymic`, `date_of_birth`, `address`, `category`, `gender`, `city`, `phone_number`, `email`, `user_status`) VALUES
@@ -167,13 +167,12 @@ INSERT INTO `users` (`id`, `document_number`, `password`, `last_name`, `name`, `
 (7, '1293953', '4040', 'Романов', 'Петр', 'Петрович', '2001-01-01', 'Санкт-Петербург, ул.Дворцовая, д.1, кв.10', 'А', 'М', 'Санкт-Петербург', '89041918899', 'Imperat0rRusi@mail.ru', 'user'),
 (8, '11111', 'admin', 'Сергеев', 'Иван', 'Дмитриевич', '1996-03-07', 'Санкт-Петербург,ул.Древесная,д.6,кв.9', '', 'М', 'Санкт-Петербург', '89048672945', 'foster@mail.ru', 'admin'),
 (9, '475939', '1010', 'Екатеринин', 'Григорий', 'Петрович', '2003-12-19', 'Санкт-Петербург, ул.Дворцовая, д.4, кв.7', 'Г', 'М', 'Санкт-Петербург', '89056473859', 'DrugK0r0lya@mail.ru', 'user'),
-(10, '7548758', '2020', 'Екатеринская', 'Мария', 'Петровна', '2000-09-29', 'Санкт-Петербург, ул.Рождественская, д.5, кв.57', 'Б', 'Ж', 'Санкт-Петербург', '89068473949', 'Gladiator@gmail.com', 'user'),
-(11, '565656565656', '555', 'ghf', 'ghfg', 'fghfgh', '2024-07-09', '', '', '', '', '', '', '');
+(10, '7548758', '2020', 'Екатеринская', 'Мария', 'Петровна', '2000-09-29', 'Санкт-Петербург, ул.Рождественская, д.5, кв.57', 'Б', 'Ж', 'Санкт-Петербург', '89068473949', 'Gladiator@gmail.com', 'user');
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `work`
+-- Table structure for table `work`
 --
 
 CREATE TABLE `work` (
@@ -186,7 +185,7 @@ CREATE TABLE `work` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Дамп данных таблицы `work`
+-- Dumping data for table `work`
 --
 
 INSERT INTO `work` (`id`, `document_number`, `name_of_work_organization`, `work_organization_address`, `job_title`, `work's status`) VALUES
@@ -194,81 +193,81 @@ INSERT INTO `work` (`id`, `document_number`, `name_of_work_organization`, `work_
 (2, 123456789, 'ОАО\"Сколково\"', 'Москва, ул.Старая, 9', 'Бухгалтер', 'нынешнее место работы');
 
 --
--- Индексы сохранённых таблиц
+-- Indexes for dumped tables
 --
 
 --
--- Индексы таблицы `date_medical_data`
+-- Indexes for table `date_medical_data`
 --
 ALTER TABLE `date_medical_data`
   ADD PRIMARY KEY (`id`);
 
 --
--- Индексы таблицы `education`
+-- Indexes for table `education`
 --
 ALTER TABLE `education`
   ADD PRIMARY KEY (`id`);
 
 --
--- Индексы таблицы `literature`
+-- Indexes for table `literature`
 --
 ALTER TABLE `literature`
   ADD PRIMARY KEY (`id`);
 
 --
--- Индексы таблицы `medical_checkup`
+-- Indexes for table `medical_checkup`
 --
 ALTER TABLE `medical_checkup`
   ADD PRIMARY KEY (`id`);
 
 --
--- Индексы таблицы `users`
+-- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD UNIQUE KEY `id` (`id`);
 
 --
--- Индексы таблицы `work`
+-- Indexes for table `work`
 --
 ALTER TABLE `work`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT для сохранённых таблиц
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT для таблицы `date_medical_data`
+-- AUTO_INCREMENT for table `date_medical_data`
 --
 ALTER TABLE `date_medical_data`
   MODIFY `id` int(250) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT для таблицы `education`
+-- AUTO_INCREMENT for table `education`
 --
 ALTER TABLE `education`
   MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT для таблицы `literature`
+-- AUTO_INCREMENT for table `literature`
 --
 ALTER TABLE `literature`
   MODIFY `id` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT для таблицы `medical_checkup`
+-- AUTO_INCREMENT for table `medical_checkup`
 --
 ALTER TABLE `medical_checkup`
   MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT для таблицы `users`
+-- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT для таблицы `work`
+-- AUTO_INCREMENT for table `work`
 --
 ALTER TABLE `work`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;

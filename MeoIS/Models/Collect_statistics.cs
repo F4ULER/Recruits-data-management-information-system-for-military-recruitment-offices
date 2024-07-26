@@ -12,6 +12,9 @@ namespace MeoIS
 {
     class Collect_statistics
     {
+        //класс для отображения статистики, экспорта в Excel/TXT
+
+        //метод экспорта данных в Excel
         public void export_to_Excel(DataTable table, string title)
         {
             if(table.Rows.Count != 0)
@@ -33,6 +36,7 @@ namespace MeoIS
             } else { MessageBox.Show("Нет данных"); }
         }
 
+        //метод экспорта данных в TXT
         public void export_to_TXT(string result, string title)
         {
             string path = @"C:\Users\User\Desktop\" + title + "." + DateTime.Today.ToShortDateString() +".txt";
@@ -46,6 +50,7 @@ namespace MeoIS
             streamWriter.Close();
         }
 
+        //вычисление статисики по половому признаку
         public void statistics_By_Gender(List<User> user, bool expOrStat)
         {
             int M = 0, F = 0;
@@ -65,6 +70,7 @@ namespace MeoIS
             }
         }
 
+        //вычисление статисики по городу
         public void statistics_By_City(List<User> user, bool expOrStat)
         {
             List<string> city = new List<string>();
@@ -76,6 +82,7 @@ namespace MeoIS
             statistics_By_Item(city, "Статистика по количеству призывников", expOrStat);
         }
 
+        //вычисление статисики по категории годности
         public void statistics_By_Category(List<User> user, bool expOrStat)
         {
             List<string> category = new List<string>();
@@ -87,6 +94,7 @@ namespace MeoIS
             statistics_By_Item(category, "Статистика по категории годности", expOrStat);
         }
 
+        //вычисление статисики по возрасту
         public void statistics_By_Age(List<User> user, bool expOrStat)
         {
             List<string> age = new List<string>();
@@ -103,6 +111,7 @@ namespace MeoIS
             statistics_By_Item(age, "Статистика по возрасту",expOrStat);
         }
 
+        //главный метод сбора статистики, который собирает неповторяющиеся элементы в отдельный список и считает количество повторений
         private void statistics_By_Item(List<string> list, string title, bool expOrStat)
         {
             var listDistinct = list.Distinct().ToList();

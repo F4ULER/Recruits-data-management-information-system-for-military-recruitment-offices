@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MeoIS
 {
     class User
     {
+        //класс для вывода информации из таблицы users в List
         public User(string documentNumber, string password, string lastName, string name, string patronymic, DateTime dateOfBirth, string addres, string category, string gender, string city, string phoneNumber, string email, string userStatus)
         {
             DocumentNumber = documentNumber;
