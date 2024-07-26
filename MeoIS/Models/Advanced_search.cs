@@ -68,6 +68,13 @@ namespace MeoIS
             return DataBase.sending_command_with_output_to_table(message);
         }
 
+        public DataTable searchEducation(string docNumber)
+        {
+            string message = "SELECT `document_number` AS 'Номер документа', `Name_of_educational_organization` AS 'Название учебной организации', `Name_of_specialty` AS 'Наименование специальности', `Enrollment_date` AS 'Дата поступления', `Duration_of_training` AS 'Продолжительность обучения', " +
+                "`Address_educational_organization` AS 'Адрес учебной организации' FROM `education` WHERE `document_number` =  '" + docNumber + "'";
+            return DataBase.sending_command_with_output_to_table(message);
+        }
+
         public List<User> searchAllUsersToList()
         {
             string message = "SELECT * FROM `users` WHERE 1=1";

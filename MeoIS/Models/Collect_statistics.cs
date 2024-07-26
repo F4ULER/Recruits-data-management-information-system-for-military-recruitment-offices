@@ -14,20 +14,23 @@ namespace MeoIS
     {
         public void export_to_Excel(DataTable table, string title)
         {
-            Excel.Application expApp = new Excel.Application();
-            expApp.Workbooks.Add().SaveAs(title + " (" + DateTime.Today.ToShortDateString() + ")");
-
-            Excel.Worksheet worksheet = (Excel.Worksheet)expApp.ActiveSheet;
-
-            for (int i = 0; i<=table.Rows.Count-1; i++)
+            if(table.Rows.Count != 0)
             {
-                for (int j = 0; j<= table.Columns.Count-1; j++)
+                Excel.Application expApp = new Excel.Application();
+                expApp.Workbooks.Add().SaveAs(title + " (" + DateTime.Today.ToShortDateString() + ")");
+
+                Excel.Worksheet worksheet = (Excel.Worksheet)expApp.ActiveSheet;
+
+                for (int i = 0; i <= table.Rows.Count - 1; i++)
                 {
-                    worksheet.Cells[1, j + 1] = table.Columns[j].ToString();
-                    worksheet.Cells[i + 2, j + 1] = table.Rows[i][j].ToString();
+                    for (int j = 0; j <= table.Columns.Count - 1; j++)
+                    {
+                        worksheet.Cells[1, j + 1] = table.Columns[j].ToString();
+                        worksheet.Cells[i + 2, j + 1] = table.Rows[i][j].ToString();
+                    }
                 }
-            }
-            expApp.Visible = true;
+                expApp.Visible = true;
+            } else { MessageBox.Show("Нет данных"); }
         }
 
         public void export_to_TXT(string result, string title)
@@ -121,14 +124,14 @@ namespace MeoIS
                 result += listDistinct[i] + " - " + count[i] + "\n\n";
             }
 
-            if(expOrStat == true)
+            if(expOrStat == true && listDistinct.Count != 0)
             {
                 MessageBox.Show(result, title, MessageBoxButtons.OK);
-            } else
+            } else if (expOrStat == false && listDistinct.Count != 0)
             {
                 result = title + "\n\n" + result;
                 export_to_TXT(result,title);
-            }
+            } else { MessageBox.Show("Нет данных"); }
         }
     }
 }

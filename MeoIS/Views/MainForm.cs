@@ -88,6 +88,11 @@ namespace MeoIS
             {
                 dataGV.DataSource = table;
                 dataGV.Visible = true;
+                labelWelcome1.Visible = false;
+                labelWelcome2.Visible = false;
+                labelWelcome3.Visible = false;
+                labelLine.Visible = false;
+                buttonFirstReg.Visible = false;
             }
             else
             {
@@ -610,8 +615,19 @@ namespace MeoIS
             pictureCloseServises.Visible = false;
             dataGV.Visible = false;
             tabControlMenuServices.Visible = false;
-            groupBoxServices.Visible = true;
             tBSearch.Text = "";
+
+            if (Transfer.Doc_num == "")
+            {
+                labelWelcome1.Visible = true;
+                labelWelcome2.Visible = true;
+                labelWelcome3.Visible = true;
+                labelLine.Visible = true;
+                buttonFirstReg.Visible = true;
+            } else
+            {
+                groupBoxServices.Visible = true;
+            }
 
         }
 

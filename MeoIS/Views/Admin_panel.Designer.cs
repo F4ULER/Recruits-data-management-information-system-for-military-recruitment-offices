@@ -137,7 +137,6 @@ namespace MeoIS
             this.buttonExport = new System.Windows.Forms.Button();
             this.tBExport = new System.Windows.Forms.TextBox();
             this.rBExportCategory = new System.Windows.Forms.RadioButton();
-            this.rBExportVizit = new System.Windows.Forms.RadioButton();
             this.rBExportCity = new System.Windows.Forms.RadioButton();
             this.rBExpTXTCity = new System.Windows.Forms.RadioButton();
             this.rBExpTXTGender = new System.Windows.Forms.RadioButton();
@@ -145,6 +144,9 @@ namespace MeoIS
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
+            this.rBEducation = new System.Windows.Forms.RadioButton();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGV)).BeginInit();
             this.tableLayoutPanelFilter.SuspendLayout();
             this.groupBoxServices.SuspendLayout();
@@ -206,7 +208,7 @@ namespace MeoIS
             this.tableLayoutPanelFilter.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.tableLayoutPanelFilter.ColumnCount = 1;
             this.tableLayoutPanelFilter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanelFilter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanelFilter.Controls.Add(this.rBEducation, 0, 6);
             this.tableLayoutPanelFilter.Controls.Add(this.rBSearchLit, 0, 5);
             this.tableLayoutPanelFilter.Controls.Add(this.rBSearchMedData, 0, 4);
             this.tableLayoutPanelFilter.Controls.Add(this.rBSearchPhone, 0, 3);
@@ -215,14 +217,14 @@ namespace MeoIS
             this.tableLayoutPanelFilter.Controls.Add(this.rBSearchDocNum, 0, 0);
             this.tableLayoutPanelFilter.Location = new System.Drawing.Point(810, 64);
             this.tableLayoutPanelFilter.Name = "tableLayoutPanelFilter";
-            this.tableLayoutPanelFilter.RowCount = 6;
-            this.tableLayoutPanelFilter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanelFilter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanelFilter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanelFilter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanelFilter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanelFilter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanelFilter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanelFilter.RowCount = 7;
+            this.tableLayoutPanelFilter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanelFilter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanelFilter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanelFilter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanelFilter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanelFilter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanelFilter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.tableLayoutPanelFilter.Size = new System.Drawing.Size(244, 359);
             this.tableLayoutPanelFilter.TabIndex = 16;
             // 
@@ -230,7 +232,7 @@ namespace MeoIS
             // 
             this.rBSearchLit.AutoSize = true;
             this.rBSearchLit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rBSearchLit.Location = new System.Drawing.Point(3, 298);
+            this.rBSearchLit.Location = new System.Drawing.Point(3, 258);
             this.rBSearchLit.Name = "rBSearchLit";
             this.rBSearchLit.Size = new System.Drawing.Size(133, 26);
             this.rBSearchLit.TabIndex = 5;
@@ -241,9 +243,9 @@ namespace MeoIS
             // 
             this.rBSearchMedData.AutoSize = true;
             this.rBSearchMedData.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rBSearchMedData.Location = new System.Drawing.Point(3, 239);
+            this.rBSearchMedData.Location = new System.Drawing.Point(3, 207);
             this.rBSearchMedData.Name = "rBSearchMedData";
-            this.rBSearchMedData.Size = new System.Drawing.Size(218, 48);
+            this.rBSearchMedData.Size = new System.Drawing.Size(218, 45);
             this.rBSearchMedData.TabIndex = 4;
             this.rBSearchMedData.Text = "Медицинских данных\r\nпо номеру документа";
             this.rBSearchMedData.UseVisualStyleBackColor = true;
@@ -252,7 +254,7 @@ namespace MeoIS
             // 
             this.rBSearchPhone.AutoSize = true;
             this.rBSearchPhone.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rBSearchPhone.Location = new System.Drawing.Point(3, 180);
+            this.rBSearchPhone.Location = new System.Drawing.Point(3, 156);
             this.rBSearchPhone.Name = "rBSearchPhone";
             this.rBSearchPhone.Size = new System.Drawing.Size(207, 26);
             this.rBSearchPhone.TabIndex = 3;
@@ -263,7 +265,7 @@ namespace MeoIS
             // 
             this.rBSearchCity.AutoSize = true;
             this.rBSearchCity.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rBSearchCity.Location = new System.Drawing.Point(3, 121);
+            this.rBSearchCity.Location = new System.Drawing.Point(3, 105);
             this.rBSearchCity.Name = "rBSearchCity";
             this.rBSearchCity.Size = new System.Drawing.Size(157, 26);
             this.rBSearchCity.TabIndex = 2;
@@ -274,7 +276,7 @@ namespace MeoIS
             // 
             this.rBSearchName.AutoSize = true;
             this.rBSearchName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rBSearchName.Location = new System.Drawing.Point(3, 62);
+            this.rBSearchName.Location = new System.Drawing.Point(3, 54);
             this.rBSearchName.Name = "rBSearchName";
             this.rBSearchName.Size = new System.Drawing.Size(104, 26);
             this.rBSearchName.TabIndex = 1;
@@ -1245,7 +1247,7 @@ namespace MeoIS
             // 
             this.tabControlExportAndStatistics.Controls.Add(this.tPStat);
             this.tabControlExportAndStatistics.Controls.Add(this.tPExport);
-            this.tabControlExportAndStatistics.Location = new System.Drawing.Point(291, 12);
+            this.tabControlExportAndStatistics.Location = new System.Drawing.Point(161, 18);
             this.tabControlExportAndStatistics.Name = "tabControlExportAndStatistics";
             this.tabControlExportAndStatistics.SelectedIndex = 0;
             this.tabControlExportAndStatistics.Size = new System.Drawing.Size(552, 370);
@@ -1342,11 +1344,12 @@ namespace MeoIS
             // 
             // tPExport
             // 
+            this.tPExport.Controls.Add(this.label34);
+            this.tPExport.Controls.Add(this.label33);
             this.tPExport.Controls.Add(this.rBExportAll);
             this.tPExport.Controls.Add(this.buttonExport);
             this.tPExport.Controls.Add(this.tBExport);
             this.tPExport.Controls.Add(this.rBExportCategory);
-            this.tPExport.Controls.Add(this.rBExportVizit);
             this.tPExport.Controls.Add(this.rBExportCity);
             this.tPExport.Controls.Add(this.rBExpTXTCity);
             this.tPExport.Controls.Add(this.rBExpTXTGender);
@@ -1367,7 +1370,7 @@ namespace MeoIS
             this.rBExportAll.AutoSize = true;
             this.rBExportAll.Checked = true;
             this.rBExportAll.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rBExportAll.Location = new System.Drawing.Point(55, 84);
+            this.rBExportAll.Location = new System.Drawing.Point(42, 73);
             this.rBExportAll.Name = "rBExportAll";
             this.rBExportAll.Size = new System.Drawing.Size(158, 31);
             this.rBExportAll.TabIndex = 24;
@@ -1400,7 +1403,7 @@ namespace MeoIS
             // 
             this.rBExportCategory.AutoSize = true;
             this.rBExportCategory.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rBExportCategory.Location = new System.Drawing.Point(55, 150);
+            this.rBExportCategory.Location = new System.Drawing.Point(42, 161);
             this.rBExportCategory.Name = "rBExportCategory";
             this.rBExportCategory.Size = new System.Drawing.Size(235, 31);
             this.rBExportCategory.TabIndex = 21;
@@ -1408,24 +1411,12 @@ namespace MeoIS
             this.rBExportCategory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.rBExportCategory.UseVisualStyleBackColor = true;
             // 
-            // rBExportVizit
-            // 
-            this.rBExportVizit.AutoSize = true;
-            this.rBExportVizit.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rBExportVizit.Location = new System.Drawing.Point(58, 186);
-            this.rBExportVizit.Name = "rBExportVizit";
-            this.rBExportVizit.Size = new System.Drawing.Size(273, 31);
-            this.rBExportVizit.TabIndex = 20;
-            this.rBExportVizit.Text = "Посещение военкомата";
-            this.rBExportVizit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.rBExportVizit.UseVisualStyleBackColor = true;
-            // 
             // rBExportCity
             // 
             this.rBExportCity.AutoSize = true;
             this.rBExportCity.Checked = true;
             this.rBExportCity.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rBExportCity.Location = new System.Drawing.Point(55, 117);
+            this.rBExportCity.Location = new System.Drawing.Point(42, 107);
             this.rBExportCity.Name = "rBExportCity";
             this.rBExportCity.Size = new System.Drawing.Size(92, 31);
             this.rBExportCity.TabIndex = 19;
@@ -1480,7 +1471,7 @@ namespace MeoIS
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label24.Location = new System.Drawing.Point(50, 55);
+            this.label24.Location = new System.Drawing.Point(53, 43);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(108, 26);
             this.label24.TabIndex = 6;
@@ -1505,6 +1496,39 @@ namespace MeoIS
             this.label28.Size = new System.Drawing.Size(185, 49);
             this.label28.TabIndex = 5;
             this.label28.Text = "Экспорт";
+            // 
+            // rBEducation
+            // 
+            this.rBEducation.AutoSize = true;
+            this.rBEducation.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rBEducation.Location = new System.Drawing.Point(3, 309);
+            this.rBEducation.Name = "rBEducation";
+            this.rBEducation.Size = new System.Drawing.Size(141, 26);
+            this.rBEducation.TabIndex = 6;
+            this.rBEducation.Text = "Образование";
+            this.rBEducation.UseVisualStyleBackColor = true;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label33.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label33.Location = new System.Drawing.Point(20, 138);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(298, 22);
+            this.label33.TabIndex = 38;
+            this.label33.Text = "(впишите в текстовое поле город)";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label34.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label34.Location = new System.Drawing.Point(20, 197);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(341, 22);
+            this.label34.TabIndex = 39;
+            this.label34.Text = "(впишите в текстовое поле категорию)";
             // 
             // Admin_panel
             // 
@@ -1676,7 +1700,6 @@ namespace MeoIS
         private System.Windows.Forms.Button buttonExport;
         private System.Windows.Forms.TextBox tBExport;
         private System.Windows.Forms.RadioButton rBExportCategory;
-        private System.Windows.Forms.RadioButton rBExportVizit;
         private System.Windows.Forms.RadioButton rBExportCity;
         private System.Windows.Forms.RadioButton rBExpTXTCity;
         private System.Windows.Forms.RadioButton rBExpTXTGender;
@@ -1685,5 +1708,8 @@ namespace MeoIS
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.RadioButton rBExportAll;
+        private System.Windows.Forms.RadioButton rBEducation;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label33;
     }
 }

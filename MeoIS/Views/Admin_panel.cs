@@ -72,6 +72,10 @@ namespace MeoIS
                 {
                     table = search.search_literature(tBSearch.Text);
                 }
+                else if (rBEducation.Checked == true)
+                {
+                    table = search.searchEducation(tBSearch.Text);
+                }
 
                 if (table.Rows.Count > 0)
                 {

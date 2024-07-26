@@ -146,7 +146,8 @@ namespace MeoIS
             // dataGV
             // 
             this.dataGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGV.Location = new System.Drawing.Point(195, 48);
+            this.dataGV.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.dataGV.Location = new System.Drawing.Point(195, 70);
             this.dataGV.Name = "dataGV";
             this.dataGV.RowHeadersWidth = 51;
             this.dataGV.RowTemplate.Height = 24;
@@ -520,7 +521,7 @@ namespace MeoIS
             "14:00",
             "15:00",
             "16:00"});
-            this.cBWednesday.Location = new System.Drawing.Point(3, 25);
+            this.cBWednesday.Location = new System.Drawing.Point(3, 26);
             this.cBWednesday.Name = "cBWednesday";
             this.cBWednesday.Size = new System.Drawing.Size(140, 24);
             this.cBWednesday.TabIndex = 7;
@@ -588,7 +589,7 @@ namespace MeoIS
             "14:00",
             "15:00",
             "16:00"});
-            this.cBMonday.Location = new System.Drawing.Point(3, 25);
+            this.cBMonday.Location = new System.Drawing.Point(3, 26);
             this.cBMonday.Name = "cBMonday";
             this.cBMonday.Size = new System.Drawing.Size(139, 24);
             this.cBMonday.TabIndex = 5;
@@ -657,7 +658,7 @@ namespace MeoIS
             "14:00",
             "15:00",
             "16:00"});
-            this.cBFriday.Location = new System.Drawing.Point(3, 26);
+            this.cBFriday.Location = new System.Drawing.Point(3, 27);
             this.cBFriday.Name = "cBFriday";
             this.cBFriday.Size = new System.Drawing.Size(141, 24);
             this.cBFriday.TabIndex = 9;
@@ -977,7 +978,7 @@ namespace MeoIS
             // buttonFirstReg
             // 
             this.buttonFirstReg.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonFirstReg.Location = new System.Drawing.Point(532, 403);
+            this.buttonFirstReg.Location = new System.Drawing.Point(508, 400);
             this.buttonFirstReg.Name = "buttonFirstReg";
             this.buttonFirstReg.Size = new System.Drawing.Size(265, 58);
             this.buttonFirstReg.TabIndex = 40;
@@ -1008,7 +1009,7 @@ namespace MeoIS
             this.labelWelcome1.AutoSize = true;
             this.labelWelcome1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.labelWelcome1.Font = new System.Drawing.Font("Times New Roman", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelWelcome1.Location = new System.Drawing.Point(325, 83);
+            this.labelWelcome1.Location = new System.Drawing.Point(340, 80);
             this.labelWelcome1.Name = "labelWelcome1";
             this.labelWelcome1.Size = new System.Drawing.Size(546, 67);
             this.labelWelcome1.TabIndex = 38;
@@ -1100,11 +1101,6 @@ namespace MeoIS
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1232, 603);
             this.Controls.Add(this.tabControlMenuServices);
-            this.Controls.Add(this.buttonFirstReg);
-            this.Controls.Add(this.labelLine);
-            this.Controls.Add(this.labelWelcome1);
-            this.Controls.Add(this.labelWelcome3);
-            this.Controls.Add(this.labelWelcome2);
             this.Controls.Add(this.labelLogIn);
             this.Controls.Add(this.pictureCloseServises);
             this.Controls.Add(this.pictureMedicalData);
@@ -1125,6 +1121,11 @@ namespace MeoIS
             this.Controls.Add(this.tBSearch);
             this.Controls.Add(this.groupBoxServices);
             this.Controls.Add(this.dataGV);
+            this.Controls.Add(this.buttonFirstReg);
+            this.Controls.Add(this.labelWelcome3);
+            this.Controls.Add(this.labelWelcome2);
+            this.Controls.Add(this.labelWelcome1);
+            this.Controls.Add(this.labelLine);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
