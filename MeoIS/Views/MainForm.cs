@@ -105,6 +105,7 @@ namespace MeoIS
 
         private void labelChangeMilitaryRegistrationOffice_Click(object sender, EventArgs e)
         {
+            tabControlMenuServices.SelectedTab = tPReg;
             tabControlMenuServices.Visible = true;
             groupBoxServices.Visible = false;
         }

@@ -26,7 +26,7 @@ namespace MeoIS
         // поиск своих мед данных (для иконки медицинского планшета)
         public DataTable searchMedicalData(string search_word)
         {
-            string message = "SELECT  `date` AS 'Дата осмотра', `therapist` AS 'Терапевт', `surgeon` AS 'Хирург', `neurologist` AS 'Невропатолог', `psychiatrist` AS 'Психиатр', `ophthalmologist` AS 'Окулист', `dermatovenerologist` AS 'Дерматовенеролог', `otorhinolaryngologist` AS 'Оториноларинголог', `dentist` AS 'Стоматолог' FROM `medical_data` WHERE `document_number` = '" + search_word + "'";
+            string message = "SELECT  `date` AS 'Дата осмотра', `therapist` AS 'Терапевт', `surgeon` AS 'Хирург', `neurologist` AS 'Невропатолог', `psychiatrist` AS 'Психиатр', `ophthalmologist` AS 'Окулист', `dermatovenerologist` AS 'Дерматовенеролог', `otorhinolaryngologist` AS 'Оториноларинголог', `dentist` AS 'Стоматолог' FROM `date_medical_data` WHERE `document_number` = '" + search_word + "'";
 
             return (DataBase.sending_command_with_output_to_table(message));
 
