@@ -18,9 +18,9 @@ namespace MeoIS
         // проверка оригинальность номера документа
         public Boolean check_document_number(string documentNumber)
         {
-            string message = "Данный номер документа уже зарегистрирован!";
-            if(DB.check("users","document_number", documentNumber, message) == true)
+            if(DB.check("users","document_number", documentNumber) == true)
             {
+                MessageBox.Show("Данный номер документа уже зарегистрирован!");
                 return true;
             }
             else
@@ -32,10 +32,9 @@ namespace MeoIS
         //проверка оригинальность электронной почты
         public Boolean check_email(string email)
         {
-            string message = "Данный email уже зарегистрирован!";
-            
-            if (DB.check("users", "email", email, message) == true)
+            if (DB.check("users", "email", email) == true)
             {
+                MessageBox.Show("Данный email уже зарегистрирован!");
                 return true;
             }
             else
@@ -47,10 +46,9 @@ namespace MeoIS
         //проверка оригинальности номера телефона
         public Boolean check_phone_number(string phone)
         {
-            string message = "Данный номер телефона уже зарегистрирован!";
-            
-            if (DB.check("users", "phone_number", phone, message) == true)
+            if (DB.check("users", "phone_number", phone) == true)
             {
+                MessageBox.Show("Данный номер телефона уже зарегистрирован!");
                 return true;
             }
             else
@@ -86,15 +84,15 @@ namespace MeoIS
                     if (comm.ExecuteNonQuery() == 1)
                     {
                         MessageBox.Show("Пользователю выданы права администратора.");
+                        DB.closeConnection();
                         return true; 
                     }
                     else 
                     {
                         MessageBox.Show("Ошибка!");
+                        DB.closeConnection();
                         return false; 
                     }
-
-                    DB.closeConnection();
                 }
                 else
                 {

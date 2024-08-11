@@ -103,5 +103,10 @@ namespace MeoIS
                 dGView.Columns.RemoveAt(dGView.Columns.Count-1);
             }
         }
+
+        private void buttonShowStat_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -100,7 +100,7 @@ namespace MeoIS
         }
 
         // проверка оригинальности любого параметра
-        public Boolean check(string tableName, string column, string value, string message)
+        public Boolean check(string tableName, string column, string value)
         {
             DataBaseConnect DB = new DataBaseConnect();
             DataTable table = new DataTable();
@@ -114,7 +114,6 @@ namespace MeoIS
 
             if (table.Rows.Count > 0)
             {
-                MessageBox.Show(message);
                 return true;
             }
             else

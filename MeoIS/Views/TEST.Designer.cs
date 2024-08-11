@@ -45,6 +45,7 @@ namespace MeoIS
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.tPExport = new System.Windows.Forms.TabPage();
+            this.buttonExport = new System.Windows.Forms.Button();
             this.tBExport = new System.Windows.Forms.TextBox();
             this.rBExportCategory = new System.Windows.Forms.RadioButton();
             this.rBExportVizit = new System.Windows.Forms.RadioButton();
@@ -55,7 +56,6 @@ namespace MeoIS
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.buttonExport = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dGView)).BeginInit();
             this.tabControlExportAndStatistics.SuspendLayout();
             this.tPStat.SuspendLayout();
@@ -174,6 +174,7 @@ namespace MeoIS
             this.buttonShowStat.TabIndex = 16;
             this.buttonShowStat.Text = "Показать статистику";
             this.buttonShowStat.UseVisualStyleBackColor = true;
+            this.buttonShowStat.Click += new System.EventHandler(this.buttonShowStat_Click);
             // 
             // rBStatCity
             // 
@@ -257,6 +258,16 @@ namespace MeoIS
             this.tPExport.TabIndex = 1;
             this.tPExport.Text = "Экспорт";
             this.tPExport.UseVisualStyleBackColor = true;
+            // 
+            // buttonExport
+            // 
+            this.buttonExport.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonExport.Location = new System.Drawing.Point(136, 259);
+            this.buttonExport.Name = "buttonExport";
+            this.buttonExport.Size = new System.Drawing.Size(265, 58);
+            this.buttonExport.TabIndex = 23;
+            this.buttonExport.Text = "Экспортировать";
+            this.buttonExport.UseVisualStyleBackColor = true;
             // 
             // tBExport
             // 
@@ -376,16 +387,6 @@ namespace MeoIS
             this.label2.Size = new System.Drawing.Size(185, 49);
             this.label2.TabIndex = 5;
             this.label2.Text = "Экспорт";
-            // 
-            // buttonExport
-            // 
-            this.buttonExport.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonExport.Location = new System.Drawing.Point(136, 259);
-            this.buttonExport.Name = "buttonExport";
-            this.buttonExport.Size = new System.Drawing.Size(265, 58);
-            this.buttonExport.TabIndex = 23;
-            this.buttonExport.Text = "Экспортировать";
-            this.buttonExport.UseVisualStyleBackColor = true;
             // 
             // TEST
             // 

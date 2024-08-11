@@ -390,6 +390,71 @@ namespace MeoIS
                 labelFriday.Text += mondayDate.AddDays(4).ToString("d");
             }
             labelPreviousWeek.Visible = false;
+
+            collection_of_data_for_verification();
+        }
+
+        //конвертация даты
+        protected string converting_date(string title)
+        {
+            string[] dateCheck = title.Split(new char[] { '\n' });
+            string[] changeDate = dateCheck[1].Split(new char[] { '.' });
+            string dateForDB = changeDate[2] + "-" + changeDate[1] + "-" + changeDate[0] + " ";
+
+            return dateForDB;
+        }
+
+        //собирает в лист время записи на мед осмотр за определенную дату, чтобы определить есть ли свободные места
+        private void collection_of_data_for_verification()
+        {
+            Military_registration_and_enlistment_office Enlistment_Office = new Military_registration_and_enlistment_office();
+
+            List<string> collection = new List<string>(cBMonday.Items.Count);
+
+            //понедельник
+            string dateForDB = converting_date(labelMonday.Text);
+
+            for (int i = 1; i < cBMonday.Items.Count; i++)
+            {
+                collection.Add(dateForDB + cBMonday.Items[i].ToString());
+            }
+
+            if (Enlistment_Office.check_records_in_general(collection) == true)
+            {
+                labelRecordingCompleteMonday.Visible = true;
+                cBMonday.Enabled = false;
+            }
+            collection.Clear();
+
+            //среда 
+            dateForDB = converting_date(labelWensday.Text);
+
+            for (int i = 1; i < cBWednesday.Items.Count; i++)
+            {
+                collection.Add(dateForDB + cBWednesday.Items[i].ToString());
+            }
+
+            if (Enlistment_Office.check_records_in_general(collection) == true)
+            {
+                labelRecordingCompleteWensday.Visible = true;
+                cBWednesday.Enabled = false;
+            }
+            collection.Clear();
+
+            //пятница
+            dateForDB = converting_date(labelFriday.Text);
+
+            for (int i = 1; i < cBFriday.Items.Count; i++)
+            {
+                collection.Add(dateForDB + cBFriday.Items[i].ToString());
+            }
+
+            if (Enlistment_Office.check_records_in_general(collection) == true)
+            {
+                labelRecordingCompleteFriday.Visible = true;
+                cBFriday.Enabled = false;
+            }
+            collection.Clear();
         }
 
         //следущая неделя
@@ -398,6 +463,14 @@ namespace MeoIS
             k += 7;
             change_date();
             labelPreviousWeek.Visible = true;
+
+            labelRecordingCompleteMonday.Visible = false;
+            cBMonday.Enabled = true;
+            labelRecordingCompleteWensday.Visible = false;
+            cBWednesday.Enabled = true;
+            labelRecordingCompleteFriday.Visible = false;
+            cBFriday.Enabled = true;
+            collection_of_data_for_verification();
         }
 
         // предыдущая неделя
@@ -416,6 +489,11 @@ namespace MeoIS
             {
                 labelPreviousWeek.Visible = false;
             }
+
+            labelRecordingCompleteMonday.Visible = false;
+            cBMonday.Enabled = true;
+
+            collection_of_data_for_verification();
         }
 
         // показывает все поля для изменения места учебы

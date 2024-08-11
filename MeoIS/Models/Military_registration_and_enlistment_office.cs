@@ -97,17 +97,37 @@ namespace MeoIS
             }
         }
 
-        
+        // проверка занята ли запись в данную дату на данное время
         protected bool check_Date_Medical_Data(string dateTime, string date)
         {
-            if (DataBase.check("medical_checkup", "date", dateTime, "На " + date + " это время уже занято.") == true)
+            if (DataBase.check("medical_checkup", "date", dateTime) == true)
             {
+                MessageBox.Show("На " + date + " это время уже занято.");
                 return true;
             }
             else
             {
                 return false;
             }
+        }
+
+        //проверка наличия свободного времени записи на мед осмотр в определенную дату
+        public bool check_records_in_general(List<string> collectionDate)
+        {
+            int key = 0;
+            foreach(string c in collectionDate)
+            {
+                if (DataBase.check("medical_checkup", "date", c) == true)
+                {
+                    key++;
+                }
+            }
+            
+            if (key == collectionDate.Count)
+            {
+                return true;
+            } 
+            else { return false; }
         }
     }
 }
