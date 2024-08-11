@@ -100,13 +100,13 @@ namespace MeoIS
         }
 
         // проверка оригинальности любого параметра
-        public Boolean check(string column, string value, string message)
+        public Boolean check(string tableName, string column, string value, string message)
         {
             DataBaseConnect DB = new DataBaseConnect();
             DataTable table = new DataTable();
 
             MySqlDataAdapter adapter = new MySqlDataAdapter();
-            MySqlCommand command = new MySqlCommand("SELECT * FROM `users` WHERE `" + column + "` = @Value", DB.getConnection());
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `" + tableName + "` WHERE `" + column + "` = @Value", DB.getConnection());
             command.Parameters.Add("@Value", MySqlDbType.VarChar).Value = value;
 
             adapter.SelectCommand = command;

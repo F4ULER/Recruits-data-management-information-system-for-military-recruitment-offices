@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -283,27 +284,37 @@ namespace MeoIS
         int k = 0; //счетчик недель для мед осмотра
 
         //изменение даты в мед осморте
-        protected void change_date()
+        protected string change_date()
         {
             labelMonday.Text = "Понедельник \n";
             labelWensday.Text = "Среда \n";
             labelFriday.Text = "Пятница \n";
 
+            var mondayDate = monday_search();
+            labelMonday.Text += mondayDate.ToString("d");
+            labelWensday.Text += mondayDate.AddDays(2).ToString("d");
+            labelFriday.Text += mondayDate.AddDays(4).ToString("d");
+            
+            return mondayDate.ToString("d");
+        }
+
+        protected DateTime monday_search()
+        {
             //поиск даты понедельника
-            var date = DateTime.Now.AddDays(k); ;
+            var date = DateTime.Now.AddDays(k);
             var difference = date.DayOfWeek - DayOfWeek.Monday;
             if (difference < 0)
                 difference += 7;
             var mondayDate = date.AddDays(-1 * difference).Date;
-            
-            labelMonday.Text += mondayDate.ToString("d");
-            labelWensday.Text += mondayDate.AddDays(2).ToString("d");
-            labelFriday.Text += mondayDate.AddDays(4).ToString("d");
+
+            return mondayDate;
         }
 
         //кнопка "записаться" в мед осмотре
         private void buttonMed_Click(object sender, EventArgs e)
         {
+            Military_registration_and_enlistment_office Enlistment_Office = new Military_registration_and_enlistment_office();
+
             if (cBMonday.Text != "" || cBWednesday.Text != "" || cBFriday.Text != "")
             {
                 string[] date;
@@ -334,7 +345,6 @@ namespace MeoIS
                 {
                     date = title.Split(new char[] { '\n' });
 
-                    Military_registration_and_enlistment_office Enlistment_Office = new Military_registration_and_enlistment_office();
                     Enlistment_Office.registration_for_medical_check_up(Transfer.Doc_num, Transfer.City, date[1], time);
 
                     cBMonday.SelectedIndex = 0;
@@ -350,6 +360,7 @@ namespace MeoIS
                 MessageBox.Show("Выберите дату и время.");
             }
         }
+
 
         //поиск даты ближайшего понедельника
         private void tabControlMenuServices_Enter(object sender, EventArgs e)
@@ -378,6 +389,7 @@ namespace MeoIS
                 labelWensday.Text += mondayDate.AddDays(2).ToString("d");
                 labelFriday.Text += mondayDate.AddDays(4).ToString("d");
             }
+            labelPreviousWeek.Visible = false;
         }
 
         //следущая неделя
@@ -385,13 +397,25 @@ namespace MeoIS
         {
             k += 7;
             change_date();
+            labelPreviousWeek.Visible = true;
         }
 
         // предыдущая неделя
         private void labelPreviousWeek_Click(object sender, EventArgs e)
         {
             k -= 7;
-            change_date();
+            var Date = change_date();
+
+            var culture = CultureInfo.CurrentCulture; // Текущая культура
+            var weekOffset = culture.DateTimeFormat.FirstDayOfWeek - DateTime.Today.DayOfWeek; // Разница между началом недели, и текущим днем.
+            var startOfWeek = DateTime.Today.AddDays(weekOffset); // Получаем дату начала недели указанной даты
+
+            MessageBox.Show(startOfWeek.ToShortDateString() + "\n" + Date);
+
+            if (startOfWeek.ToShortDateString() == Date)
+            {
+                labelPreviousWeek.Visible = false;
+            }
         }
 
         // показывает все поля для изменения места учебы

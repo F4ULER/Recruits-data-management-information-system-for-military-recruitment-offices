@@ -71,19 +71,41 @@ namespace MeoIS
         // запись на мед осмотр в военкомат
         public Boolean registration_for_medical_check_up (string docNum, string city, string date, string time)
         {
+            
+
             string[] changeDate = date.Split(new char[] { '.' });
             string dateForDB = changeDate[2] + "-" + changeDate[1] + "-" + changeDate[0] + " " + time;
             string message = "INSERT INTO `medical_checkup`(`document_number`, `city`, `date`) VALUES " +
                     "('" + docNum + "', '" + city + "', '" + dateForDB + "');";
 
-            if (DataBase.sending_command(message) == true)
+            if (check_Date_Medical_Data(dateForDB, date) == true)
             {
-                MessageBox.Show("Вы записались на мед. осмотр в военкомат города " + city + " " + date + " " + time);
+                return false;
+            }
+            else
+            {
+                if (DataBase.sending_command(message) == true)
+                {
+                    MessageBox.Show("Вы записались на мед. осмотр в военкомат города " + city + " " + date + " " + time);
+                    return true;
+                }
+                else
+                {
+                    MessageBox.Show("Не Получилось");
+                    return false;
+                }
+            }
+        }
+
+        
+        protected bool check_Date_Medical_Data(string dateTime, string date)
+        {
+            if (DataBase.check("medical_checkup", "date", dateTime, "На " + date + " это время уже занято.") == true)
+            {
                 return true;
             }
             else
             {
-                MessageBox.Show("Не Получилось");
                 return false;
             }
         }

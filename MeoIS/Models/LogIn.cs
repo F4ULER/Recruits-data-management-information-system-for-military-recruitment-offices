@@ -19,7 +19,7 @@ namespace MeoIS
         public Boolean check_document_number(string documentNumber)
         {
             string message = "Данный номер документа уже зарегистрирован!";
-            if(DB.check("document_number", documentNumber, message) == true)
+            if(DB.check("users","document_number", documentNumber, message) == true)
             {
                 return true;
             }
@@ -34,7 +34,7 @@ namespace MeoIS
         {
             string message = "Данный email уже зарегистрирован!";
             
-            if (DB.check("email", email, message) == true)
+            if (DB.check("users", "email", email, message) == true)
             {
                 return true;
             }
@@ -49,7 +49,7 @@ namespace MeoIS
         {
             string message = "Данный номер телефона уже зарегистрирован!";
             
-            if (DB.check("phone_number", phone, message) == true)
+            if (DB.check("users", "phone_number", phone, message) == true)
             {
                 return true;
             }
