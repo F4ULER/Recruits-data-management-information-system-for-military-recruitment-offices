@@ -23,7 +23,6 @@ namespace MeoIS
             pictureCloseServises.Visible = false;
             labelExit.Visible = false;
 
-
             
             if (Transfer.Doc_num != "") // если вошел зарегистрированный пользователь
             {
@@ -493,6 +492,12 @@ namespace MeoIS
             labelRecordingCompleteMonday.Visible = false;
             cBMonday.Enabled = true;
 
+            if(DateTime.Today >= startOfWeek)
+            {
+                MessageBox.Show(DateTime.Today.ToString());
+                MessageBox.Show(startOfWeek.ToString());
+            }
+
             collection_of_data_for_verification();
         }
 
@@ -748,6 +753,16 @@ namespace MeoIS
         {
             RegistrationForm reg = new RegistrationForm();
             reg.Show();
+        }
+
+        private void tableLayoutPanelServices1_MouseLeave(object sender, EventArgs e)
+        {
+            tableLayoutPanelServices1.BackColor = Color.PeachPuff;
+        }
+
+        private void tableLayoutPanelServices1_MouseMove(object sender, MouseEventArgs e)
+        {
+            tableLayoutPanelServices1.BackColor = Color.ActiveCaption;
         }
     }
 }

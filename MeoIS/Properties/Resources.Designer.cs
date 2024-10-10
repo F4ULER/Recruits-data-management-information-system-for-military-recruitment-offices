@@ -73,9 +73,29 @@ namespace MeoIS.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap changeWorkOrStudy {
+            get {
+                object obj = ResourceManager.GetObject("changeWorkOrStudy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap close {
             get {
                 object obj = ResourceManager.GetObject("close", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Enrollment {
+            get {
+                object obj = ResourceManager.GetObject("Enrollment", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -96,6 +116,16 @@ namespace MeoIS.Properties {
         internal static System.Drawing.Bitmap medical_data {
             get {
                 object obj = ResourceManager.GetObject("medical data", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap medosmotr {
+            get {
+                object obj = ResourceManager.GetObject("medosmotr", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
