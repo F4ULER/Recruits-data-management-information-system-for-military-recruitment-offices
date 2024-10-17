@@ -755,14 +755,36 @@ namespace MeoIS
             reg.Show();
         }
 
-        private void tableLayoutPanelServices1_MouseLeave(object sender, EventArgs e)
+        private void Enrollment_MouseLeave(object sender, EventArgs e)
+        {
+            tableLayoutPanelServices1.BackColor = Color.SkyBlue;
+        }
+
+        private void Enrollment_MouseMove(object sender, MouseEventArgs e)
         {
             tableLayoutPanelServices1.BackColor = Color.PeachPuff;
         }
 
-        private void tableLayoutPanelServices1_MouseMove(object sender, MouseEventArgs e)
+        private void RegMedicalExamination_MouseLeave(object sender, EventArgs e)
         {
-            tableLayoutPanelServices1.BackColor = Color.ActiveCaption;
+            tableLayoutPanelServices2.BackColor = Color.SkyBlue;
+
+        }
+
+        private void RegMedicalExamination_MouseLeave(object sender, MouseEventArgs e)
+        {
+            tableLayoutPanelServices2.BackColor = Color.PeachPuff;
+        }
+
+        private void ChangePlaceOfStudyOrWork_MouseLeave(object sender, EventArgs e)
+        {
+            tableLayoutPanelServices3.BackColor = Color.SkyBlue;
+
+        }
+
+        private void ChangePlaceOfStudyOrWork_MouseMove(object sender, MouseEventArgs e)
+        {
+            tableLayoutPanelServices3.BackColor = Color.PeachPuff;
         }
     }
 }
