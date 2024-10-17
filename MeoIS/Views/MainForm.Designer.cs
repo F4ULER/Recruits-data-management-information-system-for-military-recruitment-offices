@@ -287,7 +287,7 @@ namespace MeoIS
             this.tabControlMenuServices.Controls.Add(this.tPReg);
             this.tabControlMenuServices.Controls.Add(this.tPMed);
             this.tabControlMenuServices.Controls.Add(this.tPChange);
-            this.tabControlMenuServices.Location = new System.Drawing.Point(842, 38);
+            this.tabControlMenuServices.Location = new System.Drawing.Point(961, 48);
             this.tabControlMenuServices.Name = "tabControlMenuServices";
             this.tabControlMenuServices.SelectedIndex = 0;
             this.tabControlMenuServices.Size = new System.Drawing.Size(837, 505);
@@ -538,7 +538,7 @@ namespace MeoIS
             "14:00",
             "15:00",
             "16:00"});
-            this.cBWednesday.Location = new System.Drawing.Point(3, 25);
+            this.cBWednesday.Location = new System.Drawing.Point(3, 26);
             this.cBWednesday.Name = "cBWednesday";
             this.cBWednesday.Size = new System.Drawing.Size(140, 24);
             this.cBWednesday.TabIndex = 7;
@@ -606,7 +606,7 @@ namespace MeoIS
             "14:00",
             "15:00",
             "16:00"});
-            this.cBMonday.Location = new System.Drawing.Point(3, 25);
+            this.cBMonday.Location = new System.Drawing.Point(3, 26);
             this.cBMonday.Name = "cBMonday";
             this.cBMonday.Size = new System.Drawing.Size(139, 24);
             this.cBMonday.TabIndex = 5;
@@ -675,7 +675,7 @@ namespace MeoIS
             "14:00",
             "15:00",
             "16:00"});
-            this.cBFriday.Location = new System.Drawing.Point(3, 26);
+            this.cBFriday.Location = new System.Drawing.Point(3, 27);
             this.cBFriday.Name = "cBFriday";
             this.cBFriday.Size = new System.Drawing.Size(141, 24);
             this.cBFriday.TabIndex = 9;
@@ -1112,6 +1112,7 @@ namespace MeoIS
             // 
             this.pictureEnrollment.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureEnrollment.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.pictureEnrollment.Image = global::MeoIS.Properties.Resources.Enrollment;
             this.pictureEnrollment.Location = new System.Drawing.Point(6, 4);
             this.pictureEnrollment.Name = "pictureEnrollment";
             this.pictureEnrollment.Size = new System.Drawing.Size(147, 123);
@@ -1123,6 +1124,7 @@ namespace MeoIS
             // 
             this.pictureChangePlaceOfStudyOrWork.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureChangePlaceOfStudyOrWork.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.pictureChangePlaceOfStudyOrWork.Image = global::MeoIS.Properties.Resources.changeWorkOrStudy;
             this.pictureChangePlaceOfStudyOrWork.Location = new System.Drawing.Point(16, 264);
             this.pictureChangePlaceOfStudyOrWork.Name = "pictureChangePlaceOfStudyOrWork";
             this.pictureChangePlaceOfStudyOrWork.Size = new System.Drawing.Size(126, 123);
@@ -1134,6 +1136,7 @@ namespace MeoIS
             // 
             this.pictureRegMedicalExamination.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureRegMedicalExamination.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.pictureRegMedicalExamination.Image = global::MeoIS.Properties.Resources.medosmotr;
             this.pictureRegMedicalExamination.Location = new System.Drawing.Point(8, 134);
             this.pictureRegMedicalExamination.Name = "pictureRegMedicalExamination";
             this.pictureRegMedicalExamination.Size = new System.Drawing.Size(142, 123);
@@ -1228,6 +1231,7 @@ namespace MeoIS
             // pictureCloseServises
             // 
             this.pictureCloseServises.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureCloseServises.Image = global::MeoIS.Properties.Resources.close;
             this.pictureCloseServises.Location = new System.Drawing.Point(1069, 48);
             this.pictureCloseServises.Name = "pictureCloseServises";
             this.pictureCloseServises.Size = new System.Drawing.Size(53, 47);
@@ -1239,6 +1243,7 @@ namespace MeoIS
             // pictureMedicalData
             // 
             this.pictureMedicalData.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureMedicalData.Image = global::MeoIS.Properties.Resources.medical_data;
             this.pictureMedicalData.Location = new System.Drawing.Point(39, 168);
             this.pictureMedicalData.Name = "pictureMedicalData";
             this.pictureMedicalData.Size = new System.Drawing.Size(69, 64);
@@ -1250,6 +1255,7 @@ namespace MeoIS
             // pictureOptions
             // 
             this.pictureOptions.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureOptions.Image = global::MeoIS.Properties.Resources.options;
             this.pictureOptions.Location = new System.Drawing.Point(12, 495);
             this.pictureOptions.Name = "pictureOptions";
             this.pictureOptions.Size = new System.Drawing.Size(40, 40);
@@ -1261,6 +1267,7 @@ namespace MeoIS
             // picSearch
             // 
             this.picSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picSearch.Image = global::MeoIS.Properties.Resources.search;
             this.picSearch.Location = new System.Drawing.Point(1180, 2);
             this.picSearch.Name = "picSearch";
             this.picSearch.Size = new System.Drawing.Size(40, 40);
