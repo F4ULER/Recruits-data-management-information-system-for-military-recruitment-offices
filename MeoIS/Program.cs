@@ -32,7 +32,7 @@ namespace MeoIS
         { get; set; }
         public static string Category
         { get; set; }
-        public static string City
+        public static string district
         { get; set; }
         public static string Email
         { get; set; }

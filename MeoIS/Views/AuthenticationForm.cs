@@ -55,7 +55,7 @@ namespace MeoIS
                     Transfer.Name += table_users.Rows[0][i].ToString() + " ";
                 }
                 Transfer.Category = table_users.Rows[0][8].ToString();
-                Transfer.City = table_users.Rows[0][10].ToString();
+                Transfer.district = table_users.Rows[0][10].ToString();
                 Transfer.Pass = pass;
                 Transfer.Email = table_users.Rows[0][12].ToString();
                 Transfer.Phone = table_users.Rows[0][11].ToString();

@@ -36,7 +36,6 @@ namespace MeoIS
             this.labelWelcome = new System.Windows.Forms.Label();
             this.labelCategory = new System.Windows.Forms.Label();
             this.labelRectal = new System.Windows.Forms.Label();
-            this.labelChangeMilitaryRegistrationOffice = new System.Windows.Forms.Label();
             this.tBChangePass = new System.Windows.Forms.TextBox();
             this.tBChangeEmail = new System.Windows.Forms.TextBox();
             this.tBCangePhone = new System.Windows.Forms.TextBox();
@@ -142,10 +141,10 @@ namespace MeoIS
             // tBSearch
             // 
             this.tBSearch.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tBSearch.Location = new System.Drawing.Point(673, 12);
+            this.tBSearch.Location = new System.Drawing.Point(793, 12);
             this.tBSearch.Multiline = true;
             this.tBSearch.Name = "tBSearch";
-            this.tBSearch.Size = new System.Drawing.Size(501, 30);
+            this.tBSearch.Size = new System.Drawing.Size(381, 30);
             this.tBSearch.TabIndex = 10;
             // 
             // labelExit
@@ -164,7 +163,7 @@ namespace MeoIS
             // 
             this.dataGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGV.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.dataGV.Location = new System.Drawing.Point(1190, 139);
+            this.dataGV.Location = new System.Drawing.Point(280, 70);
             this.dataGV.Name = "dataGV";
             this.dataGV.RowHeadersWidth = 51;
             this.dataGV.RowTemplate.Height = 24;
@@ -175,78 +174,70 @@ namespace MeoIS
             // labelWelcome
             // 
             this.labelWelcome.AutoSize = true;
-            this.labelWelcome.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelWelcome.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelWelcome.Location = new System.Drawing.Point(10, 9);
             this.labelWelcome.Name = "labelWelcome";
-            this.labelWelcome.Size = new System.Drawing.Size(54, 33);
+            this.labelWelcome.Size = new System.Drawing.Size(61, 37);
             this.labelWelcome.TabIndex = 11;
             this.labelWelcome.Text = "test";
             // 
             // labelCategory
             // 
             this.labelCategory.AutoSize = true;
+            this.labelCategory.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelCategory.Location = new System.Drawing.Point(13, 66);
             this.labelCategory.Name = "labelCategory";
-            this.labelCategory.Size = new System.Drawing.Size(77, 17);
+            this.labelCategory.Size = new System.Drawing.Size(97, 22);
             this.labelCategory.TabIndex = 12;
             this.labelCategory.Text = "Категория";
             // 
             // labelRectal
             // 
             this.labelRectal.AutoSize = true;
+            this.labelRectal.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelRectal.Location = new System.Drawing.Point(12, 112);
             this.labelRectal.Name = "labelRectal";
-            this.labelRectal.Size = new System.Drawing.Size(129, 17);
+            this.labelRectal.Size = new System.Drawing.Size(167, 22);
             this.labelRectal.TabIndex = 13;
-            this.labelRectal.Text = "Военкомат города";
-            // 
-            // labelChangeMilitaryRegistrationOffice
-            // 
-            this.labelChangeMilitaryRegistrationOffice.AutoSize = true;
-            this.labelChangeMilitaryRegistrationOffice.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.labelChangeMilitaryRegistrationOffice.Location = new System.Drawing.Point(12, 139);
-            this.labelChangeMilitaryRegistrationOffice.Name = "labelChangeMilitaryRegistrationOffice";
-            this.labelChangeMilitaryRegistrationOffice.Size = new System.Drawing.Size(134, 17);
-            this.labelChangeMilitaryRegistrationOffice.TabIndex = 14;
-            this.labelChangeMilitaryRegistrationOffice.Text = "(Смена военкомат)";
-            this.labelChangeMilitaryRegistrationOffice.Click += new System.EventHandler(this.labelChangeMilitaryRegistrationOffice_Click);
+            this.labelRectal.Text = "Военкомат района";
             // 
             // tBChangePass
             // 
             this.tBChangePass.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tBChangePass.Location = new System.Drawing.Point(12, 413);
+            this.tBChangePass.Location = new System.Drawing.Point(2, 413);
             this.tBChangePass.Multiline = true;
             this.tBChangePass.Name = "tBChangePass";
-            this.tBChangePass.Size = new System.Drawing.Size(188, 30);
+            this.tBChangePass.Size = new System.Drawing.Size(234, 30);
             this.tBChangePass.TabIndex = 18;
             this.tBChangePass.Visible = false;
             // 
             // tBChangeEmail
             // 
             this.tBChangeEmail.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tBChangeEmail.Location = new System.Drawing.Point(9, 295);
+            this.tBChangeEmail.Location = new System.Drawing.Point(2, 292);
             this.tBChangeEmail.Multiline = true;
             this.tBChangeEmail.Name = "tBChangeEmail";
-            this.tBChangeEmail.Size = new System.Drawing.Size(188, 30);
+            this.tBChangeEmail.Size = new System.Drawing.Size(234, 30);
             this.tBChangeEmail.TabIndex = 19;
             this.tBChangeEmail.Visible = false;
             // 
             // tBCangePhone
             // 
             this.tBCangePhone.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tBCangePhone.Location = new System.Drawing.Point(12, 350);
+            this.tBCangePhone.Location = new System.Drawing.Point(2, 350);
             this.tBCangePhone.Multiline = true;
             this.tBCangePhone.Name = "tBCangePhone";
-            this.tBCangePhone.Size = new System.Drawing.Size(188, 30);
+            this.tBCangePhone.Size = new System.Drawing.Size(234, 30);
             this.tBCangePhone.TabIndex = 20;
             this.tBCangePhone.Visible = false;
             // 
             // labelChageEmail
             // 
             this.labelChageEmail.AutoSize = true;
-            this.labelChageEmail.Location = new System.Drawing.Point(10, 275);
+            this.labelChageEmail.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelChageEmail.Location = new System.Drawing.Point(31, 266);
             this.labelChageEmail.Name = "labelChageEmail";
-            this.labelChageEmail.Size = new System.Drawing.Size(137, 17);
+            this.labelChageEmail.Size = new System.Drawing.Size(176, 22);
             this.labelChageEmail.TabIndex = 21;
             this.labelChageEmail.Text = "Изменить эл. почту";
             this.labelChageEmail.Visible = false;
@@ -254,9 +245,10 @@ namespace MeoIS
             // labelChangePhone
             // 
             this.labelChangePhone.AutoSize = true;
-            this.labelChangePhone.Location = new System.Drawing.Point(15, 330);
+            this.labelChangePhone.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelChangePhone.Location = new System.Drawing.Point(34, 324);
             this.labelChangePhone.Name = "labelChangePhone";
-            this.labelChangePhone.Size = new System.Drawing.Size(134, 17);
+            this.labelChangePhone.Size = new System.Drawing.Size(170, 22);
             this.labelChangePhone.TabIndex = 22;
             this.labelChangePhone.Text = "Изменить телефон";
             this.labelChangePhone.Visible = false;
@@ -264,18 +256,20 @@ namespace MeoIS
             // labelChangePass
             // 
             this.labelChangePass.AutoSize = true;
-            this.labelChangePass.Location = new System.Drawing.Point(10, 393);
+            this.labelChangePass.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelChangePass.Location = new System.Drawing.Point(40, 387);
             this.labelChangePass.Name = "labelChangePass";
-            this.labelChangePass.Size = new System.Drawing.Size(123, 17);
+            this.labelChangePass.Size = new System.Drawing.Size(158, 22);
             this.labelChangePass.TabIndex = 23;
             this.labelChangePass.Text = "Изменить пароль";
             this.labelChangePass.Visible = false;
             // 
             // buttonChangeUserAccont
             // 
-            this.buttonChangeUserAccont.Location = new System.Drawing.Point(36, 449);
+            this.buttonChangeUserAccont.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonChangeUserAccont.Location = new System.Drawing.Point(59, 449);
             this.buttonChangeUserAccont.Name = "buttonChangeUserAccont";
-            this.buttonChangeUserAccont.Size = new System.Drawing.Size(92, 30);
+            this.buttonChangeUserAccont.Size = new System.Drawing.Size(121, 40);
             this.buttonChangeUserAccont.TabIndex = 24;
             this.buttonChangeUserAccont.Text = "Сохранить";
             this.buttonChangeUserAccont.UseVisualStyleBackColor = true;
@@ -287,7 +281,7 @@ namespace MeoIS
             this.tabControlMenuServices.Controls.Add(this.tPReg);
             this.tabControlMenuServices.Controls.Add(this.tPMed);
             this.tabControlMenuServices.Controls.Add(this.tPChange);
-            this.tabControlMenuServices.Location = new System.Drawing.Point(961, 48);
+            this.tabControlMenuServices.Location = new System.Drawing.Point(280, 70);
             this.tabControlMenuServices.Name = "tabControlMenuServices";
             this.tabControlMenuServices.SelectedIndex = 0;
             this.tabControlMenuServices.Size = new System.Drawing.Size(837, 505);
@@ -538,7 +532,7 @@ namespace MeoIS
             "14:00",
             "15:00",
             "16:00"});
-            this.cBWednesday.Location = new System.Drawing.Point(3, 26);
+            this.cBWednesday.Location = new System.Drawing.Point(3, 25);
             this.cBWednesday.Name = "cBWednesday";
             this.cBWednesday.Size = new System.Drawing.Size(140, 24);
             this.cBWednesday.TabIndex = 7;
@@ -606,7 +600,7 @@ namespace MeoIS
             "14:00",
             "15:00",
             "16:00"});
-            this.cBMonday.Location = new System.Drawing.Point(3, 26);
+            this.cBMonday.Location = new System.Drawing.Point(3, 25);
             this.cBMonday.Name = "cBMonday";
             this.cBMonday.Size = new System.Drawing.Size(139, 24);
             this.cBMonday.TabIndex = 5;
@@ -675,7 +669,7 @@ namespace MeoIS
             "14:00",
             "15:00",
             "16:00"});
-            this.cBFriday.Location = new System.Drawing.Point(3, 27);
+            this.cBFriday.Location = new System.Drawing.Point(3, 26);
             this.cBFriday.Name = "cBFriday";
             this.cBFriday.Size = new System.Drawing.Size(141, 24);
             this.cBFriday.TabIndex = 9;
@@ -936,7 +930,7 @@ namespace MeoIS
             this.groupBoxServices.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.groupBoxServices.Controls.Add(this.tableLayoutPanelServices);
             this.groupBoxServices.Controls.Add(this.label6);
-            this.groupBoxServices.Location = new System.Drawing.Point(327, 80);
+            this.groupBoxServices.Location = new System.Drawing.Point(280, 70);
             this.groupBoxServices.Name = "groupBoxServices";
             this.groupBoxServices.Size = new System.Drawing.Size(732, 469);
             this.groupBoxServices.TabIndex = 31;
@@ -1232,7 +1226,7 @@ namespace MeoIS
             // 
             this.pictureCloseServises.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureCloseServises.Image = global::MeoIS.Properties.Resources.close;
-            this.pictureCloseServises.Location = new System.Drawing.Point(1069, 48);
+            this.pictureCloseServises.Location = new System.Drawing.Point(1154, 48);
             this.pictureCloseServises.Name = "pictureCloseServises";
             this.pictureCloseServises.Size = new System.Drawing.Size(53, 47);
             this.pictureCloseServises.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1293,7 +1287,6 @@ namespace MeoIS
             this.Controls.Add(this.tBChangeEmail);
             this.Controls.Add(this.tBChangePass);
             this.Controls.Add(this.pictureOptions);
-            this.Controls.Add(this.labelChangeMilitaryRegistrationOffice);
             this.Controls.Add(this.labelRectal);
             this.Controls.Add(this.labelCategory);
             this.Controls.Add(this.labelWelcome);
@@ -1358,7 +1351,6 @@ namespace MeoIS
         private System.Windows.Forms.Label labelWelcome;
         private System.Windows.Forms.Label labelCategory;
         private System.Windows.Forms.Label labelRectal;
-        private System.Windows.Forms.Label labelChangeMilitaryRegistrationOffice;
         private System.Windows.Forms.PictureBox pictureOptions;
         private System.Windows.Forms.TextBox tBChangePass;
         private System.Windows.Forms.TextBox tBChangeEmail;

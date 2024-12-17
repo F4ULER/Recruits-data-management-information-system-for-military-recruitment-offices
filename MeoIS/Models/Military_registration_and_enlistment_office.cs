@@ -43,7 +43,7 @@ namespace MeoIS
                 if (DataBase.sending_command(message) == true)
                 {
                     MessageBox.Show("Вы встали на учет в военкомат города " + value + ".");
-                    Transfer.City = value;
+                    Transfer.district = value;
                     return true;
                 }
                 else
@@ -69,14 +69,14 @@ namespace MeoIS
         //}
 
         // запись на мед осмотр в военкомат
-        public Boolean registration_for_medical_check_up (string docNum, string city, string date, string time)
+        public Boolean registration_for_medical_check_up (string docNum, string district, string date, string time)
         {
             
 
             string[] changeDate = date.Split(new char[] { '.' });
             string dateForDB = changeDate[2] + "-" + changeDate[1] + "-" + changeDate[0] + " " + time;
             string message = "INSERT INTO `medical_checkup`(`document_number`, `city`, `date`) VALUES " +
-                    "('" + docNum + "', '" + city + "', '" + dateForDB + "');";
+                    "('" + docNum + "', '" + district + "', '" + dateForDB + "');";
 
             if (check_Date_Medical_Data(dateForDB, date) == true)
             {
@@ -86,12 +86,12 @@ namespace MeoIS
             {
                 if (DataBase.sending_command(message) == true)
                 {
-                    MessageBox.Show("Вы записались на мед. осмотр в военкомат города " + city + " " + date + " " + time);
+                    MessageBox.Show("Вы записались на медицинский осмотр в военкомат района " + district + " " + date + " " + time);
                     return true;
                 }
                 else
                 {
-                    MessageBox.Show("Не Получилось");
+                    MessageBox.Show("Ошибка!");
                     return false;
                 }
             }

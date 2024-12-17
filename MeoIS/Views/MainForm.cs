@@ -33,7 +33,7 @@ namespace MeoIS
                 pictureMedicalData.Visible = true;
                 labelWelcome.Text = "Добрый день, " + Transfer.Name;
                 labelCategory.Text = "Категория: " + Transfer.Category;
-                labelRectal.Text = "Военкомат города: " + Transfer.City;
+                labelRectal.Text = "Военкомат района: \n" + Transfer.district;
                 groupBoxServices.Visible = true;
                 labelExit.Visible = true;
                 labelLogIn.Visible = false;
@@ -48,7 +48,6 @@ namespace MeoIS
                 groupBoxServices.Visible = false;
                 labelWelcome.Visible = false;
                 labelCategory.Visible = false;
-                labelChangeMilitaryRegistrationOffice.Visible = false;
                 labelRectal.Visible = false;
                 pictureOptions.Visible = false;
                 labelExit.Visible = false;
@@ -101,13 +100,6 @@ namespace MeoIS
             }
 
             if (dataGV.Visible == true || tabControlMenuServices.Visible == true) { pictureCloseServises.Visible = true; }
-        }
-
-        private void labelChangeMilitaryRegistrationOffice_Click(object sender, EventArgs e)
-        {
-            tabControlMenuServices.SelectedTab = tPReg;
-            tabControlMenuServices.Visible = true;
-            groupBoxServices.Visible = false;
         }
 
        // параметры пользователя (значек шестеренки)
@@ -174,7 +166,7 @@ namespace MeoIS
                 Military_registration_and_enlistment_office Enlistment_Office = new Military_registration_and_enlistment_office();
                 if (Enlistment_Office.change_military_registration_and_enlistment_office(Transfer.Doc_num, city[0]) == true)
                 {
-                    labelRectal.Text = "Военкомат города: " + Transfer.City;
+                    labelRectal.Text = "Военкомат города: " + Transfer.district;
                     tBNewAddress.Text = "";
                     tBEnlistmentOfficeWhereRegistered.Text = "";
                     tabControlMenuServices.Visible = false;
@@ -344,7 +336,7 @@ namespace MeoIS
                 {
                     date = title.Split(new char[] { '\n' });
 
-                    Enlistment_Office.registration_for_medical_check_up(Transfer.Doc_num, Transfer.City, date[1], time);
+                    Enlistment_Office.registration_for_medical_check_up(Transfer.Doc_num, Transfer.district, date[1], time);
 
                     cBMonday.SelectedIndex = 0;
                     cBWednesday.SelectedIndex = 0;
@@ -482,7 +474,7 @@ namespace MeoIS
             var weekOffset = culture.DateTimeFormat.FirstDayOfWeek - DateTime.Today.DayOfWeek; // Разница между началом недели, и текущим днем.
             var startOfWeek = DateTime.Today.AddDays(weekOffset); // Получаем дату начала недели указанной даты
 
-            MessageBox.Show(startOfWeek.ToShortDateString() + "\n" + Date);
+            //MessageBox.Show(startOfWeek.ToShortDateString() + "\n" + Date);
 
             if (startOfWeek.ToShortDateString() == Date)
             {
@@ -494,8 +486,8 @@ namespace MeoIS
 
             if(DateTime.Today >= startOfWeek)
             {
-                MessageBox.Show(DateTime.Today.ToString());
-                MessageBox.Show(startOfWeek.ToString());
+               // MessageBox.Show(DateTime.Today.ToString());
+               // MessageBox.Show(startOfWeek.ToString());
             }
 
             collection_of_data_for_verification();
@@ -618,12 +610,14 @@ namespace MeoIS
 
                     if (DB.sending_command(message) == true)
                     {
-                        MessageBox.Show("Место учебы успешно изменено на " + tBNameOfEducationalOrganization.Text);
+                        MessageBox.Show("Место учебы успешно изменено на " + tBNameOfEducationalOrganization.Text + "\n Не забудьте отправить на почту военкомата подтверждающий документ.");
                     }
                     else MessageBox.Show("Ошибка!");
 
+                    
                     hide_education_objects();
                     defolt_change_of_study_or_job();
+
                     tabControlMenuServices.Visible = false;
                 }
                 else
@@ -646,15 +640,21 @@ namespace MeoIS
                     }
                     else MessageBox.Show("Ошибка!");
 
+
+
                     hide_work_objects();
                     defolt_change_of_study_or_job();
-                    tabControlMenuServices.Visible = false;
+                    
 
                 } else
                 {
                     MessageBox.Show("Заполните все поля!");
                 }
             }
+            tabControlMenuServices.Visible = false;
+            pictureCloseServises.Visible = false;
+            buttonFirstReg.Visible = false;
+            groupBoxServices.Visible = true;
         }
 
         //обычное состояние вкладки смены учебы или работы
@@ -785,6 +785,11 @@ namespace MeoIS
         private void ChangePlaceOfStudyOrWork_MouseMove(object sender, MouseEventArgs e)
         {
             tableLayoutPanelServices3.BackColor = Color.PeachPuff;
+        }
+
+        private void labelRectal_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

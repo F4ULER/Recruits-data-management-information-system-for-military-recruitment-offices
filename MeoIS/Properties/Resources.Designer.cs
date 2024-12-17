@@ -73,6 +73,16 @@ namespace MeoIS.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap change {
+            get {
+                object obj = ResourceManager.GetObject("change", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap changeWorkOrStudy {
             get {
                 object obj = ResourceManager.GetObject("changeWorkOrStudy", resourceCulture);
@@ -156,6 +166,16 @@ namespace MeoIS.Properties {
         internal static System.Drawing.Bitmap pass_open {
             get {
                 object obj = ResourceManager.GetObject("pass_open", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap reestr {
+            get {
+                object obj = ResourceManager.GetObject("reestr", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

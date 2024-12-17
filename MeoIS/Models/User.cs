@@ -13,7 +13,7 @@ namespace MeoIS
             Name = name;
             Patronymic = patronymic;
             DateOfBirth = dateOfBirth;
-            Addres = addres;
+            Address = addres;
             Category = category;
             Gender = gender;
             City = city;
@@ -29,7 +29,7 @@ namespace MeoIS
         public string Name { get; set; }
         public string Patronymic { get; set; }
         public DateTime DateOfBirth { get; set; }
-        public string Addres { get; set; }
+        public string Address { get; set; }
         public string Category { get; set; }
         public string Gender { get; set; }
         public string City { get; set; }

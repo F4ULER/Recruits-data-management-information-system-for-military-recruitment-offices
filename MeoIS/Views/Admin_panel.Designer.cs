@@ -121,12 +121,10 @@ namespace MeoIS
             this.buttonDeleteLit = new System.Windows.Forms.Button();
             this.label32 = new System.Windows.Forms.Label();
             this.labelExit = new System.Windows.Forms.Label();
-            this.pictureExport = new System.Windows.Forms.PictureBox();
-            this.pictureClose = new System.Windows.Forms.PictureBox();
-            this.picSearch = new System.Windows.Forms.PictureBox();
             this.labelExport = new System.Windows.Forms.Label();
             this.tabControlExportAndStatistics = new System.Windows.Forms.TabControl();
             this.tPStat = new System.Windows.Forms.TabPage();
+            this.rBStatCategory = new System.Windows.Forms.RadioButton();
             this.buttonShowStat = new System.Windows.Forms.Button();
             this.rBStatCity = new System.Windows.Forms.RadioButton();
             this.rBStatGender = new System.Windows.Forms.RadioButton();
@@ -134,6 +132,7 @@ namespace MeoIS
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.tPExport = new System.Windows.Forms.TabPage();
+            this.rBExpTXTCategory = new System.Windows.Forms.RadioButton();
             this.label34 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.rBExportAll = new System.Windows.Forms.RadioButton();
@@ -147,8 +146,11 @@ namespace MeoIS
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
-            this.rBStatCategory = new System.Windows.Forms.RadioButton();
-            this.rBExpTXTCategory = new System.Windows.Forms.RadioButton();
+            this.label35 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureExport = new System.Windows.Forms.PictureBox();
+            this.pictureClose = new System.Windows.Forms.PictureBox();
+            this.picSearch = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGV)).BeginInit();
             this.tableLayoutPanelFilter.SuspendLayout();
             this.groupBoxServices.SuspendLayout();
@@ -165,12 +167,13 @@ namespace MeoIS
             this.tPDeleteLit.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureArrowDeleteLit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDeleteLit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureExport)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureClose)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picSearch)).BeginInit();
             this.tabControlExportAndStatistics.SuspendLayout();
             this.tPStat.SuspendLayout();
             this.tPExport.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureExport)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureClose)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSearch)).BeginInit();
             this.SuspendLayout();
             // 
             // labelWelcome
@@ -186,10 +189,10 @@ namespace MeoIS
             // tBSearch
             // 
             this.tBSearch.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tBSearch.Location = new System.Drawing.Point(498, 19);
+            this.tBSearch.Location = new System.Drawing.Point(645, 19);
             this.tBSearch.Multiline = true;
             this.tBSearch.Name = "tBSearch";
-            this.tBSearch.Size = new System.Drawing.Size(513, 30);
+            this.tBSearch.Size = new System.Drawing.Size(366, 30);
             this.tBSearch.TabIndex = 13;
             this.tBSearch.TextChanged += new System.EventHandler(this.tBSearch_TextChanged);
             // 
@@ -315,7 +318,7 @@ namespace MeoIS
             this.groupBoxServices.Controls.Add(this.labelUpdatingTheReferenceBook);
             this.groupBoxServices.Controls.Add(this.labelEditingUserDatabase);
             this.groupBoxServices.Controls.Add(this.labelAppointmentOfNewAdministrator);
-            this.groupBoxServices.Location = new System.Drawing.Point(213, 60);
+            this.groupBoxServices.Location = new System.Drawing.Point(230, 80);
             this.groupBoxServices.Name = "groupBoxServices";
             this.groupBoxServices.Size = new System.Drawing.Size(630, 425);
             this.groupBoxServices.TabIndex = 32;
@@ -1208,52 +1211,15 @@ namespace MeoIS
             this.labelExit.Text = "Выход";
             this.labelExit.Click += new System.EventHandler(this.labelExit_Click);
             // 
-            // pictureExport
-            // 
-            this.pictureExport.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureExport.Image = global::MeoIS.Properties.Resources.export_icon;
-            this.pictureExport.Location = new System.Drawing.Point(12, 108);
-            this.pictureExport.Name = "pictureExport";
-            this.pictureExport.Size = new System.Drawing.Size(69, 64);
-            this.pictureExport.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureExport.TabIndex = 38;
-            this.pictureExport.TabStop = false;
-            this.pictureExport.Click += new System.EventHandler(this.pictureExport_Click);
-            // 
-            // pictureClose
-            // 
-            this.pictureClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureClose.Image = global::MeoIS.Properties.Resources.close;
-            this.pictureClose.Location = new System.Drawing.Point(1032, 46);
-            this.pictureClose.Name = "pictureClose";
-            this.pictureClose.Size = new System.Drawing.Size(53, 47);
-            this.pictureClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureClose.TabIndex = 36;
-            this.pictureClose.TabStop = false;
-            this.pictureClose.Visible = false;
-            this.pictureClose.Click += new System.EventHandler(this.pictureClose_Click);
-            // 
-            // picSearch
-            // 
-            this.picSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picSearch.Image = global::MeoIS.Properties.Resources.search;
-            this.picSearch.Location = new System.Drawing.Point(1028, 9);
-            this.picSearch.Name = "picSearch";
-            this.picSearch.Size = new System.Drawing.Size(40, 40);
-            this.picSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picSearch.TabIndex = 17;
-            this.picSearch.TabStop = false;
-            this.picSearch.Click += new System.EventHandler(this.picSearch_Click_1);
-            // 
             // labelExport
             // 
             this.labelExport.AutoSize = true;
             this.labelExport.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelExport.Location = new System.Drawing.Point(-4, 175);
+            this.labelExport.Location = new System.Drawing.Point(20, 175);
             this.labelExport.Name = "labelExport";
             this.labelExport.Size = new System.Drawing.Size(99, 38);
             this.labelExport.TabIndex = 39;
-            this.labelExport.Text = "Статистика\r\nи Экспорт";
+            this.labelExport.Text = "Статистика\r\nи отчеты";
             this.labelExport.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tabControlExportAndStatistics
@@ -1282,6 +1248,20 @@ namespace MeoIS
             this.tPStat.TabIndex = 0;
             this.tPStat.Text = "Статистика";
             this.tPStat.UseVisualStyleBackColor = true;
+            // 
+            // rBStatCategory
+            // 
+            this.rBStatCategory.AutoSize = true;
+            this.rBStatCategory.Checked = true;
+            this.rBStatCategory.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rBStatCategory.Location = new System.Drawing.Point(240, 165);
+            this.rBStatCategory.Name = "rBStatCategory";
+            this.rBStatCategory.Size = new System.Drawing.Size(235, 31);
+            this.rBStatCategory.TabIndex = 17;
+            this.rBStatCategory.TabStop = true;
+            this.rBStatCategory.Text = "Категория годности";
+            this.rBStatCategory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rBStatCategory.UseVisualStyleBackColor = true;
             // 
             // buttonShowStat
             // 
@@ -1379,6 +1359,20 @@ namespace MeoIS
             this.tPExport.TabIndex = 1;
             this.tPExport.Text = "Экспорт";
             this.tPExport.UseVisualStyleBackColor = true;
+            // 
+            // rBExpTXTCategory
+            // 
+            this.rBExpTXTCategory.AutoSize = true;
+            this.rBExpTXTCategory.Checked = true;
+            this.rBExpTXTCategory.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rBExpTXTCategory.Location = new System.Drawing.Point(374, 195);
+            this.rBExpTXTCategory.Name = "rBExpTXTCategory";
+            this.rBExpTXTCategory.Size = new System.Drawing.Size(137, 58);
+            this.rBExpTXTCategory.TabIndex = 40;
+            this.rBExpTXTCategory.TabStop = true;
+            this.rBExpTXTCategory.Text = "Категория\r\nгодности";
+            this.rBExpTXTCategory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rBExpTXTCategory.UseVisualStyleBackColor = true;
             // 
             // label34
             // 
@@ -1534,53 +1528,87 @@ namespace MeoIS
             this.label28.TabIndex = 5;
             this.label28.Text = "Экспорт";
             // 
-            // rBStatCategory
+            // label35
             // 
-            this.rBStatCategory.AutoSize = true;
-            this.rBStatCategory.Checked = true;
-            this.rBStatCategory.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rBStatCategory.Location = new System.Drawing.Point(240, 165);
-            this.rBStatCategory.Name = "rBStatCategory";
-            this.rBStatCategory.Size = new System.Drawing.Size(235, 31);
-            this.rBStatCategory.TabIndex = 17;
-            this.rBStatCategory.TabStop = true;
-            this.rBStatCategory.Text = "Категория годности";
-            this.rBStatCategory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.rBStatCategory.UseVisualStyleBackColor = true;
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label35.Location = new System.Drawing.Point(32, 310);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(80, 38);
+            this.label35.TabIndex = 39;
+            this.label35.Text = "Реестр\r\nповесток";
+            this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // rBExpTXTCategory
+            // pictureBox1
             // 
-            this.rBExpTXTCategory.AutoSize = true;
-            this.rBExpTXTCategory.Checked = true;
-            this.rBExpTXTCategory.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rBExpTXTCategory.Location = new System.Drawing.Point(374, 195);
-            this.rBExpTXTCategory.Name = "rBExpTXTCategory";
-            this.rBExpTXTCategory.Size = new System.Drawing.Size(137, 58);
-            this.rBExpTXTCategory.TabIndex = 40;
-            this.rBExpTXTCategory.TabStop = true;
-            this.rBExpTXTCategory.Text = "Категория\r\nгодности";
-            this.rBExpTXTCategory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.rBExpTXTCategory.UseVisualStyleBackColor = true;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = global::MeoIS.Properties.Resources.reestr;
+            this.pictureBox1.Location = new System.Drawing.Point(36, 243);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(69, 64);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 38;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureExport_Click);
+            // 
+            // pictureExport
+            // 
+            this.pictureExport.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureExport.Image = global::MeoIS.Properties.Resources.export_icon;
+            this.pictureExport.Location = new System.Drawing.Point(36, 108);
+            this.pictureExport.Name = "pictureExport";
+            this.pictureExport.Size = new System.Drawing.Size(69, 64);
+            this.pictureExport.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureExport.TabIndex = 38;
+            this.pictureExport.TabStop = false;
+            this.pictureExport.Click += new System.EventHandler(this.pictureExport_Click);
+            // 
+            // pictureClose
+            // 
+            this.pictureClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureClose.Image = global::MeoIS.Properties.Resources.close;
+            this.pictureClose.Location = new System.Drawing.Point(1032, 46);
+            this.pictureClose.Name = "pictureClose";
+            this.pictureClose.Size = new System.Drawing.Size(53, 47);
+            this.pictureClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureClose.TabIndex = 36;
+            this.pictureClose.TabStop = false;
+            this.pictureClose.Visible = false;
+            this.pictureClose.Click += new System.EventHandler(this.pictureClose_Click);
+            // 
+            // picSearch
+            // 
+            this.picSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picSearch.Image = global::MeoIS.Properties.Resources.search;
+            this.picSearch.Location = new System.Drawing.Point(1028, 9);
+            this.picSearch.Name = "picSearch";
+            this.picSearch.Size = new System.Drawing.Size(40, 40);
+            this.picSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picSearch.TabIndex = 17;
+            this.picSearch.TabStop = false;
+            this.picSearch.Click += new System.EventHandler(this.picSearch_Click_1);
             // 
             // Admin_panel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1093, 603);
-            this.Controls.Add(this.tabControlExportAndStatistics);
+            this.Controls.Add(this.groupBoxServices);
             this.Controls.Add(this.tableLayoutPanelFilter);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureExport);
             this.Controls.Add(this.labelExit);
             this.Controls.Add(this.pictureClose);
             this.Controls.Add(this.picSearch);
             this.Controls.Add(this.tBSearch);
             this.Controls.Add(this.labelWelcome);
-            this.Controls.Add(this.panelNewAdmin);
+            this.Controls.Add(this.label35);
+            this.Controls.Add(this.labelExport);
+            this.Controls.Add(this.tabControlExportAndStatistics);
             this.Controls.Add(this.tabControlLit);
+            this.Controls.Add(this.panelNewAdmin);
             this.Controls.Add(this.tabControlMenuFunctions);
             this.Controls.Add(this.dataGV);
-            this.Controls.Add(this.groupBoxServices);
-            this.Controls.Add(this.labelExport);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Admin_panel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -1611,14 +1639,15 @@ namespace MeoIS
             this.tPDeleteLit.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureArrowDeleteLit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDeleteLit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureExport)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureClose)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picSearch)).EndInit();
             this.tabControlExportAndStatistics.ResumeLayout(false);
             this.tPStat.ResumeLayout(false);
             this.tPStat.PerformLayout();
             this.tPExport.ResumeLayout(false);
             this.tPExport.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureExport)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureClose)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSearch)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1745,5 +1774,7 @@ namespace MeoIS
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.RadioButton rBStatCategory;
         private System.Windows.Forms.RadioButton rBExpTXTCategory;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
