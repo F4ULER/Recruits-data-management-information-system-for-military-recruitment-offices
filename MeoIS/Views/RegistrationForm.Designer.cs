@@ -29,6 +29,7 @@ namespace MeoIS
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistrationForm));
             this.tBDocNumber = new System.Windows.Forms.TextBox();
             this.buttonReg = new System.Windows.Forms.Button();
             this.tBLastName = new System.Windows.Forms.TextBox();
@@ -46,12 +47,14 @@ namespace MeoIS
             this.labelAuth = new System.Windows.Forms.Label();
             this.tBAge = new System.Windows.Forms.TextBox();
             this.labelExit = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tBDocNumber
             // 
             this.tBDocNumber.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tBDocNumber.Location = new System.Drawing.Point(71, 108);
+            this.tBDocNumber.Location = new System.Drawing.Point(81, 110);
             this.tBDocNumber.Multiline = true;
             this.tBDocNumber.Name = "tBDocNumber";
             this.tBDocNumber.Size = new System.Drawing.Size(398, 38);
@@ -63,7 +66,8 @@ namespace MeoIS
             // 
             this.buttonReg.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.buttonReg.Font = new System.Drawing.Font("Monotype Corsiva", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonReg.Location = new System.Drawing.Point(80, 469);
+            this.buttonReg.Image = ((System.Drawing.Image)(resources.GetObject("buttonReg.Image")));
+            this.buttonReg.Location = new System.Drawing.Point(90, 471);
             this.buttonReg.Name = "buttonReg";
             this.buttonReg.Size = new System.Drawing.Size(349, 76);
             this.buttonReg.TabIndex = 13;
@@ -75,7 +79,7 @@ namespace MeoIS
             // tBLastName
             // 
             this.tBLastName.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tBLastName.Location = new System.Drawing.Point(71, 188);
+            this.tBLastName.Location = new System.Drawing.Point(81, 190);
             this.tBLastName.Multiline = true;
             this.tBLastName.Name = "tBLastName";
             this.tBLastName.Size = new System.Drawing.Size(398, 38);
@@ -86,7 +90,7 @@ namespace MeoIS
             // tBPatronymic
             // 
             this.tBPatronymic.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tBPatronymic.Location = new System.Drawing.Point(71, 269);
+            this.tBPatronymic.Location = new System.Drawing.Point(81, 271);
             this.tBPatronymic.Multiline = true;
             this.tBPatronymic.Name = "tBPatronymic";
             this.tBPatronymic.Size = new System.Drawing.Size(398, 38);
@@ -97,7 +101,7 @@ namespace MeoIS
             // tBPass
             // 
             this.tBPass.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tBPass.Location = new System.Drawing.Point(71, 209);
+            this.tBPass.Location = new System.Drawing.Point(81, 211);
             this.tBPass.Multiline = true;
             this.tBPass.Name = "tBPass";
             this.tBPass.Size = new System.Drawing.Size(398, 38);
@@ -108,7 +112,7 @@ namespace MeoIS
             // tBEmail
             // 
             this.tBEmail.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tBEmail.Location = new System.Drawing.Point(71, 199);
+            this.tBEmail.Location = new System.Drawing.Point(81, 201);
             this.tBEmail.Multiline = true;
             this.tBEmail.Name = "tBEmail";
             this.tBEmail.Size = new System.Drawing.Size(398, 38);
@@ -119,7 +123,7 @@ namespace MeoIS
             // tBNameUser
             // 
             this.tBNameUser.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tBNameUser.Location = new System.Drawing.Point(71, 100);
+            this.tBNameUser.Location = new System.Drawing.Point(81, 102);
             this.tBNameUser.Multiline = true;
             this.tBNameUser.Name = "tBNameUser";
             this.tBNameUser.Size = new System.Drawing.Size(398, 38);
@@ -130,7 +134,7 @@ namespace MeoIS
             // tBPhone
             // 
             this.tBPhone.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tBPhone.Location = new System.Drawing.Point(71, 108);
+            this.tBPhone.Location = new System.Drawing.Point(81, 110);
             this.tBPhone.Multiline = true;
             this.tBPhone.Name = "tBPhone";
             this.tBPhone.Size = new System.Drawing.Size(398, 38);
@@ -142,7 +146,7 @@ namespace MeoIS
             // 
             this.labelGender.AutoSize = true;
             this.labelGender.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelGender.Location = new System.Drawing.Point(143, 337);
+            this.labelGender.Location = new System.Drawing.Point(153, 339);
             this.labelGender.Name = "labelGender";
             this.labelGender.Size = new System.Drawing.Size(54, 28);
             this.labelGender.TabIndex = 20;
@@ -175,7 +179,7 @@ namespace MeoIS
             // tBCategory
             // 
             this.tBCategory.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tBCategory.Location = new System.Drawing.Point(71, 296);
+            this.tBCategory.Location = new System.Drawing.Point(81, 298);
             this.tBCategory.Multiline = true;
             this.tBCategory.Name = "tBCategory";
             this.tBCategory.Size = new System.Drawing.Size(398, 38);
@@ -187,7 +191,8 @@ namespace MeoIS
             // 
             this.buttonContinue.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.buttonContinue.Font = new System.Drawing.Font("Monotype Corsiva", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonContinue.Location = new System.Drawing.Point(274, 397);
+            this.buttonContinue.Image = ((System.Drawing.Image)(resources.GetObject("buttonContinue.Image")));
+            this.buttonContinue.Location = new System.Drawing.Point(284, 399);
             this.buttonContinue.Name = "buttonContinue";
             this.buttonContinue.Size = new System.Drawing.Size(120, 66);
             this.buttonContinue.TabIndex = 2812;
@@ -199,7 +204,8 @@ namespace MeoIS
             // 
             this.buttonBack.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.buttonBack.Font = new System.Drawing.Font("Monotype Corsiva", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonBack.Location = new System.Drawing.Point(112, 397);
+            this.buttonBack.Image = ((System.Drawing.Image)(resources.GetObject("buttonBack.Image")));
+            this.buttonBack.Location = new System.Drawing.Point(122, 399);
             this.buttonBack.Name = "buttonBack";
             this.buttonBack.Size = new System.Drawing.Size(120, 66);
             this.buttonBack.TabIndex = 2813;
@@ -211,7 +217,8 @@ namespace MeoIS
             // 
             this.labelAuth.AutoSize = true;
             this.labelAuth.Font = new System.Drawing.Font("Times New Roman", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelAuth.Location = new System.Drawing.Point(91, 9);
+            this.labelAuth.Image = ((System.Drawing.Image)(resources.GetObject("labelAuth.Image")));
+            this.labelAuth.Location = new System.Drawing.Point(101, 11);
             this.labelAuth.Name = "labelAuth";
             this.labelAuth.Size = new System.Drawing.Size(348, 68);
             this.labelAuth.TabIndex = 2814;
@@ -220,7 +227,7 @@ namespace MeoIS
             // tBAge
             // 
             this.tBAge.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tBAge.Location = new System.Drawing.Point(71, 313);
+            this.tBAge.Location = new System.Drawing.Point(81, 315);
             this.tBAge.Multiline = true;
             this.tBAge.Name = "tBAge";
             this.tBAge.Size = new System.Drawing.Size(398, 38);
@@ -233,12 +240,24 @@ namespace MeoIS
             this.labelExit.AutoSize = true;
             this.labelExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.labelExit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelExit.Location = new System.Drawing.Point(11, 523);
+            this.labelExit.Image = ((System.Drawing.Image)(resources.GetObject("labelExit.Image")));
+            this.labelExit.Location = new System.Drawing.Point(21, 525);
             this.labelExit.Name = "labelExit";
             this.labelExit.Size = new System.Drawing.Size(63, 22);
             this.labelExit.TabIndex = 2816;
             this.labelExit.Text = "Выход";
             this.labelExit.Click += new System.EventHandler(this.labelExit_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.pictureBox1.Image = global::MeoIS.Properties.Resources.fon;
+            this.pictureBox1.Location = new System.Drawing.Point(-10, -36);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(562, 637);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2817;
+            this.pictureBox1.TabStop = false;
             // 
             // RegistrationForm
             // 
@@ -262,11 +281,13 @@ namespace MeoIS
             this.Controls.Add(this.tBLastName);
             this.Controls.Add(this.tBDocNumber);
             this.Controls.Add(this.buttonReg);
+            this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "RegistrationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Регистрация";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.RegistrationForm_FormClosed);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -291,5 +312,6 @@ namespace MeoIS
         private System.Windows.Forms.Label labelAuth;
         private System.Windows.Forms.TextBox tBAge;
         private System.Windows.Forms.Label labelExit;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

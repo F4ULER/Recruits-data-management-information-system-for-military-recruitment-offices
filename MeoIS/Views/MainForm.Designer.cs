@@ -31,18 +31,10 @@ namespace MeoIS
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.tBSearch = new System.Windows.Forms.TextBox();
-            this.labelExit = new System.Windows.Forms.Label();
             this.dataGV = new System.Windows.Forms.DataGridView();
-            this.labelWelcome = new System.Windows.Forms.Label();
-            this.labelCategory = new System.Windows.Forms.Label();
-            this.labelRectal = new System.Windows.Forms.Label();
             this.tBChangePass = new System.Windows.Forms.TextBox();
             this.tBChangeEmail = new System.Windows.Forms.TextBox();
             this.tBCangePhone = new System.Windows.Forms.TextBox();
-            this.labelChageEmail = new System.Windows.Forms.Label();
-            this.labelChangePhone = new System.Windows.Forms.Label();
-            this.labelChangePass = new System.Windows.Forms.Label();
-            this.buttonChangeUserAccont = new System.Windows.Forms.Button();
             this.tabControlMenuServices = new System.Windows.Forms.TabControl();
             this.tPReg = new System.Windows.Forms.TabPage();
             this.buttonOldEnlistmentOffice = new System.Windows.Forms.Button();
@@ -102,19 +94,28 @@ namespace MeoIS
             this.tableLayoutPanelServices2 = new System.Windows.Forms.TableLayoutPanel();
             this.label9 = new System.Windows.Forms.Label();
             this.labelSignUpForMedicalExamination = new System.Windows.Forms.Label();
+            this.buttonFirstReg = new System.Windows.Forms.Button();
+            this.labelLogIn = new System.Windows.Forms.Label();
+            this.pictureCloseServises = new System.Windows.Forms.PictureBox();
+            this.labelLine = new System.Windows.Forms.PictureBox();
+            this.pictureMedicalData = new System.Windows.Forms.PictureBox();
+            this.buttonChangeUserAccont = new System.Windows.Forms.Button();
+            this.labelChangePass = new System.Windows.Forms.Label();
+            this.labelChangePhone = new System.Windows.Forms.Label();
+            this.labelChageEmail = new System.Windows.Forms.Label();
+            this.pictureOptions = new System.Windows.Forms.PictureBox();
+            this.labelRectal = new System.Windows.Forms.Label();
+            this.labelCategory = new System.Windows.Forms.Label();
+            this.labelWelcome = new System.Windows.Forms.Label();
+            this.labelExit = new System.Windows.Forms.Label();
+            this.picSearch = new System.Windows.Forms.PictureBox();
+            this.labelWelcome3 = new System.Windows.Forms.Label();
+            this.labelWelcome2 = new System.Windows.Forms.Label();
+            this.labelWelcome1 = new System.Windows.Forms.Label();
             this.pictureEnrollment = new System.Windows.Forms.PictureBox();
             this.pictureChangePlaceOfStudyOrWork = new System.Windows.Forms.PictureBox();
             this.pictureRegMedicalExamination = new System.Windows.Forms.PictureBox();
-            this.labelLogIn = new System.Windows.Forms.Label();
-            this.buttonFirstReg = new System.Windows.Forms.Button();
-            this.labelLine = new System.Windows.Forms.Label();
-            this.labelWelcome1 = new System.Windows.Forms.Label();
-            this.labelWelcome3 = new System.Windows.Forms.Label();
-            this.labelWelcome2 = new System.Windows.Forms.Label();
-            this.pictureCloseServises = new System.Windows.Forms.PictureBox();
-            this.pictureMedicalData = new System.Windows.Forms.PictureBox();
-            this.pictureOptions = new System.Windows.Forms.PictureBox();
-            this.picSearch = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGV)).BeginInit();
             this.tabControlMenuServices.SuspendLayout();
             this.tPReg.SuspendLayout();
@@ -129,13 +130,15 @@ namespace MeoIS
             this.tableLayoutPanelServices1.SuspendLayout();
             this.tableLayoutPanelServices3.SuspendLayout();
             this.tableLayoutPanelServices2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEnrollment)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureChangePlaceOfStudyOrWork)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureRegMedicalExamination)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureCloseServises)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.labelLine)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureMedicalData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureOptions)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSearch)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEnrollment)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureChangePlaceOfStudyOrWork)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureRegMedicalExamination)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tBSearch
@@ -146,18 +149,6 @@ namespace MeoIS
             this.tBSearch.Name = "tBSearch";
             this.tBSearch.Size = new System.Drawing.Size(381, 30);
             this.tBSearch.TabIndex = 10;
-            // 
-            // labelExit
-            // 
-            this.labelExit.AutoSize = true;
-            this.labelExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.labelExit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelExit.Location = new System.Drawing.Point(12, 573);
-            this.labelExit.Name = "labelExit";
-            this.labelExit.Size = new System.Drawing.Size(63, 22);
-            this.labelExit.TabIndex = 8;
-            this.labelExit.Text = "Выход";
-            this.labelExit.Click += new System.EventHandler(this.labelExit_Click);
             // 
             // dataGV
             // 
@@ -170,36 +161,6 @@ namespace MeoIS
             this.dataGV.Size = new System.Drawing.Size(868, 488);
             this.dataGV.TabIndex = 10;
             this.dataGV.Visible = false;
-            // 
-            // labelWelcome
-            // 
-            this.labelWelcome.AutoSize = true;
-            this.labelWelcome.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelWelcome.Location = new System.Drawing.Point(10, 9);
-            this.labelWelcome.Name = "labelWelcome";
-            this.labelWelcome.Size = new System.Drawing.Size(61, 37);
-            this.labelWelcome.TabIndex = 11;
-            this.labelWelcome.Text = "test";
-            // 
-            // labelCategory
-            // 
-            this.labelCategory.AutoSize = true;
-            this.labelCategory.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelCategory.Location = new System.Drawing.Point(13, 66);
-            this.labelCategory.Name = "labelCategory";
-            this.labelCategory.Size = new System.Drawing.Size(97, 22);
-            this.labelCategory.TabIndex = 12;
-            this.labelCategory.Text = "Категория";
-            // 
-            // labelRectal
-            // 
-            this.labelRectal.AutoSize = true;
-            this.labelRectal.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelRectal.Location = new System.Drawing.Point(12, 112);
-            this.labelRectal.Name = "labelRectal";
-            this.labelRectal.Size = new System.Drawing.Size(167, 22);
-            this.labelRectal.TabIndex = 13;
-            this.labelRectal.Text = "Военкомат района";
             // 
             // tBChangePass
             // 
@@ -230,51 +191,6 @@ namespace MeoIS
             this.tBCangePhone.Size = new System.Drawing.Size(234, 30);
             this.tBCangePhone.TabIndex = 20;
             this.tBCangePhone.Visible = false;
-            // 
-            // labelChageEmail
-            // 
-            this.labelChageEmail.AutoSize = true;
-            this.labelChageEmail.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelChageEmail.Location = new System.Drawing.Point(31, 266);
-            this.labelChageEmail.Name = "labelChageEmail";
-            this.labelChageEmail.Size = new System.Drawing.Size(176, 22);
-            this.labelChageEmail.TabIndex = 21;
-            this.labelChageEmail.Text = "Изменить эл. почту";
-            this.labelChageEmail.Visible = false;
-            // 
-            // labelChangePhone
-            // 
-            this.labelChangePhone.AutoSize = true;
-            this.labelChangePhone.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelChangePhone.Location = new System.Drawing.Point(34, 324);
-            this.labelChangePhone.Name = "labelChangePhone";
-            this.labelChangePhone.Size = new System.Drawing.Size(170, 22);
-            this.labelChangePhone.TabIndex = 22;
-            this.labelChangePhone.Text = "Изменить телефон";
-            this.labelChangePhone.Visible = false;
-            // 
-            // labelChangePass
-            // 
-            this.labelChangePass.AutoSize = true;
-            this.labelChangePass.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelChangePass.Location = new System.Drawing.Point(40, 387);
-            this.labelChangePass.Name = "labelChangePass";
-            this.labelChangePass.Size = new System.Drawing.Size(158, 22);
-            this.labelChangePass.TabIndex = 23;
-            this.labelChangePass.Text = "Изменить пароль";
-            this.labelChangePass.Visible = false;
-            // 
-            // buttonChangeUserAccont
-            // 
-            this.buttonChangeUserAccont.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonChangeUserAccont.Location = new System.Drawing.Point(59, 449);
-            this.buttonChangeUserAccont.Name = "buttonChangeUserAccont";
-            this.buttonChangeUserAccont.Size = new System.Drawing.Size(121, 40);
-            this.buttonChangeUserAccont.TabIndex = 24;
-            this.buttonChangeUserAccont.Text = "Сохранить";
-            this.buttonChangeUserAccont.UseVisualStyleBackColor = true;
-            this.buttonChangeUserAccont.Visible = false;
-            this.buttonChangeUserAccont.Click += new System.EventHandler(this.buttonChangeUserAccont_Click);
             // 
             // tabControlMenuServices
             // 
@@ -385,7 +301,7 @@ namespace MeoIS
             this.labelPreviousWeek.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelPreviousWeek.AutoSize = true;
             this.labelPreviousWeek.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelPreviousWeek.Location = new System.Drawing.Point(6, 83);
+            this.labelPreviousWeek.Location = new System.Drawing.Point(4, 83);
             this.labelPreviousWeek.Name = "labelPreviousWeek";
             this.labelPreviousWeek.Size = new System.Drawing.Size(195, 21);
             this.labelPreviousWeek.TabIndex = 33;
@@ -397,7 +313,7 @@ namespace MeoIS
             this.labelNextWeek.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelNextWeek.AutoSize = true;
             this.labelNextWeek.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelNextWeek.Location = new System.Drawing.Point(491, 83);
+            this.labelNextWeek.Location = new System.Drawing.Point(489, 83);
             this.labelNextWeek.Name = "labelNextWeek";
             this.labelNextWeek.Size = new System.Drawing.Size(171, 21);
             this.labelNextWeek.TabIndex = 32;
@@ -532,7 +448,7 @@ namespace MeoIS
             "14:00",
             "15:00",
             "16:00"});
-            this.cBWednesday.Location = new System.Drawing.Point(3, 25);
+            this.cBWednesday.Location = new System.Drawing.Point(3, 26);
             this.cBWednesday.Name = "cBWednesday";
             this.cBWednesday.Size = new System.Drawing.Size(140, 24);
             this.cBWednesday.TabIndex = 7;
@@ -600,7 +516,7 @@ namespace MeoIS
             "14:00",
             "15:00",
             "16:00"});
-            this.cBMonday.Location = new System.Drawing.Point(3, 25);
+            this.cBMonday.Location = new System.Drawing.Point(3, 26);
             this.cBMonday.Name = "cBMonday";
             this.cBMonday.Size = new System.Drawing.Size(139, 24);
             this.cBMonday.TabIndex = 5;
@@ -669,7 +585,7 @@ namespace MeoIS
             "14:00",
             "15:00",
             "16:00"});
-            this.cBFriday.Location = new System.Drawing.Point(3, 26);
+            this.cBFriday.Location = new System.Drawing.Point(3, 27);
             this.cBFriday.Name = "cBFriday";
             this.cBFriday.Size = new System.Drawing.Size(141, 24);
             this.cBFriday.TabIndex = 9;
@@ -1102,6 +1018,231 @@ namespace MeoIS
             this.labelSignUpForMedicalExamination.MouseLeave += new System.EventHandler(this.RegMedicalExamination_MouseLeave);
             this.labelSignUpForMedicalExamination.MouseMove += new System.Windows.Forms.MouseEventHandler(this.RegMedicalExamination_MouseLeave);
             // 
+            // buttonFirstReg
+            // 
+            this.buttonFirstReg.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonFirstReg.Location = new System.Drawing.Point(508, 400);
+            this.buttonFirstReg.Name = "buttonFirstReg";
+            this.buttonFirstReg.Size = new System.Drawing.Size(265, 58);
+            this.buttonFirstReg.TabIndex = 40;
+            this.buttonFirstReg.Text = "Зарегистрироваться";
+            this.buttonFirstReg.UseVisualStyleBackColor = true;
+            this.buttonFirstReg.Click += new System.EventHandler(this.buttonFirstReg_Click);
+            // 
+            // labelLogIn
+            // 
+            this.labelLogIn.AutoSize = true;
+            this.labelLogIn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.labelLogIn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelLogIn.Image = global::MeoIS.Properties.Resources.fonLabelPic;
+            this.labelLogIn.Location = new System.Drawing.Point(11, 551);
+            this.labelLogIn.Name = "labelLogIn";
+            this.labelLogIn.Size = new System.Drawing.Size(50, 22);
+            this.labelLogIn.TabIndex = 35;
+            this.labelLogIn.Text = "Вход";
+            this.labelLogIn.Click += new System.EventHandler(this.labelLogIn_Click);
+            // 
+            // pictureCloseServises
+            // 
+            this.pictureCloseServises.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureCloseServises.Image = global::MeoIS.Properties.Resources.close_fon1;
+            this.pictureCloseServises.Location = new System.Drawing.Point(1154, 48);
+            this.pictureCloseServises.Name = "pictureCloseServises";
+            this.pictureCloseServises.Size = new System.Drawing.Size(66, 47);
+            this.pictureCloseServises.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureCloseServises.TabIndex = 34;
+            this.pictureCloseServises.TabStop = false;
+            this.pictureCloseServises.Click += new System.EventHandler(this.pictureCloseServises_Click);
+            // 
+            // labelLine
+            // 
+            this.labelLine.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.labelLine.Image = global::MeoIS.Properties.Resources.black;
+            this.labelLine.Location = new System.Drawing.Point(153, 266);
+            this.labelLine.Name = "labelLine";
+            this.labelLine.Size = new System.Drawing.Size(934, 10);
+            this.labelLine.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.labelLine.TabIndex = 33;
+            this.labelLine.TabStop = false;
+            // 
+            // pictureMedicalData
+            // 
+            this.pictureMedicalData.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureMedicalData.Image = global::MeoIS.Properties.Resources.medData;
+            this.pictureMedicalData.Location = new System.Drawing.Point(39, 168);
+            this.pictureMedicalData.Name = "pictureMedicalData";
+            this.pictureMedicalData.Size = new System.Drawing.Size(92, 68);
+            this.pictureMedicalData.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureMedicalData.TabIndex = 33;
+            this.pictureMedicalData.TabStop = false;
+            this.pictureMedicalData.Click += new System.EventHandler(this.pictureMedicalData_Click);
+            // 
+            // buttonChangeUserAccont
+            // 
+            this.buttonChangeUserAccont.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonChangeUserAccont.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonChangeUserAccont.Image = global::MeoIS.Properties.Resources.fonLabelPic;
+            this.buttonChangeUserAccont.Location = new System.Drawing.Point(59, 449);
+            this.buttonChangeUserAccont.Name = "buttonChangeUserAccont";
+            this.buttonChangeUserAccont.Size = new System.Drawing.Size(121, 40);
+            this.buttonChangeUserAccont.TabIndex = 24;
+            this.buttonChangeUserAccont.Text = "Сохранить";
+            this.buttonChangeUserAccont.UseVisualStyleBackColor = true;
+            this.buttonChangeUserAccont.Visible = false;
+            this.buttonChangeUserAccont.Click += new System.EventHandler(this.buttonChangeUserAccont_Click);
+            // 
+            // labelChangePass
+            // 
+            this.labelChangePass.AutoSize = true;
+            this.labelChangePass.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelChangePass.Image = ((System.Drawing.Image)(resources.GetObject("labelChangePass.Image")));
+            this.labelChangePass.Location = new System.Drawing.Point(40, 387);
+            this.labelChangePass.Name = "labelChangePass";
+            this.labelChangePass.Size = new System.Drawing.Size(158, 22);
+            this.labelChangePass.TabIndex = 23;
+            this.labelChangePass.Text = "Изменить пароль";
+            this.labelChangePass.Visible = false;
+            // 
+            // labelChangePhone
+            // 
+            this.labelChangePhone.AutoSize = true;
+            this.labelChangePhone.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelChangePhone.Image = ((System.Drawing.Image)(resources.GetObject("labelChangePhone.Image")));
+            this.labelChangePhone.Location = new System.Drawing.Point(34, 324);
+            this.labelChangePhone.Name = "labelChangePhone";
+            this.labelChangePhone.Size = new System.Drawing.Size(170, 22);
+            this.labelChangePhone.TabIndex = 22;
+            this.labelChangePhone.Text = "Изменить телефон";
+            this.labelChangePhone.Visible = false;
+            // 
+            // labelChageEmail
+            // 
+            this.labelChageEmail.AutoSize = true;
+            this.labelChageEmail.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelChageEmail.Image = ((System.Drawing.Image)(resources.GetObject("labelChageEmail.Image")));
+            this.labelChageEmail.Location = new System.Drawing.Point(31, 266);
+            this.labelChageEmail.Name = "labelChageEmail";
+            this.labelChageEmail.Size = new System.Drawing.Size(176, 22);
+            this.labelChageEmail.TabIndex = 21;
+            this.labelChageEmail.Text = "Изменить эл. почту";
+            this.labelChageEmail.Visible = false;
+            // 
+            // pictureOptions
+            // 
+            this.pictureOptions.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureOptions.Image = global::MeoIS.Properties.Resources.options_fon;
+            this.pictureOptions.Location = new System.Drawing.Point(12, 495);
+            this.pictureOptions.Name = "pictureOptions";
+            this.pictureOptions.Size = new System.Drawing.Size(49, 40);
+            this.pictureOptions.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureOptions.TabIndex = 17;
+            this.pictureOptions.TabStop = false;
+            this.pictureOptions.Click += new System.EventHandler(this.pictureOptions_Click);
+            // 
+            // labelRectal
+            // 
+            this.labelRectal.AutoSize = true;
+            this.labelRectal.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelRectal.Image = ((System.Drawing.Image)(resources.GetObject("labelRectal.Image")));
+            this.labelRectal.Location = new System.Drawing.Point(12, 112);
+            this.labelRectal.Name = "labelRectal";
+            this.labelRectal.Size = new System.Drawing.Size(167, 22);
+            this.labelRectal.TabIndex = 13;
+            this.labelRectal.Text = "Военкомат района";
+            // 
+            // labelCategory
+            // 
+            this.labelCategory.AutoSize = true;
+            this.labelCategory.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelCategory.Image = ((System.Drawing.Image)(resources.GetObject("labelCategory.Image")));
+            this.labelCategory.Location = new System.Drawing.Point(13, 66);
+            this.labelCategory.Name = "labelCategory";
+            this.labelCategory.Size = new System.Drawing.Size(97, 22);
+            this.labelCategory.TabIndex = 12;
+            this.labelCategory.Text = "Категория";
+            // 
+            // labelWelcome
+            // 
+            this.labelWelcome.AutoSize = true;
+            this.labelWelcome.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelWelcome.Image = ((System.Drawing.Image)(resources.GetObject("labelWelcome.Image")));
+            this.labelWelcome.Location = new System.Drawing.Point(10, 9);
+            this.labelWelcome.Name = "labelWelcome";
+            this.labelWelcome.Size = new System.Drawing.Size(61, 37);
+            this.labelWelcome.TabIndex = 11;
+            this.labelWelcome.Text = "test";
+            // 
+            // labelExit
+            // 
+            this.labelExit.AutoSize = true;
+            this.labelExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.labelExit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelExit.Image = ((System.Drawing.Image)(resources.GetObject("labelExit.Image")));
+            this.labelExit.Location = new System.Drawing.Point(12, 573);
+            this.labelExit.Name = "labelExit";
+            this.labelExit.Size = new System.Drawing.Size(63, 22);
+            this.labelExit.TabIndex = 8;
+            this.labelExit.Text = "Выход";
+            this.labelExit.Click += new System.EventHandler(this.labelExit_Click);
+            // 
+            // picSearch
+            // 
+            this.picSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picSearch.Image = global::MeoIS.Properties.Resources.search_fon;
+            this.picSearch.Location = new System.Drawing.Point(1180, 2);
+            this.picSearch.Name = "picSearch";
+            this.picSearch.Size = new System.Drawing.Size(48, 40);
+            this.picSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picSearch.TabIndex = 6;
+            this.picSearch.TabStop = false;
+            this.picSearch.Click += new System.EventHandler(this.picSearch_Click);
+            // 
+            // labelWelcome3
+            // 
+            this.labelWelcome3.AutoSize = true;
+            this.labelWelcome3.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelWelcome3.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelWelcome3.Image = ((System.Drawing.Image)(resources.GetObject("labelWelcome3.Image")));
+            this.labelWelcome3.Location = new System.Drawing.Point(5, 300);
+            this.labelWelcome3.Name = "labelWelcome3";
+            this.labelWelcome3.Size = new System.Drawing.Size(1146, 70);
+            this.labelWelcome3.TabIndex = 37;
+            this.labelWelcome3.Text = "Здесь Вы сможете в любое время ознакомиться с интересующей Вас информацией, \r\nа п" +
+    "осле регистрации будет доступен весь функционал системы";
+            this.labelWelcome3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelWelcome2
+            // 
+            this.labelWelcome2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelWelcome2.AutoSize = true;
+            this.labelWelcome2.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelWelcome2.Font = new System.Drawing.Font("Times New Roman", 25.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelWelcome2.Image = ((System.Drawing.Image)(resources.GetObject("labelWelcome2.Image")));
+            this.labelWelcome2.Location = new System.Drawing.Point(125, 161);
+            this.labelWelcome2.Name = "labelWelcome2";
+            this.labelWelcome2.Size = new System.Drawing.Size(991, 49);
+            this.labelWelcome2.TabIndex = 36;
+            this.labelWelcome2.Text = " в информационную систему военкоматов России!";
+            this.labelWelcome2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelWelcome1
+            // 
+            this.labelWelcome1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelWelcome1.AutoSize = true;
+            this.labelWelcome1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelWelcome1.Font = new System.Drawing.Font("Times New Roman", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelWelcome1.Image = ((System.Drawing.Image)(resources.GetObject("labelWelcome1.Image")));
+            this.labelWelcome1.Location = new System.Drawing.Point(347, 80);
+            this.labelWelcome1.Name = "labelWelcome1";
+            this.labelWelcome1.Size = new System.Drawing.Size(546, 67);
+            this.labelWelcome1.TabIndex = 38;
+            this.labelWelcome1.Text = "Добро пожаловать\r\n";
+            this.labelWelcome1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // pictureEnrollment
             // 
             this.pictureEnrollment.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -1138,137 +1279,16 @@ namespace MeoIS
             this.pictureRegMedicalExamination.TabIndex = 33;
             this.pictureRegMedicalExamination.TabStop = false;
             // 
-            // labelLogIn
+            // pictureBox1
             // 
-            this.labelLogIn.AutoSize = true;
-            this.labelLogIn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.labelLogIn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelLogIn.Location = new System.Drawing.Point(11, 551);
-            this.labelLogIn.Name = "labelLogIn";
-            this.labelLogIn.Size = new System.Drawing.Size(50, 22);
-            this.labelLogIn.TabIndex = 35;
-            this.labelLogIn.Text = "Вход";
-            this.labelLogIn.Click += new System.EventHandler(this.labelLogIn_Click);
-            // 
-            // buttonFirstReg
-            // 
-            this.buttonFirstReg.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonFirstReg.Location = new System.Drawing.Point(508, 400);
-            this.buttonFirstReg.Name = "buttonFirstReg";
-            this.buttonFirstReg.Size = new System.Drawing.Size(265, 58);
-            this.buttonFirstReg.TabIndex = 40;
-            this.buttonFirstReg.Text = "Зарегистрироваться";
-            this.buttonFirstReg.UseVisualStyleBackColor = true;
-            this.buttonFirstReg.Click += new System.EventHandler(this.buttonFirstReg_Click);
-            // 
-            // labelLine
-            // 
-            this.labelLine.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelLine.AutoSize = true;
-            this.labelLine.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelLine.Font = new System.Drawing.Font("Times New Roman", 25.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelLine.Location = new System.Drawing.Point(133, 212);
-            this.labelLine.Name = "labelLine";
-            this.labelLine.Size = new System.Drawing.Size(880, 49);
-            this.labelLine.TabIndex = 39;
-            this.labelLine.Text = "_______________________________________";
-            this.labelLine.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelWelcome1
-            // 
-            this.labelWelcome1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelWelcome1.AutoSize = true;
-            this.labelWelcome1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelWelcome1.Font = new System.Drawing.Font("Times New Roman", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelWelcome1.Location = new System.Drawing.Point(340, 80);
-            this.labelWelcome1.Name = "labelWelcome1";
-            this.labelWelcome1.Size = new System.Drawing.Size(546, 67);
-            this.labelWelcome1.TabIndex = 38;
-            this.labelWelcome1.Text = "Добро пожаловать\r\n";
-            this.labelWelcome1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelWelcome3
-            // 
-            this.labelWelcome3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelWelcome3.AutoSize = true;
-            this.labelWelcome3.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelWelcome3.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelWelcome3.Location = new System.Drawing.Point(15, 300);
-            this.labelWelcome3.Name = "labelWelcome3";
-            this.labelWelcome3.Size = new System.Drawing.Size(1146, 70);
-            this.labelWelcome3.TabIndex = 37;
-            this.labelWelcome3.Text = "Здесь Вы сможете в любое время ознакомиться с интересующей Вас информацией, \r\nа п" +
-    "осле регистрации будет доступен весь функционал системы";
-            this.labelWelcome3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelWelcome2
-            // 
-            this.labelWelcome2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelWelcome2.AutoSize = true;
-            this.labelWelcome2.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelWelcome2.Font = new System.Drawing.Font("Times New Roman", 25.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelWelcome2.Location = new System.Drawing.Point(68, 161);
-            this.labelWelcome2.Name = "labelWelcome2";
-            this.labelWelcome2.Size = new System.Drawing.Size(991, 49);
-            this.labelWelcome2.TabIndex = 36;
-            this.labelWelcome2.Text = " в информационную систему военкоматов России!";
-            this.labelWelcome2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pictureCloseServises
-            // 
-            this.pictureCloseServises.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureCloseServises.Image = global::MeoIS.Properties.Resources.close;
-            this.pictureCloseServises.Location = new System.Drawing.Point(1154, 48);
-            this.pictureCloseServises.Name = "pictureCloseServises";
-            this.pictureCloseServises.Size = new System.Drawing.Size(53, 47);
-            this.pictureCloseServises.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureCloseServises.TabIndex = 34;
-            this.pictureCloseServises.TabStop = false;
-            this.pictureCloseServises.Click += new System.EventHandler(this.pictureCloseServises_Click);
-            // 
-            // pictureMedicalData
-            // 
-            this.pictureMedicalData.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureMedicalData.Image = global::MeoIS.Properties.Resources.medical_data;
-            this.pictureMedicalData.Location = new System.Drawing.Point(39, 168);
-            this.pictureMedicalData.Name = "pictureMedicalData";
-            this.pictureMedicalData.Size = new System.Drawing.Size(69, 64);
-            this.pictureMedicalData.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureMedicalData.TabIndex = 33;
-            this.pictureMedicalData.TabStop = false;
-            this.pictureMedicalData.Click += new System.EventHandler(this.pictureMedicalData_Click);
-            // 
-            // pictureOptions
-            // 
-            this.pictureOptions.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureOptions.Image = global::MeoIS.Properties.Resources.options;
-            this.pictureOptions.Location = new System.Drawing.Point(12, 495);
-            this.pictureOptions.Name = "pictureOptions";
-            this.pictureOptions.Size = new System.Drawing.Size(40, 40);
-            this.pictureOptions.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureOptions.TabIndex = 17;
-            this.pictureOptions.TabStop = false;
-            this.pictureOptions.Click += new System.EventHandler(this.pictureOptions_Click);
-            // 
-            // picSearch
-            // 
-            this.picSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picSearch.Image = global::MeoIS.Properties.Resources.search;
-            this.picSearch.Location = new System.Drawing.Point(1180, 2);
-            this.picSearch.Name = "picSearch";
-            this.picSearch.Size = new System.Drawing.Size(40, 40);
-            this.picSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picSearch.TabIndex = 6;
-            this.picSearch.TabStop = false;
-            this.picSearch.Click += new System.EventHandler(this.picSearch_Click);
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.pictureBox1.Image = global::MeoIS.Properties.Resources.fon;
+            this.pictureBox1.Location = new System.Drawing.Point(2, -1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1236, 608);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 33;
+            this.pictureBox1.TabStop = false;
             // 
             // MainForm
             // 
@@ -1277,6 +1297,7 @@ namespace MeoIS
             this.ClientSize = new System.Drawing.Size(1232, 603);
             this.Controls.Add(this.labelLogIn);
             this.Controls.Add(this.pictureCloseServises);
+            this.Controls.Add(this.labelLine);
             this.Controls.Add(this.pictureMedicalData);
             this.Controls.Add(this.buttonChangeUserAccont);
             this.Controls.Add(this.labelChangePass);
@@ -1295,11 +1316,11 @@ namespace MeoIS
             this.Controls.Add(this.labelWelcome3);
             this.Controls.Add(this.labelWelcome2);
             this.Controls.Add(this.labelWelcome1);
-            this.Controls.Add(this.labelLine);
             this.Controls.Add(this.tabControlMenuServices);
             this.Controls.Add(this.groupBoxServices);
             this.Controls.Add(this.dataGV);
             this.Controls.Add(this.buttonFirstReg);
+            this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -1330,13 +1351,15 @@ namespace MeoIS
             this.tableLayoutPanelServices3.PerformLayout();
             this.tableLayoutPanelServices2.ResumeLayout(false);
             this.tableLayoutPanelServices2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEnrollment)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureChangePlaceOfStudyOrWork)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureRegMedicalExamination)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureCloseServises)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.labelLine)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureMedicalData)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureOptions)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSearch)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEnrollment)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureChangePlaceOfStudyOrWork)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureRegMedicalExamination)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1412,7 +1435,6 @@ namespace MeoIS
         private System.Windows.Forms.PictureBox pictureCloseServises;
         private System.Windows.Forms.Label labelLogIn;
         private System.Windows.Forms.Button buttonFirstReg;
-        private System.Windows.Forms.Label labelLine;
         private System.Windows.Forms.Label labelWelcome1;
         private System.Windows.Forms.Label labelWelcome3;
         private System.Windows.Forms.Label labelWelcome2;
@@ -1429,6 +1451,8 @@ namespace MeoIS
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelServices1;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox labelLine;
     }
 }
 

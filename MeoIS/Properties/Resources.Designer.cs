@@ -73,6 +73,16 @@ namespace MeoIS.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap black {
+            get {
+                object obj = ResourceManager.GetObject("black", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap change {
             get {
                 object obj = ResourceManager.GetObject("change", resourceCulture);
@@ -103,6 +113,26 @@ namespace MeoIS.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap close_fon {
+            get {
+                object obj = ResourceManager.GetObject("close_fon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap close_fon1 {
+            get {
+                object obj = ResourceManager.GetObject("close_fon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Enrollment {
             get {
                 object obj = ResourceManager.GetObject("Enrollment", resourceCulture);
@@ -123,9 +153,29 @@ namespace MeoIS.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap medical_data {
+        internal static System.Drawing.Bitmap fon {
             get {
-                object obj = ResourceManager.GetObject("medical data", resourceCulture);
+                object obj = ResourceManager.GetObject("fon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fonLabelPic {
+            get {
+                object obj = ResourceManager.GetObject("fonLabelPic", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap medData {
+            get {
+                object obj = ResourceManager.GetObject("medData", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +193,9 @@ namespace MeoIS.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap options {
+        internal static System.Drawing.Bitmap options_fon {
             get {
-                object obj = ResourceManager.GetObject("options", resourceCulture);
+                object obj = ResourceManager.GetObject("options_fon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -156,6 +206,16 @@ namespace MeoIS.Properties {
         internal static System.Drawing.Bitmap pass_close {
             get {
                 object obj = ResourceManager.GetObject("pass_close", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pass_close_fon {
+            get {
+                object obj = ResourceManager.GetObject("pass_close_fon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -193,9 +253,29 @@ namespace MeoIS.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap search_fon {
+            get {
+                object obj = ResourceManager.GetObject("search_fon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap user {
             get {
                 object obj = ResourceManager.GetObject("user", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_fon {
+            get {
+                object obj = ResourceManager.GetObject("user_fon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -208,5 +208,32 @@
   <ItemGroup>
     <None Include="Resources\change.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fonLabelPic.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\black.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medData.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\options_fon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_fon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_fon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_fon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pass_close_fon.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
