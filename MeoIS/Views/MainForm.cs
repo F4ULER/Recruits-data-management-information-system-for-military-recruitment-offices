@@ -97,6 +97,7 @@ namespace MeoIS
             {
                 MessageBox.Show("Не найдено ни одной записи");
                 pictureCloseServises.Visible = false;
+                groupBoxServices.Visible = true;
             }
 
             if (dataGV.Visible == true || tabControlMenuServices.Visible == true) { pictureCloseServises.Visible = true; }
@@ -161,10 +162,10 @@ namespace MeoIS
         {
             if(tBEnlistmentOfficeWhereRegistered.Text != "" && tBNewAddress.Text != "")
             {
-                string[] city = tBNewAddress.Text.Split(new char[] { ',' });
+                string[] district = tBNewAddress.Text.Split(new char[] { ',' });
 
                 Military_registration_and_enlistment_office Enlistment_Office = new Military_registration_and_enlistment_office();
-                if (Enlistment_Office.change_military_registration_and_enlistment_office(Transfer.Doc_num, city[0]) == true)
+                if (Enlistment_Office.change_military_registration_and_enlistment_office(Transfer.Doc_num, district[0]) == true)
                 {
                     labelRectal.Text = "Военкомат города: " + Transfer.district;
                     tBNewAddress.Text = "";

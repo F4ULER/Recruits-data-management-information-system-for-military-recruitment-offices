@@ -26,7 +26,7 @@ namespace MeoIS
         {
             DataBaseConnect dataBase = new DataBaseConnect();
             List<User> user = new List<User>();
-            user = dataBase.sending_command_with_output_to_list("SELECT `document_number`, `password`, `last_name`, `name`, `patronymic`, `date_of_birth`, `address`, `category`, `gender`, `city`, `phone_number`, `email`, `user_status` FROM users");
+            user = dataBase.sending_command_with_output_to_list("SELECT `document_number`, `password`, `last_name`, `name`, `patronymic`, `date_of_birth`, `address`, `category`, `gender`, `district`, `phone_number`, `email`, `user_status` FROM users");
 
             //MessageBox.Show(user[0].DocumentNumber);
             addColumnsToTable();
@@ -45,7 +45,7 @@ namespace MeoIS
         public void tryStatAge ()
         {
             //string message = "SELECT `document_number` AS 'Номер документа', `password` AS 'Пароль', `last_name` AS 'Фамилия', `name` AS 'Имя', `patronymic` AS 'Отчество', `date_of_birth` AS 'Дата рождения', `address` AS 'Фактический адрес', `category` AS 'Категория годности'," +
-            //    " `gender` AS 'Пол', `city` AS 'Город', `phone_number` AS 'Номер телефона', `email` AS 'Электронная почта', `user_status` AS 'Статус' FROM `users` WHERE 1=1";
+            //    " `gender` AS 'Пол', `district` AS 'Город', `phone_number` AS 'Номер телефона', `email` AS 'Электронная почта', `user_status` AS 'Статус' FROM `users` WHERE 1=1";
 
             //DataTable tableAge = new DataTable(), tableAll = DataBase.sending_command_with_output_to_table(message);
 
@@ -88,7 +88,7 @@ namespace MeoIS
                 new DataGridViewTextBoxColumn() { Name = "clmAddres", HeaderText = "Адрес", DataPropertyName = "Addres" },
                 new DataGridViewTextBoxColumn() { Name = "clmcategory", HeaderText = "Категория", DataPropertyName = "category" },
                 new DataGridViewTextBoxColumn() { Name = "clmgender", HeaderText = "Пол", DataPropertyName = "gender" },
-                new DataGridViewTextBoxColumn() { Name = "clmcity", HeaderText = "Военкомат", DataPropertyName = "city" },
+                new DataGridViewTextBoxColumn() { Name = "clmdistrict", HeaderText = "Военкомат", DataPropertyName = "district" },
                 new DataGridViewTextBoxColumn() { Name = "clmpPhoneNumber", HeaderText = "Номер телефона", DataPropertyName = "PhoneNumber" },
                 new DataGridViewTextBoxColumn() { Name = "clmemail", HeaderText = "Электронная почта", DataPropertyName = "email" },
                 new DataGridViewTextBoxColumn() { Name = "clmuserStatus", HeaderText = "Статус пользоваетля", DataPropertyName = "userStatus" }

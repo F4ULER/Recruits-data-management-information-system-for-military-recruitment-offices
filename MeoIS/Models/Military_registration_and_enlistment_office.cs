@@ -38,7 +38,7 @@ namespace MeoIS
 
             if (result == DialogResult.Yes)
             {
-                string message = "UPDATE `users` SET `city` = '" + value + "' WHERE `document_number`= " + documentNumber;
+                string message = "UPDATE `users` SET `district` = '" + value + "' WHERE `document_number`= " + documentNumber;
 
                 if (DataBase.sending_command(message) == true)
                 {
@@ -75,7 +75,7 @@ namespace MeoIS
 
             string[] changeDate = date.Split(new char[] { '.' });
             string dateForDB = changeDate[2] + "-" + changeDate[1] + "-" + changeDate[0] + " " + time;
-            string message = "INSERT INTO `medical_checkup`(`document_number`, `city`, `date`) VALUES " +
+            string message = "INSERT INTO `medical_checkup`(`document_number`, `district`, `date`) VALUES " +
                     "('" + docNum + "', '" + district + "', '" + dateForDB + "');";
 
             if (check_Date_Medical_Data(dateForDB, date) == true)

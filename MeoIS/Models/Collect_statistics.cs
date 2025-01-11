@@ -71,15 +71,15 @@ namespace MeoIS
         }
 
         //вычисление статисики по городу
-        public void statistics_By_City(List<User> user, bool expOrStat)
+        public void statistics_By_District(List<User> user, bool expOrStat)
         {
-            List<string> city = new List<string>();
+            List<string> district = new List<string>();
             
             foreach (User u in user)
             {
-                city.Add(u.City);
+                district.Add(u.District);
             }
-            statistics_By_Item(city, "Статистика по количеству призывников", expOrStat);
+            statistics_By_Item(district, "Статистика по количеству призывников", expOrStat);
         }
 
         //вычисление статисики по категории годности

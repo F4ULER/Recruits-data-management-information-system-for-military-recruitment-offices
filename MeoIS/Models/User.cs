@@ -5,7 +5,7 @@ namespace MeoIS
     class User
     {
         //класс для вывода информации из таблицы users в List
-        public User(string documentNumber, string password, string lastName, string name, string patronymic, DateTime dateOfBirth, string addres, string category, string gender, string city, string phoneNumber, string email, string userStatus)
+        public User(string documentNumber, string password, string lastName, string name, string patronymic, DateTime dateOfBirth, string addres, string category, string gender, string district, string phoneNumber, string email, string userStatus)
         {
             DocumentNumber = documentNumber;
             Password = password;
@@ -16,7 +16,7 @@ namespace MeoIS
             Address = addres;
             Category = category;
             Gender = gender;
-            City = city;
+            District = district;
             PhoneNumber = phoneNumber;
             Email = email;
             UserStatus = userStatus;
@@ -32,7 +32,7 @@ namespace MeoIS
         public string Address { get; set; }
         public string Category { get; set; }
         public string Gender { get; set; }
-        public string City { get; set; }
+        public string District { get; set; }
         public string PhoneNumber { get; set; }
         public string Email { get; set; }
         public string UserStatus { get; set; }

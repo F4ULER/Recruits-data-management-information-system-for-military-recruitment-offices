@@ -65,12 +65,12 @@ namespace MeoIS
         }
 
         // добавление записи о пользователе
-        public bool addUser(string documentNumber, string pass, string lastName, string name, string patronymic, string age, string category, string gender, string city, string phone, string email)
+        public bool addUser(string documentNumber, string pass, string lastName, string name, string patronymic, string age, string category, string gender, string district, string phone, string email)
         {
             string message = "INSERT INTO `users` (`document_number`, `password`, `last_name`, `name`, " +
-                "`patronymic`, `age`, `category`, `gender`, `city`, `phone_number`, `email`, `user_status`,`address`) VALUES " +
+                "`patronymic`, `age`, `category`, `gender`, `district`, `phone_number`, `email`, `user_status`,`address`) VALUES " +
                 "('" + documentNumber + "', '" + pass + "', '" + lastName + "', '" + name + "', '" + patronymic + "', '" + age +
-                "', '" + category + "','" + gender + "','" + city + "', '" + phone + "', '" + email + "', 'user', '');";
+                "', '" + category + "','" + gender + "','" + district + "', '" + phone + "', '" + email + "', 'user', '');";
             
             if (DataBase.sending_command(message) == true)
             {

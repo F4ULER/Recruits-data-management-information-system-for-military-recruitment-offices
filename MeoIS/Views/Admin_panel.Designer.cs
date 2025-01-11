@@ -38,7 +38,7 @@ namespace MeoIS
             this.rBSearchLit = new System.Windows.Forms.RadioButton();
             this.rBSearchMedData = new System.Windows.Forms.RadioButton();
             this.rBSearchPhone = new System.Windows.Forms.RadioButton();
-            this.rBSearchCity = new System.Windows.Forms.RadioButton();
+            this.rBSearchDistrict = new System.Windows.Forms.RadioButton();
             this.rBSearchName = new System.Windows.Forms.RadioButton();
             this.rBSearchDocNum = new System.Windows.Forms.RadioButton();
             this.groupBoxServices = new System.Windows.Forms.GroupBox();
@@ -48,7 +48,7 @@ namespace MeoIS
             this.tabControlMenuFunctions = new System.Windows.Forms.TabControl();
             this.tPAdd = new System.Windows.Forms.TabPage();
             this.label13 = new System.Windows.Forms.Label();
-            this.tBCity = new System.Windows.Forms.TextBox();
+            this.tBDistrict = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -126,7 +126,7 @@ namespace MeoIS
             this.tPStat = new System.Windows.Forms.TabPage();
             this.rBStatCategory = new System.Windows.Forms.RadioButton();
             this.buttonShowStat = new System.Windows.Forms.Button();
-            this.rBStatCity = new System.Windows.Forms.RadioButton();
+            this.rBStatDistrict = new System.Windows.Forms.RadioButton();
             this.rBStatGender = new System.Windows.Forms.RadioButton();
             this.rBStatAge = new System.Windows.Forms.RadioButton();
             this.label22 = new System.Windows.Forms.Label();
@@ -139,8 +139,8 @@ namespace MeoIS
             this.buttonExport = new System.Windows.Forms.Button();
             this.tBExport = new System.Windows.Forms.TextBox();
             this.rBExportCategory = new System.Windows.Forms.RadioButton();
-            this.rBExportCity = new System.Windows.Forms.RadioButton();
-            this.rBExpTXTCity = new System.Windows.Forms.RadioButton();
+            this.rBExportDistrict = new System.Windows.Forms.RadioButton();
+            this.rBExpTXTDistrict = new System.Windows.Forms.RadioButton();
             this.rBExpTXTGender = new System.Windows.Forms.RadioButton();
             this.rBExpTXTAge = new System.Windows.Forms.RadioButton();
             this.label24 = new System.Windows.Forms.Label();
@@ -217,7 +217,7 @@ namespace MeoIS
             this.tableLayoutPanelFilter.Controls.Add(this.rBSearchLit, 0, 5);
             this.tableLayoutPanelFilter.Controls.Add(this.rBSearchMedData, 0, 4);
             this.tableLayoutPanelFilter.Controls.Add(this.rBSearchPhone, 0, 3);
-            this.tableLayoutPanelFilter.Controls.Add(this.rBSearchCity, 0, 2);
+            this.tableLayoutPanelFilter.Controls.Add(this.rBSearchDistrict, 0, 2);
             this.tableLayoutPanelFilter.Controls.Add(this.rBSearchName, 0, 1);
             this.tableLayoutPanelFilter.Controls.Add(this.rBSearchDocNum, 0, 0);
             this.tableLayoutPanelFilter.Location = new System.Drawing.Point(810, 64);
@@ -277,16 +277,16 @@ namespace MeoIS
             this.rBSearchPhone.Text = "По номеру телефона";
             this.rBSearchPhone.UseVisualStyleBackColor = true;
             // 
-            // rBSearchCity
+            // rBSearchDistrict
             // 
-            this.rBSearchCity.AutoSize = true;
-            this.rBSearchCity.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rBSearchCity.Location = new System.Drawing.Point(3, 105);
-            this.rBSearchCity.Name = "rBSearchCity";
-            this.rBSearchCity.Size = new System.Drawing.Size(157, 26);
-            this.rBSearchCity.TabIndex = 2;
-            this.rBSearchCity.Text = "По военкомату";
-            this.rBSearchCity.UseVisualStyleBackColor = true;
+            this.rBSearchDistrict.AutoSize = true;
+            this.rBSearchDistrict.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rBSearchDistrict.Location = new System.Drawing.Point(3, 105);
+            this.rBSearchDistrict.Name = "rBSearchDistrict";
+            this.rBSearchDistrict.Size = new System.Drawing.Size(157, 26);
+            this.rBSearchDistrict.TabIndex = 2;
+            this.rBSearchDistrict.Text = "По военкомату";
+            this.rBSearchDistrict.UseVisualStyleBackColor = true;
             // 
             // rBSearchName
             // 
@@ -365,7 +365,7 @@ namespace MeoIS
             this.tabControlMenuFunctions.Controls.Add(this.tPAdd);
             this.tabControlMenuFunctions.Controls.Add(this.tPDelete);
             this.tabControlMenuFunctions.Controls.Add(this.tPChange);
-            this.tabControlMenuFunctions.Location = new System.Drawing.Point(111, 22);
+            this.tabControlMenuFunctions.Location = new System.Drawing.Point(130, 60);
             this.tabControlMenuFunctions.Name = "tabControlMenuFunctions";
             this.tabControlMenuFunctions.SelectedIndex = 0;
             this.tabControlMenuFunctions.Size = new System.Drawing.Size(890, 549);
@@ -374,7 +374,7 @@ namespace MeoIS
             // tPAdd
             // 
             this.tPAdd.Controls.Add(this.label13);
-            this.tPAdd.Controls.Add(this.tBCity);
+            this.tPAdd.Controls.Add(this.tBDistrict);
             this.tPAdd.Controls.Add(this.label12);
             this.tPAdd.Controls.Add(this.label11);
             this.tPAdd.Controls.Add(this.label10);
@@ -412,18 +412,18 @@ namespace MeoIS
             this.label13.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label13.Location = new System.Drawing.Point(526, 357);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(59, 22);
+            this.label13.Size = new System.Drawing.Size(62, 22);
             this.label13.TabIndex = 2837;
-            this.label13.Text = "Город";
+            this.label13.Text = "Район";
             // 
-            // tBCity
+            // tBDistrict
             // 
-            this.tBCity.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tBCity.Location = new System.Drawing.Point(658, 350);
-            this.tBCity.Multiline = true;
-            this.tBCity.Name = "tBCity";
-            this.tBCity.Size = new System.Drawing.Size(181, 38);
-            this.tBCity.TabIndex = 2836;
+            this.tBDistrict.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tBDistrict.Location = new System.Drawing.Point(658, 350);
+            this.tBDistrict.Multiline = true;
+            this.tBDistrict.Name = "tBDistrict";
+            this.tBDistrict.Size = new System.Drawing.Size(181, 38);
+            this.tBDistrict.TabIndex = 2836;
             // 
             // label12
             // 
@@ -952,7 +952,7 @@ namespace MeoIS
             // 
             this.tabControlLit.Controls.Add(this.tPAddLit);
             this.tabControlLit.Controls.Add(this.tPDeleteLit);
-            this.tabControlLit.Location = new System.Drawing.Point(101, 27);
+            this.tabControlLit.Location = new System.Drawing.Point(130, 60);
             this.tabControlLit.Name = "tabControlLit";
             this.tabControlLit.SelectedIndex = 0;
             this.tabControlLit.Size = new System.Drawing.Size(890, 453);
@@ -1226,7 +1226,7 @@ namespace MeoIS
             // 
             this.tabControlExportAndStatistics.Controls.Add(this.tPStat);
             this.tabControlExportAndStatistics.Controls.Add(this.tPExport);
-            this.tabControlExportAndStatistics.Location = new System.Drawing.Point(161, 18);
+            this.tabControlExportAndStatistics.Location = new System.Drawing.Point(290, 80);
             this.tabControlExportAndStatistics.Name = "tabControlExportAndStatistics";
             this.tabControlExportAndStatistics.SelectedIndex = 0;
             this.tabControlExportAndStatistics.Size = new System.Drawing.Size(552, 370);
@@ -1236,7 +1236,7 @@ namespace MeoIS
             // 
             this.tPStat.Controls.Add(this.rBStatCategory);
             this.tPStat.Controls.Add(this.buttonShowStat);
-            this.tPStat.Controls.Add(this.rBStatCity);
+            this.tPStat.Controls.Add(this.rBStatDistrict);
             this.tPStat.Controls.Add(this.rBStatGender);
             this.tPStat.Controls.Add(this.rBStatAge);
             this.tPStat.Controls.Add(this.label22);
@@ -1274,19 +1274,19 @@ namespace MeoIS
             this.buttonShowStat.UseVisualStyleBackColor = true;
             this.buttonShowStat.Click += new System.EventHandler(this.buttonShowStat_Click);
             // 
-            // rBStatCity
+            // rBStatDistrict
             // 
-            this.rBStatCity.AutoSize = true;
-            this.rBStatCity.Checked = true;
-            this.rBStatCity.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rBStatCity.Location = new System.Drawing.Point(108, 165);
-            this.rBStatCity.Name = "rBStatCity";
-            this.rBStatCity.Size = new System.Drawing.Size(92, 31);
-            this.rBStatCity.TabIndex = 15;
-            this.rBStatCity.TabStop = true;
-            this.rBStatCity.Text = "Город";
-            this.rBStatCity.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.rBStatCity.UseVisualStyleBackColor = true;
+            this.rBStatDistrict.AutoSize = true;
+            this.rBStatDistrict.Checked = true;
+            this.rBStatDistrict.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rBStatDistrict.Location = new System.Drawing.Point(108, 165);
+            this.rBStatDistrict.Name = "rBStatDistrict";
+            this.rBStatDistrict.Size = new System.Drawing.Size(96, 31);
+            this.rBStatDistrict.TabIndex = 15;
+            this.rBStatDistrict.TabStop = true;
+            this.rBStatDistrict.Text = "Район";
+            this.rBStatDistrict.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rBStatDistrict.UseVisualStyleBackColor = true;
             // 
             // rBStatGender
             // 
@@ -1345,8 +1345,8 @@ namespace MeoIS
             this.tPExport.Controls.Add(this.buttonExport);
             this.tPExport.Controls.Add(this.tBExport);
             this.tPExport.Controls.Add(this.rBExportCategory);
-            this.tPExport.Controls.Add(this.rBExportCity);
-            this.tPExport.Controls.Add(this.rBExpTXTCity);
+            this.tPExport.Controls.Add(this.rBExportDistrict);
+            this.tPExport.Controls.Add(this.rBExpTXTDistrict);
             this.tPExport.Controls.Add(this.rBExpTXTGender);
             this.tPExport.Controls.Add(this.rBExpTXTAge);
             this.tPExport.Controls.Add(this.label24);
@@ -1392,9 +1392,9 @@ namespace MeoIS
             this.label33.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label33.Location = new System.Drawing.Point(20, 138);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(298, 22);
+            this.label33.Size = new System.Drawing.Size(302, 22);
             this.label33.TabIndex = 38;
-            this.label33.Text = "(впишите в текстовое поле город)";
+            this.label33.Text = "(впишите в текстовое поле район)";
             // 
             // rBExportAll
             // 
@@ -1442,33 +1442,33 @@ namespace MeoIS
             this.rBExportCategory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.rBExportCategory.UseVisualStyleBackColor = true;
             // 
-            // rBExportCity
+            // rBExportDistrict
             // 
-            this.rBExportCity.AutoSize = true;
-            this.rBExportCity.Checked = true;
-            this.rBExportCity.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rBExportCity.Location = new System.Drawing.Point(42, 107);
-            this.rBExportCity.Name = "rBExportCity";
-            this.rBExportCity.Size = new System.Drawing.Size(92, 31);
-            this.rBExportCity.TabIndex = 19;
-            this.rBExportCity.TabStop = true;
-            this.rBExportCity.Text = "Город";
-            this.rBExportCity.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.rBExportCity.UseVisualStyleBackColor = true;
+            this.rBExportDistrict.AutoSize = true;
+            this.rBExportDistrict.Checked = true;
+            this.rBExportDistrict.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rBExportDistrict.Location = new System.Drawing.Point(42, 107);
+            this.rBExportDistrict.Name = "rBExportDistrict";
+            this.rBExportDistrict.Size = new System.Drawing.Size(96, 31);
+            this.rBExportDistrict.TabIndex = 19;
+            this.rBExportDistrict.TabStop = true;
+            this.rBExportDistrict.Text = "Район";
+            this.rBExportDistrict.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rBExportDistrict.UseVisualStyleBackColor = true;
             // 
-            // rBExpTXTCity
+            // rBExpTXTDistrict
             // 
-            this.rBExpTXTCity.AutoSize = true;
-            this.rBExpTXTCity.Checked = true;
-            this.rBExpTXTCity.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rBExpTXTCity.Location = new System.Drawing.Point(374, 121);
-            this.rBExpTXTCity.Name = "rBExpTXTCity";
-            this.rBExpTXTCity.Size = new System.Drawing.Size(92, 31);
-            this.rBExpTXTCity.TabIndex = 18;
-            this.rBExpTXTCity.TabStop = true;
-            this.rBExpTXTCity.Text = "Город";
-            this.rBExpTXTCity.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.rBExpTXTCity.UseVisualStyleBackColor = true;
+            this.rBExpTXTDistrict.AutoSize = true;
+            this.rBExpTXTDistrict.Checked = true;
+            this.rBExpTXTDistrict.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rBExpTXTDistrict.Location = new System.Drawing.Point(374, 121);
+            this.rBExpTXTDistrict.Name = "rBExpTXTDistrict";
+            this.rBExpTXTDistrict.Size = new System.Drawing.Size(96, 31);
+            this.rBExpTXTDistrict.TabIndex = 18;
+            this.rBExpTXTDistrict.TabStop = true;
+            this.rBExpTXTDistrict.Text = "Район";
+            this.rBExpTXTDistrict.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rBExpTXTDistrict.UseVisualStyleBackColor = true;
             // 
             // rBExpTXTGender
             // 
@@ -1593,7 +1593,6 @@ namespace MeoIS
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1093, 603);
-            this.Controls.Add(this.groupBoxServices);
             this.Controls.Add(this.tableLayoutPanelFilter);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureExport);
@@ -1605,10 +1604,11 @@ namespace MeoIS
             this.Controls.Add(this.label35);
             this.Controls.Add(this.labelExport);
             this.Controls.Add(this.tabControlExportAndStatistics);
-            this.Controls.Add(this.tabControlLit);
             this.Controls.Add(this.panelNewAdmin);
             this.Controls.Add(this.tabControlMenuFunctions);
             this.Controls.Add(this.dataGV);
+            this.Controls.Add(this.tabControlLit);
+            this.Controls.Add(this.groupBoxServices);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Admin_panel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -1662,7 +1662,7 @@ namespace MeoIS
         private System.Windows.Forms.RadioButton rBSearchLit;
         private System.Windows.Forms.RadioButton rBSearchMedData;
         private System.Windows.Forms.RadioButton rBSearchPhone;
-        private System.Windows.Forms.RadioButton rBSearchCity;
+        private System.Windows.Forms.RadioButton rBSearchDistrict;
         private System.Windows.Forms.RadioButton rBSearchName;
         private System.Windows.Forms.RadioButton rBSearchDocNum;
         private System.Windows.Forms.PictureBox picSearch;
@@ -1703,7 +1703,7 @@ namespace MeoIS
         private System.Windows.Forms.TextBox tBDocNumDelete;
         private System.Windows.Forms.Button buttonDeleteUser;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox tBCity;
+        private System.Windows.Forms.TextBox tBDistrict;
         private System.Windows.Forms.TabPage tPChange;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelChangeUser;
         private System.Windows.Forms.RadioButton rBCategoryChangeUser;
@@ -1752,7 +1752,7 @@ namespace MeoIS
         private System.Windows.Forms.TabControl tabControlExportAndStatistics;
         private System.Windows.Forms.TabPage tPStat;
         private System.Windows.Forms.Button buttonShowStat;
-        private System.Windows.Forms.RadioButton rBStatCity;
+        private System.Windows.Forms.RadioButton rBStatDistrict;
         private System.Windows.Forms.RadioButton rBStatGender;
         private System.Windows.Forms.RadioButton rBStatAge;
         private System.Windows.Forms.Label label22;
@@ -1761,8 +1761,8 @@ namespace MeoIS
         private System.Windows.Forms.Button buttonExport;
         private System.Windows.Forms.TextBox tBExport;
         private System.Windows.Forms.RadioButton rBExportCategory;
-        private System.Windows.Forms.RadioButton rBExportCity;
-        private System.Windows.Forms.RadioButton rBExpTXTCity;
+        private System.Windows.Forms.RadioButton rBExportDistrict;
+        private System.Windows.Forms.RadioButton rBExpTXTDistrict;
         private System.Windows.Forms.RadioButton rBExpTXTGender;
         private System.Windows.Forms.RadioButton rBExpTXTAge;
         private System.Windows.Forms.Label label24;

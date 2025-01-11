@@ -87,7 +87,7 @@ namespace MeoIS
                            reader.GetString(reader.GetOrdinal("address")),
                            reader.GetString(reader.GetOrdinal("category")),
                            reader.GetString(reader.GetOrdinal("gender")),
-                           reader.GetString(reader.GetOrdinal("city")),
+                           reader.GetString(reader.GetOrdinal("district")),
                            reader.GetString(reader.GetOrdinal("phone_number")),
                            reader.GetString(reader.GetOrdinal("email")),
                            reader.GetString(reader.GetOrdinal("user_status"))

@@ -56,9 +56,9 @@ namespace MeoIS
                             break;
                     }
                 }
-                else if (rBSearchCity.Checked == true)
+                else if (rBSearchDistrict.Checked == true)
                 {
-                    table = search.searchCity(tBSearch.Text);
+                    table = search.searchDistrict(tBSearch.Text);
                 }
                 else if (rBSearchPhone.Checked == true)
                 {
@@ -133,14 +133,14 @@ namespace MeoIS
             tBPatronymic.Text != "" &&
             tBAge.Text != "" &&
             tBCategory.Text != "" &&
-            tBCity.Text != "" &&
+            tBDistrict.Text != "" &&
             tBPhone.Text != "" &&
             tBEmail.Text != "")
             {
                 User_data user_Data = new User_data();
                 string gender = "";
                 if (rBM.Checked == true) { gender = "M"; } else { gender = "Ж"; };
-                user_Data.addUser(tBDocNumber.Text, tBPass.Text, tBLastName.Text, tBNameUser.Text, tBPatronymic.Text, tBAge.Text, tBCategory.Text, gender, tBCity.Text, tBPhone.Text, tBEmail.Text);
+                user_Data.addUser(tBDocNumber.Text, tBPass.Text, tBLastName.Text, tBNameUser.Text, tBPatronymic.Text, tBAge.Text, tBCategory.Text, gender, tBDistrict.Text, tBPhone.Text, tBEmail.Text);
 
                 tBDocNumber.Text = "";
                 tBPass.Text = "";
@@ -149,7 +149,7 @@ namespace MeoIS
                 tBPatronymic.Text = "";
                 tBAge.Text = "";
                 tBCategory.Text = "";
-                tBCity.Text = "";
+                tBDistrict.Text = "";
                 tBPhone.Text = "";
                 tBEmail.Text = "";
             }
@@ -371,9 +371,9 @@ namespace MeoIS
             {
                 statistics.statistics_By_Gender(search.searchAllUsersToList(), true); ;
             }
-            else if (rBStatCity.Checked == true)
+            else if (rBStatDistrict.Checked == true)
             {
-                statistics.statistics_By_City(search.searchAllUsersToList(), true);
+                statistics.statistics_By_District(search.searchAllUsersToList(), true);
             }
             else if (rBStatAge.Checked == true)
             {
@@ -392,17 +392,17 @@ namespace MeoIS
             Advanced_search search = new Advanced_search();
             Collect_statistics statistics = new Collect_statistics();
 
-            if (rBExportCity.Checked == true)
+            if (rBExportDistrict.Checked == true)
             {
-                statistics.export_to_Excel(search.searchCity(tBExport.Text), "Данные призывников в городе " + tBExport.Text);
+                statistics.export_to_Excel(search.searchDistrict(tBExport.Text), "Данные призывников в городе " + tBExport.Text);
             }
             else if (rBExportCategory.Checked == true)
             {
                 statistics.export_to_Excel(search.searchCategory(tBExport.Text), "Данные призывников с категорией " + tBExport.Text);
             }
-            else if (rBExpTXTCity.Checked == true)
+            else if (rBExpTXTDistrict.Checked == true)
             {
-                statistics.statistics_By_City(search.searchAllUsersToList(), false);
+                statistics.statistics_By_District(search.searchAllUsersToList(), false);
             }
             else if (rBExpTXTAge.Checked == true)
             {
