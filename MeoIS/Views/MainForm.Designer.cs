@@ -43,6 +43,7 @@ namespace MeoIS
             this.label2 = new System.Windows.Forms.Label();
             this.tBEnlistmentOfficeWhereRegistered = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tPMed = new System.Windows.Forms.TabPage();
             this.labelPreviousWeek = new System.Windows.Forms.Label();
             this.labelNextWeek = new System.Windows.Forms.Label();
@@ -61,6 +62,7 @@ namespace MeoIS
             this.labelRecordingCompleteFriday = new System.Windows.Forms.Label();
             this.cBFriday = new System.Windows.Forms.ComboBox();
             this.labelMonday = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.tPChange = new System.Windows.Forms.TabPage();
             this.labelWorkOrganizationAddress = new System.Windows.Forms.Label();
             this.tBWorkOrganizationAddress = new System.Windows.Forms.TextBox();
@@ -82,6 +84,7 @@ namespace MeoIS
             this.rBEducation = new System.Windows.Forms.RadioButton();
             this.rBWork = new System.Windows.Forms.RadioButton();
             this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBoxServices = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanelServices = new System.Windows.Forms.TableLayoutPanel();
@@ -94,6 +97,10 @@ namespace MeoIS
             this.tableLayoutPanelServices2 = new System.Windows.Forms.TableLayoutPanel();
             this.label9 = new System.Windows.Forms.Label();
             this.labelSignUpForMedicalExamination = new System.Windows.Forms.Label();
+            this.pictureEnrollment = new System.Windows.Forms.PictureBox();
+            this.pictureChangePlaceOfStudyOrWork = new System.Windows.Forms.PictureBox();
+            this.pictureRegMedicalExamination = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.buttonFirstReg = new System.Windows.Forms.Button();
             this.labelLogIn = new System.Windows.Forms.Label();
             this.pictureCloseServises = new System.Windows.Forms.PictureBox();
@@ -112,32 +119,33 @@ namespace MeoIS
             this.labelWelcome3 = new System.Windows.Forms.Label();
             this.labelWelcome2 = new System.Windows.Forms.Label();
             this.labelWelcome1 = new System.Windows.Forms.Label();
-            this.pictureEnrollment = new System.Windows.Forms.PictureBox();
-            this.pictureChangePlaceOfStudyOrWork = new System.Windows.Forms.PictureBox();
-            this.pictureRegMedicalExamination = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGV)).BeginInit();
             this.tabControlMenuServices.SuspendLayout();
             this.tPReg.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tPMed.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.Wednesday.SuspendLayout();
             this.monday.SuspendLayout();
             this.Friday.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.tPChange.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.groupBoxServices.SuspendLayout();
             this.tableLayoutPanelServices.SuspendLayout();
             this.tableLayoutPanelServices1.SuspendLayout();
             this.tableLayoutPanelServices3.SuspendLayout();
             this.tableLayoutPanelServices2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEnrollment)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureChangePlaceOfStudyOrWork)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureRegMedicalExamination)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureCloseServises)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.labelLine)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureMedicalData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureOptions)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSearch)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEnrollment)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureChangePlaceOfStudyOrWork)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureRegMedicalExamination)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -213,6 +221,7 @@ namespace MeoIS
             this.tPReg.Controls.Add(this.label2);
             this.tPReg.Controls.Add(this.tBEnlistmentOfficeWhereRegistered);
             this.tPReg.Controls.Add(this.label1);
+            this.tPReg.Controls.Add(this.pictureBox2);
             this.tPReg.Location = new System.Drawing.Point(4, 25);
             this.tPReg.Name = "tPReg";
             this.tPReg.Padding = new System.Windows.Forms.Padding(3);
@@ -224,6 +233,7 @@ namespace MeoIS
             // buttonOldEnlistmentOffice
             // 
             this.buttonOldEnlistmentOffice.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonOldEnlistmentOffice.Image = ((System.Drawing.Image)(resources.GetObject("buttonOldEnlistmentOffice.Image")));
             this.buttonOldEnlistmentOffice.Location = new System.Drawing.Point(298, 261);
             this.buttonOldEnlistmentOffice.Name = "buttonOldEnlistmentOffice";
             this.buttonOldEnlistmentOffice.Size = new System.Drawing.Size(165, 54);
@@ -236,6 +246,7 @@ namespace MeoIS
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Image = ((System.Drawing.Image)(resources.GetObject("label3.Image")));
             this.label3.Location = new System.Drawing.Point(396, 139);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(351, 22);
@@ -255,6 +266,7 @@ namespace MeoIS
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Image = ((System.Drawing.Image)(resources.GetObject("label2.Image")));
             this.label2.Location = new System.Drawing.Point(28, 137);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(303, 44);
@@ -274,11 +286,23 @@ namespace MeoIS
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Image = ((System.Drawing.Image)(resources.GetObject("label1.Image")));
             this.label1.Location = new System.Drawing.Point(173, 48);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(513, 43);
             this.label1.TabIndex = 0;
             this.label1.Text = "Постановка и снятие с учета";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.pictureBox2.Image = global::MeoIS.Properties.Resources.fon;
+            this.pictureBox2.Location = new System.Drawing.Point(-4, -4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(837, 484);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 33;
+            this.pictureBox2.TabStop = false;
             // 
             // tPMed
             // 
@@ -287,6 +311,7 @@ namespace MeoIS
             this.tPMed.Controls.Add(this.buttonMed);
             this.tPMed.Controls.Add(this.label4);
             this.tPMed.Controls.Add(this.tableLayoutPanel1);
+            this.tPMed.Controls.Add(this.pictureBox3);
             this.tPMed.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tPMed.Location = new System.Drawing.Point(4, 25);
             this.tPMed.Name = "tPMed";
@@ -301,6 +326,7 @@ namespace MeoIS
             this.labelPreviousWeek.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelPreviousWeek.AutoSize = true;
             this.labelPreviousWeek.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelPreviousWeek.Image = global::MeoIS.Properties.Resources.fonLabelPic;
             this.labelPreviousWeek.Location = new System.Drawing.Point(4, 83);
             this.labelPreviousWeek.Name = "labelPreviousWeek";
             this.labelPreviousWeek.Size = new System.Drawing.Size(195, 21);
@@ -313,6 +339,7 @@ namespace MeoIS
             this.labelNextWeek.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelNextWeek.AutoSize = true;
             this.labelNextWeek.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelNextWeek.Image = global::MeoIS.Properties.Resources.fonLabelPic;
             this.labelNextWeek.Location = new System.Drawing.Point(489, 83);
             this.labelNextWeek.Name = "labelNextWeek";
             this.labelNextWeek.Size = new System.Drawing.Size(171, 21);
@@ -323,6 +350,7 @@ namespace MeoIS
             // buttonMed
             // 
             this.buttonMed.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonMed.Image = global::MeoIS.Properties.Resources.fonPanel1;
             this.buttonMed.Location = new System.Drawing.Point(282, 409);
             this.buttonMed.Name = "buttonMed";
             this.buttonMed.Size = new System.Drawing.Size(165, 54);
@@ -335,6 +363,7 @@ namespace MeoIS
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Image = global::MeoIS.Properties.Resources.fonLabelPic;
             this.label4.Location = new System.Drawing.Point(68, 20);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(558, 43);
@@ -343,6 +372,7 @@ namespace MeoIS
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.BackgroundImage = global::MeoIS.Properties.Resources.fonLabelPic;
             this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.OutsetPartial;
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33332F));
@@ -603,6 +633,17 @@ namespace MeoIS
             this.labelMonday.TabIndex = 3;
             this.labelMonday.Text = "Понедельник\r\n";
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.pictureBox3.Image = global::MeoIS.Properties.Resources.fon;
+            this.pictureBox3.Location = new System.Drawing.Point(-4, -4);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(837, 484);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 34;
+            this.pictureBox3.TabStop = false;
+            // 
             // tPChange
             // 
             this.tPChange.Controls.Add(this.labelWorkOrganizationAddress);
@@ -625,6 +666,7 @@ namespace MeoIS
             this.tPChange.Controls.Add(this.rBEducation);
             this.tPChange.Controls.Add(this.rBWork);
             this.tPChange.Controls.Add(this.label5);
+            this.tPChange.Controls.Add(this.pictureBox4);
             this.tPChange.Location = new System.Drawing.Point(4, 25);
             this.tPChange.Name = "tPChange";
             this.tPChange.Padding = new System.Windows.Forms.Padding(3);
@@ -638,6 +680,7 @@ namespace MeoIS
             // 
             this.labelWorkOrganizationAddress.AutoSize = true;
             this.labelWorkOrganizationAddress.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelWorkOrganizationAddress.Image = global::MeoIS.Properties.Resources.fonLabelPic;
             this.labelWorkOrganizationAddress.Location = new System.Drawing.Point(193, 262);
             this.labelWorkOrganizationAddress.Name = "labelWorkOrganizationAddress";
             this.labelWorkOrganizationAddress.Size = new System.Drawing.Size(176, 22);
@@ -657,6 +700,7 @@ namespace MeoIS
             // 
             this.labelJobTitle.AutoSize = true;
             this.labelJobTitle.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelJobTitle.Image = global::MeoIS.Properties.Resources.fonLabelPic;
             this.labelJobTitle.Location = new System.Drawing.Point(193, 172);
             this.labelJobTitle.Name = "labelJobTitle";
             this.labelJobTitle.Size = new System.Drawing.Size(106, 22);
@@ -676,6 +720,7 @@ namespace MeoIS
             // 
             this.labelNameOfOrganizationOrIndividualEntrepreneur.AutoSize = true;
             this.labelNameOfOrganizationOrIndividualEntrepreneur.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelNameOfOrganizationOrIndividualEntrepreneur.Image = global::MeoIS.Properties.Resources.fonLabelPic;
             this.labelNameOfOrganizationOrIndividualEntrepreneur.Location = new System.Drawing.Point(193, 90);
             this.labelNameOfOrganizationOrIndividualEntrepreneur.Name = "labelNameOfOrganizationOrIndividualEntrepreneur";
             this.labelNameOfOrganizationOrIndividualEntrepreneur.Size = new System.Drawing.Size(320, 22);
@@ -693,6 +738,7 @@ namespace MeoIS
             // 
             // buttonChangePlaceOfStudyOrWork
             // 
+            this.buttonChangePlaceOfStudyOrWork.BackgroundImage = global::MeoIS.Properties.Resources.fonPanel1;
             this.buttonChangePlaceOfStudyOrWork.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonChangePlaceOfStudyOrWork.Location = new System.Drawing.Point(280, 364);
             this.buttonChangePlaceOfStudyOrWork.Name = "buttonChangePlaceOfStudyOrWork";
@@ -706,6 +752,7 @@ namespace MeoIS
             // 
             this.labelAddressOfEducationalOrganization.AutoSize = true;
             this.labelAddressOfEducationalOrganization.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelAddressOfEducationalOrganization.Image = global::MeoIS.Properties.Resources.fonLabelPic;
             this.labelAddressOfEducationalOrganization.Location = new System.Drawing.Point(500, 285);
             this.labelAddressOfEducationalOrganization.Name = "labelAddressOfEducationalOrganization";
             this.labelAddressOfEducationalOrganization.Size = new System.Drawing.Size(324, 22);
@@ -733,6 +780,7 @@ namespace MeoIS
             // 
             this.labelEnrollmentDate.AutoSize = true;
             this.labelEnrollmentDate.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelEnrollmentDate.Image = global::MeoIS.Properties.Resources.fonLabelPic;
             this.labelEnrollmentDate.Location = new System.Drawing.Point(49, 288);
             this.labelEnrollmentDate.Name = "labelEnrollmentDate";
             this.labelEnrollmentDate.Size = new System.Drawing.Size(151, 22);
@@ -753,6 +801,7 @@ namespace MeoIS
             // 
             this.labelNameOfEducationalOrganization.AutoSize = true;
             this.labelNameOfEducationalOrganization.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelNameOfEducationalOrganization.Image = global::MeoIS.Properties.Resources.fonLabelPic;
             this.labelNameOfEducationalOrganization.Location = new System.Drawing.Point(222, 134);
             this.labelNameOfEducationalOrganization.Name = "labelNameOfEducationalOrganization";
             this.labelNameOfEducationalOrganization.Size = new System.Drawing.Size(398, 22);
@@ -798,6 +847,7 @@ namespace MeoIS
             // rBEducation
             // 
             this.rBEducation.AutoSize = true;
+            this.rBEducation.BackgroundImage = global::MeoIS.Properties.Resources.fonPanel1;
             this.rBEducation.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.rBEducation.Location = new System.Drawing.Point(29, 114);
             this.rBEducation.Name = "rBEducation";
@@ -810,6 +860,7 @@ namespace MeoIS
             // rBWork
             // 
             this.rBWork.AutoSize = true;
+            this.rBWork.BackgroundImage = global::MeoIS.Properties.Resources.fonPanel1;
             this.rBWork.Checked = true;
             this.rBWork.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.rBWork.Location = new System.Drawing.Point(29, 87);
@@ -825,16 +876,29 @@ namespace MeoIS
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Image = global::MeoIS.Properties.Resources.fonLabelPic;
             this.label5.Location = new System.Drawing.Point(84, 15);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(600, 43);
             this.label5.TabIndex = 2;
             this.label5.Text = "Сменить место работы или учебы";
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.pictureBox4.Image = global::MeoIS.Properties.Resources.fon;
+            this.pictureBox4.Location = new System.Drawing.Point(-4, -4);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(837, 484);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 38;
+            this.pictureBox4.TabStop = false;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.Image = global::MeoIS.Properties.Resources.fonLabelPic;
             this.label6.Location = new System.Drawing.Point(116, 18);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(512, 38);
@@ -846,6 +910,7 @@ namespace MeoIS
             this.groupBoxServices.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.groupBoxServices.Controls.Add(this.tableLayoutPanelServices);
             this.groupBoxServices.Controls.Add(this.label6);
+            this.groupBoxServices.Controls.Add(this.pictureBox5);
             this.groupBoxServices.Location = new System.Drawing.Point(280, 70);
             this.groupBoxServices.Name = "groupBoxServices";
             this.groupBoxServices.Size = new System.Drawing.Size(732, 469);
@@ -855,6 +920,7 @@ namespace MeoIS
             // tableLayoutPanelServices
             // 
             this.tableLayoutPanelServices.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.tableLayoutPanelServices.BackgroundImage = global::MeoIS.Properties.Resources.fonPanel1;
             this.tableLayoutPanelServices.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanelServices.ColumnCount = 2;
             this.tableLayoutPanelServices.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.95513F));
@@ -877,6 +943,7 @@ namespace MeoIS
             // tableLayoutPanelServices1
             // 
             this.tableLayoutPanelServices1.BackColor = System.Drawing.Color.SkyBlue;
+            this.tableLayoutPanelServices1.BackgroundImage = global::MeoIS.Properties.Resources.fonPanel1;
             this.tableLayoutPanelServices1.ColumnCount = 1;
             this.tableLayoutPanelServices1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanelServices1.Controls.Add(this.labelRegistrationWithEnlistmentOffice, 0, 0);
@@ -897,6 +964,7 @@ namespace MeoIS
             // 
             this.labelRegistrationWithEnlistmentOffice.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelRegistrationWithEnlistmentOffice.AutoSize = true;
+            this.labelRegistrationWithEnlistmentOffice.BackColor = System.Drawing.Color.Beige;
             this.labelRegistrationWithEnlistmentOffice.Cursor = System.Windows.Forms.Cursors.Hand;
             this.labelRegistrationWithEnlistmentOffice.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelRegistrationWithEnlistmentOffice.Location = new System.Drawing.Point(94, 17);
@@ -912,6 +980,7 @@ namespace MeoIS
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Beige;
             this.label7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label7.Location = new System.Drawing.Point(26, 70);
@@ -927,6 +996,7 @@ namespace MeoIS
             // tableLayoutPanelServices3
             // 
             this.tableLayoutPanelServices3.BackColor = System.Drawing.Color.SkyBlue;
+            this.tableLayoutPanelServices3.BackgroundImage = global::MeoIS.Properties.Resources.fonPanel1;
             this.tableLayoutPanelServices3.ColumnCount = 1;
             this.tableLayoutPanelServices3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanelServices3.Controls.Add(this.labelApplicationForChangeOfPlaceOfWorkOrStudy, 0, 0);
@@ -946,6 +1016,7 @@ namespace MeoIS
             // 
             this.labelApplicationForChangeOfPlaceOfWorkOrStudy.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelApplicationForChangeOfPlaceOfWorkOrStudy.AutoSize = true;
+            this.labelApplicationForChangeOfPlaceOfWorkOrStudy.BackColor = System.Drawing.Color.Beige;
             this.labelApplicationForChangeOfPlaceOfWorkOrStudy.Cursor = System.Windows.Forms.Cursors.Hand;
             this.labelApplicationForChangeOfPlaceOfWorkOrStudy.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelApplicationForChangeOfPlaceOfWorkOrStudy.Location = new System.Drawing.Point(65, 17);
@@ -961,6 +1032,7 @@ namespace MeoIS
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Beige;
             this.label8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label8.Location = new System.Drawing.Point(25, 70);
@@ -974,6 +1046,7 @@ namespace MeoIS
             // tableLayoutPanelServices2
             // 
             this.tableLayoutPanelServices2.BackColor = System.Drawing.Color.SkyBlue;
+            this.tableLayoutPanelServices2.BackgroundImage = global::MeoIS.Properties.Resources.fonPanel1;
             this.tableLayoutPanelServices2.ColumnCount = 1;
             this.tableLayoutPanelServices2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanelServices2.Controls.Add(this.label9, 0, 1);
@@ -993,6 +1066,7 @@ namespace MeoIS
             // 
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Beige;
             this.label9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label9.Location = new System.Drawing.Point(18, 70);
@@ -1007,6 +1081,7 @@ namespace MeoIS
             // 
             this.labelSignUpForMedicalExamination.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelSignUpForMedicalExamination.AutoSize = true;
+            this.labelSignUpForMedicalExamination.BackColor = System.Drawing.Color.Beige;
             this.labelSignUpForMedicalExamination.Cursor = System.Windows.Forms.Cursors.Hand;
             this.labelSignUpForMedicalExamination.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelSignUpForMedicalExamination.Location = new System.Drawing.Point(99, 17);
@@ -1018,9 +1093,57 @@ namespace MeoIS
             this.labelSignUpForMedicalExamination.MouseLeave += new System.EventHandler(this.RegMedicalExamination_MouseLeave);
             this.labelSignUpForMedicalExamination.MouseMove += new System.Windows.Forms.MouseEventHandler(this.RegMedicalExamination_MouseLeave);
             // 
+            // pictureEnrollment
+            // 
+            this.pictureEnrollment.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureEnrollment.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.pictureEnrollment.Image = global::MeoIS.Properties.Resources.Enrollment;
+            this.pictureEnrollment.Location = new System.Drawing.Point(6, 4);
+            this.pictureEnrollment.Name = "pictureEnrollment";
+            this.pictureEnrollment.Size = new System.Drawing.Size(147, 123);
+            this.pictureEnrollment.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureEnrollment.TabIndex = 33;
+            this.pictureEnrollment.TabStop = false;
+            // 
+            // pictureChangePlaceOfStudyOrWork
+            // 
+            this.pictureChangePlaceOfStudyOrWork.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureChangePlaceOfStudyOrWork.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.pictureChangePlaceOfStudyOrWork.Image = global::MeoIS.Properties.Resources.changeWorkOrStudy;
+            this.pictureChangePlaceOfStudyOrWork.Location = new System.Drawing.Point(16, 264);
+            this.pictureChangePlaceOfStudyOrWork.Name = "pictureChangePlaceOfStudyOrWork";
+            this.pictureChangePlaceOfStudyOrWork.Size = new System.Drawing.Size(126, 123);
+            this.pictureChangePlaceOfStudyOrWork.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureChangePlaceOfStudyOrWork.TabIndex = 33;
+            this.pictureChangePlaceOfStudyOrWork.TabStop = false;
+            // 
+            // pictureRegMedicalExamination
+            // 
+            this.pictureRegMedicalExamination.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureRegMedicalExamination.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.pictureRegMedicalExamination.Image = global::MeoIS.Properties.Resources.medosmotr;
+            this.pictureRegMedicalExamination.Location = new System.Drawing.Point(8, 134);
+            this.pictureRegMedicalExamination.Name = "pictureRegMedicalExamination";
+            this.pictureRegMedicalExamination.Size = new System.Drawing.Size(142, 123);
+            this.pictureRegMedicalExamination.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureRegMedicalExamination.TabIndex = 33;
+            this.pictureRegMedicalExamination.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.pictureBox5.Image = global::MeoIS.Properties.Resources.fon;
+            this.pictureBox5.Location = new System.Drawing.Point(4, -8);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(734, 484);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 35;
+            this.pictureBox5.TabStop = false;
+            // 
             // buttonFirstReg
             // 
             this.buttonFirstReg.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonFirstReg.Image = global::MeoIS.Properties.Resources.fonLabelPic;
             this.buttonFirstReg.Location = new System.Drawing.Point(508, 400);
             this.buttonFirstReg.Name = "buttonFirstReg";
             this.buttonFirstReg.Size = new System.Drawing.Size(265, 58);
@@ -1243,42 +1366,6 @@ namespace MeoIS
             this.labelWelcome1.Text = "Добро пожаловать\r\n";
             this.labelWelcome1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureEnrollment
-            // 
-            this.pictureEnrollment.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureEnrollment.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.pictureEnrollment.Image = global::MeoIS.Properties.Resources.Enrollment;
-            this.pictureEnrollment.Location = new System.Drawing.Point(6, 4);
-            this.pictureEnrollment.Name = "pictureEnrollment";
-            this.pictureEnrollment.Size = new System.Drawing.Size(147, 123);
-            this.pictureEnrollment.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureEnrollment.TabIndex = 33;
-            this.pictureEnrollment.TabStop = false;
-            // 
-            // pictureChangePlaceOfStudyOrWork
-            // 
-            this.pictureChangePlaceOfStudyOrWork.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureChangePlaceOfStudyOrWork.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.pictureChangePlaceOfStudyOrWork.Image = global::MeoIS.Properties.Resources.changeWorkOrStudy;
-            this.pictureChangePlaceOfStudyOrWork.Location = new System.Drawing.Point(16, 264);
-            this.pictureChangePlaceOfStudyOrWork.Name = "pictureChangePlaceOfStudyOrWork";
-            this.pictureChangePlaceOfStudyOrWork.Size = new System.Drawing.Size(126, 123);
-            this.pictureChangePlaceOfStudyOrWork.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureChangePlaceOfStudyOrWork.TabIndex = 33;
-            this.pictureChangePlaceOfStudyOrWork.TabStop = false;
-            // 
-            // pictureRegMedicalExamination
-            // 
-            this.pictureRegMedicalExamination.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureRegMedicalExamination.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.pictureRegMedicalExamination.Image = global::MeoIS.Properties.Resources.medosmotr;
-            this.pictureRegMedicalExamination.Location = new System.Drawing.Point(8, 134);
-            this.pictureRegMedicalExamination.Name = "pictureRegMedicalExamination";
-            this.pictureRegMedicalExamination.Size = new System.Drawing.Size(142, 123);
-            this.pictureRegMedicalExamination.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureRegMedicalExamination.TabIndex = 33;
-            this.pictureRegMedicalExamination.TabStop = false;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Arrow;
@@ -1295,6 +1382,7 @@ namespace MeoIS
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1232, 603);
+            this.Controls.Add(this.groupBoxServices);
             this.Controls.Add(this.labelLogIn);
             this.Controls.Add(this.pictureCloseServises);
             this.Controls.Add(this.labelLine);
@@ -1316,10 +1404,9 @@ namespace MeoIS
             this.Controls.Add(this.labelWelcome3);
             this.Controls.Add(this.labelWelcome2);
             this.Controls.Add(this.labelWelcome1);
-            this.Controls.Add(this.tabControlMenuServices);
-            this.Controls.Add(this.groupBoxServices);
             this.Controls.Add(this.dataGV);
             this.Controls.Add(this.buttonFirstReg);
+            this.Controls.Add(this.tabControlMenuServices);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
@@ -1330,6 +1417,7 @@ namespace MeoIS
             this.tabControlMenuServices.ResumeLayout(false);
             this.tPReg.ResumeLayout(false);
             this.tPReg.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tPMed.ResumeLayout(false);
             this.tPMed.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -1340,8 +1428,10 @@ namespace MeoIS
             this.monday.PerformLayout();
             this.Friday.ResumeLayout(false);
             this.Friday.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.tPChange.ResumeLayout(false);
             this.tPChange.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.groupBoxServices.ResumeLayout(false);
             this.groupBoxServices.PerformLayout();
             this.tableLayoutPanelServices.ResumeLayout(false);
@@ -1351,14 +1441,15 @@ namespace MeoIS
             this.tableLayoutPanelServices3.PerformLayout();
             this.tableLayoutPanelServices2.ResumeLayout(false);
             this.tableLayoutPanelServices2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEnrollment)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureChangePlaceOfStudyOrWork)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureRegMedicalExamination)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureCloseServises)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.labelLine)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureMedicalData)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureOptions)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSearch)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEnrollment)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureChangePlaceOfStudyOrWork)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureRegMedicalExamination)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1453,6 +1544,10 @@ namespace MeoIS
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox labelLine;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox5;
     }
 }
 

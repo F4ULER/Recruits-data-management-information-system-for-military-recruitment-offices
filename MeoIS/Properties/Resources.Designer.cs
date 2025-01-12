@@ -153,6 +153,16 @@ namespace MeoIS.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap export_icon_fon {
+            get {
+                object obj = ResourceManager.GetObject("export_icon_fon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fon {
             get {
                 object obj = ResourceManager.GetObject("fon", resourceCulture);
@@ -163,9 +173,39 @@ namespace MeoIS.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fon1 {
+            get {
+                object obj = ResourceManager.GetObject("fon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fonLabelPic {
             get {
                 object obj = ResourceManager.GetObject("fonLabelPic", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fonPanel {
+            get {
+                object obj = ResourceManager.GetObject("fonPanel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fonPanel1 {
+            get {
+                object obj = ResourceManager.GetObject("fonPanel1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

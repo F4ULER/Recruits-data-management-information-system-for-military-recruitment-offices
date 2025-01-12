@@ -235,5 +235,23 @@
   <ItemGroup>
     <None Include="Resources\pass_close_fon.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fon2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fon3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fonPanel.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fonPanel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\export_icon_fon.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -788,9 +788,5 @@ namespace MeoIS
             tableLayoutPanelServices3.BackColor = Color.PeachPuff;
         }
 
-        private void labelRectal_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

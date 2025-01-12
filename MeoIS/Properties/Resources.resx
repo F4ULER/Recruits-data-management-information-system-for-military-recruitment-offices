@@ -118,6 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="fonPanel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fonPanel.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="close_fon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\close_fon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -130,17 +133,20 @@
   <data name="options_fon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\options_fon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="fonPanel1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fonPanel.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="medosmotr" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\medosmotr.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="fon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Enrollment" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Enrollment.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="fonLabelPic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fonLabelPic.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="change" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\change.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="reestr" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\reestr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,8 +160,14 @@
   <data name="medData" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\medData.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="pass_close_fon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pass_close_fon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="pass_open" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pass_open.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="close" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,8 +175,8 @@
   <data name="user_fon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user_fon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="change" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\change.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Enrollment" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Enrollment.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pass_close" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pass_close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -181,7 +193,7 @@
   <data name="close_fon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\close_fon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pass_close_fon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pass_close_fon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="export_icon_fon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\export_icon_fon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
