@@ -95,7 +95,9 @@ namespace MeoIS
 
         public DataTable searchAllSummonsByDocNumberToTable(string docNumber)
         {
-            string message = "SELECT * FROM `register_of_summonses` WHERE `document_number`=" + docNumber;
+            string message = "SELECT `document_number` AS 'Номер документа', `series` AS 'Серия', `number` AS 'Номер', " +
+                "`date_of_visit` AS 'Дата посещения военкомата', `visit_status` AS 'Статус повестки' FROM `register_of_summonses` " +
+                "WHERE `document_number`=" + docNumber;
 
             return DataBase.sending_command_with_output_to_table(message);
         }

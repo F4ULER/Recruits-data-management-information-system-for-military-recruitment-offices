@@ -43,6 +43,7 @@ namespace MeoIS
                 labelLine.Visible = false;
                 labelActiveSummon.Visible = true;
                 labelResetActiveSummon.Visible = true;
+                buttonRegisterOfSummons.Visible = true;
 
                 UpdateActiveSummons();
             }
@@ -123,6 +124,9 @@ namespace MeoIS
                 tBChangeEmail.Visible = true;
                 tBChangePass.Visible = true;
                 buttonChangeUserAccont.Visible = true;
+                labelActiveSummon.Visible = false;
+                labelResetActiveSummon.Visible = false;
+                buttonRegisterOfSummons.Visible = false;
             } else
             {
                 labelChageEmail.Visible = false;
@@ -132,6 +136,9 @@ namespace MeoIS
                 tBChangeEmail.Visible = false;
                 tBChangePass.Visible = false;
                 buttonChangeUserAccont.Visible = false;
+                labelActiveSummon.Visible = true;
+                labelResetActiveSummon.Visible = true;
+                buttonRegisterOfSummons.Visible = true;
             }
         }
 
@@ -807,6 +814,26 @@ namespace MeoIS
         private void labelResetActiveSummon_Click(object sender, EventArgs e)
         {
            UpdateActiveSummons();
+        }
+
+        private void buttonRegisterOfSummons_Click(object sender, EventArgs e)
+        {
+            tabControlMenuServices.Visible = false;
+            groupBoxServices.Visible = false;
+            pictureCloseServises.Visible = true;
+
+            Advanced_search search = new Advanced_search();
+            DataTable table = new DataTable();
+            table = search.searchAllSummonsByDocNumberToTable(Transfer.Doc_num);
+            if (table.Rows.Count > 0)
+            {
+                dataGV.DataSource = table;
+                dataGV.Visible = true;
+            }
+            else
+            {
+                MessageBox.Show("Не найдено ни одной записи");
+            }
         }
     }
 }

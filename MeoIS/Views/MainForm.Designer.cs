@@ -100,7 +100,6 @@ namespace MeoIS
             this.pictureEnrollment = new System.Windows.Forms.PictureBox();
             this.pictureChangePlaceOfStudyOrWork = new System.Windows.Forms.PictureBox();
             this.pictureRegMedicalExamination = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.buttonFirstReg = new System.Windows.Forms.Button();
             this.labelLogIn = new System.Windows.Forms.Label();
             this.pictureCloseServises = new System.Windows.Forms.PictureBox();
@@ -119,10 +118,9 @@ namespace MeoIS
             this.labelWelcome3 = new System.Windows.Forms.Label();
             this.labelWelcome2 = new System.Windows.Forms.Label();
             this.labelWelcome1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelActiveSummon = new System.Windows.Forms.Label();
             this.labelResetActiveSummon = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonRegisterOfSummons = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGV)).BeginInit();
             this.tabControlMenuServices.SuspendLayout();
             this.tPReg.SuspendLayout();
@@ -143,13 +141,11 @@ namespace MeoIS
             ((System.ComponentModel.ISupportInitialize)(this.pictureEnrollment)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureChangePlaceOfStudyOrWork)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureRegMedicalExamination)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureCloseServises)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.labelLine)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureMedicalData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureOptions)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSearch)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tBSearch
@@ -913,7 +909,6 @@ namespace MeoIS
             this.groupBoxServices.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.groupBoxServices.Controls.Add(this.tableLayoutPanelServices);
             this.groupBoxServices.Controls.Add(this.label6);
-            this.groupBoxServices.Controls.Add(this.pictureBox5);
             this.groupBoxServices.Location = new System.Drawing.Point(280, 70);
             this.groupBoxServices.Name = "groupBoxServices";
             this.groupBoxServices.Size = new System.Drawing.Size(732, 469);
@@ -1131,17 +1126,6 @@ namespace MeoIS
             this.pictureRegMedicalExamination.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureRegMedicalExamination.TabIndex = 33;
             this.pictureRegMedicalExamination.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.pictureBox5.Image = global::MeoIS.Properties.Resources.fonPanel1;
-            this.pictureBox5.Location = new System.Drawing.Point(0, -8);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(738, 484);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 35;
-            this.pictureBox5.TabStop = false;
             // 
             // buttonFirstReg
             // 
@@ -1369,24 +1353,13 @@ namespace MeoIS
             this.labelWelcome1.Text = "Добро пожаловать\r\n";
             this.labelWelcome1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.pictureBox1.Image = global::MeoIS.Properties.Resources.fon;
-            this.pictureBox1.Location = new System.Drawing.Point(2, -1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1236, 608);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 33;
-            this.pictureBox1.TabStop = false;
-            // 
             // labelActiveSummon
             // 
             this.labelActiveSummon.AutoSize = true;
-            this.labelActiveSummon.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelActiveSummon.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelActiveSummon.Location = new System.Drawing.Point(11, 301);
             this.labelActiveSummon.Name = "labelActiveSummon";
-            this.labelActiveSummon.Size = new System.Drawing.Size(190, 46);
+            this.labelActiveSummon.Size = new System.Drawing.Size(224, 52);
             this.labelActiveSummon.TabIndex = 42;
             this.labelActiveSummon.Text = "У Вас нет\r\nактивных повесток";
             this.labelActiveSummon.Visible = false;
@@ -1396,7 +1369,7 @@ namespace MeoIS
             this.labelResetActiveSummon.AutoSize = true;
             this.labelResetActiveSummon.Cursor = System.Windows.Forms.Cursors.Hand;
             this.labelResetActiveSummon.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelResetActiveSummon.Location = new System.Drawing.Point(55, 351);
+            this.labelResetActiveSummon.Location = new System.Drawing.Point(140, 355);
             this.labelResetActiveSummon.Name = "labelResetActiveSummon";
             this.labelResetActiveSummon.Size = new System.Drawing.Size(83, 19);
             this.labelResetActiveSummon.TabIndex = 43;
@@ -1404,21 +1377,23 @@ namespace MeoIS
             this.labelResetActiveSummon.Visible = false;
             this.labelResetActiveSummon.Click += new System.EventHandler(this.labelResetActiveSummon_Click);
             // 
-            // button1
+            // buttonRegisterOfSummons
             // 
-            this.button1.Location = new System.Drawing.Point(63, 388);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 44;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonRegisterOfSummons.Location = new System.Drawing.Point(9, 355);
+            this.buttonRegisterOfSummons.Name = "buttonRegisterOfSummons";
+            this.buttonRegisterOfSummons.Size = new System.Drawing.Size(120, 25);
+            this.buttonRegisterOfSummons.TabIndex = 44;
+            this.buttonRegisterOfSummons.Text = "Мои повестки";
+            this.buttonRegisterOfSummons.UseVisualStyleBackColor = true;
+            this.buttonRegisterOfSummons.Visible = false;
+            this.buttonRegisterOfSummons.Click += new System.EventHandler(this.buttonRegisterOfSummons_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1232, 603);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonRegisterOfSummons);
             this.Controls.Add(this.labelResetActiveSummon);
             this.Controls.Add(this.labelActiveSummon);
             this.Controls.Add(this.groupBoxServices);
@@ -1446,7 +1421,6 @@ namespace MeoIS
             this.Controls.Add(this.dataGV);
             this.Controls.Add(this.buttonFirstReg);
             this.Controls.Add(this.tabControlMenuServices);
-            this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -1483,13 +1457,11 @@ namespace MeoIS
             ((System.ComponentModel.ISupportInitialize)(this.pictureEnrollment)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureChangePlaceOfStudyOrWork)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureRegMedicalExamination)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureCloseServises)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.labelLine)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureMedicalData)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureOptions)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSearch)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1581,15 +1553,13 @@ namespace MeoIS
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelServices1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox labelLine;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label labelActiveSummon;
         private System.Windows.Forms.Label labelResetActiveSummon;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonRegisterOfSummons;
     }
 }
 
