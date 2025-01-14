@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\Advanced_search.cs" />
+    <Compile Include="Models\Register_of_summons_to_enlistment__office.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>

@@ -120,6 +120,8 @@ namespace MeoIS
             this.labelWelcome2 = new System.Windows.Forms.Label();
             this.labelWelcome1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.labelActiveSummon = new System.Windows.Forms.Label();
+            this.labelResetActiveSummon = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGV)).BeginInit();
             this.tabControlMenuServices.SuspendLayout();
             this.tPReg.SuspendLayout();
@@ -478,7 +480,7 @@ namespace MeoIS
             "14:00",
             "15:00",
             "16:00"});
-            this.cBWednesday.Location = new System.Drawing.Point(3, 26);
+            this.cBWednesday.Location = new System.Drawing.Point(3, 25);
             this.cBWednesday.Name = "cBWednesday";
             this.cBWednesday.Size = new System.Drawing.Size(140, 24);
             this.cBWednesday.TabIndex = 7;
@@ -546,7 +548,7 @@ namespace MeoIS
             "14:00",
             "15:00",
             "16:00"});
-            this.cBMonday.Location = new System.Drawing.Point(3, 26);
+            this.cBMonday.Location = new System.Drawing.Point(3, 25);
             this.cBMonday.Name = "cBMonday";
             this.cBMonday.Size = new System.Drawing.Size(139, 24);
             this.cBMonday.TabIndex = 5;
@@ -615,7 +617,7 @@ namespace MeoIS
             "14:00",
             "15:00",
             "16:00"});
-            this.cBFriday.Location = new System.Drawing.Point(3, 27);
+            this.cBFriday.Location = new System.Drawing.Point(3, 26);
             this.cBFriday.Name = "cBFriday";
             this.cBFriday.Size = new System.Drawing.Size(141, 24);
             this.cBFriday.TabIndex = 9;
@@ -897,8 +899,8 @@ namespace MeoIS
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Beige;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Image = global::MeoIS.Properties.Resources.fonLabelPic;
             this.label6.Location = new System.Drawing.Point(116, 18);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(512, 38);
@@ -1132,10 +1134,10 @@ namespace MeoIS
             // pictureBox5
             // 
             this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.pictureBox5.Image = global::MeoIS.Properties.Resources.fon;
-            this.pictureBox5.Location = new System.Drawing.Point(4, -8);
+            this.pictureBox5.Image = global::MeoIS.Properties.Resources.fonPanel1;
+            this.pictureBox5.Location = new System.Drawing.Point(0, -8);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(734, 484);
+            this.pictureBox5.Size = new System.Drawing.Size(738, 484);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 35;
             this.pictureBox5.TabStop = false;
@@ -1377,11 +1379,37 @@ namespace MeoIS
             this.pictureBox1.TabIndex = 33;
             this.pictureBox1.TabStop = false;
             // 
+            // labelActiveSummon
+            // 
+            this.labelActiveSummon.AutoSize = true;
+            this.labelActiveSummon.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelActiveSummon.Location = new System.Drawing.Point(11, 301);
+            this.labelActiveSummon.Name = "labelActiveSummon";
+            this.labelActiveSummon.Size = new System.Drawing.Size(190, 46);
+            this.labelActiveSummon.TabIndex = 42;
+            this.labelActiveSummon.Text = "У Вас нет\r\nактивных повесток";
+            this.labelActiveSummon.Visible = false;
+            // 
+            // labelResetActiveSummon
+            // 
+            this.labelResetActiveSummon.AutoSize = true;
+            this.labelResetActiveSummon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.labelResetActiveSummon.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelResetActiveSummon.Location = new System.Drawing.Point(55, 351);
+            this.labelResetActiveSummon.Name = "labelResetActiveSummon";
+            this.labelResetActiveSummon.Size = new System.Drawing.Size(83, 19);
+            this.labelResetActiveSummon.TabIndex = 43;
+            this.labelResetActiveSummon.Text = "Обновить";
+            this.labelResetActiveSummon.Visible = false;
+            this.labelResetActiveSummon.Click += new System.EventHandler(this.labelResetActiveSummon_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1232, 603);
+            this.Controls.Add(this.labelResetActiveSummon);
+            this.Controls.Add(this.labelActiveSummon);
             this.Controls.Add(this.groupBoxServices);
             this.Controls.Add(this.labelLogIn);
             this.Controls.Add(this.pictureCloseServises);
@@ -1548,6 +1576,8 @@ namespace MeoIS
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label labelActiveSummon;
+        private System.Windows.Forms.Label labelResetActiveSummon;
     }
 }
 

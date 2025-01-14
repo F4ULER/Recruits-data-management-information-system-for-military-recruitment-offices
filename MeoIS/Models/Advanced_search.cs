@@ -93,5 +93,12 @@ namespace MeoIS
             return DataBase.sending_command_with_output_to_table(message);
         }
 
+        public DataTable searchAllSummonsByDocNumberToTable(string docNumber)
+        {
+            string message = "SELECT * FROM `register_of_summonses` WHERE `document_number`=" + docNumber;
+
+            return DataBase.sending_command_with_output_to_table(message);
+        }
+
     }
 }

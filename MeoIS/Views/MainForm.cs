@@ -41,6 +41,10 @@ namespace MeoIS
                 labelWelcome2.Visible = false;
                 labelWelcome3.Visible = false;
                 labelLine.Visible = false;
+                labelActiveSummon.Visible = true;
+                labelResetActiveSummon.Visible = true;
+
+                UpdateActiveSummons();
             }
             else // если вошел незарегистрированный пользователь
             {
@@ -788,5 +792,21 @@ namespace MeoIS
             tableLayoutPanelServices3.BackColor = Color.PeachPuff;
         }
 
+        public void UpdateActiveSummons()
+        {
+            Register_of_summons_to_enlistment__office regSum = new Register_of_summons_to_enlistment__office();
+            if (regSum.updateActiveSummons())
+            {
+                labelActiveSummon.Text = "Вам пришла повестка!\n Ознакомьтесь с ней";
+            }
+            else
+            {
+                labelActiveSummon.Text = "У Вас нет\n активных поветок";
+            }
+        }
+        private void labelResetActiveSummon_Click(object sender, EventArgs e)
+        {
+           UpdateActiveSummons();
+        }
     }
 }
