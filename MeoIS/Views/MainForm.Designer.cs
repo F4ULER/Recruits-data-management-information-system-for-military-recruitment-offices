@@ -122,6 +122,7 @@ namespace MeoIS
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelActiveSummon = new System.Windows.Forms.Label();
             this.labelResetActiveSummon = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGV)).BeginInit();
             this.tabControlMenuServices.SuspendLayout();
             this.tPReg.SuspendLayout();
@@ -480,7 +481,7 @@ namespace MeoIS
             "14:00",
             "15:00",
             "16:00"});
-            this.cBWednesday.Location = new System.Drawing.Point(3, 25);
+            this.cBWednesday.Location = new System.Drawing.Point(3, 26);
             this.cBWednesday.Name = "cBWednesday";
             this.cBWednesday.Size = new System.Drawing.Size(140, 24);
             this.cBWednesday.TabIndex = 7;
@@ -548,7 +549,7 @@ namespace MeoIS
             "14:00",
             "15:00",
             "16:00"});
-            this.cBMonday.Location = new System.Drawing.Point(3, 25);
+            this.cBMonday.Location = new System.Drawing.Point(3, 26);
             this.cBMonday.Name = "cBMonday";
             this.cBMonday.Size = new System.Drawing.Size(139, 24);
             this.cBMonday.TabIndex = 5;
@@ -617,7 +618,7 @@ namespace MeoIS
             "14:00",
             "15:00",
             "16:00"});
-            this.cBFriday.Location = new System.Drawing.Point(3, 26);
+            this.cBFriday.Location = new System.Drawing.Point(3, 27);
             this.cBFriday.Name = "cBFriday";
             this.cBFriday.Size = new System.Drawing.Size(141, 24);
             this.cBFriday.TabIndex = 9;
@@ -1403,11 +1404,21 @@ namespace MeoIS
             this.labelResetActiveSummon.Visible = false;
             this.labelResetActiveSummon.Click += new System.EventHandler(this.labelResetActiveSummon_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(63, 388);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 44;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1232, 603);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.labelResetActiveSummon);
             this.Controls.Add(this.labelActiveSummon);
             this.Controls.Add(this.groupBoxServices);
@@ -1578,6 +1589,7 @@ namespace MeoIS
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label labelActiveSummon;
         private System.Windows.Forms.Label labelResetActiveSummon;
+        private System.Windows.Forms.Button button1;
     }
 }
 
