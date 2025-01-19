@@ -22,6 +22,7 @@ namespace MeoIS
             tableLayoutPanelFilter.Visible = false;
             tabControlMenuFunctions.Visible = false;
             tabControlExportAndStatistics.Visible = false;
+            panelRegOfSummons.Visible = false;
         }
 
         // иконка поиска
@@ -344,6 +345,7 @@ namespace MeoIS
             dataGV.Visible = false;
             groupBoxServices.Visible = true;
             tBSearch.Text = "";
+            panelRegOfSummons.Visible = false;
         }
 
         private void labelExit_Click(object sender, EventArgs e)
@@ -421,6 +423,50 @@ namespace MeoIS
                 statistics.export_to_Excel(search.searchAllUsersToTable(), "Вся таблица пользователей");
             }
             tBExport.Text = "";
+        }
+
+        private void pictureRegisterOfSummons_Click(object sender, EventArgs e)
+        {
+            panelRegOfSummons.Visible = true;
+            groupBoxServices.Visible = false;
+            pictureClose.Visible = true;
+        }
+
+        private void buttonRegOfSummonsSave_Click(object sender, EventArgs e)
+        {
+            Register_of_summons_to_enlistment__office RegOfSummons = new Register_of_summons_to_enlistment__office();
+
+            RegOfSummons.addSummons(tBRegOfSummonsDocNumber.Text, tBRegOfSummonsSeries.Text, tBRegOfSummonsNumber.Text, tBRegOfSummonsDateOfVisit.Text, "Активно");
+            tBRegOfSummonsDocNumber.Text = "";
+            tBRegOfSummonsSeries.Text = "";
+            tBRegOfSummonsNumber.Text = "";
+            tBRegOfSummonsDateOfVisit.Text = "";
+        }
+
+        private void buttonRegOfSummonsEditSearch_Click(object sender, EventArgs e)
+        {
+            Advanced_search advanced_Search = new Advanced_search();
+            DataTable tableSummons;
+            tableSummons = advanced_Search.searchSummonBySeriesAndNumberToTable(tBRegOfSummonsEditSeries.Text, tBRegOfSummonsEditNumber.Text);
+            
+
+            switch (tableSummons.Rows[0][5].ToString())
+            {
+                case "Активно": cBRegOfSummonsStatus.SelectedIndex = 0;
+                    break;
+                case "Просрочено":
+                    cBRegOfSummonsStatus.SelectedIndex = 1;
+                    break;
+                case "Закрыто":
+                    cBRegOfSummonsStatus.SelectedIndex = 2;
+                    break;
+            }
+                
+        }
+
+        private void buttonRegOfSummonsSaveEdit_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

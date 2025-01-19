@@ -102,5 +102,11 @@ namespace MeoIS
             return DataBase.sending_command_with_output_to_table(message);
         }
 
+        public DataTable searchSummonBySeriesAndNumberToTable(string series, string number)
+        {
+            string message = "SELECT * FROM `register_of_summonses` WHERE `series` = '" + series + "' AND `number` = '" + number + "'";
+
+            return DataBase.sending_command_with_output_to_table(message);
+        }
     }
 }

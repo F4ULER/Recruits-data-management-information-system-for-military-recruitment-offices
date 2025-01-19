@@ -477,7 +477,7 @@ namespace MeoIS
             "14:00",
             "15:00",
             "16:00"});
-            this.cBWednesday.Location = new System.Drawing.Point(3, 26);
+            this.cBWednesday.Location = new System.Drawing.Point(3, 25);
             this.cBWednesday.Name = "cBWednesday";
             this.cBWednesday.Size = new System.Drawing.Size(140, 24);
             this.cBWednesday.TabIndex = 7;
@@ -545,7 +545,7 @@ namespace MeoIS
             "14:00",
             "15:00",
             "16:00"});
-            this.cBMonday.Location = new System.Drawing.Point(3, 26);
+            this.cBMonday.Location = new System.Drawing.Point(3, 25);
             this.cBMonday.Name = "cBMonday";
             this.cBMonday.Size = new System.Drawing.Size(139, 24);
             this.cBMonday.TabIndex = 5;
@@ -614,7 +614,7 @@ namespace MeoIS
             "14:00",
             "15:00",
             "16:00"});
-            this.cBFriday.Location = new System.Drawing.Point(3, 27);
+            this.cBFriday.Location = new System.Drawing.Point(3, 26);
             this.cBFriday.Name = "cBFriday";
             this.cBFriday.Size = new System.Drawing.Size(141, 24);
             this.cBFriday.TabIndex = 9;
@@ -1393,10 +1393,10 @@ namespace MeoIS
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1232, 603);
+            this.Controls.Add(this.tabControlMenuServices);
             this.Controls.Add(this.buttonRegisterOfSummons);
             this.Controls.Add(this.labelResetActiveSummon);
             this.Controls.Add(this.labelActiveSummon);
-            this.Controls.Add(this.groupBoxServices);
             this.Controls.Add(this.labelLogIn);
             this.Controls.Add(this.pictureCloseServises);
             this.Controls.Add(this.labelLine);
@@ -1418,9 +1418,9 @@ namespace MeoIS
             this.Controls.Add(this.labelWelcome3);
             this.Controls.Add(this.labelWelcome2);
             this.Controls.Add(this.labelWelcome1);
-            this.Controls.Add(this.dataGV);
             this.Controls.Add(this.buttonFirstReg);
-            this.Controls.Add(this.tabControlMenuServices);
+            this.Controls.Add(this.groupBoxServices);
+            this.Controls.Add(this.dataGV);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

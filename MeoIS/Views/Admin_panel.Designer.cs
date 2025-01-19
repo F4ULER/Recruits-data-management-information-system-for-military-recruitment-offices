@@ -65,6 +65,7 @@ namespace MeoIS
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tPDelete = new System.Windows.Forms.TabPage();
+            this.pictureArrowDel = new System.Windows.Forms.PictureBox();
             this.dataGridViewDelete = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.tBDocNumDelete = new System.Windows.Forms.TextBox();
@@ -100,6 +101,7 @@ namespace MeoIS
             this.label29 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.tPDeleteLit = new System.Windows.Forms.TabPage();
+            this.pictureArrowDeleteLit = new System.Windows.Forms.PictureBox();
             this.dataGridViewDeleteLit = new System.Windows.Forms.DataGridView();
             this.label31 = new System.Windows.Forms.Label();
             this.tBDeleteLit = new System.Windows.Forms.TextBox();
@@ -132,8 +134,6 @@ namespace MeoIS
             this.label25 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureArrowDeleteLit = new System.Windows.Forms.PictureBox();
             this.panelNewAdmin = new System.Windows.Forms.Panel();
             this.buttonNewAdmin = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
@@ -147,43 +147,53 @@ namespace MeoIS
             this.rBSearchDistrict = new System.Windows.Forms.RadioButton();
             this.rBSearchName = new System.Windows.Forms.RadioButton();
             this.rBSearchDocNum = new System.Windows.Forms.RadioButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureRegisterOfSummons = new System.Windows.Forms.PictureBox();
             this.pictureExport = new System.Windows.Forms.PictureBox();
             this.pictureClose = new System.Windows.Forms.PictureBox();
             this.picSearch = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureArrowDel = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panelRegOfSummons = new System.Windows.Forms.Panel();
+            this.labelLineRegSummons = new System.Windows.Forms.PictureBox();
+            this.label36 = new System.Windows.Forms.Label();
+            this.tBRegOfSummonsDateOfVisit = new System.Windows.Forms.TextBox();
+            this.tBRegOfSummonsSeries = new System.Windows.Forms.TextBox();
+            this.label38 = new System.Windows.Forms.Label();
+            this.tBRegOfSummonsNumber = new System.Windows.Forms.TextBox();
+            this.label39 = new System.Windows.Forms.Label();
+            this.tBRegOfSummonsDocNumber = new System.Windows.Forms.TextBox();
+            this.label37 = new System.Windows.Forms.Label();
+            this.buttonRegOfSummonsSave = new System.Windows.Forms.Button();
+            this.label40 = new System.Windows.Forms.Label();
+            this.tBRegOfSummonsEditSeries = new System.Windows.Forms.TextBox();
+            this.tBRegOfSummonsEditNumber = new System.Windows.Forms.TextBox();
+            this.cBRegOfSummonsStatus = new System.Windows.Forms.ComboBox();
+            this.label41 = new System.Windows.Forms.Label();
+            this.buttonRegOfSummonsSaveEdit = new System.Windows.Forms.Button();
+            this.buttonRegOfSummonsEditSearch = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGV)).BeginInit();
             this.groupBoxServices.SuspendLayout();
             this.tabControlMenuFunctions.SuspendLayout();
             this.tPAdd.SuspendLayout();
             this.tPDelete.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureArrowDel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDelete)).BeginInit();
             this.tPChange.SuspendLayout();
             this.tableLayoutPanelChangeUser.SuspendLayout();
             this.tabControlLit.SuspendLayout();
             this.tPAddLit.SuspendLayout();
             this.tPDeleteLit.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureArrowDeleteLit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDeleteLit)).BeginInit();
             this.tabControlExportAndStatistics.SuspendLayout();
             this.tPStat.SuspendLayout();
             this.tPExport.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureArrowDeleteLit)).BeginInit();
             this.panelNewAdmin.SuspendLayout();
             this.tableLayoutPanelFilter.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureRegisterOfSummons)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureExport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSearch)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureArrowDel)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panelRegOfSummons.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.labelLineRegSummons)).BeginInit();
             this.SuspendLayout();
             // 
             // labelWelcome
@@ -209,7 +219,7 @@ namespace MeoIS
             // dataGV
             // 
             this.dataGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGV.Location = new System.Drawing.Point(109, 72);
+            this.dataGV.Location = new System.Drawing.Point(808, 481);
             this.dataGV.Name = "dataGV";
             this.dataGV.RowHeadersWidth = 51;
             this.dataGV.RowTemplate.Height = 24;
@@ -223,7 +233,7 @@ namespace MeoIS
             this.groupBoxServices.Controls.Add(this.labelUpdatingTheReferenceBook);
             this.groupBoxServices.Controls.Add(this.labelEditingUserDatabase);
             this.groupBoxServices.Controls.Add(this.labelAppointmentOfNewAdministrator);
-            this.groupBoxServices.Location = new System.Drawing.Point(230, 80);
+            this.groupBoxServices.Location = new System.Drawing.Point(929, 489);
             this.groupBoxServices.Name = "groupBoxServices";
             this.groupBoxServices.Size = new System.Drawing.Size(630, 425);
             this.groupBoxServices.TabIndex = 32;
@@ -270,7 +280,7 @@ namespace MeoIS
             this.tabControlMenuFunctions.Controls.Add(this.tPAdd);
             this.tabControlMenuFunctions.Controls.Add(this.tPDelete);
             this.tabControlMenuFunctions.Controls.Add(this.tPChange);
-            this.tabControlMenuFunctions.Location = new System.Drawing.Point(130, 60);
+            this.tabControlMenuFunctions.Location = new System.Drawing.Point(880, 432);
             this.tabControlMenuFunctions.Name = "tabControlMenuFunctions";
             this.tabControlMenuFunctions.SelectedIndex = 0;
             this.tabControlMenuFunctions.Size = new System.Drawing.Size(890, 549);
@@ -303,7 +313,6 @@ namespace MeoIS
             this.tPAdd.Controls.Add(this.buttonNewUser);
             this.tPAdd.Controls.Add(this.label2);
             this.tPAdd.Controls.Add(this.label1);
-            this.tPAdd.Controls.Add(this.pictureBox3);
             this.tPAdd.Location = new System.Drawing.Point(4, 25);
             this.tPAdd.Name = "tPAdd";
             this.tPAdd.Padding = new System.Windows.Forms.Padding(3);
@@ -580,7 +589,6 @@ namespace MeoIS
             this.tPDelete.Controls.Add(this.tBDocNumDelete);
             this.tPDelete.Controls.Add(this.buttonDeleteUser);
             this.tPDelete.Controls.Add(this.label4);
-            this.tPDelete.Controls.Add(this.pictureBox4);
             this.tPDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tPDelete.Location = new System.Drawing.Point(4, 25);
             this.tPDelete.Name = "tPDelete";
@@ -589,6 +597,19 @@ namespace MeoIS
             this.tPDelete.TabIndex = 1;
             this.tPDelete.Text = "Удаление пользователя";
             this.tPDelete.UseVisualStyleBackColor = true;
+            // 
+            // pictureArrowDel
+            // 
+            this.pictureArrowDel.BackColor = System.Drawing.Color.Beige;
+            this.pictureArrowDel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureArrowDel.Image = global::MeoIS.Properties.Resources.arrow;
+            this.pictureArrowDel.Location = new System.Drawing.Point(606, 116);
+            this.pictureArrowDel.Name = "pictureArrowDel";
+            this.pictureArrowDel.Size = new System.Drawing.Size(40, 40);
+            this.pictureArrowDel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureArrowDel.TabIndex = 2836;
+            this.pictureArrowDel.TabStop = false;
+            this.pictureArrowDel.Click += new System.EventHandler(this.pictureArrowDel_Click);
             // 
             // dataGridViewDelete
             // 
@@ -653,7 +674,6 @@ namespace MeoIS
             this.tPChange.Controls.Add(this.tBChangeUser);
             this.tPChange.Controls.Add(this.buttonChange);
             this.tPChange.Controls.Add(this.label15);
-            this.tPChange.Controls.Add(this.pictureBox5);
             this.tPChange.Location = new System.Drawing.Point(4, 25);
             this.tPChange.Name = "tPChange";
             this.tPChange.Padding = new System.Windows.Forms.Padding(3);
@@ -822,7 +842,7 @@ namespace MeoIS
             // 
             this.tabControlLit.Controls.Add(this.tPAddLit);
             this.tabControlLit.Controls.Add(this.tPDeleteLit);
-            this.tabControlLit.Location = new System.Drawing.Point(130, 60);
+            this.tabControlLit.Location = new System.Drawing.Point(829, 469);
             this.tabControlLit.Name = "tabControlLit";
             this.tabControlLit.SelectedIndex = 0;
             this.tabControlLit.Size = new System.Drawing.Size(890, 453);
@@ -845,7 +865,6 @@ namespace MeoIS
             this.tPAddLit.Controls.Add(this.buttonAddLit);
             this.tPAddLit.Controls.Add(this.label29);
             this.tPAddLit.Controls.Add(this.label30);
-            this.tPAddLit.Controls.Add(this.pictureBox6);
             this.tPAddLit.Location = new System.Drawing.Point(4, 25);
             this.tPAddLit.Name = "tPAddLit";
             this.tPAddLit.Padding = new System.Windows.Forms.Padding(3);
@@ -1015,6 +1034,18 @@ namespace MeoIS
             this.tPDeleteLit.Text = "Удаление литературы";
             this.tPDeleteLit.UseVisualStyleBackColor = true;
             // 
+            // pictureArrowDeleteLit
+            // 
+            this.pictureArrowDeleteLit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureArrowDeleteLit.Image = global::MeoIS.Properties.Resources.arrow;
+            this.pictureArrowDeleteLit.Location = new System.Drawing.Point(717, 113);
+            this.pictureArrowDeleteLit.Name = "pictureArrowDeleteLit";
+            this.pictureArrowDeleteLit.Size = new System.Drawing.Size(40, 40);
+            this.pictureArrowDeleteLit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureArrowDeleteLit.TabIndex = 2836;
+            this.pictureArrowDeleteLit.TabStop = false;
+            this.pictureArrowDeleteLit.Click += new System.EventHandler(this.pictureArrowDeleteLit_Click);
+            // 
             // dataGridViewDeleteLit
             // 
             this.dataGridViewDeleteLit.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -1095,7 +1126,7 @@ namespace MeoIS
             // 
             this.tabControlExportAndStatistics.Controls.Add(this.tPStat);
             this.tabControlExportAndStatistics.Controls.Add(this.tPExport);
-            this.tabControlExportAndStatistics.Location = new System.Drawing.Point(290, 80);
+            this.tabControlExportAndStatistics.Location = new System.Drawing.Point(989, 489);
             this.tabControlExportAndStatistics.Name = "tabControlExportAndStatistics";
             this.tabControlExportAndStatistics.SelectedIndex = 0;
             this.tabControlExportAndStatistics.Size = new System.Drawing.Size(552, 370);
@@ -1409,29 +1440,6 @@ namespace MeoIS
             this.label35.Text = "Реестр\r\nповесток";
             this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.pictureBox6.Image = global::MeoIS.Properties.Resources.fonPanel1;
-            this.pictureBox6.Location = new System.Drawing.Point(1, -45);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(880, 473);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 2843;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureArrowDeleteLit
-            // 
-            this.pictureArrowDeleteLit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureArrowDeleteLit.Image = global::MeoIS.Properties.Resources.arrow;
-            this.pictureArrowDeleteLit.Location = new System.Drawing.Point(717, 113);
-            this.pictureArrowDeleteLit.Name = "pictureArrowDeleteLit";
-            this.pictureArrowDeleteLit.Size = new System.Drawing.Size(40, 40);
-            this.pictureArrowDeleteLit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureArrowDeleteLit.TabIndex = 2836;
-            this.pictureArrowDeleteLit.TabStop = false;
-            this.pictureArrowDeleteLit.Click += new System.EventHandler(this.pictureArrowDeleteLit_Click);
-            // 
             // panelNewAdmin
             // 
             this.panelNewAdmin.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -1442,7 +1450,7 @@ namespace MeoIS
             this.panelNewAdmin.Controls.Add(this.label18);
             this.panelNewAdmin.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panelNewAdmin.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.panelNewAdmin.Location = new System.Drawing.Point(258, 90);
+            this.panelNewAdmin.Location = new System.Drawing.Point(957, 499);
             this.panelNewAdmin.Name = "panelNewAdmin";
             this.panelNewAdmin.Size = new System.Drawing.Size(585, 298);
             this.panelNewAdmin.TabIndex = 34;
@@ -1505,7 +1513,7 @@ namespace MeoIS
             this.tableLayoutPanelFilter.Controls.Add(this.rBSearchDistrict, 0, 2);
             this.tableLayoutPanelFilter.Controls.Add(this.rBSearchName, 0, 1);
             this.tableLayoutPanelFilter.Controls.Add(this.rBSearchDocNum, 0, 0);
-            this.tableLayoutPanelFilter.Location = new System.Drawing.Point(810, 64);
+            this.tableLayoutPanelFilter.Location = new System.Drawing.Point(1509, 473);
             this.tableLayoutPanelFilter.Name = "tableLayoutPanelFilter";
             this.tableLayoutPanelFilter.RowCount = 7;
             this.tableLayoutPanelFilter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
@@ -1604,17 +1612,17 @@ namespace MeoIS
             this.rBSearchDocNum.Text = "По номеру документа";
             this.rBSearchDocNum.UseVisualStyleBackColor = false;
             // 
-            // pictureBox1
+            // pictureRegisterOfSummons
             // 
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = global::MeoIS.Properties.Resources.reestr;
-            this.pictureBox1.Location = new System.Drawing.Point(36, 243);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(69, 64);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 38;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureExport_Click);
+            this.pictureRegisterOfSummons.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureRegisterOfSummons.Image = global::MeoIS.Properties.Resources.reestr;
+            this.pictureRegisterOfSummons.Location = new System.Drawing.Point(36, 243);
+            this.pictureRegisterOfSummons.Name = "pictureRegisterOfSummons";
+            this.pictureRegisterOfSummons.Size = new System.Drawing.Size(69, 64);
+            this.pictureRegisterOfSummons.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureRegisterOfSummons.TabIndex = 38;
+            this.pictureRegisterOfSummons.TabStop = false;
+            this.pictureRegisterOfSummons.Click += new System.EventHandler(this.pictureRegisterOfSummons_Click);
             // 
             // pictureExport
             // 
@@ -1653,72 +1661,220 @@ namespace MeoIS
             this.picSearch.TabStop = false;
             this.picSearch.Click += new System.EventHandler(this.picSearch_Click_1);
             // 
-            // pictureBox3
+            // panelRegOfSummons
             // 
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.pictureBox3.Image = global::MeoIS.Properties.Resources.fonPanel1;
-            this.pictureBox3.Location = new System.Drawing.Point(-4, 3);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(880, 514);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 41;
-            this.pictureBox3.TabStop = false;
+            this.panelRegOfSummons.BackColor = System.Drawing.Color.Beige;
+            this.panelRegOfSummons.Controls.Add(this.cBRegOfSummonsStatus);
+            this.panelRegOfSummons.Controls.Add(this.labelLineRegSummons);
+            this.panelRegOfSummons.Controls.Add(this.label36);
+            this.panelRegOfSummons.Controls.Add(this.tBRegOfSummonsEditNumber);
+            this.panelRegOfSummons.Controls.Add(this.tBRegOfSummonsEditSeries);
+            this.panelRegOfSummons.Controls.Add(this.tBRegOfSummonsDateOfVisit);
+            this.panelRegOfSummons.Controls.Add(this.tBRegOfSummonsSeries);
+            this.panelRegOfSummons.Controls.Add(this.label38);
+            this.panelRegOfSummons.Controls.Add(this.tBRegOfSummonsNumber);
+            this.panelRegOfSummons.Controls.Add(this.label40);
+            this.panelRegOfSummons.Controls.Add(this.label41);
+            this.panelRegOfSummons.Controls.Add(this.label39);
+            this.panelRegOfSummons.Controls.Add(this.tBRegOfSummonsDocNumber);
+            this.panelRegOfSummons.Controls.Add(this.label37);
+            this.panelRegOfSummons.Controls.Add(this.buttonRegOfSummonsEditSearch);
+            this.panelRegOfSummons.Controls.Add(this.buttonRegOfSummonsSaveEdit);
+            this.panelRegOfSummons.Controls.Add(this.buttonRegOfSummonsSave);
+            this.panelRegOfSummons.Location = new System.Drawing.Point(255, 69);
+            this.panelRegOfSummons.Name = "panelRegOfSummons";
+            this.panelRegOfSummons.Size = new System.Drawing.Size(547, 500);
+            this.panelRegOfSummons.TabIndex = 41;
             // 
-            // pictureArrowDel
+            // labelLineRegSummons
             // 
-            this.pictureArrowDel.BackColor = System.Drawing.Color.Beige;
-            this.pictureArrowDel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureArrowDel.Image = global::MeoIS.Properties.Resources.arrow;
-            this.pictureArrowDel.Location = new System.Drawing.Point(606, 116);
-            this.pictureArrowDel.Name = "pictureArrowDel";
-            this.pictureArrowDel.Size = new System.Drawing.Size(40, 40);
-            this.pictureArrowDel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureArrowDel.TabIndex = 2836;
-            this.pictureArrowDel.TabStop = false;
-            this.pictureArrowDel.Click += new System.EventHandler(this.pictureArrowDel_Click);
+            this.labelLineRegSummons.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.labelLineRegSummons.Image = global::MeoIS.Properties.Resources.black;
+            this.labelLineRegSummons.Location = new System.Drawing.Point(9, 274);
+            this.labelLineRegSummons.Name = "labelLineRegSummons";
+            this.labelLineRegSummons.Size = new System.Drawing.Size(500, 5);
+            this.labelLineRegSummons.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.labelLineRegSummons.TabIndex = 42;
+            this.labelLineRegSummons.TabStop = false;
             // 
-            // pictureBox4
+            // label36
             // 
-            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.pictureBox4.Image = global::MeoIS.Properties.Resources.fonPanel1;
-            this.pictureBox4.Location = new System.Drawing.Point(1, 3);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(880, 514);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 2837;
-            this.pictureBox4.TabStop = false;
+            this.label36.AutoSize = true;
+            this.label36.BackColor = System.Drawing.Color.Beige;
+            this.label36.Font = new System.Drawing.Font("Times New Roman", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label36.Location = new System.Drawing.Point(120, 13);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(295, 43);
+            this.label36.TabIndex = 2835;
+            this.label36.Text = "Реестр повесток";
             // 
-            // pictureBox5
+            // tBRegOfSummonsDateOfVisit
             // 
-            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.pictureBox5.Image = global::MeoIS.Properties.Resources.fonPanel1;
-            this.pictureBox5.Location = new System.Drawing.Point(1, 3);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(880, 514);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 2842;
-            this.pictureBox5.TabStop = false;
+            this.tBRegOfSummonsDateOfVisit.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tBRegOfSummonsDateOfVisit.Location = new System.Drawing.Point(220, 177);
+            this.tBRegOfSummonsDateOfVisit.Multiline = true;
+            this.tBRegOfSummonsDateOfVisit.Name = "tBRegOfSummonsDateOfVisit";
+            this.tBRegOfSummonsDateOfVisit.Size = new System.Drawing.Size(227, 38);
+            this.tBRegOfSummonsDateOfVisit.TabIndex = 2816;
             // 
-            // pictureBox2
+            // tBRegOfSummonsSeries
             // 
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.pictureBox2.Image = global::MeoIS.Properties.Resources.fon;
-            this.pictureBox2.Location = new System.Drawing.Point(-6, -3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(1104, 608);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 41;
-            this.pictureBox2.TabStop = false;
+            this.tBRegOfSummonsSeries.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tBRegOfSummonsSeries.Location = new System.Drawing.Point(220, 123);
+            this.tBRegOfSummonsSeries.Multiline = true;
+            this.tBRegOfSummonsSeries.Name = "tBRegOfSummonsSeries";
+            this.tBRegOfSummonsSeries.Size = new System.Drawing.Size(148, 38);
+            this.tBRegOfSummonsSeries.TabIndex = 2816;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.BackColor = System.Drawing.Color.Beige;
+            this.label38.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label38.Location = new System.Drawing.Point(63, 123);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(128, 22);
+            this.label38.TabIndex = 2828;
+            this.label38.Text = "Серия, Номер";
+            // 
+            // tBRegOfSummonsNumber
+            // 
+            this.tBRegOfSummonsNumber.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tBRegOfSummonsNumber.Location = new System.Drawing.Point(374, 123);
+            this.tBRegOfSummonsNumber.Multiline = true;
+            this.tBRegOfSummonsNumber.Name = "tBRegOfSummonsNumber";
+            this.tBRegOfSummonsNumber.Size = new System.Drawing.Size(135, 38);
+            this.tBRegOfSummonsNumber.TabIndex = 2816;
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.BackColor = System.Drawing.Color.Beige;
+            this.label39.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label39.Location = new System.Drawing.Point(43, 177);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(148, 22);
+            this.label39.TabIndex = 2828;
+            this.label39.Text = "Дата посещения";
+            // 
+            // tBRegOfSummonsDocNumber
+            // 
+            this.tBRegOfSummonsDocNumber.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tBRegOfSummonsDocNumber.Location = new System.Drawing.Point(220, 70);
+            this.tBRegOfSummonsDocNumber.Multiline = true;
+            this.tBRegOfSummonsDocNumber.Name = "tBRegOfSummonsDocNumber";
+            this.tBRegOfSummonsDocNumber.Size = new System.Drawing.Size(227, 38);
+            this.tBRegOfSummonsDocNumber.TabIndex = 2816;
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.BackColor = System.Drawing.Color.Beige;
+            this.label37.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label37.Location = new System.Drawing.Point(30, 70);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(161, 22);
+            this.label37.TabIndex = 2828;
+            this.label37.Text = "Номер документа";
+            // 
+            // buttonRegOfSummonsSave
+            // 
+            this.buttonRegOfSummonsSave.BackColor = System.Drawing.Color.Beige;
+            this.buttonRegOfSummonsSave.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonRegOfSummonsSave.Location = new System.Drawing.Point(192, 222);
+            this.buttonRegOfSummonsSave.Name = "buttonRegOfSummonsSave";
+            this.buttonRegOfSummonsSave.Size = new System.Drawing.Size(150, 38);
+            this.buttonRegOfSummonsSave.TabIndex = 30;
+            this.buttonRegOfSummonsSave.Text = "Сохранить";
+            this.buttonRegOfSummonsSave.UseVisualStyleBackColor = false;
+            this.buttonRegOfSummonsSave.Click += new System.EventHandler(this.buttonRegOfSummonsSave_Click);
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.BackColor = System.Drawing.Color.Beige;
+            this.label40.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label40.Location = new System.Drawing.Point(5, 299);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(376, 66);
+            this.label40.TabIndex = 2828;
+            this.label40.Text = "Если Вы хотите изменить статус повестки,\r\n\r\nвведите ее серию и номер";
+            // 
+            // tBRegOfSummonsEditSeries
+            // 
+            this.tBRegOfSummonsEditSeries.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tBRegOfSummonsEditSeries.Location = new System.Drawing.Point(244, 336);
+            this.tBRegOfSummonsEditSeries.Multiline = true;
+            this.tBRegOfSummonsEditSeries.Name = "tBRegOfSummonsEditSeries";
+            this.tBRegOfSummonsEditSeries.Size = new System.Drawing.Size(126, 38);
+            this.tBRegOfSummonsEditSeries.TabIndex = 2816;
+            // 
+            // tBRegOfSummonsEditNumber
+            // 
+            this.tBRegOfSummonsEditNumber.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tBRegOfSummonsEditNumber.Location = new System.Drawing.Point(385, 336);
+            this.tBRegOfSummonsEditNumber.Multiline = true;
+            this.tBRegOfSummonsEditNumber.Name = "tBRegOfSummonsEditNumber";
+            this.tBRegOfSummonsEditNumber.Size = new System.Drawing.Size(126, 38);
+            this.tBRegOfSummonsEditNumber.TabIndex = 2816;
+            // 
+            // cBRegOfSummonsStatus
+            // 
+            this.cBRegOfSummonsStatus.FormattingEnabled = true;
+            this.cBRegOfSummonsStatus.Items.AddRange(new object[] {
+            "Активно",
+            "Просрочено",
+            "Закрыто"});
+            this.cBRegOfSummonsStatus.Location = new System.Drawing.Point(220, 400);
+            this.cBRegOfSummonsStatus.Name = "cBRegOfSummonsStatus";
+            this.cBRegOfSummonsStatus.Size = new System.Drawing.Size(172, 24);
+            this.cBRegOfSummonsStatus.TabIndex = 2836;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.BackColor = System.Drawing.Color.Beige;
+            this.label41.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label41.Location = new System.Drawing.Point(124, 399);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(67, 22);
+            this.label41.TabIndex = 2828;
+            this.label41.Text = "Статус";
+            // 
+            // buttonRegOfSummonsSaveEdit
+            // 
+            this.buttonRegOfSummonsSaveEdit.BackColor = System.Drawing.Color.Beige;
+            this.buttonRegOfSummonsSaveEdit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonRegOfSummonsSaveEdit.Location = new System.Drawing.Point(233, 445);
+            this.buttonRegOfSummonsSaveEdit.Name = "buttonRegOfSummonsSaveEdit";
+            this.buttonRegOfSummonsSaveEdit.Size = new System.Drawing.Size(219, 38);
+            this.buttonRegOfSummonsSaveEdit.TabIndex = 30;
+            this.buttonRegOfSummonsSaveEdit.Text = "Сохранить изменение";
+            this.buttonRegOfSummonsSaveEdit.UseVisualStyleBackColor = false;
+            this.buttonRegOfSummonsSaveEdit.Click += new System.EventHandler(this.buttonRegOfSummonsSaveEdit_Click);
+            // 
+            // buttonRegOfSummonsEditSearch
+            // 
+            this.buttonRegOfSummonsEditSearch.BackColor = System.Drawing.Color.Beige;
+            this.buttonRegOfSummonsEditSearch.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonRegOfSummonsEditSearch.Location = new System.Drawing.Point(95, 445);
+            this.buttonRegOfSummonsEditSearch.Name = "buttonRegOfSummonsEditSearch";
+            this.buttonRegOfSummonsEditSearch.Size = new System.Drawing.Size(112, 38);
+            this.buttonRegOfSummonsEditSearch.TabIndex = 30;
+            this.buttonRegOfSummonsEditSearch.Text = "Найти";
+            this.buttonRegOfSummonsEditSearch.UseVisualStyleBackColor = false;
+            this.buttonRegOfSummonsEditSearch.Click += new System.EventHandler(this.buttonRegOfSummonsEditSearch_Click);
             // 
             // Admin_panel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1093, 603);
-            this.Controls.Add(this.tabControlLit);
+            this.Controls.Add(this.panelRegOfSummons);
+            this.Controls.Add(this.tabControlMenuFunctions);
             this.Controls.Add(this.panelNewAdmin);
             this.Controls.Add(this.tableLayoutPanelFilter);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureRegisterOfSummons);
             this.Controls.Add(this.pictureExport);
             this.Controls.Add(this.labelExit);
             this.Controls.Add(this.pictureClose);
@@ -1730,8 +1886,7 @@ namespace MeoIS
             this.Controls.Add(this.tabControlExportAndStatistics);
             this.Controls.Add(this.dataGV);
             this.Controls.Add(this.groupBoxServices);
-            this.Controls.Add(this.tabControlMenuFunctions);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.tabControlLit);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Admin_panel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -1745,6 +1900,7 @@ namespace MeoIS
             this.tPAdd.PerformLayout();
             this.tPDelete.ResumeLayout(false);
             this.tPDelete.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureArrowDel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDelete)).EndInit();
             this.tPChange.ResumeLayout(false);
             this.tPChange.PerformLayout();
@@ -1755,27 +1911,24 @@ namespace MeoIS
             this.tPAddLit.PerformLayout();
             this.tPDeleteLit.ResumeLayout(false);
             this.tPDeleteLit.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureArrowDeleteLit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDeleteLit)).EndInit();
             this.tabControlExportAndStatistics.ResumeLayout(false);
             this.tPStat.ResumeLayout(false);
             this.tPStat.PerformLayout();
             this.tPExport.ResumeLayout(false);
             this.tPExport.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureArrowDeleteLit)).EndInit();
             this.panelNewAdmin.ResumeLayout(false);
             this.panelNewAdmin.PerformLayout();
             this.tableLayoutPanelFilter.ResumeLayout(false);
             this.tableLayoutPanelFilter.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureRegisterOfSummons)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureExport)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSearch)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureArrowDel)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panelRegOfSummons.ResumeLayout(false);
+            this.panelRegOfSummons.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.labelLineRegSummons)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1903,11 +2056,24 @@ namespace MeoIS
         private System.Windows.Forms.RadioButton rBStatCategory;
         private System.Windows.Forms.RadioButton rBExpTXTCategory;
         private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureRegisterOfSummons;
+        private System.Windows.Forms.Panel panelRegOfSummons;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.TextBox tBRegOfSummonsDateOfVisit;
+        private System.Windows.Forms.TextBox tBRegOfSummonsSeries;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.TextBox tBRegOfSummonsNumber;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.TextBox tBRegOfSummonsDocNumber;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.PictureBox labelLineRegSummons;
+        private System.Windows.Forms.Button buttonRegOfSummonsSave;
+        private System.Windows.Forms.TextBox tBRegOfSummonsEditNumber;
+        private System.Windows.Forms.TextBox tBRegOfSummonsEditSeries;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.ComboBox cBRegOfSummonsStatus;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Button buttonRegOfSummonsSaveEdit;
+        private System.Windows.Forms.Button buttonRegOfSummonsEditSearch;
     }
 }

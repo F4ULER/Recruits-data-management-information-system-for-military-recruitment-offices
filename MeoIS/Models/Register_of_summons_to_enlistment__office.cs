@@ -15,9 +15,29 @@ namespace MeoIS
     class Register_of_summons_to_enlistment__office
     {
 
-        public void addSummons(string documentNumber)
+        public bool addSummons(string documentNumber, string series, string number, string date_of_visit, string status)
         {
+            string[] changedate;
+            string newDate = "";
+            changedate = date_of_visit.Split(new char[] { '.' });
+            newDate = changedate[2] + "-" + changedate[1] + "-" + changedate[0];
 
+            DataBaseConnect DataBase = new DataBaseConnect();
+            string message = "INSERT INTO `register_of_summonses`(`document_number`, `series`, `number`, `date_of_visit`, `visit_status`) " +
+                "VALUES (" + documentNumber  + ", " + series + ", " + number + ", '" + newDate + "', '" + status + "')";
+
+            if (DataBase.sending_command(message) == true)
+            {
+                MessageBox.Show("Повестка занесена в реестр!");
+
+                return true;
+            }
+            else
+            {
+                MessageBox.Show("Ошибка!");
+
+                return false;
+            }
         }
 
         public void editOrDeleteSummons()
