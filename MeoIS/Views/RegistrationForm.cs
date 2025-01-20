@@ -70,12 +70,12 @@ namespace MeoIS
             tBEmail.Text = "Введите email";
             tBEmail.ForeColor = Color.Gray;
         }
-
-        //установка серого цвета, если поле пустое (категория годности)
-        public void set_gray_text_in_tBStatus()
+        
+        //установка серого цвета, если поле пустое (адрес прописки)
+        public void set_gray_text_in_tBAddress()
         {
-            tBCategory.Text = "Введите категорию годности";
-            tBCategory.ForeColor = Color.Gray;
+            tBAddress.Text = "Введите адрес прописки";
+            tBAddress.ForeColor = Color.Gray;
         }
 
         public RegistrationForm()
@@ -93,6 +93,7 @@ namespace MeoIS
             tBAge.Visible = false;
             tBPhone.Visible = false;
             tBEmail.Visible = false;
+            cBCategory.Visible = false;
 
             set_grey_text_in_tBAge();
             set_gray_text_in_tBDocumentNumber();
@@ -102,17 +103,17 @@ namespace MeoIS
             set_gray_text_in_tBPass();
             set_gray_text_in_tBPatronymic();
             set_gray_text_in_tBPhone();
-            set_gray_text_in_tBStatus();
             set_grey_text_in_tBAge();
+            set_gray_text_in_tBAddress();
         }
 
         // проверка заполнения полей
         public Boolean сheckCompletedInputFields()
         {
-            string[] mass = new string[] { tBDocNumber.Text, tBPass.Text, tBCategory.Text, tBNameUser.Text, tBLastName.Text, tBPatronymic.Text, tBAge.Text, tBPhone.Text, tBEmail.Text};
+            string[] mass = new string[] { tBDocNumber.Text, tBPass.Text, cBCategory.Text, tBNameUser.Text, tBLastName.Text, tBPatronymic.Text, tBAge.Text, tBAddress.Text, tBPhone.Text, tBEmail.Text};
             bool trouble = false;
 
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 9; i++)
             {
                 if (mass[i] == "" || mass[i].IndexOf("Введите") == 0)
                 {
@@ -155,16 +156,20 @@ namespace MeoIS
             }
 
             User_data user_Data = new User_data();
-            DataTable table = new DataTable();
 
             string gender = "";
             if (rBM.Checked == false)
             {
                 gender = "М";
             }
-            else gender = "Ж";
+            else { gender = "Ж"; }
 
-            if (user_Data.addUser(tBDocNumber.Text, tBPass.Text, tBLastName.Text, tBNameUser.Text, tBPatronymic.Text, tBAge.Text, tBCategory.Text, gender,"", tBPhone.Text, tBEmail.Text))
+            string[] changedate;
+            string newDate = "";
+            changedate = tBAge.Text.Split(new char[] { '.' });
+            newDate = changedate[2] + "-" + changedate[1] + "-" + changedate[0];
+
+            if (user_Data.addUser(tBDocNumber.Text, tBPass.Text, tBLastName.Text, tBNameUser.Text, tBPatronymic.Text, newDate, tBAddress.Text, cBCategory.Text, gender, cBDistrict.Text, tBPhone.Text, tBEmail.Text))
             {
                 MessageBox.Show("Регистрация прошла успешно!");
                 AuthenticationForm form = new AuthenticationForm();
@@ -296,23 +301,6 @@ namespace MeoIS
                 set_gray_text_in_tBEmail();
             }
         }
-
-        private void tBStatus_Enter(object sender, EventArgs e)
-        {
-            if (tBCategory.Text == "Введите категорию годности")
-            {
-                tBCategory.Text = "";
-                tBCategory.ForeColor = Color.Black;
-            }
-        }
-
-        private void tBStatus_Leave(object sender, EventArgs e)
-        {
-            if (tBCategory.Text == "")
-            {
-                set_gray_text_in_tBStatus();
-            }
-        }
         private void tBAge_Enter(object sender, EventArgs e)
         {
             if (tBAge.Text == "Введите дату рождения")
@@ -337,7 +325,6 @@ namespace MeoIS
             {
                 tBDocNumber.Visible = false;
                 tBPass.Visible = false;
-                tBCategory.Visible = false;
                 tBLastName.Visible = true;
                 tBNameUser.Visible = true;
                 tBPatronymic.Visible = true;
@@ -345,6 +332,10 @@ namespace MeoIS
                 rBM.Visible = true;
                 labelGender.Visible = true;
                 buttonBack.Visible = true;
+                cBCategory.Visible = true;
+                labelCategory.Visible = true;
+                cBDistrict.Visible = false;
+                labelDistrict.Visible = false;
             } else if (tBNameUser.Visible == true)
             {
                 tBLastName.Visible = false;
@@ -356,7 +347,12 @@ namespace MeoIS
                 tBAge.Visible = true;
                 tBPhone.Visible = true;
                 tBEmail.Visible = true;
+                tBAddress.Visible = true;
                 buttonReg.Visible = true;
+                cBCategory.Visible = false;
+                labelCategory.Visible = false;
+                cBDistrict.Visible = false;
+                labelDistrict.Visible = false;
                 buttonContinue.Visible = false;
             } 
         }
@@ -369,10 +365,14 @@ namespace MeoIS
             {
                 tBDocNumber.Visible = true;
                 tBPass.Visible = true;
-                tBCategory.Visible = true;
+                cBCategory.Visible = true;
                 tBLastName.Visible = false;
                 tBNameUser.Visible = false;
                 tBPatronymic.Visible = false;
+                cBCategory.Visible = false;
+                labelCategory.Visible = false;
+                cBDistrict.Visible = true;
+                labelDistrict.Visible = true;
                 rBF.Visible = false;
                 rBM.Visible = false;
                 labelGender.Visible = false;
@@ -386,6 +386,9 @@ namespace MeoIS
                 tBAge.Visible = false;
                 tBPhone.Visible = false;
                 tBEmail.Visible = false;
+                tBAddress.Visible = false;
+                cBCategory.Visible = true;
+                labelCategory.Visible = true;
                 rBF.Visible = true;
                 rBM.Visible = true;
                 labelGender.Visible = true;
@@ -403,6 +406,23 @@ namespace MeoIS
         private void labelExit_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void tBAddress_Leave(object sender, EventArgs e)
+        {
+            if (tBAddress.Text == "")
+            {
+                set_gray_text_in_tBAddress();
+            }
+        }
+
+        private void tBAddress_Enter(object sender, EventArgs e)
+        {
+            if (tBAddress.Text == "Введите адрес прописки")
+            {
+                tBAddress.Text = "";
+                tBAddress.ForeColor = Color.Black;
+            }
         }
     }
 }

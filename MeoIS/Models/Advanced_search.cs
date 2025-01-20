@@ -47,7 +47,7 @@ namespace MeoIS
         public DataTable searchDistrict(string district)
         {
             string message = "SELECT `document_number` AS 'Номер документа', `password` AS 'Пароль', `last_name` AS 'Фамилия', `name` AS 'Имя', `patronymic` AS 'Отчество', `date_of_birth` AS 'Дата рождения', `address` AS 'Фактический адрес', `category` AS 'Категория годности'," +
-                " `gender` AS 'Пол', `district` AS 'Город', `phone_number` AS 'Номер телефона', `email` AS 'Электронная почта', `user_status` AS 'Статус' FROM `users` WHERE `district` = '" + district + "'";
+                " `gender` AS 'Пол', `district` AS 'Район', `phone_number` AS 'Номер телефона', `email` AS 'Электронная почта', `user_status` AS 'Статус' FROM `users` WHERE `district` = '" + district + "'";
 
             return DataBase.sending_command_with_output_to_table(message);
         }

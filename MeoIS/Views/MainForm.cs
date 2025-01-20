@@ -44,6 +44,7 @@ namespace MeoIS
                 labelActiveSummon.Visible = true;
                 labelResetActiveSummon.Visible = true;
                 buttonRegisterOfSummons.Visible = true;
+                buttonFirstReg.Visible = false;
 
                 UpdateActiveSummons();
             }
@@ -61,6 +62,7 @@ namespace MeoIS
                 labelWelcome2.Visible = true;
                 labelWelcome3.Visible = true;
                 labelLine.Visible = true;
+                buttonFirstReg.Visible = true;
             }
         }
 
@@ -171,16 +173,16 @@ namespace MeoIS
         //постановка на учет в новый военкомат
         private void buttonOldEnlistmentOffice_Click(object sender, EventArgs e)
         {
-            if(tBEnlistmentOfficeWhereRegistered.Text != "" && tBNewAddress.Text != "")
+            if(cBEnlistmentOfficeWhereRegistered.Text != "" && cBNewDistrict.Text != "")
             {
-                string[] district = tBNewAddress.Text.Split(new char[] { ',' });
+                string[] district = cBNewDistrict.Text.Split(new char[] { ',' });
 
                 Military_registration_and_enlistment_office Enlistment_Office = new Military_registration_and_enlistment_office();
                 if (Enlistment_Office.change_military_registration_and_enlistment_office(Transfer.Doc_num, district[0]) == true)
                 {
-                    labelRectal.Text = "Военкомат города: " + Transfer.district;
-                    tBNewAddress.Text = "";
-                    tBEnlistmentOfficeWhereRegistered.Text = "";
+                    labelRectal.Text = "Военкомат района \n" + Transfer.district;
+                    cBNewDistrict.Text = "";
+                    cBEnlistmentOfficeWhereRegistered.Text = "";
                     tabControlMenuServices.Visible = false;
                 } 
                 else { MessageBox.Show("Ошибка!"); }
@@ -196,92 +198,92 @@ namespace MeoIS
 
         private void monday_MouseMove(object sender, MouseEventArgs e)
         {
-            monday.BackColor = Color.LightBlue;
+            monday.BackColor = Color.Green;
         }
 
         private void monday_MouseLeave(object sender, EventArgs e)
         {
-            monday.BackColor = Color.White;
+            monday.BackColor = Color.DarkSeaGreen;
         }
 
         private void Wednesday_MouseMove(object sender, MouseEventArgs e)
         {
-            Wednesday.BackColor = Color.LightBlue;
+            Wednesday.BackColor = Color.Green;
         }
 
         private void Wednesday_MouseLeave(object sender, EventArgs e)
         {
-            Wednesday.BackColor = Color.White;
+            Wednesday.BackColor = Color.DarkSeaGreen;
         }
 
         private void Friday_MouseMove(object sender, MouseEventArgs e)
         {
-            Friday.BackColor = Color.LightBlue;
+            Friday.BackColor = Color.Green;
         }
 
         private void Friday_MouseLeave(object sender, EventArgs e)
         {
-            Friday.BackColor = Color.White;
+            Friday.BackColor = Color.DarkSeaGreen;
         }
 
         private void cBMonday_MouseMove(object sender, MouseEventArgs e)
         {
-            monday.BackColor = Color.LightBlue;
+            monday.BackColor = Color.Green;
         }
 
         private void cBMonday_MouseLeave(object sender, EventArgs e)
         {
-            monday.BackColor = Color.White;
+            monday.BackColor = Color.DarkSeaGreen;
         }
 
         private void cBWednesday_MouseMove(object sender, MouseEventArgs e)
         {
-            Wednesday.BackColor = Color.LightBlue;
+            Wednesday.BackColor = Color.Green;
         }
 
         private void cBWednesday_MouseLeave(object sender, EventArgs e)
         {
-            Wednesday.BackColor = Color.White;
+            Wednesday.BackColor = Color.DarkSeaGreen;
         }
 
         private void cBFriday_MouseMove(object sender, MouseEventArgs e)
         {
-            Friday.BackColor = Color.LightBlue;
+            Friday.BackColor = Color.Green;
         }
 
         private void cBFriday_MouseLeave(object sender, EventArgs e)
         {
-            Friday.BackColor = Color.White;
+            Friday.BackColor = Color.DarkSeaGreen;
         }
 
         private void labelRecordingCompleteMonday_MouseMove(object sender, MouseEventArgs e)
         {
-            monday.BackColor = Color.LightBlue;
+            monday.BackColor = Color.Green;
         }
 
         private void labelRecordingCompleteMonday_MouseLeave(object sender, EventArgs e)
         {
-            monday.BackColor = Color.White;
+            monday.BackColor = Color.DarkSeaGreen;
         }
 
         private void labelRecordingCompleteWensday_MouseMove(object sender, MouseEventArgs e)
         {
-            Wednesday.BackColor = Color.LightBlue;
+            Wednesday.BackColor = Color.Green;
         }
 
         private void labelRecordingCompleteWensday_MouseLeave(object sender, EventArgs e)
         {
-            Wednesday.BackColor = Color.White;
+            Wednesday.BackColor = Color.DarkSeaGreen;
         }
 
         private void labelRecordingCompleteFriday_MouseMove(object sender, MouseEventArgs e)
         {
-            Friday.BackColor = Color.LightBlue;
+            Friday.BackColor = Color.Green;
         }
 
         private void labelRecordingCompleteFriday_MouseLeave(object sender, EventArgs e)
         {
-            Friday.BackColor = Color.White;
+            Friday.BackColor = Color.DarkSeaGreen;
         }
 
         int k = 0; //счетчик недель для мед осмотра
@@ -833,6 +835,8 @@ namespace MeoIS
             else
             {
                 MessageBox.Show("Не найдено ни одной записи");
+                groupBoxServices.Visible = true;
+                pictureCloseServises.Visible = false;
             }
         }
     }

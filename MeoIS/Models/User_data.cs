@@ -65,16 +65,16 @@ namespace MeoIS
         }
 
         // добавление записи о пользователе
-        public bool addUser(string documentNumber, string pass, string lastName, string name, string patronymic, string age, string category, string gender, string district, string phone, string email)
+        public bool addUser(string documentNumber, string pass, string lastName, string name, string patronymic, string age, string address, string category, string gender, string district, string phone, string email)
         {
-            string message = "INSERT INTO `users` (`document_number`, `password`, `last_name`, `name`, " +
-                "`patronymic`, `age`, `category`, `gender`, `district`, `phone_number`, `email`, `user_status`,`address`) VALUES " +
-                "('" + documentNumber + "', '" + pass + "', '" + lastName + "', '" + name + "', '" + patronymic + "', '" + age +
-                "', '" + category + "','" + gender + "','" + district + "', '" + phone + "', '" + email + "', 'user', '');";
+            string message = "INSERT INTO `users`(`document_number`, `password`, `last_name`, `name`, `patronymic`, `date_of_birth`, `address`," +
+                " `category`, `gender`, `district`, `phone_number`, `email`, `user_status`) " +
+                "VALUES ('" + documentNumber + "','" + pass + "','" + lastName + "','" + name + "'," +
+                "'" + patronymic + "','" + age + "','" + address + "','" + category + "','" + gender + "'," +
+                "'" + district + "','" + phone + "','" + email + "', 'user');";
             
             if (DataBase.sending_command(message) == true)
             {
-                MessageBox.Show("Польователь успешно добавлен!");
 
                 return true;
             }

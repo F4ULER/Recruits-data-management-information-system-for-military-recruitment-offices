@@ -32,7 +32,7 @@ namespace MeoIS
         public Boolean change_military_registration_and_enlistment_office(string documentNumber, string value)
         {
             DialogResult result = MessageBox.Show(
-                "Вы хотите встать на учет в военкомате города " + value + "?",
+                "Вы хотите встать на учет в военкомате " + value + " района?",
                 "Постановка на учет",
                 MessageBoxButtons.YesNo);
 
@@ -42,7 +42,7 @@ namespace MeoIS
 
                 if (DataBase.sending_command(message) == true)
                 {
-                    MessageBox.Show("Вы встали на учет в военкомат города " + value + ".");
+                    MessageBox.Show("Заявление будет рассмотрено в течении 14 рабочих дней.");
                     Transfer.district = value;
                     return true;
                 }

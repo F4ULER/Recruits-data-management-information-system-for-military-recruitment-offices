@@ -46,7 +46,6 @@ C:\Users\User\source\repos\Recruits-data-management-information-system-for-milit
 C:\Users\User\source\repos\Recruits-data-management-information-system-for-military-recruitment-offices-main\MeoIS\bin\Debug\System.Numerics.Vectors.dll
 C:\Users\User\source\repos\Recruits-data-management-information-system-for-military-recruitment-offices-main\MeoIS\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\User\source\repos\Recruits-data-management-information-system-for-military-recruitment-offices-main\MeoIS\bin\Debug\MySql.Data.xml
-C:\Users\User\source\repos\Recruits-data-management-information-system-for-military-recruitment-offices-main\MeoIS\obj\Debug\MeoIS.csprojAssemblyReference.cache
 C:\Users\User\source\repos\Recruits-data-management-information-system-for-military-recruitment-offices-main\MeoIS\obj\Debug\MeoIS.exe.config
 C:\Users\User\source\repos\Recruits-data-management-information-system-for-military-recruitment-offices-main\MeoIS\obj\Debug\MeoIS.csproj.ResolveComReference.cache
 C:\Users\User\source\repos\Recruits-data-management-information-system-for-military-recruitment-offices-main\MeoIS\obj\Debug\MeoIS.Admin_panel.resources
@@ -60,3 +59,4 @@ C:\Users\User\source\repos\Recruits-data-management-information-system-for-milit
 C:\Users\User\source\repos\Recruits-data-management-information-system-for-military-recruitment-offices-main\MeoIS\obj\Debug\MeoIS.csproj.CopyComplete
 C:\Users\User\source\repos\Recruits-data-management-information-system-for-military-recruitment-offices-main\MeoIS\obj\Debug\MeoIS.exe
 C:\Users\User\source\repos\Recruits-data-management-information-system-for-military-recruitment-offices-main\MeoIS\obj\Debug\MeoIS.pdb
+C:\Users\User\source\repos\Recruits-data-management-information-system-for-military-recruitment-offices-main\MeoIS\obj\Debug\MeoIS.csprojAssemblyReference.cache

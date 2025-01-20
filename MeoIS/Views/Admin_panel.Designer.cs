@@ -39,10 +39,12 @@ namespace MeoIS
             this.labelAppointmentOfNewAdministrator = new System.Windows.Forms.Label();
             this.tabControlMenuFunctions = new System.Windows.Forms.TabControl();
             this.tPAdd = new System.Windows.Forms.TabPage();
-            this.label13 = new System.Windows.Forms.Label();
-            this.tBDistrict = new System.Windows.Forms.TextBox();
+            this.cBDistrict = new System.Windows.Forms.ComboBox();
+            this.cBCategory = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -50,12 +52,12 @@ namespace MeoIS
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tBAge = new System.Windows.Forms.TextBox();
-            this.tBCategory = new System.Windows.Forms.TextBox();
             this.rBF = new System.Windows.Forms.RadioButton();
             this.rBM = new System.Windows.Forms.RadioButton();
             this.labelGender = new System.Windows.Forms.Label();
             this.tBPhone = new System.Windows.Forms.TextBox();
             this.tBNameUser = new System.Windows.Forms.TextBox();
+            this.tBAddress = new System.Windows.Forms.TextBox();
             this.tBEmail = new System.Windows.Forms.TextBox();
             this.tBPass = new System.Windows.Forms.TextBox();
             this.tBPatronymic = new System.Windows.Forms.TextBox();
@@ -152,23 +154,23 @@ namespace MeoIS
             this.pictureClose = new System.Windows.Forms.PictureBox();
             this.picSearch = new System.Windows.Forms.PictureBox();
             this.panelRegOfSummons = new System.Windows.Forms.Panel();
+            this.cBRegOfSummonsStatus = new System.Windows.Forms.ComboBox();
             this.labelLineRegSummons = new System.Windows.Forms.PictureBox();
             this.label36 = new System.Windows.Forms.Label();
+            this.tBRegOfSummonsEditNumber = new System.Windows.Forms.TextBox();
+            this.tBRegOfSummonsEditSeries = new System.Windows.Forms.TextBox();
             this.tBRegOfSummonsDateOfVisit = new System.Windows.Forms.TextBox();
             this.tBRegOfSummonsSeries = new System.Windows.Forms.TextBox();
             this.label38 = new System.Windows.Forms.Label();
             this.tBRegOfSummonsNumber = new System.Windows.Forms.TextBox();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
             this.tBRegOfSummonsDocNumber = new System.Windows.Forms.TextBox();
             this.label37 = new System.Windows.Forms.Label();
-            this.buttonRegOfSummonsSave = new System.Windows.Forms.Button();
-            this.label40 = new System.Windows.Forms.Label();
-            this.tBRegOfSummonsEditSeries = new System.Windows.Forms.TextBox();
-            this.tBRegOfSummonsEditNumber = new System.Windows.Forms.TextBox();
-            this.cBRegOfSummonsStatus = new System.Windows.Forms.ComboBox();
-            this.label41 = new System.Windows.Forms.Label();
-            this.buttonRegOfSummonsSaveEdit = new System.Windows.Forms.Button();
             this.buttonRegOfSummonsEditSearch = new System.Windows.Forms.Button();
+            this.buttonRegOfSummonsSaveEdit = new System.Windows.Forms.Button();
+            this.buttonRegOfSummonsSave = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGV)).BeginInit();
             this.groupBoxServices.SuspendLayout();
             this.tabControlMenuFunctions.SuspendLayout();
@@ -219,7 +221,7 @@ namespace MeoIS
             // dataGV
             // 
             this.dataGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGV.Location = new System.Drawing.Point(808, 481);
+            this.dataGV.Location = new System.Drawing.Point(130, 65);
             this.dataGV.Name = "dataGV";
             this.dataGV.RowHeadersWidth = 51;
             this.dataGV.RowTemplate.Height = 24;
@@ -229,11 +231,11 @@ namespace MeoIS
             // 
             // groupBoxServices
             // 
-            this.groupBoxServices.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.groupBoxServices.BackColor = System.Drawing.Color.Beige;
             this.groupBoxServices.Controls.Add(this.labelUpdatingTheReferenceBook);
             this.groupBoxServices.Controls.Add(this.labelEditingUserDatabase);
             this.groupBoxServices.Controls.Add(this.labelAppointmentOfNewAdministrator);
-            this.groupBoxServices.Location = new System.Drawing.Point(929, 489);
+            this.groupBoxServices.Location = new System.Drawing.Point(200, 65);
             this.groupBoxServices.Name = "groupBoxServices";
             this.groupBoxServices.Size = new System.Drawing.Size(630, 425);
             this.groupBoxServices.TabIndex = 32;
@@ -280,7 +282,7 @@ namespace MeoIS
             this.tabControlMenuFunctions.Controls.Add(this.tPAdd);
             this.tabControlMenuFunctions.Controls.Add(this.tPDelete);
             this.tabControlMenuFunctions.Controls.Add(this.tPChange);
-            this.tabControlMenuFunctions.Location = new System.Drawing.Point(880, 432);
+            this.tabControlMenuFunctions.Location = new System.Drawing.Point(132, 46);
             this.tabControlMenuFunctions.Name = "tabControlMenuFunctions";
             this.tabControlMenuFunctions.SelectedIndex = 0;
             this.tabControlMenuFunctions.Size = new System.Drawing.Size(890, 549);
@@ -288,10 +290,12 @@ namespace MeoIS
             // 
             // tPAdd
             // 
-            this.tPAdd.Controls.Add(this.label13);
-            this.tPAdd.Controls.Add(this.tBDistrict);
+            this.tPAdd.Controls.Add(this.cBDistrict);
+            this.tPAdd.Controls.Add(this.cBCategory);
             this.tPAdd.Controls.Add(this.label12);
+            this.tPAdd.Controls.Add(this.label13);
             this.tPAdd.Controls.Add(this.label11);
+            this.tPAdd.Controls.Add(this.label42);
             this.tPAdd.Controls.Add(this.label10);
             this.tPAdd.Controls.Add(this.label9);
             this.tPAdd.Controls.Add(this.label8);
@@ -299,12 +303,12 @@ namespace MeoIS
             this.tPAdd.Controls.Add(this.label6);
             this.tPAdd.Controls.Add(this.label3);
             this.tPAdd.Controls.Add(this.tBAge);
-            this.tPAdd.Controls.Add(this.tBCategory);
             this.tPAdd.Controls.Add(this.rBF);
             this.tPAdd.Controls.Add(this.rBM);
             this.tPAdd.Controls.Add(this.labelGender);
             this.tPAdd.Controls.Add(this.tBPhone);
             this.tPAdd.Controls.Add(this.tBNameUser);
+            this.tPAdd.Controls.Add(this.tBAddress);
             this.tPAdd.Controls.Add(this.tBEmail);
             this.tPAdd.Controls.Add(this.tBPass);
             this.tPAdd.Controls.Add(this.tBPatronymic);
@@ -321,47 +325,124 @@ namespace MeoIS
             this.tPAdd.Text = "Добавление пользователя";
             this.tPAdd.UseVisualStyleBackColor = true;
             // 
-            // label13
+            // cBDistrict
             // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Beige;
-            this.label13.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label13.Location = new System.Drawing.Point(526, 357);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(62, 22);
-            this.label13.TabIndex = 2837;
-            this.label13.Text = "Район";
+            this.cBDistrict.AutoCompleteCustomSource.AddRange(new string[] {
+            "Колпинского и Пушкинского районов",
+            "Кронштадтского и Курортного районов",
+            "Адмиралтейского и Кировского районов",
+            "Василеостровского района",
+            "Выборгского района",
+            "Калининского района",
+            "Красногвардейского района",
+            "Красносельского района",
+            "Московского района",
+            "Невского района",
+            "Петроградского района",
+            "Петродворцового района",
+            "Приморского района",
+            "Фрунзенского района",
+            "Центрального района"});
+            this.cBDistrict.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cBDistrict.FormattingEnabled = true;
+            this.cBDistrict.Items.AddRange(new object[] {
+            "Колпинский и Пушкинский",
+            "Кронштадтский и Курортный",
+            "Адмиралтейский и Кировский",
+            "Василеостровский",
+            "Выборгский",
+            "Калининский",
+            "Красногвардейский",
+            "Красносельский",
+            "Московский",
+            "Невский",
+            "Петроградский",
+            "Петродворцовый",
+            "Приморский",
+            "Фрунзенский",
+            "Центральный"});
+            this.cBDistrict.Location = new System.Drawing.Point(585, 127);
+            this.cBDistrict.Name = "cBDistrict";
+            this.cBDistrict.Size = new System.Drawing.Size(291, 24);
+            this.cBDistrict.TabIndex = 2840;
             // 
-            // tBDistrict
+            // cBCategory
             // 
-            this.tBDistrict.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tBDistrict.Location = new System.Drawing.Point(658, 350);
-            this.tBDistrict.Multiline = true;
-            this.tBDistrict.Name = "tBDistrict";
-            this.tBDistrict.Size = new System.Drawing.Size(181, 38);
-            this.tBDistrict.TabIndex = 2836;
+            this.cBCategory.AutoCompleteCustomSource.AddRange(new string[] {
+            "А1",
+            "А2",
+            "А3",
+            "А4",
+            "Б1",
+            "Б2",
+            "Б3",
+            "Б4",
+            "В",
+            "Г",
+            "Д"});
+            this.cBCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cBCategory.FormattingEnabled = true;
+            this.cBCategory.Items.AddRange(new object[] {
+            "А1",
+            "А2",
+            "А3",
+            "А4",
+            "Б1",
+            "Б2",
+            "Б3",
+            "Б4",
+            "В",
+            "Д",
+            "Г"});
+            this.cBCategory.Location = new System.Drawing.Point(658, 82);
+            this.cBCategory.Name = "cBCategory";
+            this.cBCategory.Size = new System.Drawing.Size(176, 24);
+            this.cBCategory.TabIndex = 2841;
+            this.cBCategory.Visible = false;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Beige;
             this.label12.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label12.Location = new System.Drawing.Point(495, 242);
+            this.label12.Location = new System.Drawing.Point(495, 303);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(151, 22);
             this.label12.TabIndex = 2835;
             this.label12.Text = "Номер телефона";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Beige;
+            this.label13.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label13.Location = new System.Drawing.Point(472, 176);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(150, 22);
+            this.label13.TabIndex = 2834;
+            this.label13.Text = "Адрес прописки";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Beige;
             this.label11.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.Location = new System.Drawing.Point(472, 162);
+            this.label11.Location = new System.Drawing.Point(472, 234);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(174, 22);
             this.label11.TabIndex = 2834;
             this.label11.Text = "Электронная почта";
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.BackColor = System.Drawing.Color.Beige;
+            this.label42.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label42.Location = new System.Drawing.Point(504, 129);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(62, 22);
+            this.label42.TabIndex = 2833;
+            this.label42.Text = "Район";
             // 
             // label10
             // 
@@ -379,7 +460,7 @@ namespace MeoIS
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Beige;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(495, 306);
+            this.label9.Location = new System.Drawing.Point(495, 367);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(139, 22);
             this.label9.TabIndex = 2832;
@@ -432,20 +513,11 @@ namespace MeoIS
             // tBAge
             // 
             this.tBAge.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tBAge.Location = new System.Drawing.Point(658, 294);
+            this.tBAge.Location = new System.Drawing.Point(658, 355);
             this.tBAge.Multiline = true;
             this.tBAge.Name = "tBAge";
             this.tBAge.Size = new System.Drawing.Size(181, 38);
             this.tBAge.TabIndex = 2827;
-            // 
-            // tBCategory
-            // 
-            this.tBCategory.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tBCategory.Location = new System.Drawing.Point(658, 74);
-            this.tBCategory.Multiline = true;
-            this.tBCategory.Name = "tBCategory";
-            this.tBCategory.Size = new System.Drawing.Size(115, 38);
-            this.tBCategory.TabIndex = 2826;
             // 
             // rBF
             // 
@@ -487,7 +559,7 @@ namespace MeoIS
             // tBPhone
             // 
             this.tBPhone.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tBPhone.Location = new System.Drawing.Point(658, 232);
+            this.tBPhone.Location = new System.Drawing.Point(658, 293);
             this.tBPhone.Multiline = true;
             this.tBPhone.Name = "tBPhone";
             this.tBPhone.Size = new System.Drawing.Size(181, 38);
@@ -502,10 +574,19 @@ namespace MeoIS
             this.tBNameUser.Size = new System.Drawing.Size(227, 38);
             this.tBNameUser.TabIndex = 2817;
             // 
+            // tBAddress
+            // 
+            this.tBAddress.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tBAddress.Location = new System.Drawing.Point(658, 170);
+            this.tBAddress.Multiline = true;
+            this.tBAddress.Name = "tBAddress";
+            this.tBAddress.Size = new System.Drawing.Size(181, 38);
+            this.tBAddress.TabIndex = 2823;
+            // 
             // tBEmail
             // 
             this.tBEmail.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tBEmail.Location = new System.Drawing.Point(658, 156);
+            this.tBEmail.Location = new System.Drawing.Point(658, 228);
             this.tBEmail.Multiline = true;
             this.tBEmail.Name = "tBEmail";
             this.tBEmail.Size = new System.Drawing.Size(181, 38);
@@ -842,7 +923,7 @@ namespace MeoIS
             // 
             this.tabControlLit.Controls.Add(this.tPAddLit);
             this.tabControlLit.Controls.Add(this.tPDeleteLit);
-            this.tabControlLit.Location = new System.Drawing.Point(829, 469);
+            this.tabControlLit.Location = new System.Drawing.Point(588, 410);
             this.tabControlLit.Name = "tabControlLit";
             this.tabControlLit.SelectedIndex = 0;
             this.tabControlLit.Size = new System.Drawing.Size(890, 453);
@@ -1126,7 +1207,7 @@ namespace MeoIS
             // 
             this.tabControlExportAndStatistics.Controls.Add(this.tPStat);
             this.tabControlExportAndStatistics.Controls.Add(this.tPExport);
-            this.tabControlExportAndStatistics.Location = new System.Drawing.Point(989, 489);
+            this.tabControlExportAndStatistics.Location = new System.Drawing.Point(300, 65);
             this.tabControlExportAndStatistics.Name = "tabControlExportAndStatistics";
             this.tabControlExportAndStatistics.SelectedIndex = 0;
             this.tabControlExportAndStatistics.Size = new System.Drawing.Size(552, 370);
@@ -1442,15 +1523,14 @@ namespace MeoIS
             // 
             // panelNewAdmin
             // 
-            this.panelNewAdmin.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panelNewAdmin.BackgroundImage = global::MeoIS.Properties.Resources.fonPanel1;
+            this.panelNewAdmin.BackColor = System.Drawing.Color.Beige;
             this.panelNewAdmin.Controls.Add(this.buttonNewAdmin);
             this.panelNewAdmin.Controls.Add(this.label17);
             this.panelNewAdmin.Controls.Add(this.tBDocNumNewAdmin);
             this.panelNewAdmin.Controls.Add(this.label18);
             this.panelNewAdmin.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panelNewAdmin.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.panelNewAdmin.Location = new System.Drawing.Point(957, 499);
+            this.panelNewAdmin.Location = new System.Drawing.Point(307, 65);
             this.panelNewAdmin.Name = "panelNewAdmin";
             this.panelNewAdmin.Size = new System.Drawing.Size(585, 298);
             this.panelNewAdmin.TabIndex = 34;
@@ -1640,7 +1720,7 @@ namespace MeoIS
             // 
             this.pictureClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureClose.Image = global::MeoIS.Properties.Resources.close_fon;
-            this.pictureClose.Location = new System.Drawing.Point(1021, 46);
+            this.pictureClose.Location = new System.Drawing.Point(1021, 60);
             this.pictureClose.Name = "pictureClose";
             this.pictureClose.Size = new System.Drawing.Size(64, 47);
             this.pictureClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1679,12 +1759,26 @@ namespace MeoIS
             this.panelRegOfSummons.Controls.Add(this.tBRegOfSummonsDocNumber);
             this.panelRegOfSummons.Controls.Add(this.label37);
             this.panelRegOfSummons.Controls.Add(this.buttonRegOfSummonsEditSearch);
+            this.panelRegOfSummons.Controls.Add(this.tabControlLit);
             this.panelRegOfSummons.Controls.Add(this.buttonRegOfSummonsSaveEdit);
             this.panelRegOfSummons.Controls.Add(this.buttonRegOfSummonsSave);
-            this.panelRegOfSummons.Location = new System.Drawing.Point(255, 69);
+            this.panelRegOfSummons.Location = new System.Drawing.Point(307, 60);
             this.panelRegOfSummons.Name = "panelRegOfSummons";
             this.panelRegOfSummons.Size = new System.Drawing.Size(547, 500);
             this.panelRegOfSummons.TabIndex = 41;
+            // 
+            // cBRegOfSummonsStatus
+            // 
+            this.cBRegOfSummonsStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cBRegOfSummonsStatus.FormattingEnabled = true;
+            this.cBRegOfSummonsStatus.Items.AddRange(new object[] {
+            "Активно",
+            "Просрочено",
+            "Закрыто"});
+            this.cBRegOfSummonsStatus.Location = new System.Drawing.Point(220, 400);
+            this.cBRegOfSummonsStatus.Name = "cBRegOfSummonsStatus";
+            this.cBRegOfSummonsStatus.Size = new System.Drawing.Size(172, 24);
+            this.cBRegOfSummonsStatus.TabIndex = 2836;
             // 
             // labelLineRegSummons
             // 
@@ -1707,6 +1801,24 @@ namespace MeoIS
             this.label36.Size = new System.Drawing.Size(295, 43);
             this.label36.TabIndex = 2835;
             this.label36.Text = "Реестр повесток";
+            // 
+            // tBRegOfSummonsEditNumber
+            // 
+            this.tBRegOfSummonsEditNumber.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tBRegOfSummonsEditNumber.Location = new System.Drawing.Point(404, 333);
+            this.tBRegOfSummonsEditNumber.Multiline = true;
+            this.tBRegOfSummonsEditNumber.Name = "tBRegOfSummonsEditNumber";
+            this.tBRegOfSummonsEditNumber.Size = new System.Drawing.Size(126, 38);
+            this.tBRegOfSummonsEditNumber.TabIndex = 2816;
+            // 
+            // tBRegOfSummonsEditSeries
+            // 
+            this.tBRegOfSummonsEditSeries.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tBRegOfSummonsEditSeries.Location = new System.Drawing.Point(263, 333);
+            this.tBRegOfSummonsEditSeries.Multiline = true;
+            this.tBRegOfSummonsEditSeries.Name = "tBRegOfSummonsEditSeries";
+            this.tBRegOfSummonsEditSeries.Size = new System.Drawing.Size(126, 38);
+            this.tBRegOfSummonsEditSeries.TabIndex = 2816;
             // 
             // tBRegOfSummonsDateOfVisit
             // 
@@ -1746,6 +1858,28 @@ namespace MeoIS
             this.tBRegOfSummonsNumber.Size = new System.Drawing.Size(135, 38);
             this.tBRegOfSummonsNumber.TabIndex = 2816;
             // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.BackColor = System.Drawing.Color.Beige;
+            this.label40.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label40.Location = new System.Drawing.Point(5, 299);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(376, 66);
+            this.label40.TabIndex = 2828;
+            this.label40.Text = "Если Вы хотите изменить статус повестки,\r\n\r\nвведите ее серию и номер";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.BackColor = System.Drawing.Color.Beige;
+            this.label41.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label41.Location = new System.Drawing.Point(124, 399);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(67, 22);
+            this.label41.TabIndex = 2828;
+            this.label41.Text = "Статус";
+            // 
             // label39
             // 
             this.label39.AutoSize = true;
@@ -1777,69 +1911,17 @@ namespace MeoIS
             this.label37.TabIndex = 2828;
             this.label37.Text = "Номер документа";
             // 
-            // buttonRegOfSummonsSave
+            // buttonRegOfSummonsEditSearch
             // 
-            this.buttonRegOfSummonsSave.BackColor = System.Drawing.Color.Beige;
-            this.buttonRegOfSummonsSave.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonRegOfSummonsSave.Location = new System.Drawing.Point(192, 222);
-            this.buttonRegOfSummonsSave.Name = "buttonRegOfSummonsSave";
-            this.buttonRegOfSummonsSave.Size = new System.Drawing.Size(150, 38);
-            this.buttonRegOfSummonsSave.TabIndex = 30;
-            this.buttonRegOfSummonsSave.Text = "Сохранить";
-            this.buttonRegOfSummonsSave.UseVisualStyleBackColor = false;
-            this.buttonRegOfSummonsSave.Click += new System.EventHandler(this.buttonRegOfSummonsSave_Click);
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.BackColor = System.Drawing.Color.Beige;
-            this.label40.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label40.Location = new System.Drawing.Point(5, 299);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(376, 66);
-            this.label40.TabIndex = 2828;
-            this.label40.Text = "Если Вы хотите изменить статус повестки,\r\n\r\nвведите ее серию и номер";
-            // 
-            // tBRegOfSummonsEditSeries
-            // 
-            this.tBRegOfSummonsEditSeries.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tBRegOfSummonsEditSeries.Location = new System.Drawing.Point(244, 336);
-            this.tBRegOfSummonsEditSeries.Multiline = true;
-            this.tBRegOfSummonsEditSeries.Name = "tBRegOfSummonsEditSeries";
-            this.tBRegOfSummonsEditSeries.Size = new System.Drawing.Size(126, 38);
-            this.tBRegOfSummonsEditSeries.TabIndex = 2816;
-            // 
-            // tBRegOfSummonsEditNumber
-            // 
-            this.tBRegOfSummonsEditNumber.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tBRegOfSummonsEditNumber.Location = new System.Drawing.Point(385, 336);
-            this.tBRegOfSummonsEditNumber.Multiline = true;
-            this.tBRegOfSummonsEditNumber.Name = "tBRegOfSummonsEditNumber";
-            this.tBRegOfSummonsEditNumber.Size = new System.Drawing.Size(126, 38);
-            this.tBRegOfSummonsEditNumber.TabIndex = 2816;
-            // 
-            // cBRegOfSummonsStatus
-            // 
-            this.cBRegOfSummonsStatus.FormattingEnabled = true;
-            this.cBRegOfSummonsStatus.Items.AddRange(new object[] {
-            "Активно",
-            "Просрочено",
-            "Закрыто"});
-            this.cBRegOfSummonsStatus.Location = new System.Drawing.Point(220, 400);
-            this.cBRegOfSummonsStatus.Name = "cBRegOfSummonsStatus";
-            this.cBRegOfSummonsStatus.Size = new System.Drawing.Size(172, 24);
-            this.cBRegOfSummonsStatus.TabIndex = 2836;
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.BackColor = System.Drawing.Color.Beige;
-            this.label41.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label41.Location = new System.Drawing.Point(124, 399);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(67, 22);
-            this.label41.TabIndex = 2828;
-            this.label41.Text = "Статус";
+            this.buttonRegOfSummonsEditSearch.BackColor = System.Drawing.Color.Beige;
+            this.buttonRegOfSummonsEditSearch.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonRegOfSummonsEditSearch.Location = new System.Drawing.Point(95, 445);
+            this.buttonRegOfSummonsEditSearch.Name = "buttonRegOfSummonsEditSearch";
+            this.buttonRegOfSummonsEditSearch.Size = new System.Drawing.Size(112, 38);
+            this.buttonRegOfSummonsEditSearch.TabIndex = 30;
+            this.buttonRegOfSummonsEditSearch.Text = "Найти";
+            this.buttonRegOfSummonsEditSearch.UseVisualStyleBackColor = false;
+            this.buttonRegOfSummonsEditSearch.Click += new System.EventHandler(this.buttonRegOfSummonsEditSearch_Click);
             // 
             // buttonRegOfSummonsSaveEdit
             // 
@@ -1853,17 +1935,17 @@ namespace MeoIS
             this.buttonRegOfSummonsSaveEdit.UseVisualStyleBackColor = false;
             this.buttonRegOfSummonsSaveEdit.Click += new System.EventHandler(this.buttonRegOfSummonsSaveEdit_Click);
             // 
-            // buttonRegOfSummonsEditSearch
+            // buttonRegOfSummonsSave
             // 
-            this.buttonRegOfSummonsEditSearch.BackColor = System.Drawing.Color.Beige;
-            this.buttonRegOfSummonsEditSearch.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonRegOfSummonsEditSearch.Location = new System.Drawing.Point(95, 445);
-            this.buttonRegOfSummonsEditSearch.Name = "buttonRegOfSummonsEditSearch";
-            this.buttonRegOfSummonsEditSearch.Size = new System.Drawing.Size(112, 38);
-            this.buttonRegOfSummonsEditSearch.TabIndex = 30;
-            this.buttonRegOfSummonsEditSearch.Text = "Найти";
-            this.buttonRegOfSummonsEditSearch.UseVisualStyleBackColor = false;
-            this.buttonRegOfSummonsEditSearch.Click += new System.EventHandler(this.buttonRegOfSummonsEditSearch_Click);
+            this.buttonRegOfSummonsSave.BackColor = System.Drawing.Color.Beige;
+            this.buttonRegOfSummonsSave.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonRegOfSummonsSave.Location = new System.Drawing.Point(192, 222);
+            this.buttonRegOfSummonsSave.Name = "buttonRegOfSummonsSave";
+            this.buttonRegOfSummonsSave.Size = new System.Drawing.Size(150, 38);
+            this.buttonRegOfSummonsSave.TabIndex = 30;
+            this.buttonRegOfSummonsSave.Text = "Сохранить";
+            this.buttonRegOfSummonsSave.UseVisualStyleBackColor = false;
+            this.buttonRegOfSummonsSave.Click += new System.EventHandler(this.buttonRegOfSummonsSave_Click);
             // 
             // Admin_panel
             // 
@@ -1871,8 +1953,6 @@ namespace MeoIS
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1093, 603);
             this.Controls.Add(this.panelRegOfSummons);
-            this.Controls.Add(this.tabControlMenuFunctions);
-            this.Controls.Add(this.panelNewAdmin);
             this.Controls.Add(this.tableLayoutPanelFilter);
             this.Controls.Add(this.pictureRegisterOfSummons);
             this.Controls.Add(this.pictureExport);
@@ -1883,15 +1963,17 @@ namespace MeoIS
             this.Controls.Add(this.labelWelcome);
             this.Controls.Add(this.label35);
             this.Controls.Add(this.labelExport);
+            this.Controls.Add(this.panelNewAdmin);
             this.Controls.Add(this.tabControlExportAndStatistics);
+            this.Controls.Add(this.tabControlMenuFunctions);
             this.Controls.Add(this.dataGV);
             this.Controls.Add(this.groupBoxServices);
-            this.Controls.Add(this.tabControlLit);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Admin_panel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Панель администратора";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Admin_panel_FormClosed);
+            this.Load += new System.EventHandler(this.Admin_panel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGV)).EndInit();
             this.groupBoxServices.ResumeLayout(false);
             this.groupBoxServices.PerformLayout();
@@ -1967,7 +2049,6 @@ namespace MeoIS
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tBAge;
-        private System.Windows.Forms.TextBox tBCategory;
         private System.Windows.Forms.RadioButton rBF;
         private System.Windows.Forms.RadioButton rBM;
         private System.Windows.Forms.Label labelGender;
@@ -1983,8 +2064,6 @@ namespace MeoIS
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox tBDocNumDelete;
         private System.Windows.Forms.Button buttonDeleteUser;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox tBDistrict;
         private System.Windows.Forms.TabPage tPChange;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelChangeUser;
         private System.Windows.Forms.RadioButton rBCategoryChangeUser;
@@ -2075,5 +2154,10 @@ namespace MeoIS
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.Button buttonRegOfSummonsSaveEdit;
         private System.Windows.Forms.Button buttonRegOfSummonsEditSearch;
+        private System.Windows.Forms.ComboBox cBDistrict;
+        private System.Windows.Forms.ComboBox cBCategory;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.TextBox tBAddress;
     }
 }

@@ -133,15 +133,19 @@ namespace MeoIS
             tBNameUser.Text != "" &&
             tBPatronymic.Text != "" &&
             tBAge.Text != "" &&
-            tBCategory.Text != "" &&
-            tBDistrict.Text != "" &&
+            cBCategory.Text != "" &&
+            cBDistrict.Text != "" &&
             tBPhone.Text != "" &&
             tBEmail.Text != "")
             {
                 User_data user_Data = new User_data();
                 string gender = "";
                 if (rBM.Checked == true) { gender = "M"; } else { gender = "Ж"; };
-                user_Data.addUser(tBDocNumber.Text, tBPass.Text, tBLastName.Text, tBNameUser.Text, tBPatronymic.Text, tBAge.Text, tBCategory.Text, gender, tBDistrict.Text, tBPhone.Text, tBEmail.Text);
+                if(user_Data.addUser(tBDocNumber.Text, tBPass.Text, tBLastName.Text, tBNameUser.Text, tBPatronymic.Text, tBAge.Text, tBAddress.Text, cBCategory.Text, gender, cBDistrict.Text, tBPhone.Text, tBEmail.Text))
+                {
+
+                    MessageBox.Show("Польователь успешно добавлен!");
+                }
 
                 tBDocNumber.Text = "";
                 tBPass.Text = "";
@@ -149,8 +153,8 @@ namespace MeoIS
                 tBNameUser.Text = "";
                 tBPatronymic.Text = "";
                 tBAge.Text = "";
-                tBCategory.Text = "";
-                tBDistrict.Text = "";
+                cBCategory.Text = "";
+                cBDistrict.Text = "";
                 tBPhone.Text = "";
                 tBEmail.Text = "";
             }
@@ -261,6 +265,7 @@ namespace MeoIS
                 panelNewAdmin.Visible = false;
                 groupBoxServices.Visible = true;
                 tBDocNumNewAdmin.Text = "";
+                pictureClose.Visible = false;
             } else
             {
                 MessageBox.Show("Введите номер документа пользователя, которому хотите выдать права администратора.");
@@ -396,7 +401,7 @@ namespace MeoIS
 
             if (rBExportDistrict.Checked == true)
             {
-                statistics.export_to_Excel(search.searchDistrict(tBExport.Text), "Данные призывников в городе " + tBExport.Text);
+                statistics.export_to_Excel(search.searchDistrict(tBExport.Text), "Данные призывников в районе " + tBExport.Text);
             }
             else if (rBExportCategory.Checked == true)
             {
@@ -475,6 +480,11 @@ namespace MeoIS
             buttonRegOfSummonsSaveEdit.Enabled = false;
             tBRegOfSummonsEditSeries.Text = "";
             tBRegOfSummonsEditNumber.Text = "";
+        }
+
+        private void Admin_panel_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

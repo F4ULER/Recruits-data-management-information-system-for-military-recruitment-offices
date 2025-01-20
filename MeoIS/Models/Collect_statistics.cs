@@ -70,7 +70,7 @@ namespace MeoIS
             }
         }
 
-        //вычисление статисики по городу
+        //вычисление статисики по району
         public void statistics_By_District(List<User> user, bool expOrStat)
         {
             List<string> district = new List<string>();
@@ -89,7 +89,10 @@ namespace MeoIS
 
             foreach (User u in user)
             {
-                category.Add(u.Category);
+                if (u.Category != "")
+                {
+                    category.Add(u.Category);
+                }
             }
             statistics_By_Item(category, "Статистика по категории годности", expOrStat);
         }
