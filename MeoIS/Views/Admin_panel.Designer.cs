@@ -39,6 +39,14 @@ namespace MeoIS
             this.labelAppointmentOfNewAdministrator = new System.Windows.Forms.Label();
             this.tabControlMenuFunctions = new System.Windows.Forms.TabControl();
             this.tPAdd = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.radioButton5 = new System.Windows.Forms.RadioButton();
+            this.radioButton6 = new System.Windows.Forms.RadioButton();
+            this.radioButton7 = new System.Windows.Forms.RadioButton();
             this.cBDistrict = new System.Windows.Forms.ComboBox();
             this.cBCategory = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -66,6 +74,7 @@ namespace MeoIS
             this.buttonNewUser = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tPDelete = new System.Windows.Forms.TabPage();
             this.pictureArrowDel = new System.Windows.Forms.PictureBox();
             this.dataGridViewDelete = new System.Windows.Forms.DataGridView();
@@ -73,6 +82,7 @@ namespace MeoIS
             this.tBDocNumDelete = new System.Windows.Forms.TextBox();
             this.buttonDeleteUser = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.tPChange = new System.Windows.Forms.TabPage();
             this.label16 = new System.Windows.Forms.Label();
             this.tBChange = new System.Windows.Forms.TextBox();
@@ -86,6 +96,7 @@ namespace MeoIS
             this.tBChangeUser = new System.Windows.Forms.TextBox();
             this.buttonChange = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.tabControlLit = new System.Windows.Forms.TabControl();
             this.tPAddLit = new System.Windows.Forms.TabPage();
             this.label19 = new System.Windows.Forms.Label();
@@ -109,8 +120,6 @@ namespace MeoIS
             this.tBDeleteLit = new System.Windows.Forms.TextBox();
             this.buttonDeleteLit = new System.Windows.Forms.Button();
             this.label32 = new System.Windows.Forms.Label();
-            this.labelExit = new System.Windows.Forms.Label();
-            this.labelExport = new System.Windows.Forms.Label();
             this.tabControlExportAndStatistics = new System.Windows.Forms.TabControl();
             this.tPStat = new System.Windows.Forms.TabPage();
             this.rBStatCategory = new System.Windows.Forms.RadioButton();
@@ -120,6 +129,7 @@ namespace MeoIS
             this.rBStatAge = new System.Windows.Forms.RadioButton();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.tPExport = new System.Windows.Forms.TabPage();
             this.rBExpTXTCategory = new System.Windows.Forms.RadioButton();
             this.label34 = new System.Windows.Forms.Label();
@@ -135,24 +145,12 @@ namespace MeoIS
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.panelNewAdmin = new System.Windows.Forms.Panel();
             this.buttonNewAdmin = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
             this.tBDocNumNewAdmin = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.tableLayoutPanelFilter = new System.Windows.Forms.TableLayoutPanel();
-            this.rBEducation = new System.Windows.Forms.RadioButton();
-            this.rBSearchLit = new System.Windows.Forms.RadioButton();
-            this.rBSearchMedData = new System.Windows.Forms.RadioButton();
-            this.rBSearchPhone = new System.Windows.Forms.RadioButton();
-            this.rBSearchDistrict = new System.Windows.Forms.RadioButton();
-            this.rBSearchName = new System.Windows.Forms.RadioButton();
-            this.rBSearchDocNum = new System.Windows.Forms.RadioButton();
-            this.pictureRegisterOfSummons = new System.Windows.Forms.PictureBox();
-            this.pictureExport = new System.Windows.Forms.PictureBox();
-            this.pictureClose = new System.Windows.Forms.PictureBox();
-            this.picSearch = new System.Windows.Forms.PictureBox();
             this.panelRegOfSummons = new System.Windows.Forms.Panel();
             this.cBRegOfSummonsStatus = new System.Windows.Forms.ComboBox();
             this.labelLineRegSummons = new System.Windows.Forms.PictureBox();
@@ -171,15 +169,43 @@ namespace MeoIS
             this.buttonRegOfSummonsEditSearch = new System.Windows.Forms.Button();
             this.buttonRegOfSummonsSaveEdit = new System.Windows.Forms.Button();
             this.buttonRegOfSummonsSave = new System.Windows.Forms.Button();
+            this.tableLayoutPanelFilter = new System.Windows.Forms.TableLayoutPanel();
+            this.rBEducation = new System.Windows.Forms.RadioButton();
+            this.rBSearchLit = new System.Windows.Forms.RadioButton();
+            this.rBSearchMedData = new System.Windows.Forms.RadioButton();
+            this.rBSearchPhone = new System.Windows.Forms.RadioButton();
+            this.rBSearchDistrict = new System.Windows.Forms.RadioButton();
+            this.rBSearchName = new System.Windows.Forms.RadioButton();
+            this.rBSearchDocNum = new System.Windows.Forms.RadioButton();
+            this.pictureRegisterOfSummons = new System.Windows.Forms.PictureBox();
+            this.pictureExport = new System.Windows.Forms.PictureBox();
+            this.labelExit = new System.Windows.Forms.Label();
+            this.pictureClose = new System.Windows.Forms.PictureBox();
+            this.picSearch = new System.Windows.Forms.PictureBox();
+            this.label35 = new System.Windows.Forms.Label();
+            this.labelExport = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tableLayoutPanelFilterSearch = new System.Windows.Forms.TableLayoutPanel();
+            this.radioButton8 = new System.Windows.Forms.RadioButton();
+            this.radioButton9 = new System.Windows.Forms.RadioButton();
+            this.radioButton10 = new System.Windows.Forms.RadioButton();
+            this.radioButton11 = new System.Windows.Forms.RadioButton();
+            this.radioButton12 = new System.Windows.Forms.RadioButton();
+            this.radioButton13 = new System.Windows.Forms.RadioButton();
+            this.radioButton14 = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGV)).BeginInit();
             this.groupBoxServices.SuspendLayout();
             this.tabControlMenuFunctions.SuspendLayout();
             this.tPAdd.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tPDelete.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureArrowDel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDelete)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.tPChange.SuspendLayout();
             this.tableLayoutPanelChangeUser.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.tabControlLit.SuspendLayout();
             this.tPAddLit.SuspendLayout();
             this.tPDeleteLit.SuspendLayout();
@@ -187,20 +213,25 @@ namespace MeoIS
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDeleteLit)).BeginInit();
             this.tabControlExportAndStatistics.SuspendLayout();
             this.tPStat.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.tPExport.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panelNewAdmin.SuspendLayout();
+            this.panelRegOfSummons.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.labelLineRegSummons)).BeginInit();
             this.tableLayoutPanelFilter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureRegisterOfSummons)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureExport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSearch)).BeginInit();
-            this.panelRegOfSummons.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.labelLineRegSummons)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tableLayoutPanelFilterSearch.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelWelcome
             // 
             this.labelWelcome.AutoSize = true;
+            this.labelWelcome.BackColor = System.Drawing.Color.Beige;
             this.labelWelcome.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelWelcome.Location = new System.Drawing.Point(12, 9);
             this.labelWelcome.Name = "labelWelcome";
@@ -290,6 +321,7 @@ namespace MeoIS
             // 
             // tPAdd
             // 
+            this.tPAdd.Controls.Add(this.tableLayoutPanel1);
             this.tPAdd.Controls.Add(this.cBDistrict);
             this.tPAdd.Controls.Add(this.cBCategory);
             this.tPAdd.Controls.Add(this.label12);
@@ -317,6 +349,7 @@ namespace MeoIS
             this.tPAdd.Controls.Add(this.buttonNewUser);
             this.tPAdd.Controls.Add(this.label2);
             this.tPAdd.Controls.Add(this.label1);
+            this.tPAdd.Controls.Add(this.pictureBox2);
             this.tPAdd.Location = new System.Drawing.Point(4, 25);
             this.tPAdd.Name = "tPAdd";
             this.tPAdd.Padding = new System.Windows.Forms.Padding(3);
@@ -324,6 +357,119 @@ namespace MeoIS
             this.tPAdd.TabIndex = 0;
             this.tPAdd.Text = "Добавление пользователя";
             this.tPAdd.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tableLayoutPanel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.tableLayoutPanel1.BackgroundImage = global::MeoIS.Properties.Resources.fonPanel1;
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.radioButton1, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.radioButton2, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.radioButton3, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.radioButton4, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.radioButton5, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.radioButton6, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.radioButton7, 0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(882, 2);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 7;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(244, 359);
+            this.tableLayoutPanel1.TabIndex = 42;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.BackColor = System.Drawing.Color.Beige;
+            this.radioButton1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButton1.Location = new System.Drawing.Point(3, 309);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(141, 26);
+            this.radioButton1.TabIndex = 6;
+            this.radioButton1.Text = "Образование";
+            this.radioButton1.UseVisualStyleBackColor = false;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.BackColor = System.Drawing.Color.Beige;
+            this.radioButton2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButton2.Location = new System.Drawing.Point(3, 258);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(133, 26);
+            this.radioButton2.TabIndex = 5;
+            this.radioButton2.Text = "Литературы";
+            this.radioButton2.UseVisualStyleBackColor = false;
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.BackColor = System.Drawing.Color.Beige;
+            this.radioButton3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButton3.Location = new System.Drawing.Point(3, 207);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(218, 45);
+            this.radioButton3.TabIndex = 4;
+            this.radioButton3.Text = "Медицинских данных\r\nпо номеру документа";
+            this.radioButton3.UseVisualStyleBackColor = false;
+            // 
+            // radioButton4
+            // 
+            this.radioButton4.AutoSize = true;
+            this.radioButton4.BackColor = System.Drawing.Color.Beige;
+            this.radioButton4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButton4.Location = new System.Drawing.Point(3, 156);
+            this.radioButton4.Name = "radioButton4";
+            this.radioButton4.Size = new System.Drawing.Size(207, 26);
+            this.radioButton4.TabIndex = 3;
+            this.radioButton4.Text = "По номеру телефона";
+            this.radioButton4.UseVisualStyleBackColor = false;
+            // 
+            // radioButton5
+            // 
+            this.radioButton5.AutoSize = true;
+            this.radioButton5.BackColor = System.Drawing.Color.Beige;
+            this.radioButton5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButton5.Location = new System.Drawing.Point(3, 105);
+            this.radioButton5.Name = "radioButton5";
+            this.radioButton5.Size = new System.Drawing.Size(157, 26);
+            this.radioButton5.TabIndex = 2;
+            this.radioButton5.Text = "По военкомату";
+            this.radioButton5.UseVisualStyleBackColor = false;
+            // 
+            // radioButton6
+            // 
+            this.radioButton6.AutoSize = true;
+            this.radioButton6.BackColor = System.Drawing.Color.Beige;
+            this.radioButton6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButton6.Location = new System.Drawing.Point(3, 54);
+            this.radioButton6.Name = "radioButton6";
+            this.radioButton6.Size = new System.Drawing.Size(104, 26);
+            this.radioButton6.TabIndex = 1;
+            this.radioButton6.Text = "По ФИО";
+            this.radioButton6.UseVisualStyleBackColor = false;
+            // 
+            // radioButton7
+            // 
+            this.radioButton7.AutoSize = true;
+            this.radioButton7.BackColor = System.Drawing.Color.Beige;
+            this.radioButton7.Checked = true;
+            this.radioButton7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButton7.Location = new System.Drawing.Point(3, 3);
+            this.radioButton7.Name = "radioButton7";
+            this.radioButton7.Size = new System.Drawing.Size(217, 26);
+            this.radioButton7.TabIndex = 0;
+            this.radioButton7.TabStop = true;
+            this.radioButton7.Text = "По номеру документа";
+            this.radioButton7.UseVisualStyleBackColor = false;
             // 
             // cBDistrict
             // 
@@ -662,6 +808,17 @@ namespace MeoIS
             this.label1.TabIndex = 0;
             this.label1.Text = "Добавление записи о пользователе";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.pictureBox2.Image = global::MeoIS.Properties.Resources.fonPanel1;
+            this.pictureBox2.Location = new System.Drawing.Point(-4, -3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(883, 527);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 2842;
+            this.pictureBox2.TabStop = false;
+            // 
             // tPDelete
             // 
             this.tPDelete.Controls.Add(this.pictureArrowDel);
@@ -670,6 +827,7 @@ namespace MeoIS
             this.tPDelete.Controls.Add(this.tBDocNumDelete);
             this.tPDelete.Controls.Add(this.buttonDeleteUser);
             this.tPDelete.Controls.Add(this.label4);
+            this.tPDelete.Controls.Add(this.pictureBox3);
             this.tPDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tPDelete.Location = new System.Drawing.Point(4, 25);
             this.tPDelete.Name = "tPDelete";
@@ -746,6 +904,17 @@ namespace MeoIS
             this.label4.TabIndex = 1;
             this.label4.Text = "Удаление записи о пользователе";
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.pictureBox3.Image = global::MeoIS.Properties.Resources.fonPanel1;
+            this.pictureBox3.Location = new System.Drawing.Point(0, -3);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(883, 527);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 2843;
+            this.pictureBox3.TabStop = false;
+            // 
             // tPChange
             // 
             this.tPChange.Controls.Add(this.label16);
@@ -755,6 +924,7 @@ namespace MeoIS
             this.tPChange.Controls.Add(this.tBChangeUser);
             this.tPChange.Controls.Add(this.buttonChange);
             this.tPChange.Controls.Add(this.label15);
+            this.tPChange.Controls.Add(this.pictureBox4);
             this.tPChange.Location = new System.Drawing.Point(4, 25);
             this.tPChange.Name = "tPChange";
             this.tPChange.Padding = new System.Windows.Forms.Padding(3);
@@ -918,6 +1088,17 @@ namespace MeoIS
             this.label15.Size = new System.Drawing.Size(595, 43);
             this.label15.TabIndex = 2835;
             this.label15.Text = "Изменение записи о пользователе";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.pictureBox4.Image = global::MeoIS.Properties.Resources.fonPanel1;
+            this.pictureBox4.Location = new System.Drawing.Point(0, -3);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(883, 527);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 2843;
+            this.pictureBox4.TabStop = false;
             // 
             // tabControlLit
             // 
@@ -1178,31 +1359,6 @@ namespace MeoIS
             this.label32.TabIndex = 1;
             this.label32.Text = "Удаление литературы";
             // 
-            // labelExit
-            // 
-            this.labelExit.AutoSize = true;
-            this.labelExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.labelExit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelExit.Image = global::MeoIS.Properties.Resources.fonLabelPic;
-            this.labelExit.Location = new System.Drawing.Point(25, 549);
-            this.labelExit.Name = "labelExit";
-            this.labelExit.Size = new System.Drawing.Size(63, 22);
-            this.labelExit.TabIndex = 37;
-            this.labelExit.Text = "Выход";
-            this.labelExit.Click += new System.EventHandler(this.labelExit_Click);
-            // 
-            // labelExport
-            // 
-            this.labelExport.AutoSize = true;
-            this.labelExport.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelExport.Image = global::MeoIS.Properties.Resources.fonLabelPic;
-            this.labelExport.Location = new System.Drawing.Point(20, 175);
-            this.labelExport.Name = "labelExport";
-            this.labelExport.Size = new System.Drawing.Size(99, 38);
-            this.labelExport.TabIndex = 39;
-            this.labelExport.Text = "Статистика\r\nи отчеты";
-            this.labelExport.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // tabControlExportAndStatistics
             // 
             this.tabControlExportAndStatistics.Controls.Add(this.tPStat);
@@ -1222,6 +1378,7 @@ namespace MeoIS
             this.tPStat.Controls.Add(this.rBStatAge);
             this.tPStat.Controls.Add(this.label22);
             this.tPStat.Controls.Add(this.label23);
+            this.tPStat.Controls.Add(this.pictureBox5);
             this.tPStat.Location = new System.Drawing.Point(4, 25);
             this.tPStat.Name = "tPStat";
             this.tPStat.Padding = new System.Windows.Forms.Padding(3);
@@ -1233,6 +1390,7 @@ namespace MeoIS
             // rBStatCategory
             // 
             this.rBStatCategory.AutoSize = true;
+            this.rBStatCategory.BackColor = System.Drawing.Color.Beige;
             this.rBStatCategory.Checked = true;
             this.rBStatCategory.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.rBStatCategory.Location = new System.Drawing.Point(240, 165);
@@ -1242,22 +1400,24 @@ namespace MeoIS
             this.rBStatCategory.TabStop = true;
             this.rBStatCategory.Text = "Категория годности";
             this.rBStatCategory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.rBStatCategory.UseVisualStyleBackColor = true;
+            this.rBStatCategory.UseVisualStyleBackColor = false;
             // 
             // buttonShowStat
             // 
+            this.buttonShowStat.BackColor = System.Drawing.Color.LightGoldenrodYellow;
             this.buttonShowStat.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonShowStat.Location = new System.Drawing.Point(129, 215);
             this.buttonShowStat.Name = "buttonShowStat";
             this.buttonShowStat.Size = new System.Drawing.Size(265, 58);
             this.buttonShowStat.TabIndex = 16;
             this.buttonShowStat.Text = "Показать статистику";
-            this.buttonShowStat.UseVisualStyleBackColor = true;
+            this.buttonShowStat.UseVisualStyleBackColor = false;
             this.buttonShowStat.Click += new System.EventHandler(this.buttonShowStat_Click);
             // 
             // rBStatDistrict
             // 
             this.rBStatDistrict.AutoSize = true;
+            this.rBStatDistrict.BackColor = System.Drawing.Color.Beige;
             this.rBStatDistrict.Checked = true;
             this.rBStatDistrict.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.rBStatDistrict.Location = new System.Drawing.Point(108, 165);
@@ -1267,11 +1427,12 @@ namespace MeoIS
             this.rBStatDistrict.TabStop = true;
             this.rBStatDistrict.Text = "Район";
             this.rBStatDistrict.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.rBStatDistrict.UseVisualStyleBackColor = true;
+            this.rBStatDistrict.UseVisualStyleBackColor = false;
             // 
             // rBStatGender
             // 
             this.rBStatGender.AutoSize = true;
+            this.rBStatGender.BackColor = System.Drawing.Color.Beige;
             this.rBStatGender.Checked = true;
             this.rBStatGender.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.rBStatGender.Location = new System.Drawing.Point(117, 103);
@@ -1281,11 +1442,12 @@ namespace MeoIS
             this.rBStatGender.TabStop = true;
             this.rBStatGender.Text = "Пол";
             this.rBStatGender.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.rBStatGender.UseVisualStyleBackColor = true;
+            this.rBStatGender.UseVisualStyleBackColor = false;
             // 
             // rBStatAge
             // 
             this.rBStatAge.AutoSize = true;
+            this.rBStatAge.BackColor = System.Drawing.Color.Beige;
             this.rBStatAge.Checked = true;
             this.rBStatAge.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.rBStatAge.Location = new System.Drawing.Point(240, 103);
@@ -1295,11 +1457,12 @@ namespace MeoIS
             this.rBStatAge.TabStop = true;
             this.rBStatAge.Text = "Возраст";
             this.rBStatAge.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.rBStatAge.UseVisualStyleBackColor = true;
+            this.rBStatAge.UseVisualStyleBackColor = false;
             // 
             // label22
             // 
             this.label22.AutoSize = true;
+            this.label22.BackColor = System.Drawing.Color.Beige;
             this.label22.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label22.Location = new System.Drawing.Point(64, 55);
             this.label22.Name = "label22";
@@ -1310,12 +1473,24 @@ namespace MeoIS
             // label23
             // 
             this.label23.AutoSize = true;
+            this.label23.BackColor = System.Drawing.Color.Beige;
             this.label23.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label23.Location = new System.Drawing.Point(120, 6);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(255, 49);
             this.label23.TabIndex = 3;
             this.label23.Text = "Статистика";
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.pictureBox5.Image = global::MeoIS.Properties.Resources.fonPanel1;
+            this.pictureBox5.Location = new System.Drawing.Point(-4, -4);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(551, 350);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 2843;
+            this.pictureBox5.TabStop = false;
             // 
             // tPExport
             // 
@@ -1333,6 +1508,7 @@ namespace MeoIS
             this.tPExport.Controls.Add(this.label24);
             this.tPExport.Controls.Add(this.label25);
             this.tPExport.Controls.Add(this.label28);
+            this.tPExport.Controls.Add(this.pictureBox6);
             this.tPExport.Location = new System.Drawing.Point(4, 25);
             this.tPExport.Name = "tPExport";
             this.tPExport.Padding = new System.Windows.Forms.Padding(3);
@@ -1344,6 +1520,7 @@ namespace MeoIS
             // rBExpTXTCategory
             // 
             this.rBExpTXTCategory.AutoSize = true;
+            this.rBExpTXTCategory.BackColor = System.Drawing.Color.Beige;
             this.rBExpTXTCategory.Checked = true;
             this.rBExpTXTCategory.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.rBExpTXTCategory.Location = new System.Drawing.Point(374, 195);
@@ -1353,11 +1530,12 @@ namespace MeoIS
             this.rBExpTXTCategory.TabStop = true;
             this.rBExpTXTCategory.Text = "Категория\r\nгодности";
             this.rBExpTXTCategory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.rBExpTXTCategory.UseVisualStyleBackColor = true;
+            this.rBExpTXTCategory.UseVisualStyleBackColor = false;
             // 
             // label34
             // 
             this.label34.AutoSize = true;
+            this.label34.BackColor = System.Drawing.Color.Beige;
             this.label34.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label34.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label34.Location = new System.Drawing.Point(20, 197);
@@ -1369,6 +1547,7 @@ namespace MeoIS
             // label33
             // 
             this.label33.AutoSize = true;
+            this.label33.BackColor = System.Drawing.Color.Beige;
             this.label33.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label33.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label33.Location = new System.Drawing.Point(20, 138);
@@ -1380,6 +1559,7 @@ namespace MeoIS
             // rBExportAll
             // 
             this.rBExportAll.AutoSize = true;
+            this.rBExportAll.BackColor = System.Drawing.Color.Beige;
             this.rBExportAll.Checked = true;
             this.rBExportAll.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.rBExportAll.Location = new System.Drawing.Point(42, 73);
@@ -1389,17 +1569,18 @@ namespace MeoIS
             this.rBExportAll.TabStop = true;
             this.rBExportAll.Text = "Вся таблица";
             this.rBExportAll.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.rBExportAll.UseVisualStyleBackColor = true;
+            this.rBExportAll.UseVisualStyleBackColor = false;
             // 
             // buttonExport
             // 
+            this.buttonExport.BackColor = System.Drawing.Color.Beige;
             this.buttonExport.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonExport.Location = new System.Drawing.Point(136, 259);
             this.buttonExport.Name = "buttonExport";
             this.buttonExport.Size = new System.Drawing.Size(265, 58);
             this.buttonExport.TabIndex = 23;
             this.buttonExport.Text = "Экспортировать";
-            this.buttonExport.UseVisualStyleBackColor = true;
+            this.buttonExport.UseVisualStyleBackColor = false;
             this.buttonExport.Click += new System.EventHandler(this.buttonExport_Click);
             // 
             // tBExport
@@ -1414,6 +1595,7 @@ namespace MeoIS
             // rBExportCategory
             // 
             this.rBExportCategory.AutoSize = true;
+            this.rBExportCategory.BackColor = System.Drawing.Color.Beige;
             this.rBExportCategory.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.rBExportCategory.Location = new System.Drawing.Point(42, 161);
             this.rBExportCategory.Name = "rBExportCategory";
@@ -1421,11 +1603,12 @@ namespace MeoIS
             this.rBExportCategory.TabIndex = 21;
             this.rBExportCategory.Text = "Категория годности";
             this.rBExportCategory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.rBExportCategory.UseVisualStyleBackColor = true;
+            this.rBExportCategory.UseVisualStyleBackColor = false;
             // 
             // rBExportDistrict
             // 
             this.rBExportDistrict.AutoSize = true;
+            this.rBExportDistrict.BackColor = System.Drawing.Color.Beige;
             this.rBExportDistrict.Checked = true;
             this.rBExportDistrict.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.rBExportDistrict.Location = new System.Drawing.Point(42, 107);
@@ -1435,11 +1618,12 @@ namespace MeoIS
             this.rBExportDistrict.TabStop = true;
             this.rBExportDistrict.Text = "Район";
             this.rBExportDistrict.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.rBExportDistrict.UseVisualStyleBackColor = true;
+            this.rBExportDistrict.UseVisualStyleBackColor = false;
             // 
             // rBExpTXTDistrict
             // 
             this.rBExpTXTDistrict.AutoSize = true;
+            this.rBExpTXTDistrict.BackColor = System.Drawing.Color.Beige;
             this.rBExpTXTDistrict.Checked = true;
             this.rBExpTXTDistrict.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.rBExpTXTDistrict.Location = new System.Drawing.Point(374, 121);
@@ -1449,11 +1633,12 @@ namespace MeoIS
             this.rBExpTXTDistrict.TabStop = true;
             this.rBExpTXTDistrict.Text = "Район";
             this.rBExpTXTDistrict.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.rBExpTXTDistrict.UseVisualStyleBackColor = true;
+            this.rBExpTXTDistrict.UseVisualStyleBackColor = false;
             // 
             // rBExpTXTGender
             // 
             this.rBExpTXTGender.AutoSize = true;
+            this.rBExpTXTGender.BackColor = System.Drawing.Color.Beige;
             this.rBExpTXTGender.Checked = true;
             this.rBExpTXTGender.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.rBExpTXTGender.Location = new System.Drawing.Point(376, 84);
@@ -1463,11 +1648,12 @@ namespace MeoIS
             this.rBExpTXTGender.TabStop = true;
             this.rBExpTXTGender.Text = "Пол";
             this.rBExpTXTGender.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.rBExpTXTGender.UseVisualStyleBackColor = true;
+            this.rBExpTXTGender.UseVisualStyleBackColor = false;
             // 
             // rBExpTXTAge
             // 
             this.rBExpTXTAge.AutoSize = true;
+            this.rBExpTXTAge.BackColor = System.Drawing.Color.Beige;
             this.rBExpTXTAge.Checked = true;
             this.rBExpTXTAge.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.rBExpTXTAge.Location = new System.Drawing.Point(376, 165);
@@ -1477,11 +1663,12 @@ namespace MeoIS
             this.rBExpTXTAge.TabStop = true;
             this.rBExpTXTAge.Text = "Возраст";
             this.rBExpTXTAge.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.rBExpTXTAge.UseVisualStyleBackColor = true;
+            this.rBExpTXTAge.UseVisualStyleBackColor = false;
             // 
             // label24
             // 
             this.label24.AutoSize = true;
+            this.label24.BackColor = System.Drawing.Color.Beige;
             this.label24.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label24.Location = new System.Drawing.Point(53, 43);
             this.label24.Name = "label24";
@@ -1492,6 +1679,7 @@ namespace MeoIS
             // label25
             // 
             this.label25.AutoSize = true;
+            this.label25.BackColor = System.Drawing.Color.Beige;
             this.label25.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label25.Location = new System.Drawing.Point(353, 52);
             this.label25.Name = "label25";
@@ -1502,6 +1690,7 @@ namespace MeoIS
             // label28
             // 
             this.label28.AutoSize = true;
+            this.label28.BackColor = System.Drawing.Color.Beige;
             this.label28.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label28.Location = new System.Drawing.Point(172, 3);
             this.label28.Name = "label28";
@@ -1509,17 +1698,16 @@ namespace MeoIS
             this.label28.TabIndex = 5;
             this.label28.Text = "Экспорт";
             // 
-            // label35
+            // pictureBox6
             // 
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label35.Image = global::MeoIS.Properties.Resources.fonLabelPic;
-            this.label35.Location = new System.Drawing.Point(32, 310);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(80, 38);
-            this.label35.TabIndex = 39;
-            this.label35.Text = "Реестр\r\nповесток";
-            this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.pictureBox6.Image = global::MeoIS.Properties.Resources.fonPanel1;
+            this.pictureBox6.Location = new System.Drawing.Point(-3, -5);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(551, 350);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 2844;
+            this.pictureBox6.TabStop = false;
             // 
             // panelNewAdmin
             // 
@@ -1578,168 +1766,6 @@ namespace MeoIS
             this.label18.Size = new System.Drawing.Size(328, 35);
             this.label18.TabIndex = 2839;
             this.label18.Text = "Права администратора";
-            // 
-            // tableLayoutPanelFilter
-            // 
-            this.tableLayoutPanelFilter.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tableLayoutPanelFilter.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.tableLayoutPanelFilter.BackgroundImage = global::MeoIS.Properties.Resources.fonPanel1;
-            this.tableLayoutPanelFilter.ColumnCount = 1;
-            this.tableLayoutPanelFilter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanelFilter.Controls.Add(this.rBEducation, 0, 6);
-            this.tableLayoutPanelFilter.Controls.Add(this.rBSearchLit, 0, 5);
-            this.tableLayoutPanelFilter.Controls.Add(this.rBSearchMedData, 0, 4);
-            this.tableLayoutPanelFilter.Controls.Add(this.rBSearchPhone, 0, 3);
-            this.tableLayoutPanelFilter.Controls.Add(this.rBSearchDistrict, 0, 2);
-            this.tableLayoutPanelFilter.Controls.Add(this.rBSearchName, 0, 1);
-            this.tableLayoutPanelFilter.Controls.Add(this.rBSearchDocNum, 0, 0);
-            this.tableLayoutPanelFilter.Location = new System.Drawing.Point(1509, 473);
-            this.tableLayoutPanelFilter.Name = "tableLayoutPanelFilter";
-            this.tableLayoutPanelFilter.RowCount = 7;
-            this.tableLayoutPanelFilter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanelFilter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanelFilter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanelFilter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanelFilter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanelFilter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanelFilter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanelFilter.Size = new System.Drawing.Size(244, 359);
-            this.tableLayoutPanelFilter.TabIndex = 16;
-            // 
-            // rBEducation
-            // 
-            this.rBEducation.AutoSize = true;
-            this.rBEducation.BackColor = System.Drawing.Color.Beige;
-            this.rBEducation.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rBEducation.Location = new System.Drawing.Point(3, 309);
-            this.rBEducation.Name = "rBEducation";
-            this.rBEducation.Size = new System.Drawing.Size(141, 26);
-            this.rBEducation.TabIndex = 6;
-            this.rBEducation.Text = "Образование";
-            this.rBEducation.UseVisualStyleBackColor = false;
-            // 
-            // rBSearchLit
-            // 
-            this.rBSearchLit.AutoSize = true;
-            this.rBSearchLit.BackColor = System.Drawing.Color.Beige;
-            this.rBSearchLit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rBSearchLit.Location = new System.Drawing.Point(3, 258);
-            this.rBSearchLit.Name = "rBSearchLit";
-            this.rBSearchLit.Size = new System.Drawing.Size(133, 26);
-            this.rBSearchLit.TabIndex = 5;
-            this.rBSearchLit.Text = "Литературы";
-            this.rBSearchLit.UseVisualStyleBackColor = false;
-            // 
-            // rBSearchMedData
-            // 
-            this.rBSearchMedData.AutoSize = true;
-            this.rBSearchMedData.BackColor = System.Drawing.Color.Beige;
-            this.rBSearchMedData.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rBSearchMedData.Location = new System.Drawing.Point(3, 207);
-            this.rBSearchMedData.Name = "rBSearchMedData";
-            this.rBSearchMedData.Size = new System.Drawing.Size(218, 45);
-            this.rBSearchMedData.TabIndex = 4;
-            this.rBSearchMedData.Text = "Медицинских данных\r\nпо номеру документа";
-            this.rBSearchMedData.UseVisualStyleBackColor = false;
-            // 
-            // rBSearchPhone
-            // 
-            this.rBSearchPhone.AutoSize = true;
-            this.rBSearchPhone.BackColor = System.Drawing.Color.Beige;
-            this.rBSearchPhone.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rBSearchPhone.Location = new System.Drawing.Point(3, 156);
-            this.rBSearchPhone.Name = "rBSearchPhone";
-            this.rBSearchPhone.Size = new System.Drawing.Size(207, 26);
-            this.rBSearchPhone.TabIndex = 3;
-            this.rBSearchPhone.Text = "По номеру телефона";
-            this.rBSearchPhone.UseVisualStyleBackColor = false;
-            // 
-            // rBSearchDistrict
-            // 
-            this.rBSearchDistrict.AutoSize = true;
-            this.rBSearchDistrict.BackColor = System.Drawing.Color.Beige;
-            this.rBSearchDistrict.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rBSearchDistrict.Location = new System.Drawing.Point(3, 105);
-            this.rBSearchDistrict.Name = "rBSearchDistrict";
-            this.rBSearchDistrict.Size = new System.Drawing.Size(157, 26);
-            this.rBSearchDistrict.TabIndex = 2;
-            this.rBSearchDistrict.Text = "По военкомату";
-            this.rBSearchDistrict.UseVisualStyleBackColor = false;
-            // 
-            // rBSearchName
-            // 
-            this.rBSearchName.AutoSize = true;
-            this.rBSearchName.BackColor = System.Drawing.Color.Beige;
-            this.rBSearchName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rBSearchName.Location = new System.Drawing.Point(3, 54);
-            this.rBSearchName.Name = "rBSearchName";
-            this.rBSearchName.Size = new System.Drawing.Size(104, 26);
-            this.rBSearchName.TabIndex = 1;
-            this.rBSearchName.Text = "По ФИО";
-            this.rBSearchName.UseVisualStyleBackColor = false;
-            // 
-            // rBSearchDocNum
-            // 
-            this.rBSearchDocNum.AutoSize = true;
-            this.rBSearchDocNum.BackColor = System.Drawing.Color.Beige;
-            this.rBSearchDocNum.Checked = true;
-            this.rBSearchDocNum.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rBSearchDocNum.Location = new System.Drawing.Point(3, 3);
-            this.rBSearchDocNum.Name = "rBSearchDocNum";
-            this.rBSearchDocNum.Size = new System.Drawing.Size(217, 26);
-            this.rBSearchDocNum.TabIndex = 0;
-            this.rBSearchDocNum.TabStop = true;
-            this.rBSearchDocNum.Text = "По номеру документа";
-            this.rBSearchDocNum.UseVisualStyleBackColor = false;
-            // 
-            // pictureRegisterOfSummons
-            // 
-            this.pictureRegisterOfSummons.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureRegisterOfSummons.Image = global::MeoIS.Properties.Resources.reestr;
-            this.pictureRegisterOfSummons.Location = new System.Drawing.Point(36, 243);
-            this.pictureRegisterOfSummons.Name = "pictureRegisterOfSummons";
-            this.pictureRegisterOfSummons.Size = new System.Drawing.Size(69, 64);
-            this.pictureRegisterOfSummons.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureRegisterOfSummons.TabIndex = 38;
-            this.pictureRegisterOfSummons.TabStop = false;
-            this.pictureRegisterOfSummons.Click += new System.EventHandler(this.pictureRegisterOfSummons_Click);
-            // 
-            // pictureExport
-            // 
-            this.pictureExport.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureExport.Image = global::MeoIS.Properties.Resources.export_icon_fon;
-            this.pictureExport.Location = new System.Drawing.Point(24, 108);
-            this.pictureExport.Name = "pictureExport";
-            this.pictureExport.Size = new System.Drawing.Size(81, 64);
-            this.pictureExport.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureExport.TabIndex = 38;
-            this.pictureExport.TabStop = false;
-            this.pictureExport.Click += new System.EventHandler(this.pictureExport_Click);
-            // 
-            // pictureClose
-            // 
-            this.pictureClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureClose.Image = global::MeoIS.Properties.Resources.close_fon;
-            this.pictureClose.Location = new System.Drawing.Point(1021, 60);
-            this.pictureClose.Name = "pictureClose";
-            this.pictureClose.Size = new System.Drawing.Size(64, 47);
-            this.pictureClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureClose.TabIndex = 36;
-            this.pictureClose.TabStop = false;
-            this.pictureClose.Visible = false;
-            this.pictureClose.Click += new System.EventHandler(this.pictureClose_Click);
-            // 
-            // picSearch
-            // 
-            this.picSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picSearch.Image = global::MeoIS.Properties.Resources.search_fon;
-            this.picSearch.Location = new System.Drawing.Point(1028, 9);
-            this.picSearch.Name = "picSearch";
-            this.picSearch.Size = new System.Drawing.Size(53, 40);
-            this.picSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picSearch.TabIndex = 17;
-            this.picSearch.TabStop = false;
-            this.picSearch.Click += new System.EventHandler(this.picSearch_Click_1);
             // 
             // panelRegOfSummons
             // 
@@ -1947,12 +1973,335 @@ namespace MeoIS
             this.buttonRegOfSummonsSave.UseVisualStyleBackColor = false;
             this.buttonRegOfSummonsSave.Click += new System.EventHandler(this.buttonRegOfSummonsSave_Click);
             // 
+            // tableLayoutPanelFilter
+            // 
+            this.tableLayoutPanelFilter.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tableLayoutPanelFilter.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.tableLayoutPanelFilter.BackgroundImage = global::MeoIS.Properties.Resources.fonPanel1;
+            this.tableLayoutPanelFilter.ColumnCount = 1;
+            this.tableLayoutPanelFilter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanelFilter.Controls.Add(this.rBEducation, 0, 6);
+            this.tableLayoutPanelFilter.Controls.Add(this.rBSearchLit, 0, 5);
+            this.tableLayoutPanelFilter.Controls.Add(this.rBSearchMedData, 0, 4);
+            this.tableLayoutPanelFilter.Controls.Add(this.rBSearchPhone, 0, 3);
+            this.tableLayoutPanelFilter.Controls.Add(this.rBSearchDistrict, 0, 2);
+            this.tableLayoutPanelFilter.Controls.Add(this.rBSearchName, 0, 1);
+            this.tableLayoutPanelFilter.Controls.Add(this.rBSearchDocNum, 0, 0);
+            this.tableLayoutPanelFilter.Location = new System.Drawing.Point(1509, 473);
+            this.tableLayoutPanelFilter.Name = "tableLayoutPanelFilter";
+            this.tableLayoutPanelFilter.RowCount = 7;
+            this.tableLayoutPanelFilter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanelFilter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanelFilter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanelFilter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanelFilter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanelFilter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanelFilter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanelFilter.Size = new System.Drawing.Size(244, 359);
+            this.tableLayoutPanelFilter.TabIndex = 16;
+            // 
+            // rBEducation
+            // 
+            this.rBEducation.AutoSize = true;
+            this.rBEducation.BackColor = System.Drawing.Color.Beige;
+            this.rBEducation.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rBEducation.Location = new System.Drawing.Point(3, 309);
+            this.rBEducation.Name = "rBEducation";
+            this.rBEducation.Size = new System.Drawing.Size(141, 26);
+            this.rBEducation.TabIndex = 6;
+            this.rBEducation.Text = "Образование";
+            this.rBEducation.UseVisualStyleBackColor = false;
+            // 
+            // rBSearchLit
+            // 
+            this.rBSearchLit.AutoSize = true;
+            this.rBSearchLit.BackColor = System.Drawing.Color.Beige;
+            this.rBSearchLit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rBSearchLit.Location = new System.Drawing.Point(3, 258);
+            this.rBSearchLit.Name = "rBSearchLit";
+            this.rBSearchLit.Size = new System.Drawing.Size(133, 26);
+            this.rBSearchLit.TabIndex = 5;
+            this.rBSearchLit.Text = "Литературы";
+            this.rBSearchLit.UseVisualStyleBackColor = false;
+            // 
+            // rBSearchMedData
+            // 
+            this.rBSearchMedData.AutoSize = true;
+            this.rBSearchMedData.BackColor = System.Drawing.Color.Beige;
+            this.rBSearchMedData.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rBSearchMedData.Location = new System.Drawing.Point(3, 207);
+            this.rBSearchMedData.Name = "rBSearchMedData";
+            this.rBSearchMedData.Size = new System.Drawing.Size(218, 45);
+            this.rBSearchMedData.TabIndex = 4;
+            this.rBSearchMedData.Text = "Медицинских данных\r\nпо номеру документа";
+            this.rBSearchMedData.UseVisualStyleBackColor = false;
+            // 
+            // rBSearchPhone
+            // 
+            this.rBSearchPhone.AutoSize = true;
+            this.rBSearchPhone.BackColor = System.Drawing.Color.Beige;
+            this.rBSearchPhone.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rBSearchPhone.Location = new System.Drawing.Point(3, 156);
+            this.rBSearchPhone.Name = "rBSearchPhone";
+            this.rBSearchPhone.Size = new System.Drawing.Size(207, 26);
+            this.rBSearchPhone.TabIndex = 3;
+            this.rBSearchPhone.Text = "По номеру телефона";
+            this.rBSearchPhone.UseVisualStyleBackColor = false;
+            // 
+            // rBSearchDistrict
+            // 
+            this.rBSearchDistrict.AutoSize = true;
+            this.rBSearchDistrict.BackColor = System.Drawing.Color.Beige;
+            this.rBSearchDistrict.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rBSearchDistrict.Location = new System.Drawing.Point(3, 105);
+            this.rBSearchDistrict.Name = "rBSearchDistrict";
+            this.rBSearchDistrict.Size = new System.Drawing.Size(157, 26);
+            this.rBSearchDistrict.TabIndex = 2;
+            this.rBSearchDistrict.Text = "По военкомату";
+            this.rBSearchDistrict.UseVisualStyleBackColor = false;
+            // 
+            // rBSearchName
+            // 
+            this.rBSearchName.AutoSize = true;
+            this.rBSearchName.BackColor = System.Drawing.Color.Beige;
+            this.rBSearchName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rBSearchName.Location = new System.Drawing.Point(3, 54);
+            this.rBSearchName.Name = "rBSearchName";
+            this.rBSearchName.Size = new System.Drawing.Size(104, 26);
+            this.rBSearchName.TabIndex = 1;
+            this.rBSearchName.Text = "По ФИО";
+            this.rBSearchName.UseVisualStyleBackColor = false;
+            // 
+            // rBSearchDocNum
+            // 
+            this.rBSearchDocNum.AutoSize = true;
+            this.rBSearchDocNum.BackColor = System.Drawing.Color.Beige;
+            this.rBSearchDocNum.Checked = true;
+            this.rBSearchDocNum.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rBSearchDocNum.Location = new System.Drawing.Point(3, 3);
+            this.rBSearchDocNum.Name = "rBSearchDocNum";
+            this.rBSearchDocNum.Size = new System.Drawing.Size(217, 26);
+            this.rBSearchDocNum.TabIndex = 0;
+            this.rBSearchDocNum.TabStop = true;
+            this.rBSearchDocNum.Text = "По номеру документа";
+            this.rBSearchDocNum.UseVisualStyleBackColor = false;
+            // 
+            // pictureRegisterOfSummons
+            // 
+            this.pictureRegisterOfSummons.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureRegisterOfSummons.Image = global::MeoIS.Properties.Resources.reestr_fon;
+            this.pictureRegisterOfSummons.Location = new System.Drawing.Point(26, 243);
+            this.pictureRegisterOfSummons.Name = "pictureRegisterOfSummons";
+            this.pictureRegisterOfSummons.Size = new System.Drawing.Size(76, 64);
+            this.pictureRegisterOfSummons.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureRegisterOfSummons.TabIndex = 38;
+            this.pictureRegisterOfSummons.TabStop = false;
+            this.pictureRegisterOfSummons.Click += new System.EventHandler(this.pictureRegisterOfSummons_Click);
+            // 
+            // pictureExport
+            // 
+            this.pictureExport.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureExport.Image = global::MeoIS.Properties.Resources.export_icon_fon;
+            this.pictureExport.Location = new System.Drawing.Point(24, 108);
+            this.pictureExport.Name = "pictureExport";
+            this.pictureExport.Size = new System.Drawing.Size(81, 64);
+            this.pictureExport.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureExport.TabIndex = 38;
+            this.pictureExport.TabStop = false;
+            this.pictureExport.Click += new System.EventHandler(this.pictureExport_Click);
+            // 
+            // labelExit
+            // 
+            this.labelExit.AutoSize = true;
+            this.labelExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.labelExit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelExit.Image = global::MeoIS.Properties.Resources.fonLabelPic;
+            this.labelExit.Location = new System.Drawing.Point(25, 549);
+            this.labelExit.Name = "labelExit";
+            this.labelExit.Size = new System.Drawing.Size(63, 22);
+            this.labelExit.TabIndex = 37;
+            this.labelExit.Text = "Выход";
+            this.labelExit.Click += new System.EventHandler(this.labelExit_Click);
+            // 
+            // pictureClose
+            // 
+            this.pictureClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureClose.Image = global::MeoIS.Properties.Resources.close_fon;
+            this.pictureClose.Location = new System.Drawing.Point(1021, 60);
+            this.pictureClose.Name = "pictureClose";
+            this.pictureClose.Size = new System.Drawing.Size(64, 47);
+            this.pictureClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureClose.TabIndex = 36;
+            this.pictureClose.TabStop = false;
+            this.pictureClose.Visible = false;
+            this.pictureClose.Click += new System.EventHandler(this.pictureClose_Click);
+            // 
+            // picSearch
+            // 
+            this.picSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picSearch.Image = global::MeoIS.Properties.Resources.search_fon;
+            this.picSearch.Location = new System.Drawing.Point(1028, 9);
+            this.picSearch.Name = "picSearch";
+            this.picSearch.Size = new System.Drawing.Size(53, 40);
+            this.picSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picSearch.TabIndex = 17;
+            this.picSearch.TabStop = false;
+            this.picSearch.Click += new System.EventHandler(this.picSearch_Click_1);
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label35.Image = global::MeoIS.Properties.Resources.fonLabelPic;
+            this.label35.Location = new System.Drawing.Point(24, 310);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(80, 38);
+            this.label35.TabIndex = 39;
+            this.label35.Text = "Реестр\r\nповесток";
+            this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelExport
+            // 
+            this.labelExport.AutoSize = true;
+            this.labelExport.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelExport.Image = global::MeoIS.Properties.Resources.fonLabelPic;
+            this.labelExport.Location = new System.Drawing.Point(15, 175);
+            this.labelExport.Name = "labelExport";
+            this.labelExport.Size = new System.Drawing.Size(99, 38);
+            this.labelExport.TabIndex = 39;
+            this.labelExport.Text = "Статистика\r\nи отчеты";
+            this.labelExport.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.pictureBox1.Image = global::MeoIS.Properties.Resources.fon;
+            this.pictureBox1.Location = new System.Drawing.Point(0, -8);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1097, 612);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 38;
+            this.pictureBox1.TabStop = false;
+            // 
+            // tableLayoutPanelFilterSearch
+            // 
+            this.tableLayoutPanelFilterSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tableLayoutPanelFilterSearch.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.tableLayoutPanelFilterSearch.BackgroundImage = global::MeoIS.Properties.Resources.fonPanel1;
+            this.tableLayoutPanelFilterSearch.ColumnCount = 1;
+            this.tableLayoutPanelFilterSearch.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanelFilterSearch.Controls.Add(this.radioButton8, 0, 6);
+            this.tableLayoutPanelFilterSearch.Controls.Add(this.radioButton9, 0, 5);
+            this.tableLayoutPanelFilterSearch.Controls.Add(this.radioButton10, 0, 4);
+            this.tableLayoutPanelFilterSearch.Controls.Add(this.radioButton11, 0, 3);
+            this.tableLayoutPanelFilterSearch.Controls.Add(this.radioButton12, 0, 2);
+            this.tableLayoutPanelFilterSearch.Controls.Add(this.radioButton13, 0, 1);
+            this.tableLayoutPanelFilterSearch.Controls.Add(this.radioButton14, 0, 0);
+            this.tableLayoutPanelFilterSearch.Location = new System.Drawing.Point(840, 60);
+            this.tableLayoutPanelFilterSearch.Name = "tableLayoutPanelFilterSearch";
+            this.tableLayoutPanelFilterSearch.RowCount = 7;
+            this.tableLayoutPanelFilterSearch.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanelFilterSearch.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanelFilterSearch.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanelFilterSearch.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanelFilterSearch.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanelFilterSearch.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanelFilterSearch.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanelFilterSearch.Size = new System.Drawing.Size(244, 359);
+            this.tableLayoutPanelFilterSearch.TabIndex = 42;
+            // 
+            // radioButton8
+            // 
+            this.radioButton8.AutoSize = true;
+            this.radioButton8.BackColor = System.Drawing.Color.Beige;
+            this.radioButton8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButton8.Location = new System.Drawing.Point(3, 309);
+            this.radioButton8.Name = "radioButton8";
+            this.radioButton8.Size = new System.Drawing.Size(141, 26);
+            this.radioButton8.TabIndex = 6;
+            this.radioButton8.Text = "Образование";
+            this.radioButton8.UseVisualStyleBackColor = false;
+            // 
+            // radioButton9
+            // 
+            this.radioButton9.AutoSize = true;
+            this.radioButton9.BackColor = System.Drawing.Color.Beige;
+            this.radioButton9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButton9.Location = new System.Drawing.Point(3, 258);
+            this.radioButton9.Name = "radioButton9";
+            this.radioButton9.Size = new System.Drawing.Size(133, 26);
+            this.radioButton9.TabIndex = 5;
+            this.radioButton9.Text = "Литературы";
+            this.radioButton9.UseVisualStyleBackColor = false;
+            // 
+            // radioButton10
+            // 
+            this.radioButton10.AutoSize = true;
+            this.radioButton10.BackColor = System.Drawing.Color.Beige;
+            this.radioButton10.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButton10.Location = new System.Drawing.Point(3, 207);
+            this.radioButton10.Name = "radioButton10";
+            this.radioButton10.Size = new System.Drawing.Size(218, 45);
+            this.radioButton10.TabIndex = 4;
+            this.radioButton10.Text = "Медицинских данных\r\nпо номеру документа";
+            this.radioButton10.UseVisualStyleBackColor = false;
+            // 
+            // radioButton11
+            // 
+            this.radioButton11.AutoSize = true;
+            this.radioButton11.BackColor = System.Drawing.Color.Beige;
+            this.radioButton11.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButton11.Location = new System.Drawing.Point(3, 156);
+            this.radioButton11.Name = "radioButton11";
+            this.radioButton11.Size = new System.Drawing.Size(207, 26);
+            this.radioButton11.TabIndex = 3;
+            this.radioButton11.Text = "По номеру телефона";
+            this.radioButton11.UseVisualStyleBackColor = false;
+            // 
+            // radioButton12
+            // 
+            this.radioButton12.AutoSize = true;
+            this.radioButton12.BackColor = System.Drawing.Color.Beige;
+            this.radioButton12.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButton12.Location = new System.Drawing.Point(3, 105);
+            this.radioButton12.Name = "radioButton12";
+            this.radioButton12.Size = new System.Drawing.Size(157, 26);
+            this.radioButton12.TabIndex = 2;
+            this.radioButton12.Text = "По военкомату";
+            this.radioButton12.UseVisualStyleBackColor = false;
+            // 
+            // radioButton13
+            // 
+            this.radioButton13.AutoSize = true;
+            this.radioButton13.BackColor = System.Drawing.Color.Beige;
+            this.radioButton13.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButton13.Location = new System.Drawing.Point(3, 54);
+            this.radioButton13.Name = "radioButton13";
+            this.radioButton13.Size = new System.Drawing.Size(104, 26);
+            this.radioButton13.TabIndex = 1;
+            this.radioButton13.Text = "По ФИО";
+            this.radioButton13.UseVisualStyleBackColor = false;
+            // 
+            // radioButton14
+            // 
+            this.radioButton14.AutoSize = true;
+            this.radioButton14.BackColor = System.Drawing.Color.Beige;
+            this.radioButton14.Checked = true;
+            this.radioButton14.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButton14.Location = new System.Drawing.Point(3, 3);
+            this.radioButton14.Name = "radioButton14";
+            this.radioButton14.Size = new System.Drawing.Size(217, 26);
+            this.radioButton14.TabIndex = 0;
+            this.radioButton14.TabStop = true;
+            this.radioButton14.Text = "По номеру документа";
+            this.radioButton14.UseVisualStyleBackColor = false;
+            // 
             // Admin_panel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1093, 603);
-            this.Controls.Add(this.panelRegOfSummons);
+            this.Controls.Add(this.tableLayoutPanelFilterSearch);
             this.Controls.Add(this.tableLayoutPanelFilter);
             this.Controls.Add(this.pictureRegisterOfSummons);
             this.Controls.Add(this.pictureExport);
@@ -1963,11 +2312,13 @@ namespace MeoIS
             this.Controls.Add(this.labelWelcome);
             this.Controls.Add(this.label35);
             this.Controls.Add(this.labelExport);
-            this.Controls.Add(this.panelNewAdmin);
             this.Controls.Add(this.tabControlExportAndStatistics);
-            this.Controls.Add(this.tabControlMenuFunctions);
             this.Controls.Add(this.dataGV);
             this.Controls.Add(this.groupBoxServices);
+            this.Controls.Add(this.tabControlMenuFunctions);
+            this.Controls.Add(this.panelRegOfSummons);
+            this.Controls.Add(this.panelNewAdmin);
+            this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Admin_panel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -1980,14 +2331,19 @@ namespace MeoIS
             this.tabControlMenuFunctions.ResumeLayout(false);
             this.tPAdd.ResumeLayout(false);
             this.tPAdd.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tPDelete.ResumeLayout(false);
             this.tPDelete.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureArrowDel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDelete)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.tPChange.ResumeLayout(false);
             this.tPChange.PerformLayout();
             this.tableLayoutPanelChangeUser.ResumeLayout(false);
             this.tableLayoutPanelChangeUser.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.tabControlLit.ResumeLayout(false);
             this.tPAddLit.ResumeLayout(false);
             this.tPAddLit.PerformLayout();
@@ -1998,19 +2354,24 @@ namespace MeoIS
             this.tabControlExportAndStatistics.ResumeLayout(false);
             this.tPStat.ResumeLayout(false);
             this.tPStat.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.tPExport.ResumeLayout(false);
             this.tPExport.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.panelNewAdmin.ResumeLayout(false);
             this.panelNewAdmin.PerformLayout();
+            this.panelRegOfSummons.ResumeLayout(false);
+            this.panelRegOfSummons.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.labelLineRegSummons)).EndInit();
             this.tableLayoutPanelFilter.ResumeLayout(false);
             this.tableLayoutPanelFilter.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureRegisterOfSummons)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureExport)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSearch)).EndInit();
-            this.panelRegOfSummons.ResumeLayout(false);
-            this.panelRegOfSummons.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.labelLineRegSummons)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tableLayoutPanelFilterSearch.ResumeLayout(false);
+            this.tableLayoutPanelFilterSearch.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2159,5 +2520,27 @@ namespace MeoIS
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.TextBox tBAddress;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.RadioButton radioButton5;
+        private System.Windows.Forms.RadioButton radioButton6;
+        private System.Windows.Forms.RadioButton radioButton7;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelFilterSearch;
+        private System.Windows.Forms.RadioButton radioButton8;
+        private System.Windows.Forms.RadioButton radioButton9;
+        private System.Windows.Forms.RadioButton radioButton10;
+        private System.Windows.Forms.RadioButton radioButton11;
+        private System.Windows.Forms.RadioButton radioButton12;
+        private System.Windows.Forms.RadioButton radioButton13;
+        private System.Windows.Forms.RadioButton radioButton14;
     }
 }

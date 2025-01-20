@@ -40,11 +40,6 @@ namespace MeoIS
             }
         }
 
-        public void editOrDeleteSummons()
-        {
-
-        }
-
         public bool editStatusSummons(string series, string number, string status)
         {
             DataBaseConnect DataBase = new DataBaseConnect();
@@ -79,6 +74,12 @@ namespace MeoIS
             {
                 return false;
             }
+        }
+
+
+        public void editOrDeleteSummons()
+        {
+
         }
 
     }

@@ -19,7 +19,7 @@ namespace MeoIS
             labelWelcome.Text = "Добрый день, " + Transfer.Name;
             dataGV.Visible = false;
 
-            tableLayoutPanelFilter.Visible = false;
+            tableLayoutPanelFilterSearch.Visible = false;
             tabControlMenuFunctions.Visible = false;
             tabControlExportAndStatistics.Visible = false;
             panelRegOfSummons.Visible = false;
@@ -34,15 +34,23 @@ namespace MeoIS
 
             if (tBSearch.Text != "")
             {
-                tableLayoutPanelFilter.Visible = false;
-                
+                tableLayoutPanelFilterSearch.Visible = false;
+
+
+
+                string[] fullName = tBSearch.Text.Split(new char[] { ' ' });
+                table = search.searchFullName(fullName[0], " ", " ");
+
+
+
+
                 if (rBSearchDocNum.Checked == true)
                 {
                     table = search.searchDocumentNumber(tBSearch.Text);
                 }
                 else if (rBSearchName.Checked == true)
                 {
-                    string[] fullName = tBSearch.Text.Split(new char[] { ' ' });
+                    string[] fullName1 = tBSearch.Text.Split(new char[] { ' ' });
 
                     switch (fullName.Length)
                     {
@@ -106,9 +114,9 @@ namespace MeoIS
             if (tBSearch.Text != "")
             {
                 rBSearchDocNum.Checked = true;
-                tableLayoutPanelFilter.Visible = true;
+                tableLayoutPanelFilterSearch.Visible = true;
             }
-            else tableLayoutPanelFilter.Visible = false;
+            else tableLayoutPanelFilterSearch.Visible = false;
         }
 
         private void Admin_panel_FormClosed(object sender, FormClosedEventArgs e)

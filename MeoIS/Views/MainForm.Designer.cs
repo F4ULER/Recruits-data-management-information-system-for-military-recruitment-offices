@@ -37,6 +37,8 @@ namespace MeoIS
             this.tBCangePhone = new System.Windows.Forms.TextBox();
             this.tabControlMenuServices = new System.Windows.Forms.TabControl();
             this.tPReg = new System.Windows.Forms.TabPage();
+            this.cBNewDistrict = new System.Windows.Forms.ComboBox();
+            this.cBEnlistmentOfficeWhereRegistered = new System.Windows.Forms.ComboBox();
             this.buttonOldEnlistmentOffice = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -50,6 +52,9 @@ namespace MeoIS
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.labelFriday = new System.Windows.Forms.Label();
             this.labelWensday = new System.Windows.Forms.Label();
+            this.Wednesday = new System.Windows.Forms.TableLayoutPanel();
+            this.labelRecordingCompleteWensday = new System.Windows.Forms.Label();
+            this.cBWednesday = new System.Windows.Forms.ComboBox();
             this.monday = new System.Windows.Forms.TableLayoutPanel();
             this.labelRecordingCompleteMonday = new System.Windows.Forms.Label();
             this.cBMonday = new System.Windows.Forms.ComboBox();
@@ -116,17 +121,14 @@ namespace MeoIS
             this.labelActiveSummon = new System.Windows.Forms.Label();
             this.labelResetActiveSummon = new System.Windows.Forms.Label();
             this.buttonRegisterOfSummons = new System.Windows.Forms.Button();
-            this.cBWednesday = new System.Windows.Forms.ComboBox();
-            this.labelRecordingCompleteWensday = new System.Windows.Forms.Label();
-            this.Wednesday = new System.Windows.Forms.TableLayoutPanel();
-            this.cBEnlistmentOfficeWhereRegistered = new System.Windows.Forms.ComboBox();
-            this.cBNewDistrict = new System.Windows.Forms.ComboBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGV)).BeginInit();
             this.tabControlMenuServices.SuspendLayout();
             this.tPReg.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tPMed.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.Wednesday.SuspendLayout();
             this.monday.SuspendLayout();
             this.Friday.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -145,7 +147,7 @@ namespace MeoIS
             ((System.ComponentModel.ISupportInitialize)(this.pictureMedicalData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureOptions)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSearch)).BeginInit();
-            this.Wednesday.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tBSearch
@@ -229,23 +231,105 @@ namespace MeoIS
             this.tPReg.Text = "Постановка на учет";
             this.tPReg.UseVisualStyleBackColor = true;
             // 
+            // cBNewDistrict
+            // 
+            this.cBNewDistrict.AutoCompleteCustomSource.AddRange(new string[] {
+            "Колпинского и Пушкинского районов",
+            "Кронштадтского и Курортного районов",
+            "Адмиралтейского и Кировского районов",
+            "Василеостровского района",
+            "Выборгского района",
+            "Калининского района",
+            "Красногвардейского района",
+            "Красносельского района",
+            "Московского района",
+            "Невского района",
+            "Петроградского района",
+            "Петродворцового района",
+            "Приморского района",
+            "Фрунзенского района",
+            "Центрального района"});
+            this.cBNewDistrict.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cBNewDistrict.FormattingEnabled = true;
+            this.cBNewDistrict.Items.AddRange(new object[] {
+            "Колпинский и Пушкинский",
+            "Кронштадтский и Курортный",
+            "Адмиралтейский и Кировский",
+            "Василеостровский",
+            "Выборгский",
+            "Калининский",
+            "Красногвардейский",
+            "Красносельский",
+            "Московский",
+            "Невский",
+            "Петроградский",
+            "Петродворцовый",
+            "Приморский",
+            "Фрунзенский",
+            "Центральный"});
+            this.cBNewDistrict.Location = new System.Drawing.Point(409, 201);
+            this.cBNewDistrict.Name = "cBNewDistrict";
+            this.cBNewDistrict.Size = new System.Drawing.Size(291, 24);
+            this.cBNewDistrict.TabIndex = 2841;
+            // 
+            // cBEnlistmentOfficeWhereRegistered
+            // 
+            this.cBEnlistmentOfficeWhereRegistered.AutoCompleteCustomSource.AddRange(new string[] {
+            "Колпинского и Пушкинского районов",
+            "Кронштадтского и Курортного районов",
+            "Адмиралтейского и Кировского районов",
+            "Василеостровского района",
+            "Выборгского района",
+            "Калининского района",
+            "Красногвардейского района",
+            "Красносельского района",
+            "Московского района",
+            "Невского района",
+            "Петроградского района",
+            "Петродворцового района",
+            "Приморского района",
+            "Фрунзенского района",
+            "Центрального района"});
+            this.cBEnlistmentOfficeWhereRegistered.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cBEnlistmentOfficeWhereRegistered.FormattingEnabled = true;
+            this.cBEnlistmentOfficeWhereRegistered.Items.AddRange(new object[] {
+            "Колпинский и Пушкинский",
+            "Кронштадтский и Курортный",
+            "Адмиралтейский и Кировский",
+            "Василеостровский",
+            "Выборгский",
+            "Калининский",
+            "Красногвардейский",
+            "Красносельский",
+            "Московский",
+            "Невский",
+            "Петроградский",
+            "Петродворцовый",
+            "Приморский",
+            "Фрунзенский",
+            "Центральный"});
+            this.cBEnlistmentOfficeWhereRegistered.Location = new System.Drawing.Point(50, 201);
+            this.cBEnlistmentOfficeWhereRegistered.Name = "cBEnlistmentOfficeWhereRegistered";
+            this.cBEnlistmentOfficeWhereRegistered.Size = new System.Drawing.Size(291, 24);
+            this.cBEnlistmentOfficeWhereRegistered.TabIndex = 2841;
+            // 
             // buttonOldEnlistmentOffice
             // 
+            this.buttonOldEnlistmentOffice.BackColor = System.Drawing.Color.Beige;
             this.buttonOldEnlistmentOffice.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonOldEnlistmentOffice.Image = ((System.Drawing.Image)(resources.GetObject("buttonOldEnlistmentOffice.Image")));
             this.buttonOldEnlistmentOffice.Location = new System.Drawing.Point(298, 261);
             this.buttonOldEnlistmentOffice.Name = "buttonOldEnlistmentOffice";
             this.buttonOldEnlistmentOffice.Size = new System.Drawing.Size(165, 54);
             this.buttonOldEnlistmentOffice.TabIndex = 30;
             this.buttonOldEnlistmentOffice.Text = "Отправить заявку";
-            this.buttonOldEnlistmentOffice.UseVisualStyleBackColor = true;
+            this.buttonOldEnlistmentOffice.UseVisualStyleBackColor = false;
             this.buttonOldEnlistmentOffice.Click += new System.EventHandler(this.buttonOldEnlistmentOffice_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Beige;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Image = ((System.Drawing.Image)(resources.GetObject("label3.Image")));
             this.label3.Location = new System.Drawing.Point(425, 137);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(293, 44);
@@ -255,8 +339,8 @@ namespace MeoIS
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Beige;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Image = ((System.Drawing.Image)(resources.GetObject("label2.Image")));
             this.label2.Location = new System.Drawing.Point(14, 137);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(370, 44);
@@ -266,8 +350,8 @@ namespace MeoIS
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Beige;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Image = ((System.Drawing.Image)(resources.GetObject("label1.Image")));
             this.label1.Location = new System.Drawing.Point(173, 48);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(513, 43);
@@ -277,7 +361,7 @@ namespace MeoIS
             // pictureBox2
             // 
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.pictureBox2.Image = global::MeoIS.Properties.Resources.fon;
+            this.pictureBox2.Image = global::MeoIS.Properties.Resources.fonPanel1;
             this.pictureBox2.Location = new System.Drawing.Point(-4, -4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(837, 484);
@@ -306,8 +390,8 @@ namespace MeoIS
             // 
             this.labelPreviousWeek.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelPreviousWeek.AutoSize = true;
+            this.labelPreviousWeek.BackColor = System.Drawing.Color.Beige;
             this.labelPreviousWeek.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelPreviousWeek.Image = global::MeoIS.Properties.Resources.fonLabelPic;
             this.labelPreviousWeek.Location = new System.Drawing.Point(4, 83);
             this.labelPreviousWeek.Name = "labelPreviousWeek";
             this.labelPreviousWeek.Size = new System.Drawing.Size(195, 21);
@@ -319,8 +403,8 @@ namespace MeoIS
             // 
             this.labelNextWeek.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelNextWeek.AutoSize = true;
+            this.labelNextWeek.BackColor = System.Drawing.Color.Beige;
             this.labelNextWeek.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelNextWeek.Image = global::MeoIS.Properties.Resources.fonLabelPic;
             this.labelNextWeek.Location = new System.Drawing.Point(489, 83);
             this.labelNextWeek.Name = "labelNextWeek";
             this.labelNextWeek.Size = new System.Drawing.Size(171, 21);
@@ -343,8 +427,8 @@ namespace MeoIS
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Beige;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Image = global::MeoIS.Properties.Resources.fonLabelPic;
             this.label4.Location = new System.Drawing.Point(68, 20);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(558, 43);
@@ -396,6 +480,75 @@ namespace MeoIS
             this.labelWensday.Size = new System.Drawing.Size(59, 21);
             this.labelWensday.TabIndex = 5;
             this.labelWensday.Text = "Среда\r\n";
+            // 
+            // Wednesday
+            // 
+            this.Wednesday.AccessibleRole = System.Windows.Forms.AccessibleRole.Cursor;
+            this.Wednesday.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Wednesday.ColumnCount = 1;
+            this.Wednesday.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.Wednesday.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.Wednesday.Controls.Add(this.labelRecordingCompleteWensday, 0, 1);
+            this.Wednesday.Controls.Add(this.cBWednesday, 0, 0);
+            this.Wednesday.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Wednesday.Location = new System.Drawing.Point(160, 125);
+            this.Wednesday.Name = "Wednesday";
+            this.Wednesday.RowCount = 2;
+            this.Wednesday.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.Wednesday.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 57F));
+            this.Wednesday.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.Wednesday.Size = new System.Drawing.Size(146, 110);
+            this.Wednesday.TabIndex = 1;
+            this.Wednesday.MouseLeave += new System.EventHandler(this.Wednesday_MouseLeave);
+            this.Wednesday.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Wednesday_MouseMove);
+            // 
+            // labelRecordingCompleteWensday
+            // 
+            this.labelRecordingCompleteWensday.AutoSize = true;
+            this.labelRecordingCompleteWensday.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.labelRecordingCompleteWensday.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelRecordingCompleteWensday.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelRecordingCompleteWensday.Location = new System.Drawing.Point(3, 68);
+            this.labelRecordingCompleteWensday.Name = "labelRecordingCompleteWensday";
+            this.labelRecordingCompleteWensday.Size = new System.Drawing.Size(140, 42);
+            this.labelRecordingCompleteWensday.TabIndex = 8;
+            this.labelRecordingCompleteWensday.Text = "Запись завершена";
+            this.labelRecordingCompleteWensday.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelRecordingCompleteWensday.Visible = false;
+            this.labelRecordingCompleteWensday.MouseLeave += new System.EventHandler(this.labelRecordingCompleteWensday_MouseLeave);
+            this.labelRecordingCompleteWensday.MouseMove += new System.Windows.Forms.MouseEventHandler(this.labelRecordingCompleteWensday_MouseMove);
+            // 
+            // cBWednesday
+            // 
+            this.cBWednesday.AutoCompleteCustomSource.AddRange(new string[] {
+            "9:00",
+            "10:00",
+            "11:00",
+            "12:00",
+            "14:00",
+            "15:00",
+            "16:00",
+            "17:00"});
+            this.cBWednesday.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.cBWednesday.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cBWednesday.FormattingEnabled = true;
+            this.cBWednesday.Items.AddRange(new object[] {
+            "",
+            "9:00",
+            "10:00",
+            "11:00",
+            "12:00",
+            "14:00",
+            "15:00",
+            "16:00"});
+            this.cBWednesday.Location = new System.Drawing.Point(3, 26);
+            this.cBWednesday.Name = "cBWednesday";
+            this.cBWednesday.Size = new System.Drawing.Size(140, 24);
+            this.cBWednesday.TabIndex = 7;
+            this.cBWednesday.MouseLeave += new System.EventHandler(this.cBWednesday_MouseLeave);
+            this.cBWednesday.MouseMove += new System.Windows.Forms.MouseEventHandler(this.cBWednesday_MouseMove);
             // 
             // monday
             // 
@@ -459,7 +612,7 @@ namespace MeoIS
             "14:00",
             "15:00",
             "16:00"});
-            this.cBMonday.Location = new System.Drawing.Point(3, 26);
+            this.cBMonday.Location = new System.Drawing.Point(3, 25);
             this.cBMonday.Name = "cBMonday";
             this.cBMonday.Size = new System.Drawing.Size(139, 24);
             this.cBMonday.TabIndex = 5;
@@ -528,7 +681,7 @@ namespace MeoIS
             "14:00",
             "15:00",
             "16:00"});
-            this.cBFriday.Location = new System.Drawing.Point(3, 27);
+            this.cBFriday.Location = new System.Drawing.Point(3, 26);
             this.cBFriday.Name = "cBFriday";
             this.cBFriday.Size = new System.Drawing.Size(141, 24);
             this.cBFriday.TabIndex = 9;
@@ -549,7 +702,7 @@ namespace MeoIS
             // pictureBox3
             // 
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.pictureBox3.Image = global::MeoIS.Properties.Resources.fon;
+            this.pictureBox3.Image = global::MeoIS.Properties.Resources.fonPanel1;
             this.pictureBox3.Location = new System.Drawing.Point(-4, -4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(837, 484);
@@ -592,8 +745,8 @@ namespace MeoIS
             // labelWorkOrganizationAddress
             // 
             this.labelWorkOrganizationAddress.AutoSize = true;
+            this.labelWorkOrganizationAddress.BackColor = System.Drawing.Color.Beige;
             this.labelWorkOrganizationAddress.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelWorkOrganizationAddress.Image = global::MeoIS.Properties.Resources.fonLabelPic;
             this.labelWorkOrganizationAddress.Location = new System.Drawing.Point(193, 262);
             this.labelWorkOrganizationAddress.Name = "labelWorkOrganizationAddress";
             this.labelWorkOrganizationAddress.Size = new System.Drawing.Size(176, 22);
@@ -612,8 +765,8 @@ namespace MeoIS
             // labelJobTitle
             // 
             this.labelJobTitle.AutoSize = true;
+            this.labelJobTitle.BackColor = System.Drawing.Color.Beige;
             this.labelJobTitle.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelJobTitle.Image = global::MeoIS.Properties.Resources.fonLabelPic;
             this.labelJobTitle.Location = new System.Drawing.Point(193, 172);
             this.labelJobTitle.Name = "labelJobTitle";
             this.labelJobTitle.Size = new System.Drawing.Size(106, 22);
@@ -632,8 +785,8 @@ namespace MeoIS
             // labelNameOfOrganizationOrIndividualEntrepreneur
             // 
             this.labelNameOfOrganizationOrIndividualEntrepreneur.AutoSize = true;
+            this.labelNameOfOrganizationOrIndividualEntrepreneur.BackColor = System.Drawing.Color.Beige;
             this.labelNameOfOrganizationOrIndividualEntrepreneur.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelNameOfOrganizationOrIndividualEntrepreneur.Image = global::MeoIS.Properties.Resources.fonLabelPic;
             this.labelNameOfOrganizationOrIndividualEntrepreneur.Location = new System.Drawing.Point(193, 90);
             this.labelNameOfOrganizationOrIndividualEntrepreneur.Name = "labelNameOfOrganizationOrIndividualEntrepreneur";
             this.labelNameOfOrganizationOrIndividualEntrepreneur.Size = new System.Drawing.Size(320, 22);
@@ -664,8 +817,8 @@ namespace MeoIS
             // labelAddressOfEducationalOrganization
             // 
             this.labelAddressOfEducationalOrganization.AutoSize = true;
+            this.labelAddressOfEducationalOrganization.BackColor = System.Drawing.Color.Beige;
             this.labelAddressOfEducationalOrganization.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelAddressOfEducationalOrganization.Image = global::MeoIS.Properties.Resources.fonLabelPic;
             this.labelAddressOfEducationalOrganization.Location = new System.Drawing.Point(500, 285);
             this.labelAddressOfEducationalOrganization.Name = "labelAddressOfEducationalOrganization";
             this.labelAddressOfEducationalOrganization.Size = new System.Drawing.Size(324, 22);
@@ -692,8 +845,8 @@ namespace MeoIS
             // labelEnrollmentDate
             // 
             this.labelEnrollmentDate.AutoSize = true;
+            this.labelEnrollmentDate.BackColor = System.Drawing.Color.Beige;
             this.labelEnrollmentDate.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelEnrollmentDate.Image = global::MeoIS.Properties.Resources.fonLabelPic;
             this.labelEnrollmentDate.Location = new System.Drawing.Point(49, 288);
             this.labelEnrollmentDate.Name = "labelEnrollmentDate";
             this.labelEnrollmentDate.Size = new System.Drawing.Size(151, 22);
@@ -713,8 +866,8 @@ namespace MeoIS
             // labelNameOfEducationalOrganization
             // 
             this.labelNameOfEducationalOrganization.AutoSize = true;
+            this.labelNameOfEducationalOrganization.BackColor = System.Drawing.Color.Beige;
             this.labelNameOfEducationalOrganization.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelNameOfEducationalOrganization.Image = global::MeoIS.Properties.Resources.fonLabelPic;
             this.labelNameOfEducationalOrganization.Location = new System.Drawing.Point(222, 134);
             this.labelNameOfEducationalOrganization.Name = "labelNameOfEducationalOrganization";
             this.labelNameOfEducationalOrganization.Size = new System.Drawing.Size(398, 22);
@@ -760,20 +913,20 @@ namespace MeoIS
             // rBEducation
             // 
             this.rBEducation.AutoSize = true;
-            this.rBEducation.BackgroundImage = global::MeoIS.Properties.Resources.fonPanel1;
+            this.rBEducation.BackColor = System.Drawing.Color.Beige;
             this.rBEducation.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.rBEducation.Location = new System.Drawing.Point(29, 114);
             this.rBEducation.Name = "rBEducation";
             this.rBEducation.Size = new System.Drawing.Size(85, 25);
             this.rBEducation.TabIndex = 4;
             this.rBEducation.Text = "Учебы";
-            this.rBEducation.UseVisualStyleBackColor = true;
+            this.rBEducation.UseVisualStyleBackColor = false;
             this.rBEducation.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
             // 
             // rBWork
             // 
             this.rBWork.AutoSize = true;
-            this.rBWork.BackgroundImage = global::MeoIS.Properties.Resources.fonPanel1;
+            this.rBWork.BackColor = System.Drawing.Color.Beige;
             this.rBWork.Checked = true;
             this.rBWork.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.rBWork.Location = new System.Drawing.Point(29, 87);
@@ -782,14 +935,14 @@ namespace MeoIS
             this.rBWork.TabIndex = 3;
             this.rBWork.TabStop = true;
             this.rBWork.Text = "Работы";
-            this.rBWork.UseVisualStyleBackColor = true;
+            this.rBWork.UseVisualStyleBackColor = false;
             this.rBWork.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Beige;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Image = global::MeoIS.Properties.Resources.fonLabelPic;
             this.label5.Location = new System.Drawing.Point(84, 15);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(600, 43);
@@ -799,7 +952,7 @@ namespace MeoIS
             // pictureBox4
             // 
             this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.pictureBox4.Image = global::MeoIS.Properties.Resources.fon;
+            this.pictureBox4.Image = global::MeoIS.Properties.Resources.fonPanel1;
             this.pictureBox4.Location = new System.Drawing.Point(-4, -4);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(837, 484);
@@ -821,6 +974,7 @@ namespace MeoIS
             // groupBoxServices
             // 
             this.groupBoxServices.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.groupBoxServices.BackgroundImage = global::MeoIS.Properties.Resources.fonPanel1;
             this.groupBoxServices.Controls.Add(this.tableLayoutPanelServices);
             this.groupBoxServices.Controls.Add(this.label6);
             this.groupBoxServices.Location = new System.Drawing.Point(280, 70);
@@ -1302,156 +1456,16 @@ namespace MeoIS
             this.buttonRegisterOfSummons.Visible = false;
             this.buttonRegisterOfSummons.Click += new System.EventHandler(this.buttonRegisterOfSummons_Click);
             // 
-            // cBWednesday
+            // pictureBox1
             // 
-            this.cBWednesday.AutoCompleteCustomSource.AddRange(new string[] {
-            "9:00",
-            "10:00",
-            "11:00",
-            "12:00",
-            "14:00",
-            "15:00",
-            "16:00",
-            "17:00"});
-            this.cBWednesday.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.cBWednesday.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cBWednesday.FormattingEnabled = true;
-            this.cBWednesday.Items.AddRange(new object[] {
-            "",
-            "9:00",
-            "10:00",
-            "11:00",
-            "12:00",
-            "14:00",
-            "15:00",
-            "16:00"});
-            this.cBWednesday.Location = new System.Drawing.Point(3, 25);
-            this.cBWednesday.Name = "cBWednesday";
-            this.cBWednesday.Size = new System.Drawing.Size(140, 24);
-            this.cBWednesday.TabIndex = 7;
-            this.cBWednesday.MouseLeave += new System.EventHandler(this.cBWednesday_MouseLeave);
-            this.cBWednesday.MouseMove += new System.Windows.Forms.MouseEventHandler(this.cBWednesday_MouseMove);
-            // 
-            // labelRecordingCompleteWensday
-            // 
-            this.labelRecordingCompleteWensday.AutoSize = true;
-            this.labelRecordingCompleteWensday.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.labelRecordingCompleteWensday.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelRecordingCompleteWensday.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelRecordingCompleteWensday.Location = new System.Drawing.Point(3, 68);
-            this.labelRecordingCompleteWensday.Name = "labelRecordingCompleteWensday";
-            this.labelRecordingCompleteWensday.Size = new System.Drawing.Size(140, 42);
-            this.labelRecordingCompleteWensday.TabIndex = 8;
-            this.labelRecordingCompleteWensday.Text = "Запись завершена";
-            this.labelRecordingCompleteWensday.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.labelRecordingCompleteWensday.Visible = false;
-            this.labelRecordingCompleteWensday.MouseLeave += new System.EventHandler(this.labelRecordingCompleteWensday_MouseLeave);
-            this.labelRecordingCompleteWensday.MouseMove += new System.Windows.Forms.MouseEventHandler(this.labelRecordingCompleteWensday_MouseMove);
-            // 
-            // Wednesday
-            // 
-            this.Wednesday.AccessibleRole = System.Windows.Forms.AccessibleRole.Cursor;
-            this.Wednesday.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Wednesday.ColumnCount = 1;
-            this.Wednesday.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.Wednesday.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.Wednesday.Controls.Add(this.labelRecordingCompleteWensday, 0, 1);
-            this.Wednesday.Controls.Add(this.cBWednesday, 0, 0);
-            this.Wednesday.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Wednesday.Location = new System.Drawing.Point(160, 125);
-            this.Wednesday.Name = "Wednesday";
-            this.Wednesday.RowCount = 2;
-            this.Wednesday.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.Wednesday.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 57F));
-            this.Wednesday.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.Wednesday.Size = new System.Drawing.Size(146, 110);
-            this.Wednesday.TabIndex = 1;
-            this.Wednesday.MouseLeave += new System.EventHandler(this.Wednesday_MouseLeave);
-            this.Wednesday.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Wednesday_MouseMove);
-            // 
-            // cBEnlistmentOfficeWhereRegistered
-            // 
-            this.cBEnlistmentOfficeWhereRegistered.AutoCompleteCustomSource.AddRange(new string[] {
-            "Колпинского и Пушкинского районов",
-            "Кронштадтского и Курортного районов",
-            "Адмиралтейского и Кировского районов",
-            "Василеостровского района",
-            "Выборгского района",
-            "Калининского района",
-            "Красногвардейского района",
-            "Красносельского района",
-            "Московского района",
-            "Невского района",
-            "Петроградского района",
-            "Петродворцового района",
-            "Приморского района",
-            "Фрунзенского района",
-            "Центрального района"});
-            this.cBEnlistmentOfficeWhereRegistered.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cBEnlistmentOfficeWhereRegistered.FormattingEnabled = true;
-            this.cBEnlistmentOfficeWhereRegistered.Items.AddRange(new object[] {
-            "Колпинский и Пушкинский",
-            "Кронштадтский и Курортный",
-            "Адмиралтейский и Кировский",
-            "Василеостровский",
-            "Выборгский",
-            "Калининский",
-            "Красногвардейский",
-            "Красносельский",
-            "Московский",
-            "Невский",
-            "Петроградский",
-            "Петродворцовый",
-            "Приморский",
-            "Фрунзенский",
-            "Центральный"});
-            this.cBEnlistmentOfficeWhereRegistered.Location = new System.Drawing.Point(50, 201);
-            this.cBEnlistmentOfficeWhereRegistered.Name = "cBEnlistmentOfficeWhereRegistered";
-            this.cBEnlistmentOfficeWhereRegistered.Size = new System.Drawing.Size(291, 24);
-            this.cBEnlistmentOfficeWhereRegistered.TabIndex = 2841;
-            // 
-            // cBNewDistrict
-            // 
-            this.cBNewDistrict.AutoCompleteCustomSource.AddRange(new string[] {
-            "Колпинского и Пушкинского районов",
-            "Кронштадтского и Курортного районов",
-            "Адмиралтейского и Кировского районов",
-            "Василеостровского района",
-            "Выборгского района",
-            "Калининского района",
-            "Красногвардейского района",
-            "Красносельского района",
-            "Московского района",
-            "Невского района",
-            "Петроградского района",
-            "Петродворцового района",
-            "Приморского района",
-            "Фрунзенского района",
-            "Центрального района"});
-            this.cBNewDistrict.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cBNewDistrict.FormattingEnabled = true;
-            this.cBNewDistrict.Items.AddRange(new object[] {
-            "Колпинский и Пушкинский",
-            "Кронштадтский и Курортный",
-            "Адмиралтейский и Кировский",
-            "Василеостровский",
-            "Выборгский",
-            "Калининский",
-            "Красногвардейский",
-            "Красносельский",
-            "Московский",
-            "Невский",
-            "Петроградский",
-            "Петродворцовый",
-            "Приморский",
-            "Фрунзенский",
-            "Центральный"});
-            this.cBNewDistrict.Location = new System.Drawing.Point(409, 201);
-            this.cBNewDistrict.Name = "cBNewDistrict";
-            this.cBNewDistrict.Size = new System.Drawing.Size(291, 24);
-            this.cBNewDistrict.TabIndex = 2841;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.pictureBox1.Image = global::MeoIS.Properties.Resources.fon;
+            this.pictureBox1.Location = new System.Drawing.Point(2, -8);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1237, 612);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2819;
+            this.pictureBox1.TabStop = false;
             // 
             // MainForm
             // 
@@ -1486,6 +1500,7 @@ namespace MeoIS
             this.Controls.Add(this.buttonFirstReg);
             this.Controls.Add(this.groupBoxServices);
             this.Controls.Add(this.dataGV);
+            this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -1500,6 +1515,8 @@ namespace MeoIS
             this.tPMed.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.Wednesday.ResumeLayout(false);
+            this.Wednesday.PerformLayout();
             this.monday.ResumeLayout(false);
             this.monday.PerformLayout();
             this.Friday.ResumeLayout(false);
@@ -1525,8 +1542,7 @@ namespace MeoIS
             ((System.ComponentModel.ISupportInitialize)(this.pictureMedicalData)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureOptions)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSearch)).EndInit();
-            this.Wednesday.ResumeLayout(false);
-            this.Wednesday.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1625,6 +1641,7 @@ namespace MeoIS
         private System.Windows.Forms.ComboBox cBWednesday;
         private System.Windows.Forms.ComboBox cBNewDistrict;
         private System.Windows.Forms.ComboBox cBEnlistmentOfficeWhereRegistered;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

@@ -424,5 +424,10 @@ namespace MeoIS
                 tBAddress.ForeColor = Color.Black;
             }
         }
+
+        private void rBM_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

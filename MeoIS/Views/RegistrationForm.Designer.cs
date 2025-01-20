@@ -51,6 +51,8 @@ namespace MeoIS
             this.tBAddress = new System.Windows.Forms.TextBox();
             this.labelDistrict = new System.Windows.Forms.Label();
             this.labelCategory = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tBDocNumber
@@ -159,13 +161,14 @@ namespace MeoIS
             this.rBM.AutoSize = true;
             this.rBM.Checked = true;
             this.rBM.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rBM.Location = new System.Drawing.Point(239, 327);
+            this.rBM.Location = new System.Drawing.Point(226, 327);
             this.rBM.Name = "rBM";
             this.rBM.Size = new System.Drawing.Size(54, 33);
             this.rBM.TabIndex = 5;
             this.rBM.TabStop = true;
             this.rBM.Text = "M";
             this.rBM.UseVisualStyleBackColor = true;
+            this.rBM.CheckedChanged += new System.EventHandler(this.rBM_CheckedChanged);
             // 
             // rBF
             // 
@@ -267,7 +270,7 @@ namespace MeoIS
             "В",
             "Д",
             "Г"});
-            this.cBCategory.Location = new System.Drawing.Point(300, 294);
+            this.cBCategory.Location = new System.Drawing.Point(300, 290);
             this.cBCategory.Name = "cBCategory";
             this.cBCategory.Size = new System.Drawing.Size(176, 24);
             this.cBCategory.TabIndex = 2817;
@@ -309,7 +312,7 @@ namespace MeoIS
             "Приморский",
             "Фрунзенский",
             "Центральный"});
-            this.cBDistrict.Location = new System.Drawing.Point(185, 263);
+            this.cBDistrict.Location = new System.Drawing.Point(185, 259);
             this.cBDistrict.Name = "cBDistrict";
             this.cBDistrict.Size = new System.Drawing.Size(291, 24);
             this.cBDistrict.TabIndex = 2817;
@@ -347,11 +350,23 @@ namespace MeoIS
             this.labelCategory.Text = "Категория годности";
             this.labelCategory.Visible = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.pictureBox1.Image = global::MeoIS.Properties.Resources.fon;
+            this.pictureBox1.Location = new System.Drawing.Point(-3, -7);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(549, 552);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2818;
+            this.pictureBox1.TabStop = false;
+            // 
             // RegistrationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(542, 543);
+            this.Controls.Add(this.labelCategory);
             this.Controls.Add(this.cBDistrict);
             this.Controls.Add(this.cBCategory);
             this.Controls.Add(this.labelExit);
@@ -361,7 +376,6 @@ namespace MeoIS
             this.Controls.Add(this.buttonContinue);
             this.Controls.Add(this.rBF);
             this.Controls.Add(this.rBM);
-            this.Controls.Add(this.labelCategory);
             this.Controls.Add(this.labelDistrict);
             this.Controls.Add(this.labelGender);
             this.Controls.Add(this.tBPhone);
@@ -373,11 +387,13 @@ namespace MeoIS
             this.Controls.Add(this.tBLastName);
             this.Controls.Add(this.tBDocNumber);
             this.Controls.Add(this.buttonReg);
+            this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "RegistrationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Регистрация";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.RegistrationForm_FormClosed);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -406,5 +422,6 @@ namespace MeoIS
         private System.Windows.Forms.TextBox tBAddress;
         private System.Windows.Forms.Label labelDistrict;
         private System.Windows.Forms.Label labelCategory;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
