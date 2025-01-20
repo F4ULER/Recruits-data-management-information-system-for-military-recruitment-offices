@@ -430,6 +430,7 @@ namespace MeoIS
             panelRegOfSummons.Visible = true;
             groupBoxServices.Visible = false;
             pictureClose.Visible = true;
+            buttonRegOfSummonsSaveEdit.Enabled = false;
         }
 
         private void buttonRegOfSummonsSave_Click(object sender, EventArgs e)
@@ -448,25 +449,32 @@ namespace MeoIS
             Advanced_search advanced_Search = new Advanced_search();
             DataTable tableSummons;
             tableSummons = advanced_Search.searchSummonBySeriesAndNumberToTable(tBRegOfSummonsEditSeries.Text, tBRegOfSummonsEditNumber.Text);
-            
 
-            switch (tableSummons.Rows[0][5].ToString())
+            if (tableSummons.Rows.Count > 0)
             {
-                case "Активно": cBRegOfSummonsStatus.SelectedIndex = 0;
-                    break;
-                case "Просрочено":
-                    cBRegOfSummonsStatus.SelectedIndex = 1;
-                    break;
-                case "Закрыто":
-                    cBRegOfSummonsStatus.SelectedIndex = 2;
-                    break;
-            }
-                
+                buttonRegOfSummonsSaveEdit.Enabled = true;
+                switch (tableSummons.Rows[0][5].ToString())
+                {
+                    case "Активно":
+                        cBRegOfSummonsStatus.SelectedIndex = 0;
+                        break;
+                    case "Просрочено":
+                        cBRegOfSummonsStatus.SelectedIndex = 1;
+                        break;
+                    case "Закрыто":
+                        cBRegOfSummonsStatus.SelectedIndex = 2;
+                        break;
+                }
+            }else { MessageBox.Show("Такой повестки не существует"); buttonRegOfSummonsSaveEdit.Enabled = false; }
         }
 
         private void buttonRegOfSummonsSaveEdit_Click(object sender, EventArgs e)
         {
-
+            Register_of_summons_to_enlistment__office RegOfSummons = new Register_of_summons_to_enlistment__office();
+            RegOfSummons.editStatusSummons(tBRegOfSummonsEditSeries.Text, tBRegOfSummonsEditNumber.Text, cBRegOfSummonsStatus.Text);
+            buttonRegOfSummonsSaveEdit.Enabled = false;
+            tBRegOfSummonsEditSeries.Text = "";
+            tBRegOfSummonsEditNumber.Text = "";
         }
     }
 }

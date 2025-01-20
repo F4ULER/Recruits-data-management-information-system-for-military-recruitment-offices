@@ -17,15 +17,15 @@ namespace MeoIS
 
         public bool addSummons(string documentNumber, string series, string number, string date_of_visit, string status)
         {
+            DataBaseConnect DataBase = new DataBaseConnect();
             string[] changedate;
             string newDate = "";
             changedate = date_of_visit.Split(new char[] { '.' });
             newDate = changedate[2] + "-" + changedate[1] + "-" + changedate[0];
 
-            DataBaseConnect DataBase = new DataBaseConnect();
             string message = "INSERT INTO `register_of_summonses`(`document_number`, `series`, `number`, `date_of_visit`, `visit_status`) " +
-                "VALUES (" + documentNumber  + ", " + series + ", " + number + ", '" + newDate + "', '" + status + "')";
-
+                    "VALUES (" + documentNumber + ", " + series + ", " + number + ", '" + newDate + "', '" + status + "')";
+            
             if (DataBase.sending_command(message) == true)
             {
                 MessageBox.Show("Повестка занесена в реестр!");
@@ -45,9 +45,25 @@ namespace MeoIS
 
         }
 
-        public void editStatusSummons()
+        public bool editStatusSummons(string series, string number, string status)
         {
+            DataBaseConnect DataBase = new DataBaseConnect();
 
+
+            string message = "UPDATE `register_of_summonses` SET `visit_status`= '" + status + "' WHERE `series`= '" + series + "' AND `number`= '" + number + "'";
+
+            if (DataBase.sending_command(message) == true)
+            {
+                MessageBox.Show("Статус повестки изменен на " + status);
+
+                return true;
+            }
+            else
+            {
+                MessageBox.Show("Ошибка!");
+
+                return false;
+            }
         }
 
         public bool updateActiveSummons()
